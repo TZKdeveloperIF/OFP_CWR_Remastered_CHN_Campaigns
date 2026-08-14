@@ -1,0 +1,79 @@
+; Reunion-dialogue dispatcher for Status Quo.
+; The meeting lines were originally fired by waypoints on a fixed 2s
+; gate, which is shorter than several of the voice lines, so a friend
+; answered while the previous speaker was still talking. This plays each
+; exchange spaced to the length of the actual recording for the selected
+; voice (Czech recordings differ from the default), keeping the original
+; 2s cadence wherever a line already fits.
+_k = _this select 0
+_cz = voiceLanguage == "Czech"
+
+? _k == "38v01" : goto "pilots"
+? _k == "38v43" : goto "velitel"
+? _k == "38v51" : goto "partyzan"
+? _k == "38v41" : goto "david"
+? _k == "38v37" : goto "robert"
+? _k == "38v39" : goto "bill"
+exit
+
+#pilots
+aP say "38v01"
+_w = 2.0
+? _cz : _w = 2.4
+~_w
+pilot1 say "38v02"
+_w = 2.0
+? _cz : _w = 2.3
+~_w
+pilot2 say "38v03"
+exit
+
+#velitel
+velitel say "38v43"
+_w = 3.1
+? _cz : _w = 3.3
+~_w
+aP say "38v44"
+~2.0
+velitel say "38v45"
+_w = 4.9
+? _cz : _w = 4.6
+~_w
+aP say "38v46"
+exit
+
+#partyzan
+partyzan say "38v51"
+_w = 4.0
+? _cz : _w = 4.1
+~_w
+aP say "38v52"
+_w = 3.3
+? _cz : _w = 5.7
+~_w
+partyzan say "38v53"
+exit
+
+#david
+aP say "38v41"
+_w = 4.4
+? _cz : _w = 5.7
+~_w
+david say "38v42"
+exit
+
+#robert
+robert say "38v37"
+_w = 2.7
+? _cz : _w = 2.5
+~_w
+aP say "38v38"
+exit
+
+#bill
+bill say "38v39"
+_w = 2.0
+? _cz : _w = 3.1
+~_w
+aP say "38v40"
+exit

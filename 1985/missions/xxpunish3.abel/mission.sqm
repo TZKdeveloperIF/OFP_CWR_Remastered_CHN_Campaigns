@@ -1,0 +1,206 @@
+version=11.000000;
+
+class Mission
+
+{
+
+	randomSeed=10110979.000000;
+
+	class Intel
+
+	{
+		viewDistance=900;
+};
+
+};
+
+class Intro
+
+{
+
+	randomSeed=8139267.000000;
+
+	class Intel
+
+	{
+
+	};
+
+	class Groups
+
+	{
+
+		items=2.000000;
+
+		class Item0
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9802.895508,40.577110,4033.459961};
+
+					azimut=25.000000;
+
+					id=0.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWB";
+
+					leader=1.000000;
+
+					rank="COLONEL";
+
+					skill=0.200000;
+
+					text="blake";
+
+					markers[]={};
+
+					init="this setIdentity ""Blake""; this setbehaviour ""careless""; this exec ""intro.sqs""";
+
+				};
+
+			};
+
+		};
+
+		class Item1
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9558.011719,33.943604,4255.361816};
+
+					id=1.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWB";
+
+					player="PLAYER COMMANDER";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+	};
+
+	class Vehicles
+
+	{
+
+		items=1.000000;
+
+		class Item0
+
+		{
+
+			position[]={9803.489258,40.553146,4031.922119};
+
+			id=2.000000;
+
+			side="EMPTY";
+
+			vehicle="Shed";
+
+			skill=0.200000;
+
+			markers[]={};
+
+		};
+
+	};
+
+	class Sensors
+
+	{
+
+		items=1.000000;
+
+		class Item0
+
+		{
+
+			position[]={9714.387695,41.323235,4062.269287};
+
+			type="END1";
+
+			age="UNKNOWN";
+
+			text="konec";
+
+			expCond="konec";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+	};
+
+};
+
+class OutroWin
+
+{
+
+	randomSeed=14788099.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+
+class OutroLoose
+
+{
+
+	randomSeed=14339587.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+

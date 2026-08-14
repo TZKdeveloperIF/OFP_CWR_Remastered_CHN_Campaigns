@@ -1,0 +1,244 @@
+version=11.000000;
+
+class Mission
+
+{
+
+	randomSeed=10110979.000000;
+
+	class Intel
+
+	{
+		viewDistance=900;
+};
+
+};
+
+class Intro
+
+{
+
+	randomSeed=8139267.000000;
+
+	class Intel
+
+	{
+
+		startWeather=0.200000;
+
+		forecastWeather=0.200000;
+
+		hour=17.000000;
+
+	};
+
+	class Groups
+
+	{
+
+		items=2.000000;
+
+		class Item0
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9756.127930,39.329998,3898.046875};
+
+					id=0.000000;
+
+					side="WEST";
+
+					vehicle="OfficerW";
+
+					leader=1.000000;
+
+					rank="COLONEL";
+
+					skill=0.200000;
+
+					text="blake";
+
+					markers[]={};
+
+					init="this setIdentity ""Blake""; this setbehaviour ""careless""; this moveInDriver jeep; this exec ""intro.sqs""";
+
+				};
+
+			};
+
+			class Waypoints
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9716.760742,39.329998,3940.943115};
+
+					type="GETOUT";
+
+					synchronizations[]={};
+
+					class Effects
+
+					{
+
+					};
+
+					showWP="NEVER";
+
+				};
+
+			};
+
+		};
+
+		class Item1
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9558.011719,33.943604,4255.361816};
+
+					id=1.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWB";
+
+					player="PLAYER COMMANDER";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+	};
+
+	class Vehicles
+
+	{
+
+		items=1.000000;
+
+		class Item0
+
+		{
+
+			position[]={9757.849609,39.329998,3894.239746};
+
+			azimut=335.000000;
+
+			id=2.000000;
+
+			side="EMPTY";
+
+			vehicle="Jeep";
+
+			leader=1.000000;
+
+			skill=0.200000;
+
+			text="jeep";
+
+			markers[]={};
+
+		};
+
+	};
+
+	class Sensors
+
+	{
+
+		items=1.000000;
+
+		class Item0
+
+		{
+
+			position[]={9702.502930,29.834999,4022.655029};
+
+			type="END1";
+
+			age="UNKNOWN";
+
+			text="konec";
+
+			expCond="konec";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+	};
+
+};
+
+class OutroWin
+
+{
+
+	randomSeed=14788099.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+
+class OutroLoose
+
+{
+
+	randomSeed=14339587.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+

@@ -1,0 +1,198 @@
+;init
+_Camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+aP setPos [5316.603,4199.028,-0.011]
+aP setDir -85
+aP playmove "effectstand"
+sab2 dowatch aP
+sab1 dowatch aP
+
+
+
+
+;sab1 brake
+_camera camSetTarget [-90859.17,30514.54,7630.44]
+_camera camSetPos [5318.08,4197.76,1.30]
+_camera camSetFOV 0.636
+_camera camCommit 0
+@camCommitted _camera
+sab1 say "23v_02"
+~2
+
+;aP g1
+_camera camSetTarget [104937.54,12046.48,3632.96]
+_camera camSetPos [5310.13,4198.35,1.46]
+_camera camSetFOV 0.260
+_camera camCommit 0
+@camCommitted _camera
+aP say "23v_03"
+sab1 playmove "effectstand"
+~4
+
+;-----------------------------
+;sab2 s1
+_camera camSetTarget [-91845.27,-18781.23,5635.08]
+_camera camSetPos [5318.17,4200.24,1.10]
+_camera camSetFOV 0.221
+_camera camCommit 0
+@camCommitted _camera
+sab2 say "23v_04"
+
+	;*sab2 s1
+	_camera camSetTarget [-91845.27,-18781.23,5635.22]
+	_camera camSetPos [5318.17,4200.24,1.10]
+	_camera camSetFOV 0.427
+	_camera camCommit 5
+	@camCommitted _camera
+	;-----------------------------
+
+;kamera na sab1
+sab2 dowatch aP
+sab1 dowatch aP
+_camera camSetTarget [-90859.17,30514.54,7630.44]
+_camera camSetPos [5318.08,4197.76,1.30]
+_camera camSetFOV 0.636
+_camera camCommit 0
+@camCommitted _camera
+sab1 say "23v_05"
+~2
+
+
+;kamera na AP 
+_camera camSetTarget [104937.54,12046.48,3632.96]
+_camera camSetPos [5310.13,4198.35,1.46]
+_camera camSetFOV 0.260
+_camera camCommit 0
+@camCommitted _camera
+aP say "23v_06"
+~6
+
+;Sab2
+_camera camSetTarget [-91845.27,-18781.23,5635.22]
+_camera camSetPos [5318.17,4200.24,1.10]
+_camera camSetFOV 0.427
+_camera camCommit 0
+@camCommitted _camera
+sab2 say "23v_07"
+~2
+
+
+;AP
+_camera camSetTarget [-70067.37,-61507.16,57.69]
+_camera camSetPos [5315.62,4199.81,1.33]
+_camera camSetFOV 0.816
+_camera camCommit 0
+@camCommitted _camera
+aP say "23v_08"
+~3
+sab1 playmove "effectstand"
+
+
+;sab1 g4
+_camera camSetTarget [22798.17,-90441.09,-27089.87]
+_camera camSetPos [5314.54,4202.09,1.65]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+sab1 say "23v_09"
+sab1 playmove "effectstand"
+
+	;*sab1 g4
+	_camera camSetTarget [-54730.96,-74594.88,-13567.28]
+	_camera camSetPos [5316.78,4200.01,1.61]
+	_camera camSetFOV 0.700
+	_camera camCommit 2
+	@camCommitted _camera
+
+;AP
+_camera camSetTarget [104937.54,12046.48,3632.96]
+_camera camSetPos [5310.13,4198.35,1.46]
+_camera camSetFOV 0.260
+_camera camCommit 0
+@camCommitted _camera
+aP say "23v_10"
+~5
+
+
+
+sab1 playmove "standtocombat"
+sab2 playmove "standtocombat"
+aP playmove "standtocombat"
+
+
+;-------------------konec-------------------------
+spojeni=true
+aP setbehaviour "aware"
+sab1 setbehaviour "Aware"
+sab2 setbehaviour "Aware"
+;exit
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;=== 23:24:05
+_camera camSetTarget [-82222.63,52533.43,-685.44]
+_camera camSetPos [5316.44,4197.51,1.42]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 23:24:20
+_camera camSetTarget [-37166.13,94721.98,-685.30]
+_camera camSetPos [5316.44,4197.51,1.42]
+_camera camSetFOV 0.700
+_camera camCommit 2
+@camCommitted _camera
+sab1 playmove "effectstand"
+~3
+
+;aP g6
+_camera camSetTarget [104937.54,12046.48,3632.96]
+_camera camSetPos [5310.13,4198.35,1.46]
+_camera camSetFOV 0.260
+_camera camCommit 0
+@camCommitted _camera
+aP playmove "effectstandtalk"
+
+~6
+
+;sab1 s5 
+_camera camSetTarget [-57323.18,-73680.20,-3219.24]
+_camera camSetPos [5316.81,4201.08,1.17]
+_camera camSetFOV 0.321
+_camera camCommit 0
+
+~3
+@camCommitted _camera
+sab1 playmove "effectstandStill"
+sab2 playmove "effectstandStill"
+aP playmove "effectstandStill"
+
+
+;=== 23:56:05
+_camera camSetTarget [-57323.18,-73680.20,-3218.80]
+_camera camSetPos [5316.81,4201.08,1.17]
+_camera camSetFOV 0.655
+_camera camCommit 6
+@camCommitted _camera
+~2.5
+~2.5
+
+

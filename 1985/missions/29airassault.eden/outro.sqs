@@ -1,0 +1,32 @@
+_camera = "camera" camCreate [8388.39,4348.80,0.74] 
+_camera cameraEffect ["internal","back"]
+
+enableRadio false
+setaccTime 0.2
+
+;=== 18:24:51
+_camera camSetTarget [-90211.80,1618.44,171.85]
+_camera camSetPos [9788.10,1676.14,10.93]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 18:25:05
+_camera camSetTarget [-15177.56,-95071.80,-4027.03]
+_camera camSetPos [9788.10,1676.14,10.93]
+_camera camSetFOV 0.700
+_camera camCommit 2
+
+~1.2
+titleCut ["","BLACK OUT", 0.6]
+
+@camCommitted _camera
+
+~0.2
+
+setaccTime 1
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+Over=true

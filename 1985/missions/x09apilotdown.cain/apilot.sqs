@@ -1,0 +1,524 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+playmusic "track8"
+1 fademusic 0.20
+titleCut ["","BLACK IN",2]
+
+
+;=== 15:33:04
+_camera camSetTarget par
+_camera camSetRelPos [-4.52,-2.78,-6.08]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 15:33:25
+_camera camSetTarget par
+_camera camSetPos [4687.18,3876.10,121.31]
+_camera camSetFOV 0.300
+_camera camCommit 6
+@camCommitted _camera
+
+
+;=== 15:00:57
+_camera camSetTarget [-85623.72,45959.01,81.06]
+_camera camSetPos [5050.33,3790.18,1.07]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~3
+
+;=== 15:33:25
+_camera camSetTarget par
+_camera camSetPos [4687.18,3876.10,121.31]
+_camera camSetFOV 0.300
+_camera camCommit 0
+@camCommitted _camera
+3 fademusic 0.1
+~3
+rus1 dowatch par
+jdou=true
+;=== 13:14:13
+_camera camSetTarget [60946.71,-79030.05,-3832.72]
+_camera camSetPos [5048.58,3792.15,1.62]
+_camera camSetFOV 0.709
+_camera camCommit 0
+@camCommitted _camera
+
+rus say "x09av01"
+rus setmimic "smile"
+;=== 13:14:33
+_camera camSetTarget [94994.12,-39726.63,-3832.31]
+_camera camSetPos [5048.24,3791.81,1.80]
+_camera camSetFOV 0.709
+_camera camCommit 5
+~3
+3 fademusic 0.3
+jede=true
+@camCommitted _camera
+
+;NAVAZUJI NAVAZUJI
+
+
+;*PRIJIZDI UAZ**********************
+
+
+rus dowatch of
+_camera camSetTarget UAZ
+_camera camSetPos [5048.74,3874.63,1.58]
+_camera camSetFOV 0.100
+_camera camCommit 0
+~2
+rus move [5052.534,3881.634,0.012]
+~1.5
+@camCommitted _camera
+
+;=== 13:33:44
+_camera camSetTarget [-86017.14,-33800.80,-16536.80]
+_camera camSetPos [5087.26,3888.81,1.11]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+@camCommitted _camera
+
+_camera camSetTarget UAZ
+_camera camSetPos [5048.74,3874.63,1.58]
+_camera camSetFOV 0.292
+_camera camCommit 0
+~3
+@dojel
+@camCommitted _camera
+_camera camSetTarget [71896.50,-70023.54,-8089.72]
+_camera camSetPos [5051.55,3891.17,0.81]
+_camera camSetFOV 0.500
+_camera camCommit 0
+@camCommitted _camera
+~2
+;DOJEL*******************************
+rus dowatch of
+;OF VYSTOUPIL
+~1
+of move  [5056.579,3883.406,-0.006]
+~5
+
+;OF JE VENKU
+of dowatch rus
+rus dowatch of
+;=== 20:43:54
+_camera camSetTarget [-25727.61,-88632.54,-21989.80]
+_camera camSetPos [5063.58,3889.75,1.85]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+4.5 fadeMusic 0.0
+
+~3.5
+of SetPos [5056.579,3883.406,-0.006]
+of dowatch rus
+rus dowatch of
+
+;BEZI RUS A CUMI NA VELITELE
+_camera camSetTarget rus
+_camera camSetPos [5053.60,3889.19,0.82]
+_camera camSetFOV 0.104
+_camera camCommit 0
+@camCommitted _camera
+bmpjede=true
+
+~1
+rus say "x09av02"
+playmusic "track10" 
+0 fademusic 0.07
+~2
+
+_camera camSetTarget [103874.83,12590.31,12747.98]
+_camera camSetPos [5050.98,3882.32,1.07]
+_camera camSetFOV 0.400
+_camera camCommit 2.5
+@camCommitted _camera
+;BEZI RUS A CUMI NA VELITELE
+
+of SetPos [5056.579,3883.406,-0.006]
+rus SetPos [5052.534,3881.634,0.012]
+
+;ZABER NA OF
+_camera camSetTarget of
+_camera camSetPos [5053.67,3881.62,1.37]
+_camera camSetFOV 0.272
+_camera camCommit 0.3
+@camCommitted _camera
+of say "x09av03"
+~7
+rus say "x09av04"
+~2
+;ZABER NA RUS
+_camera camSetTarget [-73493.38,62472.57,20108.00]
+_camera camSetPos [5054.29,3880.54,0.91]
+_camera camSetFOV 0.482
+_camera camCommit 0
+@camCommitted _camera
+
+~2
+
+;Prijizdi BMP
+_camera camSetTarget BMP
+_camera camSetPos [5053.83,3894.10,0.93]
+_camera camSetFOV 0.545
+_camera camCommit 0
+~4
+
+
+@bmpdojelo
+bmp action ["engine off"]
+bmp stop true
+~2
+@camCommitted _camera
+
+;prichazi specOPS*************
+sab1 move [5058.493,3886.774,0]
+sab1 dowatch of
+sab2 move [5060.135,3885.977,0]
+sab2 dowatch of
+sab3 move  [5055.417,3887.611,0]
+sab3 dowatch of
+snip move [5059.976,3889.246,0]
+snip dowatch of
+;prichazi specOPS*************
+BMP stop true
+
+
+;=== 17:17:29
+_camera camSetTarget [47943.15,93542.27,11191.64]
+_camera camSetPos [5055.87,3879.48,2.52]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+of dowatch sab1
+~7
+unassignvehicle sab1
+unassignvehicle sab2
+
+;nastavujeme specOPS*************
+sab1 SetPos [5058.493,3886.774,0]
+sab1 dowatch of
+sab2 SetPos [5060.135,3885.977,0]
+sab2 dowatch of
+sab3 SetPos [5055.417,3887.611,0]
+sab3 dowatch of
+snip SetPos [5059.976,3889.246,0]
+snip dowatch of
+;nastavujeme specOPS*************
+
+;velitel VITE CO MATE DELAT
+_camera camSetTarget [-73999.06,-56598.52,-9406.25]
+_camera camSetPos [5057.43,3884.57,1.13]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+;nastavujeme specOPS*************
+sab1 SetPos [5058.493,3886.774,0]
+sab1 dowatch of
+sab2 SetPos [5060.135,3885.977,0]
+sab2 dowatch of
+sab3 SetPos [5055.417,3887.611,0]
+sab3 dowatch of
+snip SetPos [5059.976,3889.246,0]
+snip dowatch of
+;nastavujeme specOPS*************
+~1
+
+
+;sab3
+_camera camSetTarget sab3
+_camera camSetRelPos [-1.22,3.34,1.27]
+_camera camSetFOV 0.277
+_camera camCommit 0
+@camCommitted _camera
+sab3 say "x09av05"
+
+;sab3
+_camera camSetTarget sab3
+_camera camSetPos [5052.48,3885.29,1.38]
+_camera camSetFOV 0.277
+_camera camCommit 7
+@camCommitted _camera
+
+
+a10 SetPos [4447.35,3186.15,-0.00]
+
+;nastavujeme specOPS*************
+sab1 SetPos [5058.493,3886.774,0]
+sab1 dowatch of
+sab2 SetPos [5060.135,3885.977,0]
+sab2 dowatch of
+sab3 SetPos [5055.417,3887.611,0]
+sab3 dowatch of
+snip SetPos [5059.976,3889.246,0]
+snip dowatch of
+;nastavujeme specOPS*************
+
+;velitel VITE CO MATE DELAT
+_camera camSetTarget [-73999.06,-56598.52,-9406.25]
+_camera camSetPos [5057.43,3884.57,1.13]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+of say "x09av06"
+7 fadeMusic 0.0
+~7
+
+;SAB1
+_camera camSetTarget sab1
+_camera camSetPos [5056.44,3884.65,1.03]
+_camera camSetFOV 0.326
+_camera camCommit 0
+@camCommitted _camera
+sab1 say "x09av07"
+
+0 fadeMusic 0.1
+playMusic "7thIamGonaFly"
+
+~2
+
+
+sab1 move [4989.845,3943.476,-0.029]
+snip move [5038.618,3895.345,-0.020]
+
+
+;AKCE SABOTEURU!!!!!!!!!!!!!!!! ZACINA
+
+_camera camSetTarget [-88512.81,-27221.59,-16384.04]
+_camera camSetPos [5069.73,3889.86,1.64]
+_camera camSetFOV 0.277
+_camera camCommit 0
+sab1 say "x09av08"
+@camCommitted _camera
+_camera camSetTarget sab1
+_camera camSetPos [5069.73,3889.86,5.89]
+_camera camSetFOV 0.277
+_camera camCommit 10
+~1
+sab2 move [4985.822,3938.128,-0.030]
+~1
+sab3 move [4979.698,3932.041,-0.028]
+~7
+snip setPos [5038.618,3895.345,0]
+snip setunitpos "down"
+snip setcombatmode "blue"
+snip setdir 275
+snip stop true
+sab1 setunitpos "up"
+sab2 setunitpos "up"
+
+~1
+
+@camCommitted _camera
+;zabihaji za kopec
+aP setPos [4774.732,4018.569,0.0]
+snip stop false
+snip dowatch aP
+aP move [4764.478,3959.475,0.0]
+;=== 17:41:43
+_camera camSetTarget [94547.10,-23838.04,35054.38]
+_camera camSetPos [5027.60,3898.18,0.13]
+_camera camSetFOV 0.300
+_camera camCommit 0
+@camCommitted _camera
+~3
+snip setPos [5038.618,3895.345,0]
+snip setdir 275
+snip stop true
+
+;=== 17:42:11
+_camera camSetTarget [-90578.61,18013.57,-25470.12]
+_camera camSetPos [5040.48,3895.38,0.16]
+_camera camSetFOV 0.292
+_camera camCommit 0
+@camCommitted _camera
+~1
+snip stop false
+snip dowatch aP
+~2
+snip say "x09av09"
+
+;=== 12:29:42
+_camera camSetTarget aP
+_camera camSetPos [5034.19,3898.18,0.47]
+_camera camSetFOV 0.020
+_camera camCommit 0
+@camCommitted _camera
+;snip say "x09av09"
+~4
+aP setcombatmode "blue"
+aP setunitpos "down"
+
+~2
+~1
+titleCut ["","BLACK OUT",1.5]
+sab1 move [4715.354,3894.152,0.10]
+sab2 move [4718.315,3889.565,0.10]
+aP move [4709.570,3882.927,0.10]
+~1.5
+
+
+
+
+;NAVAZOVANI NA POZICI 2!!!!!!!!!!!!!!!!!!!!11
+
+
+
+
+
+;POZICE****ZAJIMAME AMIKA
+aP SetPos [4709.570,3882.927,0.0]
+[aP] allowgetin false
+[sab1] allowgetin false
+[sab2] allowgetin false
+aP setunitpos "down"
+aP dowatch jeep
+aP move [4697.164,3871.123,0.0]
+aP setcombatmode "blue"
+aP setbehaviour "careless"
+sab1 setcombatmode "blue"
+sab1 setPos [4715.354,3894.152,0.0]
+sab1 dowatch aP
+sab1 setunitpos "up"
+sab2 setcombatmode "blue"
+sab2 setPos [4718.315,3889.565,0.0]
+sab2 setDir -128
+sab2 setbehaviour "combat"
+sab2 setunitpos "up"
+sab2 dowatch aP
+sab1 setdir 230
+sab1 stop true
+sab2 setdir 250
+sab2 stop true
+;POZICE****ZAJIMAME AMIKA
+~1.5
+titleCut ["","BLACK IN",2]
+
+aP setdir 255
+;=== 18:00:43
+_camera camSetTarget [-68602.64,-63592.14,-8274.58]
+_camera camSetPos [4718.36,3890.89,0.92]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~1
+
+~3
+
+
+
+;=== 21:12:14
+_camera camSetTarget sab1
+_camera camSetPos [4714.05,3897.12,0.70]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;sab1 say "x09av11"
+;=== 21:12:39
+_camera camSetTarget sab1
+_camera camSetPos [4710.95,3894.91,1.09]
+_camera camSetFOV 0.700
+_camera camCommit 2
+@camCommitted _camera
+sab1 stop false
+sab1 move [4699.402,3878.945,-0.020]
+aP dowatch jeep
+
+;=== 18:10:50
+_camera camSetTarget sab1
+_camera camSetPos [4697.87,3889.76,5.33]
+_camera camSetFOV 0.345
+_camera camCommit 0
+@camCommitted _camera
+~4
+;NASTAVOVANI POZICI**************
+of SetPos [5053.070,3883.877,-0.008]
+of dowatch aP
+rus setPos [5052.336,3886.790,-0.008]
+rus setDir -101
+;NASTAVOVANI POZICI-----------------
+
+
+;ZAJIMA HO!!!!!!
+sab1 setbehaviour "combat"
+sab1 setunitpos "up"
+sab1 SetPos [4699.402,3878.945,-0.020]
+sab1 dowatch aP
+aP setdir 230
+aP stop true
+_camera camSetTarget [-29114.49,-88819.80,-16121.65]
+_camera camSetPos [4701.01,3881.56,0.78]
+_camera camSetFOV 0.539
+_camera camCommit 0
+@camCommitted _camera
+sab1 say "x09av10"
+~1.5
+
+;=== 21:35:36
+;=== 14:48:14
+_camera camSetTarget [21946.61,99902.38,21995.07]
+_camera camSetPos [4697.92,3867.63,0.27]
+_camera camSetFOV 0.360
+_camera camCommit 0
+@camCommitted _camera
+aP switchmove "FXStandSurDown"
+
+8 fademusic 0.0
+~5
+
+;ZAJIMA HO!!!!!!
+
+
+
+;NAVAZOVANI NA POZICI 3***************
+
+;VELITEL GOTCHA**************
+;=== 21:00:20
+;_camera camSetTarget [25818.26,100256.72,16919.30]
+;_camera camSetPos [5051.03,3880.24,1.14]
+;_camera camSetFOV 0.375
+;_camera camCommit 0
+;@camCommitted _camera
+;~3
+;=== 21:00:54
+;_camera camSetTarget [95336.78,-35707.23,16919.30]
+;_camera camSetPos [5048.34,3886.98,0.84]
+;_camera camSetFOV 0.375
+;_camera camCommit 0
+;@camCommitted _camera
+;~3
+
+;_camera camSetTarget [-83137.48,-32320.81,-30012.67]
+;_camera camSetPos [5053.46,3884.89,1.35]
+;_camera camSetFOV 0.700
+;_camera camCommit 0
+;@camCommitted _camera
+
+;=== 20:59:38
+_camera camSetTarget [50585.36,-85147.20,4.53]
+_camera camSetPos [5052.24,3884.85,1.49]
+_camera camSetFOV 0.626
+_camera camCommit 0
+@camCommitted _camera
+of say "x09av11"
+~2
+;VELITEL GOTCHA----------------------
+titleCut ["","BLACK OUT",2]
+~3
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+

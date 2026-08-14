@@ -1,0 +1,1010 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+	
+	setacctime 1.0
+	tel1 SetPos [668.94,12086.16,0.70]
+
+	;goto "ninjas"
+	0 fadeMusic 0.0
+	
+	60 fadeMusic 0.05
+	playMusic "track7"
+	ruch=true
+	
+	
+	ian=ian_3
+	ian_3  setidentity "james"
+	ian setidentity "james"
+	titleCut ["","BLACK IN",2]
+	ian_3 disableAi "autotarget"
+	ian_3 disableAi "target"
+	ian_3 stop true
+	ian stop true
+	ian_3 setmimic "normal"
+	blake setmimic "normal"
+	
+	;zaber na hangar=-=-=-=-==-=-=-=-=-=-=-==-=-=
+	_camera camSetTarget [-45412.03,-75023.66,16862.02]
+	_camera camSetPos [670.50,12114.69,0.83]
+	_camera camSetFOV 0.627
+	_camera camCommit 0
+	@camCommitted _camera
+	~4
+	ring=true
+	~3
+	;zaber na hangar=-=-=-=-==-=-=-=-=-=-=-==-=-=
+
+	
+	
+	;zaber v hangaru=-=-=-=-=-=-==-=-=-=-=---=-=--=
+	_camera camSetTarget [49516.58,-75034.11,-4720.36]
+	_camera camSetPos [654.68,12085.88,7.38]
+	_camera camSetFOV 0.793
+	_camera camCommit 0
+	@camCommitted _camera
+	_camera camSetTarget [99129.77,12989.65,-17334.81]
+	_camera camSetPos [654.68,12085.88,5.13]
+	_camera camSetFOV 0.793
+	_camera camCommit 8
+	~3
+	go=true
+	@camCommitted _camera
+	;zaber v hangaru=-=-=-=-=-=-==-=-=-=-=---=-=--=
+	
+	ring=false
+	ian_3  setPos [669.930,12086.157,0.001]
+	ian_3  setDir -85
+	ian_3 switchmove "FXstandtotel"
+	ian_3 playmove "FXstandtotelHand"
+	man2 SetPos [697.53,12125.53,0.84]
+	man2 stop true
+	
+	;IAN (zaber skrz flasky)
+	_camera camSetTarget [74455.30,-55393.90,1384.14]
+	_camera camSetPos [667.99,12086.66,1.08]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	~0.5
+	ian say "x01v99"
+	tel1 SetPos [697.53,12125.53,0.84]
+	tel2 SetPos [668.94,12086.16,0.70]
+	~1
+	ian say "x01v10"
+	~3
+	ian say "x01v11"
+	~10
+	
+	;IAN (zaber ze zadu)
+	_camera camSetTarget [-95978.72,-3032.24,-20714.60]
+	_camera camSetPos [670.75,12085.45,1.24]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ian_3 switchmove "FXStandTelLoop"
+	ian say "x01v12"
+	_camera camSetTarget [3185.86,109876.69,-20715.10]
+	_camera camSetPos [669.38,12084.43,1.23]
+	_camera camSetFOV 0.700
+	_camera camCommit 7
+	@camCommitted _camera
+
+	;IAN (zaber skrz flasky)
+	_camera camSetTarget [74455.30,-55393.90,1384.14]
+	_camera camSetPos [667.99,12086.66,1.08]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ian say "x01v13"
+	~9
+	
+	;IAN (ze zadu do strany)
+	;=== 15:52:20
+	_camera camSetTarget [-41185.11,102176.44,-11443.65]
+	_camera camSetPos [669.84,12084.66,1.23]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+
+		_camera camSetTarget [94006.82,47379.23,6528.10]
+		_camera camSetPos [668.33,12084.81,1.02]
+		_camera camSetFOV 0.700
+		_camera camCommit 16
+		ian say "x01v17"
+		ian_3 setmimic "angry"
+		~7
+		ian say "x01v18"
+		~8
+		@camCommitted _camera
+
+	
+	;IAN (zaber skrz kytku)
+	;=== 15:55:06
+	_camera camSetTarget [39586.82,-73035.77,-35176.21]
+	_camera camSetPos [668.68,12086.89,1.88]
+	_camera camSetFOV 1.058
+	_camera camCommit 0
+	@camCommitted _camera
+		_camera camSetTarget [58183.85,-69210.33,-9074.35]
+		_camera camSetPos [668.75,12086.21,1.31]
+		_camera camSetFOV 0.958
+		_camera camCommit 10
+		ian say "x01v19"
+		~6
+		
+		
+		ian say "x01v20"
+		~4
+		@camCommitted _camera
+
+	
+	
+	;IAN details
+	;=== 15:59:47
+	_camera camSetTarget [77081.31,-52024.83,7163.88]
+	_camera camSetPos [668.54,12085.98,0.84]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ian say "x01v21"
+	~2
+	~1
+	3 fadeMusic 0.2
+	~1
+	~1
+	#ninjas
+	goo2=true
+	titleCut ["","BLACK OUT",1]
+	~2
+	@camCommitted _camera
+
+	
+
+;DLASI CUTSCENA -*-*-*-*-*-* DLASI CUTSCENA --*-*-*-*-*-*-*DLASI CUTSCENA -*-*-*-*-*DLASI CUTSCENA
+	
+		#cut
+		ian=ian_2
+		titleCut ["","BLACK IN",3]
+		skiptime +10
+		
+		truck move [10077.97,4030.34,0.00]
+		
+		of setpos  [10085.53,4013.95,1.38]
+		of commandWatch [10046.09,4018.74,-0.00]
+		vojakf SetPos [10012.77,4031.06,3.94]
+		vojakf commandWatch [109924.59,-1581.12,29.05]
+		
+		
+		;zaber na tank skrz truck
+		_camera camSetTarget [97286.91,52451.98,42.18]
+		_camera camSetPos [9787.99,4037.74,2.70]
+		_camera camSetFOV 0.700
+		_camera camCommit 0
+		@camCommitted _camera
+		
+		
+		;truck odjizidi
+		_camera camSetTarget [97286.91,52451.98,42.18]
+		_camera camSetPos [9787.99,4037.74,2.70]
+		_camera camSetFOV 0.500
+		_camera camCommit 14
+		@camCommitted _camera
+		
+		
+		;skrz bunkr jede truck
+		_camera camSetTarget truck
+		_camera camSetPos [10007.78,4029.75,3.29]
+		_camera camSetFOV 0.400
+		_camera camCommit 0
+		@camCommitted _camera
+		
+		;skrz bunkr jede truck
+		_camera camSetTarget truck
+		_camera camSetPos [10010.90,4031.05,4.08]
+		_camera camSetFOV 0.700
+		_camera camCommit 8
+		@camCommitted _camera
+		
+		
+		;truck zakladna
+		_camera camSetTarget truck
+		_camera camSetPos [10107.92,3997.74,10.31]
+		_camera camSetFOV 0.292
+		_camera camCommit 0
+		@camCommitted _camera
+		
+		;truck skrz vrtulnik
+		_camera camSetTarget [-32957.37,94232.33,35.47]
+		_camera camSetPos [10097.08,3975.38,1.64]
+		_camera camSetFOV 0.600
+		_camera camCommit 7
+		@camCommitted _camera
+		
+		
+		[ian] allowgetin false
+		ian move [10081.62,4014.85,1.03]
+		ian dowatch [109924.59,-1581.12,29.05]
+		of setpos [10085.53,4013.95,0]
+		 of setbehaviour "safe"
+		 of commandWatch [10046.09,4018.74,-0.00]
+		
+		;vystupuji
+		_camera camSetTarget truck
+		_camera camSetPos [10082.61,4016.04,1.50]
+		_camera camSetFOV 0.354
+		_camera camCommit 0
+		@camCommitted _camera
+		~3
+		[cage] allowgetin false
+		cage move [10081.55,4013.66,1.03]
+		cage dowatch [109924.59,-1581.12,29.05]
+		~3
+		[conery] allowgetin false
+		conery move [10081.45,4011.90,1.03]
+		conery dowatch [109924.59,-1581.12,29.05]
+			
+		 
+		;=== 13:24:53
+		;vystoupili
+		;_camera camSetTarget [92170.59,-52919.20,2917.79]
+		;_camera camSetPos [10030.76,4043.06,0.05]
+		;_camera camSetFOV 0.150
+		;_camera camCommit 7
+		;@camCommitted _camera
+		
+		
+		
+		jde=true
+		
+		
+		;bezi
+		;=== 15:50:43
+		_camera camSetTarget [-58174.18,75080.75,-16724.37]
+		_camera camSetPos [10116.30,3979.25,9.58]
+		_camera camSetFOV 0.247
+		_camera camCommit 0
+		@camCommitted _camera
+		
+		
+		;saboteri bezi
+		;=== 15:50:54
+		_camera camSetTarget [-59202.60,75810.80,-5893.80]
+		_camera camSetPos [10116.97,3979.89,3.95]
+		_camera camSetFOV 0.118
+		_camera camCommit 7
+		@camCommitted _camera
+		
+		ian setbehaviour "safe"
+		conery setbehaviour "safe"
+		cage setbehaviour "safe"
+		
+		unassignvehicle ian
+		unassignvehicle cage
+		unassignvehicle conery
+		ian setpos [10081.62,4014.85,0]
+		ian switchMove "effectStand"
+		ian commandWatch [109924.59,-1581.12,29.05]
+		ian setdir 85
+		conery setpos [10081.45,4011.90,0]
+		conery commandWatch [109924.59,-1581.12,29.05]
+		conery switchMove "effectStand"
+		conery setdir 85
+		cage switchMove "effectStand"
+		cage setpos [10081.55,4013.66,0]
+		cage setdir 85
+		truck move [9708.78,3945.22,0.00]
+		
+		cage commandWatch [109924.59,-1581.12,29.05]
+		
+		conery stop true
+		cage stop true
+		ian stop true
+		
+		;prisly
+		;_camera camSetTarget [-81636.02,-34222.40,-11146.89]
+		;_camera camSetPos [10086.18,4015.28,1.69]
+		;_camera camSetFOV 0.700
+		;_camera camCommit 0
+		;@camCommitted _camera
+		;~5
+		 
+		ian assignascargo uh
+		conery assignascargo uh
+		cage assignascargo uh
+		of assignascargo uh
+		
+		
+		;kecaj-detail na roberta
+		;=== 15:49:45
+		_camera camSetTarget [-59149.95,75629.30,-8772.43]
+		_camera camSetPos [10086.28,4013.19,1.44]
+		_camera camSetFOV 0.700
+		_camera camCommit 0
+		@camCommitted _camera
+		of say "x02v01"
+		_camera camSetTarget [-89150.87,12638.40,-8772.42]
+		_camera camSetPos [10086.89,4013.29,1.43]
+		_camera camSetFOV 0.700
+		_camera camCommit 5
+		~4
+		of say "x02v02"
+		@camCommitted _camera
+		;konec - kecaj-detail na roberta
+		
+		;=== 16:46:42
+		_camera camSetTarget [101773.16,-34429.92,10768.42]
+		_camera camSetPos [10084.93,4014.07,1.55]
+		_camera camSetFOV 0.700
+		_camera camCommit 0
+		@camCommitted _camera
+		~2
+		;=== 16:47:16
+		_camera camSetTarget [-81453.05,44267.38,480.57]
+		_camera camSetPos [10086.05,4013.40,1.53]
+		_camera camSetFOV 0.354
+		_camera camCommit 0
+		@camCommitted _camera
+		~2
+		
+		@uhland
+		@camCommitted _camera
+		conery stop false
+		cage stop false
+		ian stop false
+		
+		
+		pojd=true
+		nastup=true
+		cage move getmarkerpos "1nastup"
+		conery move getmarkerpos "2nastup"
+		of move getmarkerpos "3nastup"
+		ian move getmarkerpos "4nastup"
+		
+		
+		;keca2
+		_camera camSetTarget [-71187.99,-53973.78,-5583.18]
+		_camera camSetPos [10087.22,4016.23,1.42]
+		_camera camSetFOV 0.700
+		_camera camCommit 0
+		@camCommitted _camera
+		~2
+		
+		;nastupuji
+		;=== 16:04:36
+		_camera camSetTarget [40742.34,-91154.95,29.34]
+		_camera camSetPos [10076.40,4027.00,0.74]
+		_camera camSetFOV 0.364
+		_camera camCommit 0
+		@camCommitted _camera
+		~2
+		[ian] allowgetin true
+		[cage] allowgetin true
+		[conery] allowgetin true
+		~2
+		
+		;nastoupili
+		_camera camSetTarget uh
+		_camera camSetPos [10059.95,3996.60,2.83]
+		_camera camSetFOV 0.278
+		_camera camCommit 0
+		~1
+		@uuh
+		[of, cage, conery, ian] ordergetin true
+		jdoudo=true
+		@ian in uh
+		@cage in uh
+		@conery in uh
+		@of in uh
+		@camCommitted _camera
+		heli1 move [10106.56,4002.31,59.45]
+		heli2 move [10064.20,4000.51,60.16]
+		
+		
+		
+		;efektni prulet heli2
+		_camera camSetTarget heli2
+		_camera camSetRelPos [3.87,7.23,2.50]
+		_camera camSetFOV 0.741
+		_camera camCommit 0
+		@camCommitted _camera
+		~6
+		
+		;efektni zaber na cobry
+		_camera camSetTarget heli1
+		_camera camSetPos [10120.06,4002.91,51.46]
+		_camera camSetFOV 0.148
+		_camera camCommit 0
+		@camCommitted _camera
+		
+		
+		;efektni zaber konci
+		_camera camSetTarget heli1
+		_camera camSetPos [10110.95,4004.53,50.46]
+		_camera camSetFOV 0.248
+		_camera camCommit 5
+		@camCommitted _camera
+		
+		;zaber z heli1 na uh
+		_camera camSetTarget heli2
+		_camera camSetPos [10053.57,3999.65,53.56]
+		_camera camSetFOV 0.627
+		_camera camCommit 0
+		@camCommitted _camera
+		heli1 move [10942.65,4528.80,12.75]
+		heli2 move [10975.52,4495.52,12.69]
+		uh move [11010.34,4445.01,12.54]
+		
+		
+		;uh
+		_camera camSetTarget uh
+		_camera camSetPos [10053.57,3999.65,53.56]
+		_camera camSetFOV 0.627
+		_camera camCommit 20
+		~4
+		uh move [11010.34,4445.01,12.54]
+		
+		~9
+		5 fadeSound 0.0
+		~2
+		3 fadeMusic 0.0
+		~1
+		titleCut ["","BLACK OUT",2]
+		~2
+		@camCommitted _camera
+		;=== 13:13:26
+		uh SetPos [-73.23,38.89,6.06]
+		heli1 SetPos [-73.23,32.89,6.06]
+		heli2 SetPos [-73.23,45.89,6.06]
+		~1
+		uh setdammage 1
+		heli1 setdammage 1
+		heli2 setdammage 1
+		
+		
+
+;DLASI CUTSCENA -*-*-*-*-*-* DLASI CUTSCENA --*-*-*-*-*-*-*DLASI CUTSCENA -*-*-*-*-*DLASI CUTSCENA
+#grounds
+3 fadeSound 1.0
+
+of2 setmimic "normal"
+
+titleCut ["","BLACK IN",3]
+goo=true
+;zaber na nebe
+_camera camSetTarget [-15704.42,-80801.56,44483.58]
+_camera camSetPos [11443.90,4551.77,12.39]
+_camera camSetFOV 0.309
+_camera camCommit 0
+@camCommitted _camera
+
+;konec zaberu - 5element zaber
+_camera camSetTarget [85123.34,-45888.48,45034.73]
+_camera camSetPos [11443.90,4551.77,12.39]
+_camera camSetFOV 0.309
+_camera camCommit 12
+@camCommitted _camera
+
+;konec zaberu 5 element
+_camera camSetTarget [93950.48,-51931.39,-1500.50]
+_camera camSetPos [11443.90,4551.77,12.39]
+_camera camSetFOV 0.309
+_camera camCommit 0.5
+@camCommitted _camera
+~5
+
+;nahled na zakladnu
+_camera camSetTarget [11628.99,-95317.68,-6663.97]
+_camera camSetPos [11564.50,4452.70,1.68]
+_camera camSetFOV 0.584
+_camera camCommit 0
+@camCommitted _camera
+
+;**nahled na zakladnu
+_camera camSetTarget [110140.96,4656.90,-16787.14]
+_camera camSetPos [11564.17,4463.11,8.87]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 13:39:30
+_camera camSetTarget [71014.41,-74169.52,-16786.82]
+_camera camSetPos [11564.17,4463.11,8.87]
+_camera camSetFOV 0.700
+_camera camCommit 6
+@camCommitted _camera
+
+;=== 13:42:23
+_camera camSetTarget [-82556.03,37363.23,5823.87]
+_camera camSetPos [11688.30,4435.10,1.29]
+_camera camSetFOV 0.730
+_camera camCommit 0
+@camCommitted _camera
+~7
+alarm=true
+
+~1
+vratny dowatch h3
+
+~3
+~3
+8 fadeMusic 0.3
+playMusic "track1"
+
+;PRESUN VOJAKU*-*-*-*-*-*-*-*-*-*-* 
+	v1 SetPos [11606.65,4422.08,0]
+	v1_1 SetPos [11606.65,4424.08,0]
+	v1_2 SetPos [11607.65,4424.08,0]
+	v1_3 SetPos [11608,4424.08,0]
+	v1_4 SetPos [11609.65,4424.08,0]
+	v1_5 SetPos [11606,4421.08,0]
+	v1_6 SetPos [11606.65,4420.08,0]
+	v1_1 SetPos [11621.82,4429.55,0]
+	v1_1_1 SetPos [11621.82,4429.55,0]
+	v1_2_1 SetPos [11620.82,4429.55,0]
+	v1_3_1 SetPos [11621.82,4428.55,0]
+	v1_4_1 SetPos [11621.82,4430.55,0]
+	v1_5_1 SetPos [11622.82,4429.55,0]
+	v1_6_1 SetPos [11620.82,4429.55,0]
+;PRESUN VOJAKU********************
+
+
+;vybeh-*-*-*-*-*-*-*-*-*-*-*-
+	vybeh1=true
+	v1 move [11580,4439.83,0]
+	v1_1 move [11582,4440.35,0]
+	v1_2 move [11584.53,4440.88,0]
+	v1_3 move [11586.17,4441.41,0]
+	v1_4 move [11588.24,4442.03,0]
+	v1_5 move [11590.24,4442.03,0]
+	v1_6 move [11592.24,4442.03,0]
+	
+	v1_1 move [11600,4439.83,0]
+	v1_1_1 move [11602,4440.35,0]
+	v1_2_1 move [11604.53,4440.88,0]
+	v1_3_1 move [11606.17,4441.41,0]
+	v1_4_1 move [11608.24,4442.03,0]
+	v1_5_1 move [11610.24,4442.03,0]
+	v1_6_1 move [11611.24,4442.03,0]
+;vybeh***********************
+
+;=== 14:38:46
+_camera camSetTarget [76654.78,80148.29,-5651.33]
+_camera camSetPos [11587.78,4424.13,2.72]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~12
+of2 setdir 02
+of2 SetPos [11605.20,4447.20,0]
+
+;nastavovani pozici ****************************
+v1 setdir 0
+v1 SetPos [11580,4439.83,0]
+v1_1 setdir 0
+v1_1 SetPos [11582,4439.83,0]
+v1_2 setdir 0
+v1_2 SetPos [11584,4439.83,0]
+v1_3 setdir 0
+v1_3 SetPos [11586,4439.83,0]
+v1_4 setdir 0
+v1_4 SetPos [11588,4439.83,0]
+v1_5 setdir 0
+v1_5 SetPos [11590,4439.83,0]
+v1_6 setdir 0
+v1_6 SetPos [11592,4439.83,0]
+
+v1_1 setdir 0
+v1_1 SetPos [11600,4439.83,0]
+v1_1_1 setdir 0
+v1_1_1 SetPos [11602,4439.83,0]
+v1_2_1 setdir 0
+v1_2_1 SetPos [11604,4439.83,0]
+v1_3_1 setdir 0
+v1_3_1 SetPos [11606,4439.83,0]
+v1_4_1 setdir 0
+v1_4_1 SetPos [11608,4439.83,0]
+v1_5_1 setdir 0
+v1_5_1 SetPos [11610,4439.83,0]
+v1_6_1 setdir 0
+v1_6_1 SetPos [11612,4439.83,0]
+;******nastavovani pozici ***********************
+
+v1 stop true
+v1_1 stop true
+v1_2 stop true
+v1_3 stop true
+v1_4 stop true
+v1_5 stop true
+v1_6 stop true
+
+v1_1 stop true
+v1_1_1 stop true
+v1_2_1 stop true
+v1_3_1 stop true
+v1_4_1 stop true
+v1_5_1 stop true
+;v1_6_1 stop true
+
+;=== 15:03:52
+_camera camSetTarget [18586.66,99872.38,-28926.28]
+_camera camSetPos [11597.63,4411.01,12.05]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 15:03:52
+_camera camSetTarget [18586.66,99872.38,-28926.28]
+_camera camSetPos [11597.63,4411.01,12.05]
+_camera camSetFOV 0.500
+_camera camCommit 5
+@camCommitted _camera
+
+;nastavovani pozici ****************************
+v1 setdir 0
+v1 SetPos [11580,4439.83,0]
+v1_1 setdir 0
+v1_1 SetPos [11582,4439.83,0]
+v1_2 setdir 0
+v1_2 SetPos [11584,4439.83,0]
+v1_3 setdir 0
+v1_3 SetPos [11586,4439.83,0]
+v1_4 setdir 0
+v1_4 SetPos [11588,4439.83,0]
+v1_5 setdir 0
+v1_5 SetPos [11590,4439.83,0]
+v1_6 setdir 0
+v1_6 SetPos [11592,4439.83,0]
+
+;1_1_1 setdir 0
+;v1_1_1 playmove "EffectStandStill"
+;v1_1_1 SetPos [11600,4439.83,1]
+v1_1_1 setdir 0
+v1_1_1 SetPos [11602,4439.83,0]
+v1_2_1 setdir 0
+v1_2_1 SetPos [11604,4439.83,0]
+v1_3_1 setdir 0
+v1_3_1 SetPos [11606,4439.83,0]
+v1_4_1 setdir 0
+v1_4_1 SetPos [11608,4439.83,0]
+v1_5_1 setdir 0
+v1_5_1 SetPos [11610,4439.83,0]
+v1_6_1 setdir 0
+v1_6_1 SetPos [11612,4439.83,0]
+
+v1 switchmove "FXStandAtt"
+v1_1 switchmove "FXStandAtt"
+v1_2 switchmove "FXStandAtt"
+v1_3 switchmove "FXStandAtt"
+v1_4 switchmove "FXStandAtt"
+v1_5 switchmove "FXStandAtt"
+v1_6 switchmove "FXStandAtt"
+
+v1_1_1 switchmove "FXStandAtt"
+v1_2_1 switchmove "FXStandAtt"
+v1_3_1 switchmove "FXStandAtt"
+v1_4_1 switchmove "FXStandAtt"
+v1_5_1 switchmove "FXStandAtt"
+;v1_6_1 switchmove "FXStandAtt"
+
+
+v1 stop true
+v1_1 stop true
+v1_2 stop true
+v1_3 stop true
+v1_4 stop true
+v1_5 stop true
+v1_6 stop true
+
+v1_1 stop true
+v1_1_1 stop true
+v1_2_1 stop true
+v1_3_1 stop true
+v1_4_1 stop true
+v1_5_1 stop true
+;v1_6_1 stop true
+
+
+v1 setmimic "normal"
+v1_1 setmimic "normal"
+v1_2 setmimic "normal"
+v1_3 setmimic "normal"
+v1_4 setmimic "normal"
+v1_5 setmimic "normal"
+v1_6 setmimic "normal"
+
+v1_1_1 setmimic "normal"
+v1_2_1 setmimic "normal"
+v1_3_1 setmimic "normal"
+v1_4_1 setmimic "normal"
+v1_5_1 setmimic "normal"
+v1_6_1 setmimic "normal"
+;******nastavovani pozici ***********************
+
+
+
+
+;******vojak vystupuje z rady******
+v1_6_1 move [11605.39,4445.97,0]
+
+;*******sledujeme
+_camera camSetTarget [-52048.32,81542.64,-1384.29]
+_camera camSetPos [11613.13,4437.13,1.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+alarm=false
+~4
+;presun---
+;v1_6_1 setpos [11605.39,4445.97,1.62]
+v1_6_1 dowatch v1_3_1
+
+;******strih ze predu
+_camera camSetTarget [-40177.30,-81086.05,-1384.31]
+_camera camSetPos [11608.50,4449.14,1.66]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;**dojde a otoci se.
+4 fadeMusic 0.1
+
+~4
+
+v1_6_1 say "X03v01"
+~6
+
+;SALUTUJEME*-*-*-*-*-
+_camera camSetTarget [-37068.52,91796.88,16.31]
+_camera camSetPos [11607.57,4443.34,1.52]
+_camera camSetFOV 0.401
+_camera camCommit 0
+@camCommitted _camera
+v1_6_1 dowatch of2
+of2 dowatch v1_6_1 
+~2
+;sergant salutuje
+v1_6_1 playmove "EffectStandSalute"
+~1
+of2 playmove "EffectStandSalute"
+~2
+of2 playmove "EffectStand"
+;dosalutoval
+
+
+
+;sergant odchazi
+v1_6_1 move [11612,4439.83,1]
+v1_6_1 setdir 0
+~5
+
+;zaber jak odhazi a radi se do rady
+_camera camSetTarget [-77135.41,-41260.21,-5580.02]
+_camera camSetPos [11629.87,4449.81,2.39]
+_camera camSetFOV 0.300
+_camera camCommit 0
+@camCommitted _camera
+of2 move [11606.13,4443.33,1.10]
+~5
+
+
+;02bl*-*-*-*-*-*-*-*-*-*-*-*-*
+
+;rotujeme
+ _camera camSetTarget of2
+_camera camSetPos [11606.75,4446.98,1.32]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+v1 switchmove "effectstand"
+v1_1 switchmove "effectstand"
+v1_2 switchmove "effectstand"
+v1_3 switchmove "effectstand"
+v1_4 switchmove "effectstand"
+v1_5 switchmove "effectstand"
+v1_6 switchmove "effectstand"
+
+v1_1_1 switchmove "effectstand"
+v1_2_1 switchmove "effectstand"
+v1_3_1 switchmove "effectstand"
+v1_4_1 switchmove "effectstand"
+v1_5_1 switchmove "effectstand"
+;v1_6_1 switchmove "FXStandAtt"
+
+
+;konec rotace
+_camera camSetTarget of2
+_camera camSetPos [11604.49,4445.49,1.29]
+_camera camSetFOV 0.449
+_camera camCommit 13
+of2 say "x03v02"
+~4
+of2 say "x03v03"
+@camCommitted _camera
+of2 say "x03v04"
+~6
+of2 dowatch v1_5_1
+of2 say "x03v05"
+~4
+
+;ze stranu zaber
+_camera camSetTarget [-88293.11,8591.77,-1594.67]
+_camera camSetPos [11607.41,4446.70,1.45]
+_camera camSetFOV 0.340
+_camera camCommit 0
+@camCommitted _camera
+~9
+of2 dowatch v1_2_1
+of2 say "x03v06"
+~6
+
+;02bl************************
+
+
+
+
+;03bor*-*-*-*-*-*-*-*-*-*-*-*-*-*
+v1_5_1 dowatch of2
+
+;=== 12:09:28
+_camera camSetTarget v1_5_1
+_camera camSetPos [11608.66,4440.54,1.42]
+_camera camSetFOV 0.440
+_camera camCommit 0
+@camCommitted _camera
+v1_5_1 say "x03v07"
+
+;=== 12:09:40
+_camera camSetTarget v1_5_1
+_camera camSetPos [11610.57,4441.34,1.44]
+_camera camSetFOV 0.340
+_camera camCommit 7
+@camCommitted _camera
+;03bor*************************
+
+;PRENASTAVUJEME POZICE VOJAKU
+v1_1_1 setdir 0
+v1_1_1 SetPos [11602,4439.83,0]
+v1_2_1 setdir 0
+v1_2_1 SetPos [11604,4439.83,0]
+v1_3_1 setdir 0
+v1_3_1 SetPos [11606,4439.83,0]
+v1_4_1 setdir 0
+v1_4_1 SetPos [11608,4439.83,0]
+v1_5_1 setdir 0
+v1_5_1 SetPos [11610,4439.83,0]
+v1_6_1 setdir 0
+v1_6_1 SetPos [11612,4439.83,0]
+;PRENASTAVUJEME POZICE VOJAKU
+
+
+
+;04bl*-*-*-*-*-*-*-*-*-*-*-*-*
+_camera camSetTarget of2
+_camera camSetPos [11604.96,4445.38,1.58]
+_camera camSetFOV 0.321
+_camera camCommit 0
+@camCommitted _camera
+of2 say "x03v08"
+~2
+of2 say "x03v10"
+~3
+;04bl*********************
+
+
+
+
+	;05fow*-*-*-*-*-*-*-*-*-*-*-*-*-
+	;v1_3_1 dowatch of2 
+	;=== 12:11:32
+	;_camera camSetTarget [108321.32,-13615.55,17905.15]
+	;_camera camSetPos [11605.33,4440.05,1.53]
+	;_camera camSetFOV 0.851
+	;_camera camCommit 0
+	;@camCommitted _camera
+	;v1_3_1 say "05fow"
+	;~6
+	;05fow**********************
+
+
+
+
+
+;06bl*-*-*-*-*-*-*-*-*-*-*-*-*
+;=== 12:14:29
+_camera camSetTarget [-33144.37,93770.25,-4268.10]
+_camera camSetPos [11606.33,4444.89,1.5]
+_camera camSetFOV 0.851
+_camera camCommit 0
+@camCommitted _camera
+
+
+;=== 12:14:36
+_camera camSetTarget [-33144.37,93770.25,-4268.59]
+_camera camSetPos [11605.79,4446.41,1.5]
+_camera camSetFOV 0.851
+_camera camCommit 17
+~5
+of2 dowatch v1_6_1
+~5
+of2 say "x03v11"
+~7
+@camCommitted _camera
+;06bl***********************
+
+8 fadeMusic 0.0
+
+;07koz*-*-*-*-*-*-*-*-*-*-*
+_camera camSetTarget v1_4_1
+_camera camSetPos [11607.46,4440.63,1.56]
+_camera camSetFOV 0.750
+_camera camCommit 0
+@camCommitted _camera
+v1_4_1 say "x03v12"
+~7.5
+;07koz*******************
+
+
+;08bl*-*-*-*-*-*-*-*-*-*-*-*-*
+;=== 12:16:35
+_camera camSetTarget [29497.70,-93845.15,-4268.20]
+_camera camSetPos [11605.44,4447.85,1.53]
+_camera camSetFOV 0.851
+_camera camCommit 0
+@camCommitted _camera
+;=== 12:17:04
+_camera camSetTarget [-68377.86,-55420.38,-4268.31]
+_camera camSetPos [11606.15,4447.33,1.53]
+_camera camSetFOV 0.851
+_camera camCommit 21
+of2 say "x03v13"
+~6
+of2 say "x03v14"
+~6
+of2 dowatch v1_4_1
+of2 say "x03v15"
+~9
+of2 dowatch v1_2_1
+@camCommitted _camera
+
+;=== 12:18:12
+_camera camSetTarget [16555.49,104316.68,-1128.89]
+_camera camSetPos [11605.23,4445.83,1.61]
+_camera camSetFOV 0.224
+_camera camCommit 0
+@camCommitted _camera
+~3
+of2 dowatch v1_4_1
+of2 say "x03v16"
+~7
+
+;09ber-*-*-*-*-*jde
+v1_6_1 move [11612.06,4441.44,0]
+v1_6_1 dowatch v1_3_1
+_camera camSetTarget v1_6_1
+_camera camSetPos [11604.42,4440.94,1.42]
+_camera camSetFOV 0.240
+_camera camCommit 0
+@camCommitted _camera
+v1_6_1 say "x03v17"
+~4
+
+_camera camSetTarget v1_6_1
+_camera camSetPos [11604.42,4440.94,1.42]
+_camera camSetFOV 0.050
+_camera camCommit 0
+@camCommitted _camera
+~3
+
+titleCut ["","BLACK OUT",2]
+~4
+
+konec=true
+@camCommitted _camera
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

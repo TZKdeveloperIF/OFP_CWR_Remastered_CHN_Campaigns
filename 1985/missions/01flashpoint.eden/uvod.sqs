@@ -1,0 +1,42 @@
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+
+_camera camSetTarget uh
+_camera camSetPos [6112.00,2034.87,51.79]
+_camera camSetFOV 1.200
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetFOV 0.05
+_camera camCommit 8
+
+~7.5
+titleCut ["","WHITE OUT",0.5]
+@camCommitted _camera
+titleCut ["","WHITE IN",1]
+
+
+;ukonceni kamer a skriptu
+player cameraEffect ["terminate","back"]
+
+camDestroy _camera
+
+vojak1 say "01v1"
+~4
+vojak2 say "01v2"
+~2
+hint localize "STRM_01h01"
+~2
+vojak1 say "01v3"
+~4
+vojak2 say "01v4"
+~5
+vojak1 say "01v5"
+~6
+vojak2 say "01v6"
+~2
+velitel say "01v7"
+~14
+enableRadio true

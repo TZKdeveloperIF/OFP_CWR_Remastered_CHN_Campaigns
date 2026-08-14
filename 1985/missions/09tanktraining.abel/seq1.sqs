@@ -1,0 +1,87 @@
+_camera = "camera" camCreate [94252.50,-32186.46,-28340.23]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+enableradio false
+Ham=aP
+Vel=Dr
+Ham setcombatmode "SAFE"
+
+
+Vel move [7289.165,7873.800,0.001]
+Vel setPos [7289.165,7873.800,0.001]
+Vel setDir -166
+Vel stop true
+aP setPos [7289.12,7871.05,0]
+aP setDir 5
+aP switchmove "EffectStandStill"
+
+;=== 13:49:22
+_camera camSetTarget [-20581.47,-88165.40,169.40]
+_camera camSetPos [7289.44,7872.16,1.42]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+Ham say "Seq1"
+aP playmove "EffectStandSalute"
+~1
+Vel playmove "EffectStandSalute"
+~2
+
+;=== 13:53:52
+_camera camSetTarget [31975.47,104130.79,11345.74]
+_camera camSetPos [7288.84,7872.50,1.39]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+Vel say "Seq2"
+~1
+aP playmove "EffectStand"
+Vel playmove "EffectStand"
+~2
+
+;=== 13:57:59
+_camera camSetTarget [52785.80,-80792.11,-8073.50]
+_camera camSetPos [7287.60,7875.68,1.56]
+_camera camSetFOV 0.407
+_camera camCommit 0
+@camCommitted _camera
+~6
+
+
+;=== 13:57:25
+_camera camSetTarget [-26736.66,100866.78,14109.59]
+_camera camSetPos [7289.43,7872.75,1.45]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+
+;=== 13:58:25
+_camera camSetTarget [-45539.52,92767.57,-768.94]
+_camera camSetPos [7292.01,7867.92,1.07]
+_camera camSetFOV 0.276
+_camera camCommit 0
+@camCommitted _camera
+~5
+titleCut ["","BLACK OUT", 2]
+~3
+
+Dr assignasdriver aT
+Gu assignasgunner aT
+aP assignascommander aT
+
+Dr moveindriver aT
+Gu moveingunner aT
+aP moveincommander aT
+
+Cont = true
+enableradio true
+
+Vel stop false
+
+
+titleCut ["","BLACK IN", 2]
+
+_this cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

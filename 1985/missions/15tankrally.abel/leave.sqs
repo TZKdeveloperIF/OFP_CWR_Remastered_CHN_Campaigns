@@ -1,0 +1,15 @@
+; Skript pro vyhazeni vsech vystoupenych z grupy
+
+_tankyU = units _this
+_i=0
+_pocet = count _tankyU
+
+#Znovu
+_nekdo=_tankyU select _i
+?vehicle _nekdo==_nekdo:[_nekdo] join stazeni
+?getDammage _nekdo > 0.75 : [nekdo] join stazeni
+?_i==_pocet:goto "Pryc"
+_i=_i+1
+goto "Znovu"
+
+#Pryc

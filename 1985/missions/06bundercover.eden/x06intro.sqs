@@ -1,0 +1,66 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+titleCut ["","BLACK IN",3]
+;=== 16:52:00
+_camera camSetTarget [-87455.17,31974.04,3098.51]
+_camera camSetPos [8597.50,4298.63,1.65]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+	_camera camSetTarget [-61194.25,-67265.90,-2465.71]
+	_camera camSetPos [8599.18,4297.71,1.62]
+	_camera camSetFOV 0.700
+	_camera camCommit 5
+	~3
+	slava say "06Cv20"
+	~2
+	@camCommitted _camera
+		_camera camSetTarget [-45921.12,-79487.80,-2465.66]
+		_camera camSetPos [8599.18,4297.71,1.62]
+		_camera camSetFOV 0.700
+		_camera camCommit 8
+		david say "06Cv21"
+		@camCommitted _camera
+
+			_camera camSetTarget [105624.42,-19861.88,1832.07]
+			_camera camSetPos [8599.18,4297.71,1.62]
+			_camera camSetFOV 0.400
+			_camera camCommit 3
+			~1
+			slava say "06Cv22"
+			@camCommitted _camera
+					
+				_camera camSetTarget [106603.14,-15464.88,2437.99]
+				_camera camSetPos [8599.18,4297.71,1.62]
+				_camera camSetFOV 0.187
+				_camera camCommit 4
+				@camCommitted _camera
+				~3
+
+;=== 16:58:20
+_camera camSetTarget [-22232.54,96464.63,-23269.69]
+_camera camSetPos [8599.04,4296.76,1.69]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david say "06Cv23"
+~2
+slava say "06Cv24"
+~2
+
+;=== 16:59:03
+_camera camSetTarget [105270.93,26593.35,-12259.31]
+_camera camSetPos [8597.94,4296.85,1.73]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~6
+titleCut ["","BLACK OUT",2]
+~2
+
+konec=true
+player cameraEffect ["terminate","back"]
+camDestroy _camera

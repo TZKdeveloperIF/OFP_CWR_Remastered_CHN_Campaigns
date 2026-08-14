@@ -1,0 +1,38 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",3]
+
+0 fadeMusic 0.0
+2 fadeMusic 0.2
+
+playMusic ["track8", 60]
+
+;=== 15:00:33
+_camera camSetTarget blake
+_camera camSetRelPos [-0.07,0.59,1.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+
+
+~1.5
+
+blake say "xxPunish3"
+
+blake setMimic "angry"
+
+~8.5
+titleCut ["","BLACK OUT",2]
+
+2 fadeMusic 0
+
+~2
+
+konec=true
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

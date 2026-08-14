@@ -1,0 +1,106 @@
+class CfgSounds
+{
+	sounds[] = 
+		{
+			
+};
+	class x11v01
+	{
+		name = "x11v01";
+		sound[] = {"sound/x11v01.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STR_x11v01
+		};
+	};
+	
+	class x11v02
+	{
+		name = "x11v02";
+		sound[] = {"sound/x11v02.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STR_x11v02
+		};
+	};	
+	
+	class x11v03
+	{
+		name = "x11v03";
+		sound[] = {"sound/x11v03.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STR_x11v03
+		};
+	};	
+
+
+	class x11v04
+	{
+		name = "x11v04";
+		sound[] = {"sound/x11v04.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STR_x11v04
+		};
+	};	
+	
+	class x11v05
+	{
+		name = "x11v05";
+		sound[] = {"sound/x11v05.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STR_x11v05
+		};
+	};	
+	
+};
+
+class CfgRadio
+{
+	sounds[] = {};
+};
+class CfgSFx
+{
+	sounds[] = 
+		{
+		telefon, droptel, call
+		};
+	
+	class telefon
+	{
+		name = "telefon";
+		sounds[]={sound1};
+		sound1[]={"sound/telefon.ogg", db+45,1, 1, 1, 1, 1};
+		empty[]= {, , , , 1 , 5, 20};
+	};
+	
+	class droptel
+	{
+		name = "droptel";
+		sounds[]={sound1};
+		sound1[]={"sound/droptel.ogg", db+45,1, 1, 1, 1, 1};
+		empty[]= {, , , , 1 , 5, 20};
+	};
+
+	class call
+	{
+		name = "call";
+		sounds[]={sound1};
+		sound1[]={"sound/call.ogg", db-20,1, 1, 1, 1, 1};
+		empty[]= {, , , , 1 , 5, 20};
+	};
+
+	class ruch
+	{
+		name = "ruch";
+		sounds[]={sound1};
+		sound1[]={"sound/ruch.ogg", db-60,1, 1, 1, 1, 1};
+		empty[]= {, , , , 1 , 5, 20};
+	};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

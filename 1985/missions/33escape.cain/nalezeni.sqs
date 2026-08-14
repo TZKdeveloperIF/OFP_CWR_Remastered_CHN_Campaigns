@@ -1,0 +1,57 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+;=== 22:54:02
+_camera camSetTarget [-57324.48,-67542.49,-32185.45]
+_camera camSetPos [5332.61,3408.96,0.10]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+titleCut ["","BLACK OUT",0.1]
+
+0 fadeMusic 0.0
+8 fadeMusic 0.5
+playMusic "track7"
+
+~0.5
+
+w1 doWatch w2
+
+~2
+
+w1 say "33v01"
+~4
+w2 say "33v02"
+
+~8
+
+? phaseN : of2 fire ["M203Muzzle", "Flare"]
+
+titleCut ["","BLACK IN",5]
+
+w1 say "33v03"
+
+;=== 22:57:04
+_camera camSetTarget [104564.41,14121.53,6267.27]
+_camera camSetPos [5332.90,3408.93,1.45]
+_camera camSetFOV 0.200
+_camera camCommit 10
+
+~3
+
+w2 say "33v04"
+
+@camCommitted _camera
+
+
+
+titleCut ["","BLACK OUT",3]
+
+~3
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+victory = true

@@ -1,0 +1,125 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",3]
+setacctime 1.0
+0 fadeMusic 0.1
+playMusic "Track12"
+;=== 15:47:16
+_camera camSetTarget [28511.95,-86980.72,35609.35]
+_camera camSetPos [3768.84,3157.15,11.11]
+_camera camSetFOV 0.177
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 15:50:37
+_camera camSetTarget [37225.73,95843.51,-16994.00]
+_camera camSetPos [3768.84,3157.15,11.11]
+_camera camSetFOV 0.136
+_camera camCommit 23
+~10
+;vel say "07av8x"
+@camCommitted _camera
+aP say "07av5"
+
+10 fadeMusic 0.15
+
+;=== 15:56:02
+_camera camSetTarget [-70579.27,64080.66,27655.27]
+_camera camSetPos [3793.80,3214.82,0.87]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 15:56:35
+_camera camSetTarget [-85997.30,-31041.08,27655.61]
+_camera camSetPos [3794.44,3217.13,0.87]
+_camera camSetFOV 0.700
+_camera camCommit 6
+~1
+vel say "07av6"
+~3
+aP say "07av7"
+@camCommitted _camera
+
+;=== 15:57:43
+_camera camSetTarget [30434.33,79441.15,59009.83]
+_camera camSetPos [3792.34,3216.32,1.08]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 15:58:01
+_camera camSetTarget [-7646.62,83148.57,59009.94]
+_camera camSetPos [3792.60,3216.23,1.16]
+_camera camSetFOV 0.700
+_camera camCommit 12
+~1
+vel say "07av8"
+@camCommitted _camera
+
+
+;=== 15:59:38
+_camera camSetTarget [9177.49,-94984.54,18119.14]
+_camera camSetPos [3792.45,3216.27,1.44]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 15:59:38
+_camera camSetFOV 0.500
+_camera camCommit 1
+aP say "07av9"
+@camCommitted _camera
+
+
+;=== 15:57:43
+_camera camSetTarget [30434.33,79441.15,59009.83]
+_camera camSetPos [3792.34,3216.32,1.08]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetFOV 0.500
+_camera camCommit 2
+vel say "07av10"
+@camCommitted _camera
+
+;=== 15:56:02
+_camera camSetTarget [-70579.27,64080.66,27655.27]
+_camera camSetPos [3793.80,3214.82,0.87]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 15:56:35
+_camera camSetTarget [-85997.30,-31041.08,27655.61]
+_camera camSetPos [3794.44,3217.13,0.87]
+_camera camSetFOV 0.700
+_camera camCommit 12
+@camCommitted _camera
+
+;=== 15:59:38
+_camera camSetTarget [9177.49,-94984.54,18119.14]
+_camera camSetPos [3792.45,3216.27,1.44]
+_camera camSetFOV 0.400
+_camera camCommit 0
+@camCommitted _camera
+;=== 15:59:38
+_camera camSetFOV 0.700
+_camera camCommit 2
+aP say "07av11"
+@camCommitted _camera
+
+
+;=== 15:57:43
+_camera camSetTarget [30434.33,79441.15,59009.83]
+_camera camSetPos [3792.34,3216.32,1.08]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetFOV 0.200
+titleCut ["","BLACK OUT",4]
+4 fadeMusic 0
+_camera camCommit 4
+vel say "07av12"
+@camCommitted _camera
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+konec = true

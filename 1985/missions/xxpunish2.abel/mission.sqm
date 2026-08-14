@@ -1,0 +1,320 @@
+version=11.000000;
+
+class Mission
+
+{
+
+	randomSeed=10110979.000000;
+
+	class Intel
+
+	{
+		viewDistance=900;
+};
+
+};
+
+class Intro
+
+{
+
+	randomSeed=8139267.000000;
+
+	class Intel
+
+	{
+
+	};
+
+	class Groups
+
+	{
+
+		items=4.000000;
+
+		class Item0
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9802.895508,40.577110,4033.459961};
+
+					azimut=25.000000;
+
+					id=0.000000;
+
+					side="WEST";
+
+					vehicle="OfficerW";
+
+					leader=1.000000;
+
+					rank="COLONEL";
+
+					skill=0.200000;
+
+					text="blake";
+
+					markers[]={};
+
+					init="this setIdentity ""Blake""; this setbehaviour ""careless""; this exec ""intro.sqs""";
+
+				};
+
+			};
+
+		};
+
+		class Item1
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9558.011719,33.943604,4255.361816};
+
+					id=2.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWB";
+
+					player="PLAYER COMMANDER";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+		class Item2
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9803.157227,40.586021,4033.366943};
+
+					azimut=345.000000;
+
+					id=4.000000;
+
+					side="WEST";
+
+					vehicle="OfficerW";
+
+					leader=1.000000;
+
+					rank="COLONEL";
+
+					skill=0.200000;
+
+					text="blake_1";
+
+					markers[]={};
+
+					init="this setBehaviour ""safe""";
+
+				};
+
+			};
+
+		};
+
+		class Item3
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9802.560547,40.566399,4033.600098};
+
+					azimut=80.000000;
+
+					id=5.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWPilot";
+
+					leader=1.000000;
+
+					rank="COLONEL";
+
+					skill=0.200000;
+
+					text="blake_1_1";
+
+					markers[]={};
+
+					init="this setBehaviour ""safe""";
+
+				};
+
+			};
+
+		};
+
+	};
+
+	class Vehicles
+
+	{
+
+		items=2.000000;
+
+		class Item0
+
+		{
+
+			position[]={9797.084961,40.383801,4031.015625};
+
+			azimut=270.000000;
+
+			id=1.000000;
+
+			side="EMPTY";
+
+			vehicle="M113";
+
+			leader=1.000000;
+
+			skill=0.200000;
+
+			markers[]={};
+
+		};
+
+		class Item1
+
+		{
+
+			position[]={9794.482422,40.598530,4036.901123};
+
+			azimut=225.000000;
+
+			id=3.000000;
+
+			side="EMPTY";
+
+			vehicle="Jeep";
+
+			skill=0.200000;
+
+			text="jeep";
+
+			markers[]={};
+
+		};
+
+	};
+
+	class Sensors
+
+	{
+
+		items=1.000000;
+
+		class Item0
+
+		{
+
+			position[]={9714.387695,41.323235,4062.269287};
+
+			type="END1";
+
+			age="UNKNOWN";
+
+			text="konec";
+
+			expCond="konec";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+	};
+
+};
+
+class OutroWin
+
+{
+
+	randomSeed=14788099.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+
+class OutroLoose
+
+{
+
+	randomSeed=14339587.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+

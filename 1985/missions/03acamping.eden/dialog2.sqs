@@ -1,0 +1,17 @@
+@vehicle player == jeep and vehicle leader player == jeep
+~20
+? vehicle player != jeep : goto "end"
+velitel say "03av14"
+~7
+? vehicle player != jeep : goto "end"
+velitel say "03av15"
+~8
+3 fadeMusic 0.4
+playMusic "track2"
+? vehicle player != jeep : goto "end"
+velitel say "03av16"
+
+#end
+
+
+

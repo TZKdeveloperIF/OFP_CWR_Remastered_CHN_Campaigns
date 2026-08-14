@@ -1,0 +1,362 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+0 fadesound 0.0
+cutText ["","Black IN",200]
+~1
+_camera = "camera" camCreate [-32.13,-41.99,2.48]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+cutText ["","Black IN",2]
+bum setdammage 1 
+abrams setdammage 1
+blake dowatch kuk2
+ian dowatch kuk1
+blake setmimic "normal"
+
+;=== 14:21:12
+_camera camSetTarget [109000.20,-2776.64,-9390.11]
+_camera camSetPos [9541.39,1618.35,2.34]
+_camera camSetFOV 0.182
+_camera camCommit 0
+@camCommitted _camera
+~1
+3 fadesound 1.0
+~6
+bum setPos [9714.349,1582.358,0]
+bum setDir 137
+abrams setPos [9731.782,1580.104,0]
+abrams setDir 100
+
+;=== 14:25:20
+_camera camSetTarget [-88706.58,14942.60,-11553.58]
+_camera camSetPos [9726.56,1605.78,19.34]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+cumil1 dowatch bum
+cumil2 dowatch bum
+cumil3  dowatch bum
+cumil4 dowatch bum
+;=== 14:25:38
+_camera camSetTarget [-62747.90,-57160.50,-35915.24]
+_camera camSetPos [9738.89,1608.51,15.27]
+_camera camSetFOV 0.772
+_camera camCommit 7
+@camCommitted _camera
+
+;=== 14:16:29
+_camera camSetTarget [92862.55,-53946.48,11.91]
+_camera camSetPos [9700.01,1591.49,2.14]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+hop=true
+
+
+
+;Vyskakuji*-*-*-*-*-*-*-*-*-
+_camera camSetTarget uh
+_camera camSetPos [9729.86,1595.73,1.81]
+_camera camSetFOV 0.240
+_camera camCommit 0
+@camCommitted _camera
+~4
+_camera camSetTarget uh
+_camera camSetPos [9702.96,1604.19,18.21]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetTarget [104776.33,32553.46,13.17]
+_camera camSetPos [9690.41,1591.07,3.11]
+_camera camSetFOV 0.431
+_camera camCommit 6
+@camCommitted _camera
+;Vyskakuji***************
+
+
+;TANKY A UH60-*-*-*-*-*-*-*-
+_camera camSetTarget [-79028.45,47544.25,3477.62]
+_camera camSetPos [9716.68,1584.54,2.00]
+_camera camSetFOV 0.054
+_camera camCommit 0
+@camCommitted _camera
+~7
+
+;=== 17:23:04
+_camera camSetTarget [-69713.05,62141.12,7011.97]
+_camera camSetPos [9600.06,1638.93,0.81]
+_camera camSetFOV 0.430
+_camera camCommit 0
+@camCommitted _camera
+~4
+
+_camera camSetTarget [-79028.45,47544.25,3477.62]
+_camera camSetPos [9716.68,1584.54,2.00]
+_camera camSetFOV 0.054
+_camera camCommit 0
+@camCommitted _camera
+~3
+
+;TANKY A UH60-*-*-*-*-*-*-*-
+
+
+
+
+;Tanky-*-*-*-*-*-*-*-*
+_camera camSetTarget [-76519.89,51839.26,7085.08]
+_camera camSetPos [9663.22,1607.56,0.78]
+_camera camSetFOV 0.150
+_camera camCommit 0
+~5
+@dojel
+@camCommitted _camera
+
+_camera camSetTarget [-65288.91,67235.27,9182.81]
+_camera camSetPos [9623.54,1629.43,2.66]
+_camera camSetFOV 0.375
+_camera camCommit 0
+@camCommitted _camera
+~0.5
+lidrc  say "x08v01"
+~2.5
+
+_camera camSetTarget [100297.34,-40500.88,2714.69]
+_camera camSetPos [9642.06,1621.80,1.47]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+vojak say "x08v02"
+~5
+
+_camera camSetTarget [-76519.89,51839.26,7085.08]
+_camera camSetPos [9663.22,1607.56,0.78]
+_camera camSetFOV 0.150
+_camera camCommit 0
+@camCommitted _camera
+~4
+
+;=== 14:59:00
+_camera camSetTarget [103479.03,-30952.63,-11247.25]
+_camera camSetPos [9609.79,1631.77,0.50]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~6
+
+;=== 15:00:43
+_camera camSetTarget [-76984.86,50227.06,11489.31]
+_camera camSetPos [9649.21,1618.14,1.39]
+_camera camSetFOV 0.600
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 15:00:50
+_camera camSetTarget [-74827.02,-50650.32,11489.38]
+_camera camSetPos [9648.66,1619.67,1.30]
+_camera camSetFOV 0.500
+_camera camCommit 7
+@camCommitted _camera
+
+;=== 16:25:50
+_camera camSetTarget [108118.27,15623.13,-9898.67]
+_camera camSetPos [9601.80,1616.28,0.60]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 16:26:08
+_camera camSetTarget lidr
+_camera camSetPos [9601.13,1612.15,1.89]
+_camera camSetFOV 0.468
+_camera camCommit 12
+@camCommitted _camera
+
+;Tanky*******************
+
+; UVEDENI DO ROZHOVORU
+
+_camera camSetTarget [86286.02,60678.70,-25345.99]
+_camera camSetPos [9710.94,1575.74,7.01]
+_camera camSetFOV 0.495
+_camera camCommit 0
+@camCommitted _camera
+~5
+_camera camSetTarget [47648.48,93710.81,-8689.97]
+_camera camSetPos [9730.64,1588.74,1.85]
+_camera camSetFOV 0.385
+_camera camCommit 0
+@camCommitted _camera
+;ZACINA ROZHOVOR-------------------------------------------
+blake dowatch ian
+ian dowatch blake
+conery dowatch ian
+cage dowatch ian
+
+;x08v_03blake
+_camera camSetTarget [34169.91,98291.16,-7219.23]
+_camera camSetPos [9732.86,1593.11,1.60]
+_camera camSetFOV 0.700
+_camera camCommit 6
+~2
+blake say "x08v03"
+@camCommitted _camera
+
+
+;x08v_04ian
+_camera camSetTarget [-3888.15,-96093.16,16498.61]
+_camera camSetPos [9732.25,1593.71,1.38]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+ian say "x08v04"
+~4
+;x08v_04ian
+
+
+
+;x08v_05blake.wav
+_camera camSetTarget [80080.79,72654.28,-1042.23]
+_camera camSetPos [9731.05,1592.34,1.56]
+_camera camSetFOV 0.449
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v05"
+~3
+cage dowatch blake
+conery dowatch blake
+_camera camSetTarget [-48203.86,83091.66,-1042.03]
+_camera camSetPos [9734.22,1592.82,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+~4
+
+
+
+;x08v_05blake.wav
+
+
+;x08v_06ian
+_camera camSetTarget [-79204.75,-44110.65,-1042.08]
+_camera camSetPos [9733.53,1593.48,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+ian say "x08v06"
+~2.5
+
+;x08v_07blake
+_camera camSetTarget [105623.95,29943.25,-1042.18]
+_camera camSetPos [9732.21,1594.34,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v07a"
+~9
+
+
+;x08v_08blake
+_camera camSetTarget [28513.17,99807.44,-1042.25]
+_camera camSetPos [9732.57,1592.50,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v07b"
+~6
+_camera camSetTarget [107271.09,23612.81,-1042.42]
+_camera camSetPos [9731.04,1594.11,1.56]
+_camera camSetFOV 0.241
+_camera camCommit 0
+@camCommitted _camera
+~6
+_camera camSetTarget [-48203.86,83091.66,-1042.03]
+_camera camSetPos [9734.22,1592.82,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+~5
+;x08v_08blake
+
+
+;IAN
+_camera camSetTarget [-83239.08,-34403.76,7782.19]
+_camera camSetPos [9732.97,1593.11,1.52]
+_camera camSetFOV 0.925
+_camera camCommit 0
+@camCommitted _camera
+ian say "x08v08"
+~2
+
+
+
+;=== 19:32:46
+_camera camSetTarget [58809.30,87059.02,16958.83]
+_camera camSetPos [9732.76,1594.02,1.36]
+_camera camSetFOV 0.925
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v09"
+~7
+
+;x08v_06ian
+_camera camSetTarget [-79204.75,-44110.65,-1042.08]
+_camera camSetPos [9733.53,1593.48,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+ian say "x08v10"
+~2
+
+;x08v_09blake
+_camera camSetTarget [28513.17,99807.44,-1042.25]
+_camera camSetPos [9732.57,1592.50,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v11"
+~4
+
+;x08v_06ian
+_camera camSetTarget [-79204.75,-44110.65,-1042.08]
+_camera camSetPos [9733.53,1593.48,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+ian say "x08v12"
+~2.5
+
+;x08v_09blake
+_camera camSetTarget [28513.17,99807.44,-1042.25]
+_camera camSetPos [9732.57,1592.50,1.56]
+_camera camSetFOV 0.502
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v13"
+~2
+
+
+cutText ["","Black out",1]
+~2
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
+
+
+
+
+;x08v_10blake
+_camera camSetTarget [3277.38,2520.85,-99772.24]
+_camera camSetPos [9732.70,1593.53,2.28]
+_camera camSetFOV 0.840
+_camera camCommit 0
+@camCommitted _camera
+blake say "x08v_10blake"
+~15
+blake say "x08v_11blake"
+~8

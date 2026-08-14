@@ -1,0 +1,49 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",1]
+setacctime 1.0
+aP SetPos [3622.827,8495.826,-0.004]
+aP setDir 34
+aMaj SetPos [3623.962,8497.066,0.002]
+aMaj setDir -134
+aMaj stop true
+aP stop true
+
+
+;celkovy zaber
+_camera camSetTarget [1893.09,107894.14,10920.87]
+_camera camSetPos [3623.55,8493.15,0.49]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+aMaj say "17v08"
+~4
+
+
+;aMAJ
+_camera camSetTarget [81799.90,70712.24,-4067.54]
+_camera camSetPos [3622.92,8496.17,1.54]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+
+;aP
+_camera camSetTarget [-81023.80,-44728.19,1530.93]
+_camera camSetPos [3623.62,8496.35,1.55]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+aMaj say "17v09"
+~3
+titleCut ["","BLACK OUT",1]
+~1
+
+Goi = true
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+titleCut ["","BLACK IN",1]
+
+exit

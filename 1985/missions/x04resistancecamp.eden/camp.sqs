@@ -1,0 +1,356 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+;goto "nahore"
+
+titleCut ["","BLACK IN",2]
+playmusic "track4"
+;NASTAVUJEME POZICE-*-*-*-*-*-*
+david switchmove "EffectStandSitDown"
+sef switchmove "EffectStandSitDown"
+res1 switchmove "EffectStandSitDown"
+res2 switchmove "EffectStand"
+res2 SetPos [9371.18,1059.0]
+res2 dowatch [-87490.78,25556.98,4367.56]
+res1 dowatch [-58274.25,74476.38,5727.40]
+res1 SetPos [9371.26,1036.15,0]
+david dowatch[79974.23,71634.71,5727.58]
+david SetPos [9369.02,1036.25,0]
+david setmimic "normal"
+sef dowatch [93182.12,-53226.17,5727.52]
+sef SetPos [9368.58,1038.20,0]
+;NASTAVUJEME POZICE***********
+
+
+;tajemny hrad v karpatech-*-*-*-*-*-*
+_camera camSetTarget [103999.62,29511.43,14746.31]
+_camera camSetPos [9258.08,1015.38,2.96]
+_camera camSetFOV 0.517
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetTarget [101744.20,38511.07,6528.50]
+_camera camSetPos [9255.24,1012.41,16.96]
+_camera camSetFOV 0.300
+_camera camCommit 8
+@camCommitted _camera
+;tajemny hrad v karpatech************
+
+
+
+
+; na hradu-*-*-*-*-*-*-*
+_camera camSetTarget [-85359.91,31965.53,8610.42]
+_camera camSetPos [9372.39,1058.32,22.68]
+_camera camSetFOV 0.517
+_camera camCommit 0
+@camCommitted _camera
+~5
+; na hradu************
+
+
+
+;celkovy pohled na hrad-*-*-*-*-*-*-*
+_camera camSetTarget [94612.13,21444.33,48307.34]
+_camera camSetPos [9349.99,1053.46,6.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetTarget [81232.65,-62675.65,-27578.37]
+_camera camSetPos [9349.99,1053.46,6.68]
+_camera camSetFOV 0.538
+_camera camCommit 7
+@camCommitted _camera
+~3
+;celkovy pohled na hrad*************
+
+
+
+
+
+;celkovy pohled na groupu-*-*-*
+_camera camSetTarget [-22254.67,95862.69,2911.29]
+_camera camSetPos [9370.99,1034.34,0.70]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+8 fademusic 0.05
+~5
+
+
+
+
+
+;UNI-kamera na RES1*-*-*-*
+_camera camSetTarget [86181.32,-56630.72,28017.59]
+_camera camSetPos [9369.85,1037.36,0.05]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+res setmimic "angry"
+res1 say "x04v01"
+~2
+;UNI-kamera na RES1****
+
+
+
+;UNI-kamera na DAVIDA2*-*-*-*
+_camera camSetTarget [-89213.47,-14731.36,5909.18]
+_camera camSetPos [9369.81,1036.61,0.58]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david setmimic "normal"
+david say "x04v02"
+~3
+;UNI-kamera na DAVIDA2*****
+
+
+
+;UNI-kamera na SEFA2*-*-*
+_camera camSetTarget [53328.93,-86940.42,18290.05]
+_camera camSetPos [9370.73,1037.16,0.47]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+posel2 move [9365.29,1036.58,0]
+res1 say "x04v03"
+~5
+;UNI-kamera na SEFA2****
+
+
+;UNI-kamera na DAVIDA*-*-*
+_camera camSetTarget [-58976.99,-69811.91,17767.16]
+_camera camSetPos [9370.41,1037.68,0.36]
+_camera camSetFOV 0.474
+_camera camCommit 0
+@camCommitted _camera
+david say "x04v04"
+
+~4.5
+3 fademusic 0.4
+;UNI-kamera na DAVIDA****
+titleText [" ","plain",1]
+
+
+
+
+
+
+;posel2-*-*-*-*-*-*-*-
+sud SetPos [9378.98,1058.21,0]
+
+
+
+
+_camera camSetTarget [36308.67,-91130.02,-27687.39]
+_camera camSetPos [9356.91,1045.17,3.47]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+posel2 setspeedmode "normal"
+~5
+posel2 setspeedmode "limited"
+2 fademusic 0.05
+~1.5
+posel2 domove getpos posel2
+~0.5
+posel2 dowatch [105603.82,-23679.00,-11077.24]
+posel2 SetPos [9365.29,1036.58,0]
+;posel2*********************
+
+
+;posel2 kde je sef*-*-*-*-*-*-*-*-*-*-*
+_camera camSetTarget [-72440.01,-54312.73,-15428.34]
+_camera camSetPos [9367.28,1037.10,1.71]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+posel2 setmimic "normal"
+posel2 SetPos [9365.29,1036.58,0]
+posel2 say "x04v05"
+~7
+
+
+;POSEL ODCHAZI*******************
+
+
+
+;celkovy pohled na groupu-*- odchazi k radiu*-*
+_camera camSetTarget [3339.79,100687.73,5854.31]
+_camera camSetPos [9367.92,1030.06,1.63]
+_camera camSetFOV 0.911
+_camera camCommit 0
+@camCommitted _camera
+
+
+_camera camSetTarget [3339.79,100687.73,5854.14]
+_camera camSetPos [9367.92,1030.06,2.11]
+_camera camSetFOV 0.804
+_camera camCommit 8.5
+~1
+sef playmove "Sitdowntostand"
+~1
+david playmove "Sitdowntostand"
+david dowatch rep
+sef dowatch rep
+4 fademusic 0.4
+
+sef move [9362.45,1054.68,1.05]
+~1
+david move [9362.45,1054.68,1.05]
+@camCommitted _camera
+~1
+3 fademusic 1.0
+
+;posel2 SetPos [9365.29,1036.58,0]
+posel2 setspeedmode "full"
+;celkovy pohled na groupu-****chazi k radiu****
+
+
+
+;BEZI NAHORU
+_camera camSetTarget [3339.79,100687.73,5854.14]
+_camera camSetPos [9367.92,1030.06,2.11]
+_camera camSetFOV 0.804
+_camera camCommit 0
+@camCommitted _camera
+~7
+#nahore
+;
+;david dowatch sud
+david move [9376.92,1059.16,0]
+sef move [9377.75,1057.28,0]
+;david stop true
+;sef stop true
+;david disableAI "move"
+;sef disableAI "move"
+;david SetPos [9376.92,1059.16,0]
+;sef dowatch sud
+;sef SetPos [9377.75,1057.28,0]
+
+;=== 17:40:17
+_camera camSetTarget [1400.77,59895.61,80642.70]
+_camera camSetPos [9374.83,1041.32,1.02]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~3
+6 fademusic 0.05
+~4
+
+;NAHORE=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+_camera camSetTarget [87376.39,-40230.53,47225.23]
+_camera camSetPos [9370.42,1055.95,19.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+posel2 move [9377.34,1055.64,0]
+; The Helfenburk tower-roof platform is ~21.5 m above terrain; setPos z=0 sinks
+; the trio into the pit below this roof-level dialog camera (212.924 ASL).
+posel2 setPosASL [9374.30,1054.24,212.924]
+sef setidentity "Resistance"
+david switchmove "EffectStand"
+sef switchmove "EffectStand"
+posel2 switchmove "EffectStand"
+david setbehaviour "careless"
+sef setbehaviour "careless"
+posel2 setbehaviour "careless"
+sef move  [9377.79,1057.15,0]
+sef setPosASL [9377.79,1057.15,212.924]
+sef setDir 124
+sef reveal david
+david reveal sef
+sef dowatch david 
+david dowatch sef
+david move [9376.13,1054.52,0]
+david setPosASL [9376.13,1054.52,212.924]
+david  setDir -18
+;NAHORE=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+
+;zaber na SEFA1
+_camera camSetTarget [-89521.09,14706.72,-5487.57]
+_camera camSetPos [9378.79,1056.29,23.1]
+_camera camSetFOV 0.804
+_camera camCommit 0
+@camCommitted _camera
+sef setmimic "normal"
+sef say "x04v06"
+~5.5
+
+~4
+;zaber na DAVIDA
+_camera camSetTarget [-19195.73,-94525.23,-6704.37]
+_camera camSetPos [9376.35,1056.16,23.1]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david say "x04v07"
+~1
+sef say "x04v08"
+~2.7
+
+;zaber na SEFA1
+_camera camSetTarget [-89521.09,14706.72,-5487.57]
+_camera camSetPos [9378.79,1056.29,23.1]
+_camera camSetFOV 0.904
+_camera camCommit 0
+@camCommitted _camera
+~5.5
+
+;zaber na DAVIDA2
+_camera camSetTarget [30949.13,-96500.73,4351.03]
+_camera camSetPos [9375.76,1056.72,23]
+_camera camSetFOV 0.462
+_camera camCommit 0
+@camCommitted _camera
+david say "x04v09"
+~1
+
+
+;zaber na DAVIDA2
+;=== 16:07:55
+_camera camSetTarget [82225.76,69555.95,199.20]
+_camera camSetPos [9373.87,1053.36,23.1]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+sef say "x04v10"
+~3
+david  say "x04v11"
+~5
+
+
+titleCut ["","BLACK OUT",2]
+~2
+
+lod=true
+
+flakac SetPos [9208.06,462.17,0]
+flakac dowatch [-69995.57,-60564.59,6.53]
+sef SetPos [9207.16,464.01,0]
+sef dowatch [-69995.57,-60564.59,6.53]
+
+
+;=== 18:50:32
+_camera camSetTarget [-68295.09,-62671.38,-2464.24]
+_camera camSetPos [9212.68,467.03,0.05]
+_camera camSetFOV 0.293
+_camera camCommit 0
+@camCommitted _camera
+titleCut ["","BLACK IN",4]
+~2
+sef say "x04v12"
+~4
+4 fademusic 0
+~4
+titleCut ["","BLACK OUT",2]
+~4
+konec=true
+
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

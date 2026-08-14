@@ -1,0 +1,376 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15]
+_camera cameraEffect ["internal","back"]
+
+
+titleCut ["","BLACK IN",3]
+enableRadio false
+playmusic ["track6",10]
+0 fademusic 0.4
+
+
+
+;NASTAVUJEME POZICE-*-*-*-*-*-*
+;straz1 setBehaviour "Safe"
+;straz2 setBehaviour "Safe"
+
+;NASTAVUJEME POZICE-*-*-*-*-*-*
+
+david setPos getMarkerPos "hracpozice"
+david setdir 140
+david switchmove "CombatRelaxed"
+david stop true
+
+;NASTAVUJEME POZICE-*-*-*-*-*-*
+
+straz1 setPos getMarkerPos "pozice1"
+straz1 setBehaviour "Combat"
+straz1 setunitpos "up"
+straz1 stop true
+
+straz2 setPos getMarkerPos "pozice2"
+straz2 setBehaviour "Combat"
+straz2 setunitpos "up"
+straz2 stop true
+
+straz1 setDir 180
+straz2 setDir 180
+
+straz1 reveal david
+straz2 reveal david
+
+straz1 dowatch david
+straz2 dowatch david
+
+straz1 dotarget david
+straz2 dotarget david
+
+
+;za stromem
+;=== 19:50:12
+_camera camSetTarget [23883.50,-93453.01,7590.65]
+_camera camSetPos [5238.21,4508.33,0.86]
+_camera camSetFOV 0.402
+_camera camCommit 0
+@camCommitted _camera
+
+	;=== 19:50:19
+	_camera camSetTarget [16753.03,-94544.58,7590.88]
+	_camera camCommit 1
+	@camCommitted _camera
+
+	_camera camSetTarget [-27496.80,-89685.56,7591.12]
+	_camera camCommit 3
+	@camCommitted _camera
+
+	_camera camSetTarget [-35687.70,-86426.09,7590.64]
+	_camera camCommit 1
+	@camCommitted _camera
+
+	_camera camSetTarget [-26700.42,-89958.19,7591.10]
+	_camera camCommit 3
+	@camCommitted _camera
+	
+	_camera camSetTarget [-6210.59,-93220.19,17944.41]
+	_camera camCommit 2
+	@camCommitted _camera
+
+	_camera camSetTarget [-2994.13,-93078.67,20334.42]
+	_camera camCommit 1
+	@camCommitted _camera
+	
+	_camera camSetTarget [43543.87,-87841.02,-1968.73]
+	_camera camCommit 2.5
+	@camCommitted _camera
+
+;na straz
+_camera camSetTarget [2755.55,104464.17,109.24]
+_camera camSetPos [5239.50,4505.65,0.46]
+_camera camSetFOV 0.700
+_camera camCommit 5
+straz2 say "Rus14"
+@camCommitted _camera
+2 fademusic 0.2
+straz1 say "Rus6"
+
+
+
+
+
+;SETKANI*-*-*-*-*-*-*-*-*-*
+
+;hrac ze zeme
+_camera camSetTarget [-1982.69,-95117.57,-4372.74]
+_camera camSetPos [5238.95,4520.42,0.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+;hrac shora
+_camera camSetTarget [-8494.54,-90903.03,-26451.44]
+_camera camSetPos [5239.86,4520.29,3.24]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+
+straz1 setDir 180
+straz2 setDir 180
+
+straz1 reveal david
+straz2 reveal david
+
+straz1 dowatch david
+straz2 dowatch david
+
+straz1 dotarget david
+straz2 dotarget david
+
+;detail na straz1
+_camera camSetTarget [-25393.20,-87336.79,25104.04]
+_camera camSetPos [5239.23,4516.50,0.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+straz1 say "05bv03"
+~4
+
+;detail straz2
+_camera camSetTarget straz2
+_camera camSetRelPos [0.73,1.38,1.11]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+straz1 reveal david
+straz2 reveal david
+
+straz1 dowatch david
+straz2 dowatch david
+
+straz2 say "05bv04"
+~4.5
+
+david switchMove "FXStandSurUniv"
+david removeWeapon "M16GrenadeLauncher"
+
+;davis se vzdava
+_camera camSetTarget [23231.63,102232.82,-11122.87]
+_camera camSetPos [5237.67,4508.81,1.46]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+david say "05bv05"
+~2
+
+titleCut ["","BLACK IN",0.8]
+
+;david za hlavou
+_camera camSetTarget [22971.22,90670.51,-47440.91]
+_camera camSetPos [5237.22,4507.99,3.06]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;detail straz2 s boku
+_camera camSetTarget straz2
+_camera camSetRelPos [2.34,2.65,1.19]
+_camera camSetFOV 0.700
+_camera camCommit 11
+@camCommitted _camera
+
+
+;PRESUN*-*-*-*-*-*-*
+straz1 stop false
+staz2 stop false
+
+removeAllWeapons david
+
+david setPos getMarkerPos "kul"
+david setDir 45
+
+straz1 setSpeedMode "Limited"
+straz2 setSpeedMode "Limited"
+
+straz1 setPos getMarkerPos "kekulu1"
+straz2 setPos getMarkerPos "kekulu2"
+
+straz1 stop true 
+straz2 stop true
+
+straz1 setDir 85
+straz2 setDir 75
+
+pre setPos getMarkerPos "umrtvoly"
+mrtvola setDir 310
+
+
+;MRTVE POLE*-*-*-*-*-*
+
+titleCut ["","BLACK IN",1]
+
+;rusky kanady
+_camera camSetTarget [-91517.39,-18654.95,10033.80]
+_camera camSetPos [5249.89,4531.74,0.07]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;mrtvola
+_camera camSetTarget [19069.10,-92544.15,19721.80]
+_camera camSetPos [5247.06,4534.83,0.05]
+_camera camSetFOV 0.700
+_camera camCommit 13
+4 fademusic 0.2
+@camCommitted _camera
+
+
+titleCut ["","BLACK IN",1.5]
+playmusic "frost"
+0 fademusic 1
+
+;zaber na les
+_camera camSetTarget [87028.40,39259.50,-45795.74]
+_camera camSetPos [5255.42,4536.69,27.44]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;posun
+_camera camSetTarget [33736.54,90716.22,-41824.02]
+_camera camSetPos [5259.56,4528.26,27.24]
+_camera camSetFOV 0.700
+_camera camCommit 5
+titleCut ["","BLACK IN",2]
+@camCommitted _camera
+
+;mrtvoly shora
+_camera camSetTarget [-86231.38,177.63,-40024.94]
+_camera camSetPos [5255.17,4538.46,5.01]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;mrtvoly shora II
+_camera camSetTarget [-12692.33,94620.53,-39371.95]
+_camera camSetPos [5240.62,4515.83,7.73]
+_camera camSetFOV 0.700
+_camera camCommit 15
+@camCommitted _camera
+
+;detail mrtvola 3 ze zeme
+_camera camSetTarget mrtvola3
+_camera camSetRelPos [-8.21,11.16,0.99]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+titleCut ["","BLACK IN",2]
+
+;detail na mrtvolu 3
+_camera camSetTarget mrtvola3
+_camera camSetRelPos [-0.50,-0.11,1.67]
+_camera camSetFOV 0.700
+_camera camCommit 13
+@camCommitted _camera
+
+;detail mrtvoly
+_camera camSetTarget mrtvola2
+_camera camSetRelPos [-1.11,0.69,0.30]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;oddaleni
+_camera camSetTarget mrtvola2
+_camera camSetRelPos [-2.62,0.39,1.81]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+
+titleCut ["","BLACK IN",2]
+1 fademusic 0
+
+
+
+
+;ROZHOVOR*-*-*-*-*-*-*-*-*-*-*
+
+;detail na ruskyho velitele
+_camera camSetTarget ruslee
+_camera camSetRelPos [-0.00,0.78,1.48]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~1
+
+;straz u stanu pres davida
+_camera camSetTarget [-72724.89,-51154.55,28691.42]
+_camera camSetPos [5257.75,4539.50,0.88]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+straz1 say "05bv06"
+
+;straz u stanu detail
+_camera camSetTarget straz1
+_camera camSetRelPos [-0.10,1.50,1.13]
+_camera camSetFOV 0.700
+_camera camCommit 3.5
+@camCommitted _camera
+
+;straz u stanu pres davida
+_camera camSetTarget [-72724.89,-51154.55,28691.42]
+_camera camSetPos [5257.75,4539.50,0.88]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+david say "05bv07"
+~3.5
+
+;velitel  trochu dal
+_camera camSetTarget ruslee
+_camera camSetRelPos [0.47,2.00,1.34]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+ruslee say "05bv08"
+
+;detail na ruskyho velitele
+_camera camSetTarget ruslee
+_camera camSetRelPos [-0.00,0.78,1.48]
+_camera camSetFOV 0.700
+_camera camCommit 3.5
+@camCommitted _camera
+~0.5
+
+pre setPos getMarkerPos "ustanu"
+pre setDir 82
+
+david setDir 280
+david setPos getMarkerPos "stan"
+
+straz1 stop false
+straz2 stop false
+
+vestanu = true
+
+savegame
+
+;exit (ukonceni kamery)
+
+player cameraEffect ["terminate","back"]
+david switchMove ""
+camDestroy _camera
+exit

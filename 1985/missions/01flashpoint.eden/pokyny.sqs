@@ -1,0 +1,121 @@
+setacctime 1.0
+leader player lockWP true
+enableRadio false
+leader player stop true
+
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+[mg] join grpNull
+[law] join grpNull
+[vojak1] join grpNull
+[vojak2] join grpNull
+[vojak3] join grpNull
+[vojak4] join grpNull
+
+leader player switchMove "effectStand"
+velitel setbehaviour "safe" 
+
+;aP setPos [5613.979,3812.884,0.003]
+;aP setDir -32
+
+velitel setPos [5613.124,3818.771,-0.009]
+velitel setDir -177
+
+law setPos [5614.311,3813.665,0.001]
+law setDir -48
+
+mg setPos [565.5,3814.0,0.001]
+mg setDir -48
+
+vojak1 setPos [5613.416,3815.309,0.001]
+vojak1 setDir -48
+
+vojak2 setPos [5610.398,3810.027,-0.009]
+vojak2 setDir -168
+
+vojak3 setPos [5609.183,3811.581,0.006]
+vojak3 setDir 16
+
+vojak4 setPos [5612.182,3810.074,0.004]
+vojak4 setDir -23
+
+[aP, vojak1, vojak2, vojak3, vojak4, mg, law] doWatch velitel
+
+[velitel] doWatch aP
+
+;=== 16:20:58
+_camera camSetTarget [-22453.82,99119.29,11335.80]
+_camera camSetPos [5616.07,3807.93,2.28]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 16:21:31
+_camera camSetTarget [-22453.82,99119.29,11335.79]
+_camera camSetPos [5615.34,3810.41,2.13]
+_camera camSetFOV 0.700
+_camera camCommit 7
+~2
+leader player say "01v8"
+@camCommitted _camera
+
+leader player switchMove "effectStandTalk"
+
+;=== 16:34:17
+_camera camSetTarget [-64667.22,66688.84,33307.36]
+_camera camSetPos [5613.84,3817.56,1.41]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 16:34:45
+_camera camSetTarget [-34988.70,91615.25,25381.03]
+_camera camSetPos [5613.50,3817.19,1.39]
+_camera camSetFOV 0.401
+_camera camCommit 7
+@camCommitted _camera
+
+
+
+;=== 16:25:31
+_camera camSetTarget velitel
+_camera camSetPos [5602.92,3806.81,1.86]
+_camera camSetFOV 0.486
+_camera camCommit 0
+@camCommitted _camera
+;=== 16:25:53
+_camera camSetPos [5614.30,3801.73,3.30]
+_camera camSetFOV 0.486
+_camera camCommit 6
+@camCommitted _camera
+
+
+;=== 16:34:17
+_camera camSetTarget [-64667.22,66688.84,33307.36]
+_camera camSetPos [5613.84,3817.56,1.41]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 16:34:45
+_camera camSetTarget [-34988.70,91615.25,25381.03]
+_camera camSetPos [5613.50,3817.19,1.39]
+_camera camSetFOV 0.401
+_camera camCommit 7
+@camCommitted _camera
+
+;ukonceni kamer a skriptu
+
+player cameraEffect ["terminate","back"]
+leader player switchMove ""
+camDestroy _camera
+
+velitel setBehaviour "aware"
+[aP, vojak1, vojak2, vojak3, vojak4, mg, law] join group leader player
+
+titleCut ["","BLACK IN",1]
+saveGame
+enableRadio true
+leader player lockWP false
+leader player stop false

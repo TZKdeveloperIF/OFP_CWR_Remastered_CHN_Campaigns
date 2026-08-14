@@ -1,0 +1,57 @@
+; Bezime skrz drahu
+
+_s1 = leader (_this select 0)
+
+_m1 = getMarkerPos "vstup"
+_m2 = getMarkerPos "in1"
+_m3 = getMarkerPos "ven1"
+
+
+_m1X = _m1 select 0
+_m1Y = _m1 select 1
+_m2X = _m2 select 0
+_m2Y = _m2 select 1
+_m3X = _m3 select 0
+_m3Y = _m3 select 1
+
+
+_s1 doMove [_m1X, _m1Y]
+@unitReady _s1
+
+_s1 doMove [_m3X, _m3Y]
+@unitReady _s1
+
+
+_s1 doMove [_m2X, _m2Y]
+@unitReady _s1
+
+
+_s1 doMove getmarkerpos "nas2"
+@unitReady _s1
+
+_s1 setpos getmarkerpos "Uv2"
+
+_s1 doMove getmarkerpos "na2"
+@unitReady _s1
+
+
+_s1 doMove getmarkerpos "mezi"
+@unitReady _s1
+
+_s1 setunitpos "DOWN"
+
+_s1 setpos getmarkerpos "Pred"
+
+_s1 doMove getmarkerpos "uv4"
+@unitReady _s1
+
+_s1 doMove getmarkerpos "dole"
+@unitReady _s1
+
+_s1 doMove getmarkerpos "mimo"
+@unitReady _s1
+
+_s1 setunitpos "UP"
+
+_s1 doMove getmarkerpos "exit"
+@unitReady _s1

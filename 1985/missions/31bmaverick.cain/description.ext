@@ -1,0 +1,66 @@
+showNotepad = 0
+showCompass = 0
+
+minScore=0
+avgScore=2800
+maxScore=10000
+
+onLoadMission=$STRM_31bm01
+
+debriefing = 0;
+
+class CfgSounds
+{
+	sounds[] = 	{ };
+};
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+			321r1, 321r2, 321r3, 321r4, 321r5
+		};
+
+	class 321r1
+	{
+		name = "";
+		sound[] = {"sound/321r01.ogg", db-40, 1.0};
+		title = $STRCAMP_321r01;
+	};
+	class 321r2
+	{
+		name = "";
+		sound[] = {"sound/321r02.ogg", db-40, 1.0};
+		title = $STRCAMP_321r02;
+	};
+	class 321r3
+	{
+		name = "";
+		sound[] = {"sound/321r03.ogg", db-40, 1.0};
+		title = $STRCAMP_321r03;
+	};
+	class 321r4
+	{
+		name = "";
+		sound[] = {"sound/321r04.ogg", db-40, 1.0};
+		title = $STRCAMP_321r04;
+	};
+	class 321r5
+	{
+		name = "";
+		sound[] = {"sound/321r05.ogg", db-40, 1.0};
+		title = $STRCAMP_321r05;
+	};
+};
+
+
+
+
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

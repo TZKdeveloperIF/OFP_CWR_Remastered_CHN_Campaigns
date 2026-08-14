@@ -1,0 +1,120 @@
+titleCut ["","BLACK IN",1000]
+
+
+;NASTAVUJEME POZICE
+guba setUnitPos "up"
+group player reveal guba
+player doWatch guba
+player dotarget guba
+
+group guba reveal player
+guba doWatch player
+;NASTAVUJEME POZICE
+~2
+titleCut ["","BLACK IN",3]
+
+
+;BLBOSTI NA ZACATEK
+"1" objStatus "done"
+enableRadio false
+0 fadeMusic 0.1
+playmusic "Track2"
+;BLBOSTI NA ZACATEK
+guba stop true
+
+_pG = getPos Guba
+_x = _pG select 0
+_y = _pG select 1
+
+_pG = [_x, _y - 4, 0]
+
+player setPos _pG
+
+guba setDir 180
+player setDir 0
+
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+;=== 16:57:32
+_camera camSetTarget guba
+_camera camSetRelPos [1.5,1.5,1.50]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+guba say "36v01"
+
+~5
+
+guba say "36v02"
+;=== 16:57:57
+_camera camSetTarget guba
+_camera camSetRelPos [-0.4,0.5,1.54]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~10
+player dotarget guba
+guba say "36v03"
+
+~5
+
+;=== 16:57:57
+_camera camSetTarget guba
+_camera camSetRelPos [-0.32,0.36,1.54]
+_camera camSetFOV 0.35
+_camera camCommit 0
+@camCommitted _camera
+5 fadeMusic 0.0
+~14
+
+
+0 fadeMusic 0.4
+playmusic "track13"
+
+
+;=== 1:38:26
+_camera camSetTarget player
+_camera camSetRelPos [1.23,-0.33,1.42]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+guba say "36v04"
+
+
+;=== 1:39:23
+_camera camSetRelPos [-0.37,-1.61,1.75]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+
+
+;=== 17:00:17
+_camera camSetTarget guba
+_camera camSetRelPos [-0.7,0.34,1.01]
+_camera camSetFOV 0.700
+_camera camCommit 0
+guba say "36v05"
+@camCommitted _camera
+
+~6
+
+
+guba stop false
+
+"2" objStatus "active"
+
+gubaArest = true 
+
+;ukonceni kamer a skriptu
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+_this switchMove ""
+
+enableRadio true
+
+exit

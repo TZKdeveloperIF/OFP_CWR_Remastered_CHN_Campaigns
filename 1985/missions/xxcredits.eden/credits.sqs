@@ -1,0 +1,750 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+kamera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+kamera cameraEffect ["internal","back"]
+enableradio false
+showCinemaBorder false
+0 fademusic 1.5
+playmusic "7thLifeless"
+mg1 setunitpos "down"
+mg2 setunitpos "down"
+AT1 dotarget tank
+AT2 dotarget tank
+AT3 dotarget tank
+
+
+removeallweapons kamila
+;goto "mg"
+;PRVNI ZABER*-*-*-*-**PRVNI ZABER*-*-*-*-**PRVNI ZABER*-*-*-*-**PRVNI ZABER*-*-*-*-**
+
+;=== 15:47:00
+kamera camSetTarget [21197.78,-31713.98,88368.12]
+kamera camSetPos [4675.19,12127.39,0.05]
+kamera camSetFOV 0.284
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget uh601
+	kamera camSetPos [4675.19,12127.39,0.05]
+	kamera camSetFOV 0.284
+	kamera camCommit 4
+	@camCommitted kamera
+~4
+;=== 15:47:41
+kamera camSetTarget uh601
+kamera camSetRelPos [-1.42,12.13,7.91]
+kamera camSetFOV 0.581
+kamera camCommit 0
+@camCommitted kamera
+~4
+
+;=== 18:46:28
+kamera camSetTarget uh601
+kamera camSetRelPos [-15.37,-8.31,1.55]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+
+
+	kamera camSetTarget uh601
+	kamera camSetPos [4705.61,12076.31,1.02]
+	kamera camSetFOV 0.396
+	kamera camCommit 8
+	@camCommitted kamera
+
+	
+;PRVNI ZABER*-*-*-*-**PRVNI ZABER*-*-*-*-**PRVNI ZABER*-*-*-*-**PRVNI ZABER*-*-*-*-**
+
+
+
+; GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-
+	;Marek Spanel popraven, zaber na Ondru a Jirku
+
+	
+	;zaber na les a dum
+	kamera camSetTarget [43853.59,97830.28,2756.23]
+	kamera camSetPos [7561.54,4685.22,14.86]
+	kamera camSetFOV 0.244
+	kamera camCommit 0
+	@camCommitted kamera
+	
+	;=== 13:13:39
+	kamera camSetTarget [16324.31,104294.13,-1630.26]
+	kamera camSetPos [7561.35,4694.14,1.34]
+	kamera camSetFOV 0.244
+	kamera camCommit 10
+	@camCommitted kamera
+	~2
+	ussniper reveal marek_1
+	ussniper dotarget marek_1
+	;ondra_1 dotarget marek_1
+	general=true
+	
+
+
+
+	;=== 13:26:03
+	kamera camSetTarget [-3686.26,104037.68,686.91]
+	kamera camSetPos [7564.59,4674.51,0.41]
+	kamera camSetFOV 0.130
+	kamera camCommit 0
+	
+	
+	~3
+	ussniper setcombatmode "red"
+	ussniper dofire objNull 
+	@ ussniper ammo "m21" < 78
+;	marek_1 setdammage 1
+	@marekmrtev
+	
+	;MAREK UMIRA
+	setacctime 0.25
+	kamera camSetTarget marek_1
+	kamera camSetPos [7565.80,4689.43,1.03]
+	kamera camSetFOV 0.585
+	kamera camCommit 0
+	@camCommitted kamera
+		kamera camSetTarget marek_1
+		kamera camSetPos [7561.66,4693.72,0.12]
+		kamera camSetFOV 0.585
+		kamera camCommit 0.7
+		@camCommitted kamera
+	setacctime 1.0
+	ussniper SetPos [7970.28,4783.24,0.00]
+	;MAREK UMIRA
+	
+	setacctime 1.3
+	;=== 13:34:10
+	kamera camSetTarget marek_1
+	kamera camSetPos [7549.97,4716.39,0.05]
+	kamera camSetFOV 0.120
+	kamera camCommit 0
+	@camCommitted kamera
+	~7
+	setacctime 1.0
+tankyvtank=true
+	;zaber na ONDRU
+	kamera camSetTarget [54842.18,-79414.46,27009.79]
+	kamera camSetPos [7671.01,4563.94,0.23]
+	kamera camSetFOV 0.800
+	kamera camCommit 0
+	@camCommitted kamera
+		kamera camSetTarget [54842.18,-79414.46,27009.79]
+		kamera camSetPos [7671.01,4563.94,0.23]
+		kamera camSetFOV 0.600
+		kamera camCommit 1
+		@camCommitted kamera
+	~3
+	
+	;ZABER NA JIRKU
+	kamera camSetTarget [-90042.71,-13312.93,-11337.82]
+	kamera camSetPos [7675.63,4564.10,0.51]
+	kamera camSetFOV 0.475
+	kamera camCommit 0
+	@camCommitted kamera
+	~2
+		kamera camSetTarget [-55916.32,-71754.48,-11337.56]
+		kamera camSetPos [7675.63,4564.10,0.51]
+		kamera camSetFOV 0.475
+		kamera camCommit 1
+		@camCommitted kamera
+	
+	~3
+; GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-GENERAL*-*-*-
+
+
+
+
+; TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**
+	
+
+	
+	;=== 18:59:07
+	kamera camSetTarget [80775.80,68325.41,5652.22]
+	kamera camSetPos [2622.30,6189.90,1.24]
+	kamera camSetFOV 0.700
+	kamera camCommit 0
+	
+	@lom
+	~2
+	
+	;=== 19:01:32
+	kamera camSetTarget [-39011.37,-84695.36,3728.16]
+	kamera camSetPos [2608.50,6162.55,2.27]
+	kamera camSetFOV 0.300
+	kamera camCommit 0
+	@camCommitted kamera
+	~5
+	;=== 19:21:58
+	kamera camSetTarget t2
+	kamera camSetPos [2651.04,6019.40,6.07]
+	kamera camSetFOV 0.254
+	kamera camCommit 0
+	@camCommitted kamera
+	~4
+	
+	;=== 19:03:00
+	kamera camSetTarget [-10058.84,-93141.40,28.45]
+	kamera camSetPos [2568.55,6060.53,2.10]
+	kamera camSetFOV 0.700
+	kamera camCommit 0
+	@camCommitted kamera
+	
+	
+	
+		;=== 19:03:13
+		kamera camSetTarget prvni
+		kamera camSetPos [2565.44,5974.47,16.77]
+		kamera camSetFOV 0.127
+		kamera camCommit 14
+		~6
+		prvni setbehaviour "aware"
+		@camCommitted kamera
+	
+	
+	
+	;=== 19:10:09
+	kamera camSetTarget [-20132.45,-90954.59,9989.34]
+	kamera camSetPos [2583.38,5925.49,3.54]
+	kamera camSetFOV 0.530
+	kamera camCommit 0
+	@camCommitted kamera
+	~3
+	;=== 19:13:34
+	kamera camSetTarget [-9925.11,-93237.68,65.39]
+	kamera camSetPos [2571.60,5978.41,1.32]
+	kamera camSetFOV 0.700
+	kamera camCommit 0
+	@camCommitted kamera
+	
+	~3
+	
+	;=== 19:13:56
+	kamera camSetTarget t1
+	kamera camSetPos [2491.80,5960.97,5.27]
+	kamera camSetFOV 0.600
+	kamera camCommit 0
+	@camCommitted kamera
+	t1 setdammage 1
+	
+	~3
+	
+	;=== 18:53:36
+	kamera camSetTarget t2
+	kamera camSetPos [2562.58,5812.34,1.10]
+	kamera camSetFOV 0.280
+	kamera camCommit 0
+	@camCommitted kamera
+	t2 setdammage 1
+	~4
+	
+	;t3
+	kamera camSetTarget t3
+	kamera camSetPos [2522.59,5924.20,6.44]
+	kamera camSetFOV 0.300
+	kamera camCommit 0
+	~4
+	t3 setdammage 1
+
+	~2
+
+;forNEXTCUTSCENE*-*;NEXTCUTSCENE
+pbezi=true
+pabrams1 setdammage 1
+pabrams2 setdammage 1
+pv1 setdammage 1
+pv2 setdammage 1
+pv3 setdammage 1
+pv1 setunitpos "up"
+pv2 setunitpos "up"
+pv3 setunitpos "up"
+
+;forNEXTCUTSCENE*-*;NEXTCUTSCENE
+	
+	atabrams=true
+	
+	;=== 19:15:00
+	kamera camSetTarget t1
+	kamera camSetPos [2570.81,5976.36,0.83]
+	kamera camSetFOV 0.592
+	kamera camCommit 0
+	@camCommitted kamera
+	~3
+	~1
+
+;TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**TANKYVTANK*-*-**
+
+
+;UVOD K ATKAM
+kamera camSetTarget [82965.61,69304.20,159.18]
+kamera camSetPos [4842.38,6879.76,1.34]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+
+kamera camSetTarget [-23187.06,102771.30,4430.79]
+kamera camSetPos [4843.77,6875.35,1.48]
+kamera camSetFOV 0.700
+kamera camCommit 4
+@camCommitted kamera
+~1
+
+;UVOD K ATKAM
+
+
+
+; AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*
+ 	;Zaber na Honzu hovoru a Petra Pechara
+ 	
+;=== 16:14:00
+kamera camSetTarget at1
+kamera camSetRelPos [-0.40,0.61,1.00]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget at1
+	kamera camSetRelPos [-0.07,1.20,1.00]
+	kamera camSetFOV 0.456
+	kamera camCommit 4
+	@camCommitted kamera
+
+
+;=== 16:14:28
+kamera camSetTarget at3
+kamera camSetRelPos [-0.11,1.60,0.60]
+kamera camSetFOV 0.456
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget at3
+	kamera camSetRelPos [-0.40,0.98,0.96]
+	kamera camSetFOV 0.456
+	kamera camCommit 4
+	@camCommitted kamera
+
+
+
+;=== 18:27:06
+kamera camSetTarget [-66901.70,78208.71,-1079.72]
+kamera camSetPos [4064.59,7763.43,0.73]
+kamera camSetFOV 0.262
+kamera camCommit 0
+@camCommitted kamera
+~1	
+AT1 setcombatmode "red"
+@ AT1 ammo "AT4launcher" == 0
+setacctime 0.15
+;=== 18:01:14
+kamera camSetTarget [67907.63,84720.19,1223.51]
+kamera camSetPos [4052.43,7771.42,0.84]
+kamera camSetFOV 0.593
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [73243.84,80018.48,1224.02]
+	kamera camSetPos [4081.24,7801.31,1.08]
+	kamera camSetFOV 0.593
+	kamera camCommit 0.60
+	@camCommitted kamera
+AT2 setcombatmode "red"
+@ AT2 ammo "AT4launcher" == 0
+;=== 18:07:52
+kamera camSetTarget [12154.94,-91886.72,38.67]
+kamera camSetPos [4050.95,7784.37,0.68]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [82326.84,69956.16,2721.22]
+	kamera camSetPos [4051.56,7780.77,0.72]
+	kamera camSetFOV 0.163
+	kamera camCommit 0.58
+	@camCommitted kamera
+
+
+
+AT3 setcombatmode "red"
+@ AT3 ammo "AT4launcher" == 0
+
+;=== 18:08:57
+kamera camSetTarget [-45150.15,-79192.15,-1121.26]
+kamera camSetPos [4100.67,7830.90,1.92]
+kamera camSetFOV 0.192
+kamera camCommit 0
+@camCommitted kamera
+
+	;=== 18:09:18
+	kamera camSetTarget [-44469.66,-79572.05,-1121.10]
+	kamera camSetPos [4100.14,7832.89,3.36]
+	kamera camSetFOV 0.192
+	kamera camCommit 0.40
+	@camCommitted kamera
+
+;=== 18:11:21
+kamera camSetTarget [85527.79,65815.81,37.97]
+kamera camSetPos [4078.70,7798.19,1.72]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+
+	;=== 18:11:32
+	kamera camSetTarget [47040.72,97561.07,-9811.93]
+	kamera camSetPos [4087.52,7796.46,3.28]
+	kamera camSetFOV 0.700
+	kamera camCommit 0.85
+	@camCommitted kamera
+
+;=== 18:13:43
+kamera camSetTarget tank
+kamera camSetPos [4080.40,7813.23,9.29]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+
+	;=== 18:13:49
+	kamera camSetTarget tank
+	kamera camSetPos [4088.64,7805.07,2.96]
+	kamera camSetFOV 0.700
+	kamera camCommit 1
+	@camCommitted kamera
+setacctime 1.0
+
+;AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*AT AKCE*-*-*-*
+
+
+
+
+
+
+
+;POPRAVA*-*-*-*-POPRAVA*-*-*-*-POPRAVA*-*-*-*-POPRAVA*-*-*-*-POPRAVA*-*-*-*-
+	;Viktor zabiji adu
+adam_1 switchmove "FXStandSurDown"
+;=== 15:22:43
+kamera camSetTarget [40621.84,102606.78,25.42]
+kamera camSetPos [5021.65,9158.25,1.28]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [-20014.29,105973.11,25.45]
+	kamera camSetPos [5023.50,9158.29,1.10]
+	kamera camSetFOV 0.700
+	kamera camCommit 2
+	@camCommitted kamera
+
+popravci dotarget adam_1
+;=== 15:04:23
+kamera camSetTarget [-18558.96,-87861.42,5436.07]
+kamera camSetPos [5022.78,9167.44,0.37]
+kamera camSetFOV 0.509
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [-15710.29,-84404.95,28560.07]
+	kamera camSetPos [5022.78,9167.44,0.24]
+	kamera camSetFOV 0.509
+	kamera camCommit 2
+	@camCommitted kamera
+	~1
+;=== 15:39:42
+kamera camSetTarget adam_1
+kamera camSetPos [5022.90,9164.30,1.39]
+kamera camSetFOV 0.700
+kamera camCommit 0
+	kamera camSetTarget [37541.52,-84453.90,13368.19]
+	kamera camSetPos [5021.39,9164.37,1.39]
+	kamera camSetFOV 0.700
+	kamera camCommit 3
+	
+	@camCommitted kamera
+	adam_1 removeweapon "m4"
+	adam_1 switchmove "FXStandSurUniv"
+	;popravci setcombatmode "red"
+	popravci dofire objNull
+	@pzemrel
+adam_1 switchmove "FXStandSurDead"
+;adam_1 setdammage 1
+
+popravci setmimic "smile"
+	
+
+;=== 15:18:58
+kamera camSetTarget [56672.24,-73143.75,23627.56]
+kamera camSetPos [5020.49,9165.54,0.21]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+
+	;=== 15:19:15
+	kamera camSetTarget [100678.63,-15596.10,15394.53]
+	kamera camSetPos [5019.81,9165.11,0.18]
+	kamera camSetFOV 0.700
+	kamera camCommit 2
+	@camCommitted kamera
+
+;=== 15:23:56
+kamera camSetTarget [-13761.64,-45596.95,-81512.00]
+kamera camSetPos [5022.31,9165.73,1.37]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+~1
+ah1akce=true
+;=== 15:24:09
+kamera camSetTarget [-6211.91,-89584.18,11131.85]
+kamera camSetPos [5022.51,9160.03,1.34]
+kamera camSetFOV 0.700
+kamera camCommit 2
+@camCommitted kamera
+~4
+
+;=== 15:43:37
+kamera camSetTarget [-74916.50,68981.41,-5266.97]
+kamera camSetPos [5034.02,9149.06,0.53]
+kamera camSetFOV 0.200
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [-92711.62,-11859.75,1584.75]
+	kamera camSetPos [5040.02,9168.43,2.11]
+	kamera camSetFOV 0.200
+	kamera camCommit 5
+	@camCommitted kamera
+;POPRAVA*-*-*-*-POPRAVA*-*-*-*-POPRAVA*-*-*-*-POPRAVA*-*-*-*-POPRAVA*-*-*-*-
+
+
+
+;AH1 sejme BMP1*-*-**-*AH1 sejme BMP1*-*-**-*AH1 sejme BMP1*-*-**-*AH1 sejme BMP1*-*-**-*
+ah_1 dotarget BMP_1
+;=== 14:57:38
+;kamera camSetTarget [105588.66,11019.28,-12503.98]
+;kamera camSetPos [6382.77,9747.72,3.47]
+;kamera camSetFOV 0.725
+;kamera camCommit 0
+;@camCommitted kamera
+;~15
+
+
+;=== 15:15:39
+kamera camSetTarget ah_1
+kamera camSetRelPos [0.91,-13.19,3.91]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+
+
+kamera camSetTarget ah_1
+kamera camSetPos [6295.66,9987.60,53.46]
+kamera camSetFOV 0.161
+kamera camCommit 6.7
+~2
+ah_1 dofire BMP1
+@camCommitted kamera
+
+
+;=== 15:26:33
+kamera camSetTarget BMP1
+kamera camSetPos [6456.86,9792.57,1.58]
+kamera camSetFOV 0.408
+kamera camCommit 0
+@camCommitted kamera
+~4
+
+;AH1 sejme BMP1*-*-**-*AH1 sejme BMP1*-*-**-*AH1 sejme BMP1*-*-**-*AH1 sejme BMP1*-*-**-*
+
+
+
+
+#mg
+;MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-
+truck=true
+
+
+;=== 14:14:20
+kamera camSetTarget [-78217.23,57794.50,12354.44]
+kamera camSetPos [5245.64,4108.87,0.42]
+kamera camSetFOV 0.407
+kamera camCommit 0
+@camCommitted kamera
+
+~2
+;=== 14:14:41
+kamera camSetTarget [-80620.69,-41684.70,-22949.19]
+kamera camSetPos [5251.04,4115.13,0.52]
+kamera camSetFOV 0.237
+kamera camCommit 0
+@camCommitted kamera
+~4
+
+;=== 13:44:51
+kamera camSetTarget [99161.27,37893.34,3494.78]
+kamera camSetPos [5126.55,4050.08,0.53]
+kamera camSetFOV 0.190
+kamera camCommit 0
+@camCommitted kamera
+~3
+mg1 dotarget velitel
+mg2 dotarget vojak
+mg1 setcombatmode "red"
+mg2 setcombatmode "red"
+
+
+;=== 14:45:12
+kamera camSetTarget [-61667.86,-65864.22,-24976.89]
+kamera camSetPos [5245.46,4114.38,0.05]
+kamera camSetFOV 0.227
+kamera camCommit 0
+@camCommitted kamera
+
+~3
+;=== 13:48:35
+kamera camSetTarget [-78377.72,-46557.55,-20927.49]
+kamera camSetPos [5247.51,4112.15,0.24]
+kamera camSetFOV 0.161
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [-74987.52,-47694.64,-29602.89]
+	kamera camSetPos [5248.28,4113.56,0.69]
+	kamera camSetFOV 0.395
+	kamera camCommit 6
+	@camCommitted kamera
+
+
+
+setacctime 0.25
+;=== 13:50:39
+kamera camSetTarget [85933.10,61059.49,15059.10]
+kamera camSetPos [5162.43,4052.53,0.05]
+kamera camSetFOV 0.228
+kamera camCommit 0
+@camCommitted kamera
+~1
+
+	;=== 14:10:58
+	kamera camSetTarget [85597.91,63187.83,5949.45]
+	kamera camSetPos [5174.56,4053.37,0.52]
+	kamera camSetFOV 0.369
+	kamera camCommit 0.8
+	@camCommitted kamera
+	~0.5
+
+setacctime 1
+bitva=true
+;=== 14:13:42
+kamera camSetTarget [-94136.25,7314.23,-10543.84]
+kamera camSetPos [5251.02,4110.38,0.49]
+kamera camSetFOV 0.201
+kamera camCommit 0
+@camCommitted kamera
+~5
+;MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-MG AKCE*-*-*-*-*-*-
+
+
+
+bmp2 setdammage 1
+ah_1 setdammage 1
+
+
+
+; BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-
+;=== 16:57:15
+kamera camSetTarget [-77477.06,-46725.86,7980.76]
+kamera camSetPos [6268.65,7362.02,0.05]
+kamera camSetFOV 0.134
+kamera camCommit 0
+@camCommitted kamera
+~10
+
+;=== 16:57:37
+kamera camSetTarget t803
+kamera camSetPos [6170.30,7264.33,0.72]
+kamera camSetFOV 0.419
+kamera camCommit 0
+@camCommitted kamera
+? not canmove t803: goto "preskoc1"
+~5
+#preskoc1
+
+;=== 16:58:05
+kamera camSetTarget abrams1
+kamera camSetPos [6107.19,7356.74,2.48]
+kamera camSetFOV 0.049
+kamera camCommit 0
+@camCommitted kamera
+? not canmove abrams1: goto "preskoc2"
+~5
+#preskoc2
+
+;=== 16:59:27
+kamera camSetTarget abrams4
+kamera camSetRelPos [-8.57,-22.43,1.34]
+kamera camSetFOV 0.312
+kamera camCommit 0
+@camCommitted kamera
+? not canmove abrams4: goto "preskoc3"
+~5
+#preskoc3
+
+;=== 17:00:06
+kamera camSetTarget t804
+kamera camSetRelPos [92.27,76.05,8.91]
+kamera camSetFOV 0.107
+kamera camCommit 0
+@camCommitted kamera
+? not canmove t804: goto "preskoc4"
+~5
+#preskoc4
+
+;=== 17:08:50
+kamera camSetTarget [-80609.44,-42178.92,160.61]
+kamera camSetPos [6267.68,7342.78,1.01]
+kamera camSetFOV 0.700
+kamera camCommit 0
+@camCommitted kamera
+	kamera camSetTarget [-73685.22,-52719.16,165.97]
+	kamera camSetPos [6258.64,7355.92,14.04]
+	kamera camSetFOV 0.700
+	kamera camCommit 10
+	@camCommitted kamera
+
+;=== 17:09:37
+kamera camSetTarget [93145.01,55614.03,-8042.06]
+kamera camSetPos [6030.39,7204.30,0.52]
+kamera camSetFOV 0.230
+kamera camCommit 0
+@camCommitted kamera
+~5
+
+	;=== 17:09:37
+	kamera camSetTarget [93145.01,55614.03,-8042.06]
+	kamera camSetPos [6030.39,7204.30,0.52]
+	kamera camSetFOV 0.130
+	kamera camCommit 4
+	@camCommitted kamera
+	
+	;=== 17:09:37
+	kamera camSetTarget T801
+	kamera camSetPos [6030.39,7204.30,0.52]
+	kamera camSetFOV 0.130
+	kamera camCommit 0.5
+	@camCommitted kamera
+	~3
+	;=== 17:09:37
+	kamera camSetTarget T802
+	kamera camSetPos [6030.39,7204.30,0.52]
+	kamera camSetFOV 0.130
+	kamera camCommit 0.5
+	@camCommitted kamera
+	~3
+	;=== 17:09:37
+	kamera camSetTarget T803
+	kamera camSetPos [6030.39,7204.30,0.52]
+	kamera camSetFOV 0.130
+	kamera camCommit 0.4
+	@camCommitted kamera
+~5	
+
+kamera camSetTarget abrams1
+kamera camSetRelPos [51.58,232.98,9.92]
+kamera camSetFOV 0.059
+kamera camCommit 0
+@camCommitted kamera
+~5
+; BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-BITVA*-*-*-*-*-*-
+
+

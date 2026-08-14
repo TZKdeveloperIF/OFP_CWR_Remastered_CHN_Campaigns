@@ -1,0 +1,56 @@
+_camera = "camera" camCreate [109426.16,2893.93,-159.60]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+; Scenka u strelnice
+
+;=== 18:31:19
+_camera camSetTarget [109426.16,2893.93,-159.60]
+_camera camSetPos [9434.70,4186.26,3.04]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+aS1 setPos (getMarkerPos "SVoj1")
+aS2 setPos (getMarkerPos "SVoj2")
+Peter setPos (getMarkerPos "SPeter")
+aS3 setPos (getMarkerPos "SVoj3")
+aS4 setPos (getMarkerPos "SVOJ4")
+serg setPos (getMarkerPos "SVel")
+aP setPos (getMarkerPos "SHrac")
+
+aP setdir 270
+aS1 setdir 270
+aS2 setdir 270
+aS3 setdir 270
+aS4 setdir 270
+Peter setdir 270
+serg setdir 90
+
+aP setbehaviour "CARELESS"
+aS1 setbehaviour "CARELESS"
+aS2 setbehaviour "CARELESS"
+aS3 setbehaviour "CARELESS"
+aS4 setbehaviour "CARELESS"
+Peter setbehaviour "CARELESS"
+Serg setbehaviour "CARELESS"
+
+;A jedeme kamerou
+
+
+;=== 18:43:26
+_camera camSetTarget [109426.16,2893.93,-159.95]
+_camera camSetPos [9539.55,4184.91,3.04]
+_camera camSetFOV 0.700
+_camera camCommit 12
+
+~5
+
+serg say "00v14"
+
+@camCommitted _camera
+
+;exit
+Strelby=true
+_this cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

@@ -1,0 +1,80 @@
+_camera = "camera" camCreate [25914.58,97207.05,-32774.20]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+GPhase=5
+
+
+;=== 17:50:55
+_camera camSetTarget [25914.58,97207.05,-32774.20]
+_camera camSetPos [10501.03,4006.12,19.31]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+aS1 setPos (getMarkerPos "Vojak")
+aS2 setPos (getMarkerPos "Vojak_1")
+Peter setPos (getMarkerPos "Vojak_2")
+aS3 setPos (getMarkerPos "Vojak_3")
+aS4 setPos (getMarkerPos "Vojak_4")
+serg setPos (getMarkerPos "Velitel")
+aP setPos (getMarkerPos "Hrac")
+
+aP setdir 0
+aS1 setdir 0
+aS2 setdir 0
+aS3 setdir 0
+aS4 setdir 0
+Peter setdir 0
+serg setdir 180
+
+aP setbehaviour "SAFE"
+aP playmove "effectstand"
+aS1 setbehaviour "SAFE"
+aS2 setbehaviour "SAFE"
+aS3 setbehaviour "SAFE"
+aS4 setbehaviour "SAFE"
+Peter setbehaviour "SAFE"
+Serg setbehaviour "SAFE"
+
+
+Serg say "00v10"
+
+
+;=== 17:51:27
+_camera camSetTarget [58831.24,90914.22,-10527.80]
+_camera camSetPos [10500.93,4005.51,1.56]
+_camera camSetFOV 0.700
+_camera camCommit 10
+
+~7
+aP playmove "Combat"
+
+@camCommitted _camera
+
+
+;detail na hrace
+_camera camSetTarget aP
+_camera camSetPos [10504.49,4030.57,1.91]
+_camera camSetFOV 0.343
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 20:47:42
+_camera camSetTarget aP
+_camera camSetFOV 0.027
+_camera camCommit 3
+~2
+
+titleCut ["","WHITE OUT", 1]
+
+@camCommitted _camera
+
+titleCut ["","WHITE IN", 1]
+
+3 fadeMusic 0.2
+
+;exit
+Kupredu=true
+_this cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

@@ -1,0 +1,188 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+;5616221
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+player setPos [4575.89,3879.20,1.99]
+
+
+cutscene = true
+cutrsc ["binocular","plain down",0.1] 
+setviewdistance 1200
+playmusic ["track3",5]
+0 fademusic 0.15
+
+;uvodni kamera na nic
+_camera camSetTarget [8376.33,103552.56,7148.38]
+_camera camSetPos [4577.93,3879.52,2.01]
+_camera camSetFOV 0.0600
+_camera camCommit 0
+@camCommitted _camera
+
+;posouvam se k tanku
+_camera camSetTarget [11657.75,103427.37,6349.47]
+_camera camSetPos [4577.93,3879.52,2.01]
+_camera camSetFOV 0.0600
+_camera camCommit 1
+@camCommitted _camera
+
+;tank trochu dole
+_camera camSetTarget [20884.09,102307.38,6842.49]
+_camera camSetPos [4577.89,3879.20,1.99]
+_camera camSetFOV 0.0600
+_camera camCommit 0.5
+@camCommitted _camera
+
+
+;nastank2
+_camera camSetTarget [25255.78,101533.09,6097.39]
+_camera camSetPos [4574.43,3884.13,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 0.5
+@camCommitted _camera
+
+
+;mrtvoly
+_camera camSetTarget [47348.63,94272.54,844.14]
+_camera camSetPos [4574.43,3884.13,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 0.5
+@camCommitted _camera
+
+
+;stromy pred lesikem
+_camera camSetTarget [88987.20,57504.38,1379.53]
+_camera camSetPos [4574.43,3884.13,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 1
+@camCommitted _camera
+
+
+
+;lesik u mesta
+_camera camSetTarget [99962.84,33910.18,545.20]
+_camera camSetPos [4580.14,3879.24,1.87]
+_camera camSetFOV 0.0600
+_camera camCommit 1
+@camCommitted _camera
+
+
+;MESTO*-*-*-*-*-*-*-*-*-*-*-*
+
+
+;pod vlajkou
+_camera camSetTarget [100855.71,30789.28,-2519.78]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 1
+@camCommitted _camera
+
+player say "05bv09"
+
+;vlajka
+_camera camSetTarget [101587.04,28137.76,885.65]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 2
+@camCommitted _camera
+
+;vlajka2
+_camera camSetTarget [101553.95,28267.71,1219.12]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 2
+@camCommitted _camera
+
+;vojaci pod vlajkou
+_camera camSetTarget [101988.48,26500.75,206.68]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 2
+@camCommitted _camera
+
+;za vojaky
+_camera camSetTarget [102374.62,24776.80,-368.22]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 3
+@camCommitted _camera
+
+;fontana
+_camera camSetTarget [103628.16,17630.73,809.76]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 3
+@camCommitted _camera
+
+;tank 
+_camera camSetTarget [102690.62,23215.46,-92.15]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 4
+@camCommitted _camera
+
+;tank plus mrtvoly
+_camera camSetTarget [103558.59,18120.86,-52.13]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 3
+@camCommitted _camera
+
+player say "05bv10"
+
+;pod kostelem
+_camera camSetTarget [104185.99,12568.00,-1638.08]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 3
+@camCommitted _camera
+
+;vedle kostela
+_camera camSetTarget [104446.70,8952.65,717.20]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 3
+@camCommitted _camera
+
+;najezd na vojaky
+_camera camSetTarget [104584.58,4636.45,-371.34]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 3
+@camCommitted _camera
+
+
+;vojaci
+_camera camSetTarget [104551.18,1467.85,222.15]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 4
+@camCommitted _camera
+~0.5
+
+;vojaci2
+_camera camSetTarget [104576.53,2730.60,78.58]
+_camera camSetPos [4577.94,3879.18,2.00]
+_camera camSetFOV 0.0600
+_camera camCommit 2
+@camCommitted _camera
+
+
+~0.5
+
+
+titleCut ["","BLACK IN",0.01]
+setviewdistance 900	
+50 fademusic 0
+
+
+konec_prohlidky =true
+
+saveGame
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

@@ -1,0 +1,132 @@
+debriefing = 0;
+onLoadMission = $STRM_01n01
+onLoadIntro = $STRM_01n02
+onLoadIntroTime = true
+
+
+showNotepad = 0
+
+minScore=-500
+avgScore=100
+maxScore=5000
+
+class CfgSounds
+{
+	sounds[] = 
+	{
+		01v1,01v2,01v3,01v4,01v5, 01v6, 01v7,
+		01v8
+	};
+
+	class 01v8
+	{
+		name = "Orders";
+		sound[] = {"sound/01v8.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v8a,
+			7, $STRCAMP_01v8b
+		};
+	};
+	class 01v1
+	{
+		name = "Chat 1";
+		sound[] = {"sound/01v1.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v1,
+		};
+	};
+	class 01v2
+	{
+		name = "Chat 2";
+		sound[] = {"sound/01v2.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v2,
+		};
+	};
+	class 01v3
+	{
+		name = "Chat 3";
+		sound[] = {"sound/01v3.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v3,
+		};
+	};
+	class 01v4
+	{
+		name = "Chat 4";
+		sound[] = {"sound/01v4.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v4,
+		};
+	};
+	class 01v5
+	{
+		name = "Chat 5";
+		sound[] = {"sound/01v5.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v5,
+		};
+	};
+	class 01v6
+	{
+		name = "Chat 6";
+		sound[] = {"sound/01v6.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v6,
+		};
+	};
+	class 01v7
+	{
+		name = "Chat 7";
+		sound[] = {"sound/01v7.ogg", db-0, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_01v7,
+		};
+	};
+
+
+};
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+			01r1, 01r2, 01r3
+		};
+
+	class 01r1
+	{
+		name = "Radio Msg 1";
+		sound[] = {"sound/01r1.ogg", db-20, 1.0};
+		title = $STRCAMP_01r1;
+	};
+	class 01r2
+	{
+		name = "Radio Msg 2";
+		sound[] = {"sound/01r2.ogg", db-20, 1.0};
+		title = $STRCAMP_01r2;
+	};
+	class 01r3
+	{
+		name = "Radio Msg 3";
+		sound[] = {"sound/01r3.ogg", db-20, 1.0};
+		title = $STRCAMP_01r3;
+	};
+};
+
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

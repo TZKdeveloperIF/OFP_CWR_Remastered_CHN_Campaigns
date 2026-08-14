@@ -1,0 +1,58 @@
+minScore=1601
+avgScore=3000
+maxScore=6399
+
+onLoadMission=$STRM_12An10
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+			Instr1, Act1, Act2, Act3, Amb1
+		};
+
+	class Instr1
+	{
+		name = "Instr1";
+		sound[] = {"sound/12ar01.ogg", db-40, 1.0};
+		title = $STRM_12Ar01;
+	};
+	class Act1
+	{
+		name = "Act1";
+		sound[] = {"sound/12ar02.ogg", db-40, 1.0};
+		title = $STRM_12Ar02;
+	};
+	class Act2
+	{
+		name = "Act2";
+		sound[] = {"sound/12ar03.ogg", db-40, 1.0};
+		title = $STRM_12Ar03;
+	};
+	class Act3
+	{
+		name = "Act3";
+		sound[] = {"sound/12ar04.ogg", db-40, 1.0};
+		title = $STRM_12Ar04;
+	};
+	class Amb1
+	{
+		name = "Amb1";
+		sound[] = {"sound/12ar05.ogg", db-40, 1.0};
+		title = $STRM_12Ar05;
+	};
+	class 12Ar06
+	{
+		name = "12Ar06";
+		sound[] = {"sound/12ar06.ogg", db-40, 1.0};
+		title = $STRM_12Ar06;
+	};
+};
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

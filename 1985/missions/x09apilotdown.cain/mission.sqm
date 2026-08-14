@@ -1,0 +1,1043 @@
+version=11.000000;
+
+class Mission
+
+{
+
+	randomSeed=2904067.000000;
+
+	class Intel
+
+	{
+
+		briefingName="$STR_CAMPAIGN_1985_X09APILOTDOWN_CAIN_BRIEFING_NAME";
+		viewDistance=900;
+
+	};
+
+};
+
+class Intro
+
+{
+
+	randomSeed=14165507.000000;
+
+	class Intel
+
+	{
+
+		briefingName="$STR_CAMPAIGN_1985_X09APILOTDOWN_CAIN_BRIEFING_NAME";
+
+		forecastWeather=0.224862;
+
+		month=6.000000;
+
+		hour=5.000000;
+
+		minute=20.000000;
+
+	};
+
+	class Groups
+
+	{
+
+		items=10.000000;
+
+		class Item0
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={4688.097656,95.525528,3875.845459};
+
+					id=0.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWPilot";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="aP";
+
+					markers[]={};
+
+					init="this moveindriver par; this setcombatmode ""blue""";
+
+				};
+
+			};
+
+		};
+
+		class Item1
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5241.808105,169.470062,3947.276123};
+
+					azimut=275.000000;
+
+					id=3.000000;
+
+					side="EAST";
+
+					vehicle="SoldierEB";
+
+					player="PLAYER COMMANDER";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					markers[]={};
+
+					init="player exec ""apilot.sqs""";
+
+				};
+
+			};
+
+		};
+
+		class Item2
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5049.334473,152.905106,3791.265381};
+
+					azimut=270.000000;
+
+					id=4.000000;
+
+					side="EAST";
+
+					vehicle="SoldierEB";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="rus";
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+		class Item3
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5117.966797,180.410812,3891.864258};
+
+					azimut=255.000000;
+
+					id=5.000000;
+
+					side="EAST";
+
+					vehicle="UAZ";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=1.000000;
+
+					text="UAZ";
+
+					markers[]={};
+
+				};
+
+			};
+
+			class Waypoints
+
+			{
+
+				items=3.000000;
+
+				class Item0
+
+				{
+
+					position[]={5112.772949,180.657990,3889.808594};
+
+					expCond="jede";
+
+					synchronizations[]={};
+
+					class Effects
+
+					{
+
+					};
+
+					showWP="NEVER";
+
+				};
+
+				class Item1
+
+				{
+
+					position[]={5062.242676,178.541000,3882.427002};
+
+					type="GETOUT";
+
+					expActiv="[of] allowgetin false; dojel=true";
+
+					synchronizations[]={};
+
+					class Effects
+
+					{
+
+					};
+
+					showWP="NEVER";
+
+				};
+
+				class Item2
+
+				{
+
+					position[]={5065.798340,177.537842,3874.958496};
+
+					synchronizations[]={};
+
+					class Effects
+
+					{
+
+					};
+
+					showWP="NEVER";
+
+				};
+
+			};
+
+		};
+
+		class Item4
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5119.760254,181.061432,3897.782227};
+
+					azimut=280.000000;
+
+					id=6.000000;
+
+					side="EAST";
+
+					vehicle="OfficerE";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=0.333333;
+
+					text="of";
+
+					markers[]={};
+
+					init="this setbehaviour ""careless""; this moveincargo uaz";
+
+				};
+
+			};
+
+		};
+
+		class Item5
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5136.547852,181.083389,3908.115234};
+
+					azimut=275.000000;
+
+					id=7.000000;
+
+					side="EAST";
+
+					vehicle="BMP";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=1.000000;
+
+					text="BMP";
+
+					markers[]={};
+
+				};
+
+			};
+
+			class Waypoints
+
+			{
+
+				items=2.000000;
+
+				class Item0
+
+				{
+
+					position[]={5127.408203,181.942123,3907.625488};
+
+					combatMode="GREEN";
+
+					formation="VEE";
+
+					speed="LIMITED";
+
+					combat="SAFE";
+
+					expCond="bmpjede";
+
+					synchronizations[]={};
+
+					class Effects
+
+					{
+
+					};
+
+					showWP="NEVER";
+
+				};
+
+				class Item1
+
+				{
+
+					position[]={5062.348633,180.333771,3893.571289};
+
+					expActiv="bmpdojelo=true";
+
+					synchronizations[]={};
+
+					class Effects
+
+					{
+
+					};
+
+					showWP="NEVER";
+
+				};
+
+			};
+
+		};
+
+		class Item6
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5144.981445,182.011398,3919.704346};
+
+					azimut=325.000000;
+
+					id=8.000000;
+
+					side="EAST";
+
+					vehicle="SoldierESaboteurPipe";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=0.333333;
+
+					text="sab2";
+
+					markers[]={};
+
+					init="this moveincargo BMP";
+
+				};
+
+			};
+
+		};
+
+		class Item7
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5148.406738,181.082764,3916.505371};
+
+					azimut=275.000000;
+
+					id=9.000000;
+
+					side="EAST";
+
+					vehicle="SoldierESaboteurPipe";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=0.333333;
+
+					text="sab3";
+
+					markers[]={};
+
+					init="this moveincargo BMP";
+
+				};
+
+			};
+
+		};
+
+		class Item8
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5150.004883,181.951004,3923.131592};
+
+					azimut=275.000000;
+
+					id=10.000000;
+
+					side="EAST";
+
+					vehicle="SoldierESaboteurPipe";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=0.333333;
+
+					text="sab1";
+
+					markers[]={};
+
+					init="this moveincargo BMP";
+
+				};
+
+			};
+
+		};
+
+		class Item9
+
+		{
+
+			side="EAST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={5143.382812,183.523346,3927.929688};
+
+					azimut=275.000000;
+
+					id=11.000000;
+
+					side="EAST";
+
+					vehicle="SoldierESniper";
+
+					leader=1.000000;
+
+					rank="CORPORAL";
+
+					skill=0.333333;
+
+					text="snip";
+
+					markers[]={};
+
+					init="this moveincargo BMP";
+
+				};
+
+			};
+
+		};
+
+	};
+
+	class Vehicles
+
+	{
+
+		items=3.000000;
+
+		class Item0
+
+		{
+
+			position[]={4695.361328,93.913429,3876.974365};
+
+			special="FLY";
+
+			id=1.000000;
+
+			side="EMPTY";
+
+			vehicle="Parachute";
+
+			leader=1.000000;
+
+			skill=0.200000;
+
+			text="par";
+
+			markers[]={};
+
+		};
+
+		class Item1
+
+		{
+
+			position[]={4682.823242,97.180443,3877.529053};
+
+			id=2.000000;
+
+			side="EMPTY";
+
+			vehicle="A10";
+
+			leader=1.000000;
+
+			skill=0.200000;
+
+			text="a10";
+
+			markers[]={};
+
+			init="this SetPos [4726.55,3938.34,119.38]; this setdammage 1";
+
+		};
+
+		class Item2
+
+		{
+
+			position[]={4629.884766,75.199318,3796.913086};
+
+			azimut=255.000000;
+
+			id=12.000000;
+
+			side="EMPTY";
+
+			vehicle="HeliHEmpty";
+
+			leader=1.000000;
+
+			skill=1.000000;
+
+			text="jeep";
+
+			markers[]={};
+
+		};
+
+	};
+
+	class Sensors
+
+	{
+
+		items=10.000000;
+
+		class Item0
+
+		{
+
+			position[]={4682.289062,89.494705,3835.562744};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			age="UNKNOWN";
+
+			text="createCAM";
+
+			expCond="cheat1";
+
+			expActiv="player exec ""camera.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item1
+
+		{
+
+			position[]={4702.312500,85.510063,3835.530518};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="playCAM";
+
+			expCond="cheat2";
+
+			expActiv="player exec ""apilot.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item2
+
+		{
+
+			position[]={4733.076172,87.919006,3839.661377};
+
+			a=20.000000;
+
+			b=20.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			type="END1";
+
+			age="UNKNOWN";
+
+			text="endmission";
+
+			expCond="konec";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item3
+
+		{
+
+			position[]={5037.196777,177.318878,3924.870850};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="playCAM pozice";
+
+			expCond="cheat3";
+
+			expActiv="player exec ""pozice.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item4
+
+		{
+
+			position[]={4833.563477,108.159615,3897.727783};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="playCAM pozice2";
+
+			expCond="cheat4";
+
+			expActiv="player exec ""pozice2.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item5
+
+		{
+
+			position[]={4913.958496,120.371490,3906.664062};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="playCAM pozice3";
+
+			expCond="cheat5";
+
+			expActiv="player exec ""pozice3.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item6
+
+		{
+
+			position[]={5099.212891,196.374405,3973.509033};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			age="UNKNOWN";
+
+			expCond="bmpdojelo";
+
+			expActiv="[sab3] allowgetin false;";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item7
+
+		{
+
+			position[]={5119.503906,194.064926,3973.509033};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			timeoutMin=2.000000;
+
+			timeoutMid=2.000000;
+
+			timeoutMax=2.000000;
+
+			interruptable=1.000000;
+
+			age="UNKNOWN";
+
+			expCond="bmpdojelo";
+
+			expActiv="[sab2] allowgetin false;";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item8
+
+		{
+
+			position[]={5139.561523,191.510284,3973.509033};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			timeoutMin=4.000000;
+
+			timeoutMid=4.000000;
+
+			timeoutMax=4.000000;
+
+			interruptable=1.000000;
+
+			age="UNKNOWN";
+
+			expCond="bmpdojelo";
+
+			expActiv="[sab1] allowgetin false;";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item9
+
+		{
+
+			position[]={5159.708984,188.326630,3973.538086};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			timeoutMin=6.000000;
+
+			timeoutMid=6.000000;
+
+			timeoutMax=6.000000;
+
+			interruptable=1.000000;
+
+			age="UNKNOWN";
+
+			expCond="bmpdojelo";
+
+			expActiv="[snip] allowgetin false;";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+	};
+
+};
+
+class OutroWin
+
+{
+
+	randomSeed=2904067.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+
+class OutroLoose
+
+{
+
+	randomSeed=6223363.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+

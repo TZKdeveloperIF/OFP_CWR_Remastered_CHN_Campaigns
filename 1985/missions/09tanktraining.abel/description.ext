@@ -1,0 +1,105 @@
+minScore=201
+avgScore=600
+maxScore=2999
+onLoadMission=$STRM_09n20
+
+class CfgSounds
+{
+	sounds[] = { };
+
+	class Seq1
+	{
+		name = "Seq1";
+		sound[] = {"sound/09v07.ogg", db+70, 1.0};
+		titles[] = 
+		{
+			0, $STRM_09v07
+		};
+	};
+	class Seq2
+	{
+		name = "Seq2";
+		sound[] = {"sound/09v08.ogg", db+70, 1.0};
+		titles[] = 
+		{
+			0, $STRM_09v08a,
+			8, $STRM_09v08b
+		};
+	};
+
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class Seq0
+	{
+		name = "Seq0";
+		sound[] = {"sound/09r06.ogg", db-40, 1.0};
+		title = $STRM_09r06;
+	};
+	class Instr1
+	{
+		name = "Instr1";
+		sound[] = {"sound/09r09.ogg", db-40, 1.0};
+		title = $STRM_09r09;
+	};
+	class Instr2
+	{
+		name = "Instr2";
+		sound[] = {"sound/09r10.ogg", db-40, 1.0};
+		title = $STRM_09r10;
+	};
+	class Instr3
+	{
+		name = "Instr3";
+		sound[] = {"sound/09r11.ogg", db-40, 1.0};
+		title = $STRM_09r11;
+	};
+	class Alarm1
+	{
+		name = "Alarm1";
+		sound[] = {"sound/09r12.ogg", db-40, 1.0};
+		title = $STRM_09r12;
+	};
+	class Alarm2
+	{
+		name = "Alarm2";
+		sound[] = {"sound/09r13.ogg", db-40, 1.0};
+		title = $STRM_09r13;
+	};
+	class Alarm3
+	{
+		name = "Alarm3";
+		sound[] = {"sound/09r14.ogg", db-40, 1.0};
+		title = $STRM_09r14;
+	};
+	class End4
+	{
+		name = "End4";
+		sound[] = {"sound/09r15.ogg", db-40, 1.0};
+		title = $STRM_09r15;
+	};
+	class 09r16
+	{
+		name = "09r16";
+		sound[] = {"sound/09r16.ogg", db-40, 1.0};
+		title = $STRM_09r16;
+	};
+	class 09r17
+	{
+		name = "09r17";
+		sound[] = {"sound/09r17.ogg", db-40, 1.0};
+		title = $STRM_09r17;
+	};
+
+};
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

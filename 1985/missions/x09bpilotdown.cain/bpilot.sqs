@@ -1,0 +1,464 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+;=== 13:30:01
+setacctime 1.0
+0 fadeMusic 0
+30 fadeMusic 0.3
+playMusic "track14"
+
+;nastavujeme pozice=-=-=-=--=-=-=-=-=-=-=-
+		guba setPos [1899.422,7391.860,5]
+		guba  setDir -220
+		guba  setFormDir -220
+		guba setBehaviour "careless"
+		guba removeWeapon "AK74"
+		guba disableAI "target"
+		guba disableAI "autotarget"
+		guba removeWeapon "binocular"
+		guba stop true
+		;guba setunitpos "up"
+		angel stop true
+		angel removeweapon "AK74"
+		angel SetPos [1898.936,7393.816,5]
+		angel setDir 41
+		angel setbehaviour "careless"
+		angel dowatch pilot
+		angel disableAI "autotarget"
+		;angel setunitpos "up"
+		kam SetPos [1897.566,7387.723,5]
+		kam setDir 17
+		pilot removeweapon "m4"
+		pilot SetPos [1899.633,7395.383,5]
+		zidle SetPos [1899.633,7395.443,3]
+		pilot setDir -176
+		pilot switchMove "EffectStandSitDown"
+		pilot setBehaviour "careless"
+		pilot switchMove "OnChair"
+		pilot stop true
+		pilot setMimic "normal"
+		angel doWatch pilot
+		Straz  setPos [1897.880,7395.914,3.058]
+		Straz setDir 90
+		;straz  setPos [1898.628,7395.895,5]
+		;straz  setDir 149
+		straz doTarget pilot
+		straz setBehaviour "aware"
+		straz setUnitPos "up"
+		;sedime=true
+		ian switchMove "OnChair"
+		blake switchMove "OnChair"
+		trans switchMove "FXStandUnivTable"
+		kamera setPos [1897.97,7388.300,0]
+		kamera setDir 29
+		kam setPos [1898.09,7389.07,3.05]
+		kam setDir 200
+		guba setMimic "angry"
+		angel setMimic "normal"
+		blake setMimic "normal"
+		angel switchMove "FXangel"
+		ian disableAI "autotarget"
+		guba disableAI "autotarget"
+;nastavujeme pozice=-=-=-=-=-=-=-=-=-=-=-=-
+titleCut ["","BLACK IN",1]
+;goto "cut"
+
+;SOAP KAMERA
+_camera camSetTarget [8282.26,106527.95,11368.74]
+_camera camSetPos [1898.04,7367.15,1.19]
+_camera camSetFOV 0.509
+_camera camCommit 0
+@camCommitted _camera
+~1
+		pilot SetPos [1899.633,7395.383,3.2]
+~1
+		pilot SetPos [1899.633,7395.383,3.2]
+~1
+~1
+~1		
+;straz doTarget pilot
+		
+;SOAP KAMERA
+
+
+
+
+;angel kaze pilotovi
+;=== 11:27:44
+_camera camSetTarget [-76253.50,-38691.43,42180.07]
+_camera camSetPos [1899.56,7394.26,4.28]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+angel say "x09bv01"
+~5
+_camera camSetTarget [-96677.95,-5177.07,11265.63]
+_camera camSetPos [1901.72,7394.78,4.20]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~6
+
+1 fadeMusic 0
+
+~1
+
+;angel kaze pilotovi
+
+angel stop false
+
+
+
+;Angelina
+		angel switchmove "FXangel2"
+;=== 11:01:17
+_camera camSetTarget [-38795.85,98083.05,-10767.49]
+_camera camSetPos [1900.73,7391.18,4.93]
+_camera camSetFOV 0.468
+_camera camCommit 0
+@camCommitted _camera
+angel doWatch guba
+angel setPos [1898.561,7391.419,5]
+guba  setDir 275
+angel dowatch guba
+30 fadeMusic 0.1
+playMusic ["track9", 16]
+
+~1
+angel say "x09bv02"
+~1.5
+;Angelina
+
+
+
+
+
+;GUBA MLUVI
+guba setmimic "angry"
+_camera camSetTarget [-97152.17,12935.52,-12438.00]
+_camera camSetPos [1899.87,7391.49,4.66]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~3
+guba say "x09bv03"
+
+_camera camSetTarget [30833.46,102626.42,-9512.94]
+_camera camSetPos [1898.81,7390.91,4.54]
+_camera camSetFOV 0.537
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [101559.06,-711.62,1605.72]
+	_camera camSetPos [1898.86,7392.01,4.72]
+	_camera camSetFOV 0.700
+	_camera camCommit 22
+	~9
+	~6
+	guba say "x09bv04"
+	~5
+	@camCommitted _camera
+
+
+;GUBA MLUVI
+
+
+
+
+
+;ANGEL MLUVI
+;=== 13:36:09
+_camera camSetTarget [-38938.28,-83091.61,-11895.85]
+_camera camSetPos [1899.74,7393.52,4.88]
+_camera camSetFOV 0.345
+_camera camCommit 0
+@camCommitted _camera
+angel say "x09bv05"
+~4
+;=== 13:36:47
+_camera camSetTarget [4040.77,107296.33,-3571.09]
+_camera camSetPos [1898.52,7387.89,4.20]
+_camera camSetFOV 0.699
+_camera camCommit 0
+@camCommitted _camera
+
+~4
+;ANGEL MLUVI
+
+
+
+;KAMERA=-=-=-=-=-=-==-=-==-=-=-=-=-=--=-=-=-=-=-=-=-
+_camera camSetTarget [29219.12,103582.62,-251.11]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.731
+_camera camCommit 0
+@camCommitted _camera
+guba say "x09bv06"
+~2
+guba stop false
+;=== 12:53:32
+_camera camSetTarget [29219.12,103582.62,-251.11]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.327
+_camera camCommit 0.5
+@camCommitted _camera
+~3
+titleCut ["","BLACK OUT",1]
+~1
+guba dowatch kam
+guba setDir -159
+angel SetPos [1900.593,7385.898,5]
+angel setDir -42
+~2
+guba stop true
+
+titleCut ["","BLACK IN",1]
+~2
+;=== 12:54:21
+_camera camSetTarget [29878.01,103393.03,-250.72]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.165
+_camera camCommit 1
+@camCommitted _camera
+
+~2
+
+
+;=== 12:54:21
+_camera camSetTarget [29878.01,103393.03,-250.72]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.165
+_camera camCommit 2
+@camCommitted _camera
+guba say "x09bv07"
+guba stop true
+~4
+;=== 12:54:42
+_camera camSetTarget [29878.01,103393.03,-251.16]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.414
+_camera camCommit 4
+@camCommitted _camera
+
+;=== 12:54:42
+_camera camSetTarget pilot
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.100
+_camera camCommit 0.5
+@camCommitted _camera
+guba say "x09bv08"
+~1.5
+guba setmimic "normal"
+~1.5
+
+;=== 12:54:42
+_camera camSetTarget [29878.01,103393.03,-251.16]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.414
+_camera camCommit 0.5
+@camCommitted _camera
+~3
+
+
+_camera camSetTarget [29878.01,103393.03,-251.16]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.414
+_camera camCommit 0.5
+@camCommitted _camera
+guba say "x09bv09"
+~4
+~4
+;ztmaveni-*-*-**-*-*-*-*-*-*
+titleCut ["","BLACK OUT",1]
+~1
+;ztmaveni-*-*-**-*-*-*-*-*-*
+
+
+;SHOTIME zacina=-=-=-=-=-=-=-=--=-=-=-
+~0.5
+titleCut ["","BLACK IN",1]
+cutobj ["tvset","plain down",100] 
+_camera camSetTarget [38039.17,100629.50,128.41]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.414
+_camera camCommit 0
+@camCommitted _camera
+guba say "x09bv10"
+~6
+;zoom
+_camera camSetTarget [30149.93,101445.32,-250.20]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.164
+_camera camCommit 1
+@camCommitted _camera
+~2
+kamera say "x09bv10us"
+~12
+
+titleCut ["","plain down",0.1]
+;KAMERA=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ian switchmove "FXStandUnivTable"
+blake switchmove "OnChair"
+trans switchmove "OnChair"
+
+0 fadeMusic 0.08
+playMusic "track5"
+
+;GASTOVSKi
+_camera camSetTarget [42857.40,105642.08,-1294.45]
+_camera camSetPos [11476.88,10703.62,1.06]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+ian say "x09bv11"
+~2
+
+;GUBA GUBA GUBA v televizi=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-
+cutobj ["tvset","plain down",100] 
+_camera camSetTarget [30149.93,101445.32,-250.20]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.164
+_camera camCommit 0
+@camCommitted _camera
+guba say "x09bv12"
+~4
+guba say "x09bv13"
+~1
+kamera say "x09bv12us"
+~2
+kamera say "x09bv13us"
+~8
+_camera camSetTarget [35849.23,101445.32,-250.20]
+_camera camSetPos [1898.23,7387.88,4.62]
+_camera camSetFOV 0.414
+_camera camCommit 1
+@camCommitted _camera
+guba say "x09bv14"
+~6
+kamera say "x09bv14us"
+~13
+
+titleCut ["","plain down",0.1]
+;GUBA GUBA GUBA v televizi
+
+;GASTOVSKi
+_camera camSetTarget [42857.40,105642.08,-1294.45]
+_camera camSetPos [11476.88,10703.62,1.06]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+ian say "x09bv15"
+~3.5
+
+
+
+
+;BLAKE
+_camera camSetTarget [59534.30,94753.44,25129.86]
+_camera camSetPos [11477.58,10704.18,0.83]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+blake say "x09bv16"
+~6
+
+;zaber na vsechny sedici
+_camera camSetTarget [59405.16,97354.38,-13849.44]
+_camera camSetPos [11477.12,10704.60,1.26]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+;Z IANa NA BLAKEa
+_camera camSetTarget [40413.40,105925.11,-9679.73]
+_camera camSetPos [11477.82,10704.30,1.24]
+_camera camSetFOV 0.700
+_camera camCommit 8
+ian say "x09bv17"
+~1
+blake say "x09bv18"
+@camCommitted _camera
+
+;Blake
+_camera camSetTarget [-57818.82,82134.23,-9679.45]
+_camera camSetPos [11478.35,10704.77,1.37]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+blake say "x09bv19"
+~8
+
+;zespoda nahoru
+_camera camSetTarget [85981.51,46552.53,56353.50]
+_camera camSetPos [11476.79,10704.73,0.59]
+_camera camSetFOV 0.472
+_camera camCommit 0
+@camCommitted _camera
+
+
+;zespoda nahoru a zaber na Blakea
+_camera camSetTarget [104982.69,44576.95,10560.00]
+_camera camSetPos [11476.79,10704.73,1.11]
+_camera camSetFOV 0.472
+_camera camCommit 7
+ian say "x09bv20"
+~2
+blake say "x09bv21"
+@camCommitted _camera
+blake say "x09bv22"
+~6
+
+;=== 16:49:19
+_camera camSetTarget [-65788.09,74071.09,-3709.27]
+_camera camSetPos [11478.54,10704.51,1.26]
+_camera camSetFOV 0.311
+_camera camCommit 0
+@camCommitted _camera
+ian say "x09bv23"
+~2.5
+
+;=== 16:48:55
+_camera camSetTarget [-49012.52,90242.47,-3708.81]
+_camera camSetPos [11478.54,10704.51,1.26]
+_camera camSetFOV 0.400
+_camera camCommit 2
+blake say "x09bv24"
+@camCommitted _camera
+2 fadeMusic 0
+~2
+
+;GASTOVSKi
+_camera camSetTarget [42857.40,105642.08,-1294.45]
+_camera camSetPos [11476.88,10703.62,1.06]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+ian say "x09bv25"
+playMusic "track8"
+7 fadeMusic 0.15
+~3
+#cut
+
+;=== 16:53:06
+_camera camSetTarget [-8781.19,104454.97,-28177.88]
+_camera camSetPos [11478.26,10702.25,1.78]
+_camera camSetFOV 0.479
+_camera camCommit 0
+@camCommitted _camera
+blake say "x09bv26"
+trans switchmove "FXStandFromTable"
+~6
+
+1 fadeMusic 0
+titleCut ["","BLACK OUT",1]
+~1
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+

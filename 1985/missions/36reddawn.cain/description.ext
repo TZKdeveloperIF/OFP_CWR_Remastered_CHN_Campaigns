@@ -1,0 +1,335 @@
+minScore=500
+avgScore=3000
+maxScore=8000
+
+showGPS=1
+
+class Weapons
+{
+    class M16
+    {
+        count = 6;
+    };
+    class M16GrenadeLauncher
+    {
+        count = 3;
+    };
+    class M4
+    {
+        count = 4;
+    };
+    class M60
+    {
+        count = 3;
+    };
+    class LAWLauncher
+    {
+        count = 3;
+    };
+    class AALauncher
+    {
+        count = 1;
+    };
+    class M21
+    {
+        count = 1;
+    };
+    class HK
+    {
+        count = 5;
+    };
+    class AK74
+    {
+        count = 1;
+    };
+    class AK74GrenadeLauncher
+    {
+        count = 1;
+    };
+    class AK74SU
+    {
+        count = 4;
+    };
+    class PK
+    {
+        count = 2;
+    };
+    class RPGLauncher
+    {
+        count = 1;
+    };
+    class SVDDragunov
+    {
+        count = 1;
+    };
+    class AK47CZ
+    {
+        count = 1;
+    };
+    class AK47GrenadeLauncher
+    {
+        count = 2;
+    };
+    class AK47
+    {
+        count = 6;
+    };
+    class CarlGustavLauncher
+    {
+        count = 2;
+    };
+    class AT4Launcher
+    {
+        count = 1;
+    };
+};
+
+class Magazines
+{
+    class M16
+    {
+        count = 10;
+    };
+    class HandGrenade
+    {
+        count = 10;
+    };
+    class GrenadeLauncher
+    {
+        count = 10;
+    };
+    class M4
+    {
+        count = 10;
+    };
+    class M60
+    {
+        count = 10;
+    };
+    class LAWLauncher
+    {
+        count = 10;
+    };
+    class AALauncher
+    {
+        count = 10;
+    };
+    class Mortar
+    {
+        count = 10;
+    };
+    class M21
+    {
+        count = 10;
+    };
+    class HK
+    {
+        count = 10;
+    };
+    class PipeBomb
+    {
+        count = 10;
+    };
+    class Mine
+    {
+        count = 10;
+    };
+    class SmokeShell
+    {
+        count = 10;
+    };
+    class Flare
+    {
+        count = 10;
+    };
+    class AK74
+    {
+        count = 20;
+    };
+    class PK
+    {
+        count = 10;
+    };
+    class RPGLauncher
+    {
+        count = 10;
+    };
+    class SVDDragunov
+    {
+        count = 10;
+    };
+    class AK47
+    {
+        count = 20;
+    };
+    class CarlGustavLauncher
+    {
+        count = 2;
+    };
+    class AT4Launcher
+    {
+        count = 1;
+    };
+};
+
+
+class CfgSounds
+{
+	sounds[] = 	{ };
+
+	class 36v01
+	{
+		name = "";
+		sound[] = {"sound/36v01.ogg", db-40, 1.0};
+		forceTitles = true;
+		titles[] = { 0, $STRM_36v01 };
+	};
+	class 36v02
+	{
+		name = "";
+		sound[] = {"sound/36v02.ogg", db-40, 1.0};
+		forceTitles = true;
+		titles[] = { 0, $STRM_36v02 };
+	};
+	class 36v03	
+	{
+		name = "";
+		sound[] = {"sound/36v03.ogg", db-40, 1.0};
+		forceTitles = true;
+		titles[] = { 0, $STRM_36v03 };
+	};
+	class 36v04
+	{
+		name = "";
+		sound[] = {"sound/36v04.ogg", db-40, 1.0};
+		forceTitles = true;
+		titles[] = { 0, $STRM_36v04 };
+	};
+	class 36v05
+	{
+		name = "";
+		sound[] = {"sound/36v05.ogg", db-40, 1.0};
+		forceTitles = true;
+		titles[] = { 0, $STRM_36v05 };
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = {};
+
+	class 36r06
+	{
+		name = "";
+		sound[] = {"sound/36r06.ogg", db-40, 1.0};
+		title = $STRM_36r06;
+	};
+	class 36r07
+	{
+		name = "";
+		sound[] = {"sound/36r07.ogg", db-40, 1.0};
+		title = $STRM_36r07;
+	};
+	class 36r08
+	{
+		name = "";
+		sound[] = {"sound/36r08.ogg", db-40, 1.0};
+		title = $STRM_36r08;
+	};
+	class 36r09
+	{
+		name = "";
+		sound[] = {"sound/36r09.ogg", db-40, 1.0};
+		title = $STRM_36r09;
+	};
+	class 36r10
+	{
+		name = "";
+		sound[] = {"sound/36r10.ogg", db-40, 1.0};
+		title = $STRM_36r10;
+	};	
+	class 36r11
+	{
+		name = "";
+		sound[] = {"sound/36r11.ogg", db-40, 1.0};
+		title = $STRM_36r11;
+	};	
+	class 36r12
+	{
+		name = "";
+		sound[] = {"sound/36r12.ogg", db-40, 1.0};
+		title = $STRM_36r12;
+	};
+	class 36r13
+	{
+		name = "";
+		sound[] = {"sound/36r13.ogg", db-40, 1.0};
+		title = $STRM_36r13;
+	};
+	class 36r14
+	{
+		name = "";
+		sound[] = {"sound/36r14.ogg", db-40, 1.0};
+		title = $STRM_36r14;
+	};
+	class 36r15
+	{
+		name = "";
+		sound[] = {"sound/36r15.ogg", db-40, 1.0};
+		title = $STRM_36r15;
+	};
+	class 36r16
+	{
+		name = "";
+		sound[] = {"sound/36r16.ogg", db-40, 1.0};
+		title = $STRM_36r16;
+	};
+	class 36r17
+	{
+		name = "";
+		sound[] = {"sound/36r17.ogg", db-40, 1.0};
+		title = $STRM_36r17;
+	};
+	class 36r18
+	{
+		name = "";
+		sound[] = {"sound/36r18.ogg", db-40, 1.0};
+		title = $STRM_36r18;
+	};
+	class 36r19
+	{
+		name = "";
+		sound[] = {"sound/36r19.ogg", db-40, 1.0};
+		title = $STRM_36r19;
+	};
+	class 36r20
+	{
+		name = "";
+		sound[] = {"sound/36r20.ogg", db-40, 1.0};
+		title = $STRM_36r20;
+	};
+	class 36r21
+	{
+		name = "";
+		sound[] = {"sound/36r21.ogg", db-40, 1.0};
+		title = $STRM_36r21;
+	};
+	class 36r22
+	{
+		name = "";
+		sound[] = {"sound/36r22.ogg", db-40, 1.0};
+		title = $STRM_36r22;
+	};
+};
+
+
+
+
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

@@ -1,0 +1,197 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+
+titleCut ["","BLACK IN",1]
+setacctime 1.0
+_czechVoice = voiceLanguage == "Czech"
+playmusic "track5"
+
+;NA MESTO
+_camera camSetTarget [-88780.95,35531.00,764.52]
+_camera camSetPos [7320.09,7885.90,11.58]
+_camera camSetFOV 0.516
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [-47268.36,91675.74,760.33]
+	_camera camSetPos [7310.42,7885.48,1.77]
+	_camera camSetFOV 0.516
+	_camera camCommit 10
+	~7
+	6 fademusic 0.05
+	@camCommitted _camera
+
+	;NA MESTO
+
+
+;Blake ze zadu a zaber na saboteour
+_camera camSetTarget [102459.40,-22837.50,168.88]
+_camera camSetPos [7299.95,7898.18,1.65]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+blake say "11v02"
+~3
+;Blake ze zadu a zaber na saboteour
+
+;Blake detal 
+_camera camSetTarget [-92236.91,13781.44,7751.00]
+_camera camSetPos [7301.47,7897.51,1.34]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+~3
+;Blake detal 
+
+
+;James Gastovski*-*-*-*-*-*-*
+_camera camSetTarget [76281.43,80224.30,-3090.05]
+_camera camSetPos [7302.42,7896.74,1.51]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+ian stop true
+ian say "11v03"
+~5
+;James Gastovski*-*-*-*-*-*-*
+
+;Blake detail 2
+_camera camSetTarget [-74222.54,65810.68,169.05]
+_camera camSetPos [7300.86,7897.50,1.57]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+blake say "11v04"
+~7
+;Blake detail 2
+
+;Blake skrz sab2
+_camera camSetTarget [-91262.37,-8967.39,-9.78]
+_camera camSetPos [7304.94,7898.38,1.51]
+_camera camSetFOV 0.276
+_camera camCommit 0
+@camCommitted _camera
+~7
+;Blake skrz sab2
+
+
+
+;Detail na Iana
+_camera camSetTarget [105495.62,24762.07,8748.85]
+_camera camSetPos [7302.12,7897.28,1.51]
+_camera camSetFOV 0.276
+_camera camCommit 0
+@camCommitted _camera
+ian say "11v05"
+~3
+;Detail na Iana
+
+;=== 21:25:46
+_camera camSetTarget [32352.65,-88912.11,169.66]
+_camera camSetPos [7302.64,7899.17,1.57]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+	;=== 21:26:04
+	_camera camSetTarget [-69797.01,-55784.03,169.47]
+	_camera camSetPos [7303.36,7899.04,1.57]
+	_camera camSetFOV 0.700
+	_camera camCommit 8
+
+	~5
+	blake say "11v06"
+	_wait = 2.5
+	? _czechVoice : _wait = 3.4
+	~_wait
+	ian say "11v07"
+	~2
+	@camCommitted _camera
+
+
+;IAN mluvi
+_camera camSetTarget [73680.23,-66836.31,-2683.10]
+_camera camSetPos [7299.89,7900.01,1.45]
+_camera camSetFOV 0.601
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [97430.63,-35323.52,-2682.65]
+	_camera camSetPos [7299.27,7899.23,1.48]
+	_camera camSetFOV 0.601
+	_commit = 10
+	? _czechVoice : _commit = 13
+	_camera camCommit _commit
+	~2
+	blake  say "11v08"
+	_wait = 1.5
+	? _czechVoice : _wait = 2.6
+	~_wait
+	ian say "11v09"
+	@camCommitted _camera
+;IAN mluvi	
+	
+
+;Blake detail 2
+_camera camSetTarget [-74222.54,65810.68,169.05]
+_camera camSetPos [7300.86,7897.50,1.57]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+blake say "11v10"
+~2.5
+;Blake detail 2
+
+;James Gastovski*-*-*-*-*-*-*
+_camera camSetTarget [76281.43,80224.30,-3090.05]
+_camera camSetPos [7302.42,7896.74,1.51]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+ian stop true
+ian say "11v11"
+_wait = 2
+? _czechVoice : _wait = 2.8
+~_wait
+;James Gastovski*-*-*-*-*-*-*
+
+
+;zaber na vsechny
+_camera camSetTarget [9056.25,-92042.46,-2683.11]
+_camera camSetPos [7301.83,7901.48,1.45]
+_camera camSetFOV 0.601
+_camera camCommit 0
+@camCommitted _camera
+blake say "11v12"
+~2
+ian say "11v13"
+3 fademusic 0.00
+~2
+
+;zaber na vsechny
+
+
+titleCut ["","BLACK OUT",1]
+~1
+
+
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
+
+
+;ZAHOZENE KAMERY, ktere se zatim nepouzivaj
+;zaber ze zadu saboteru
+_camera camSetTarget [-10377.56,-95117.25,19.10]
+_camera camSetPos [8153.44,3150.77,1.45]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+

@@ -1,0 +1,79 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+enableRadio false
+aL removeweapon "NVgoggles"
+aP setbehaviour "SAFE"
+aL setbehaviour "SAFE"
+aGuard setbehaviour "SAFE"
+aP playmove "effectstand"
+aL playmove "effectstand"
+aGuard playmove "effectstand"
+
+aGuard setPos getMarkerPos "C1"
+aGuard setDir 180
+aP setPos getMarkerPos "C2"
+aP setDir 10
+aL setPos getMarkerPos "C3"
+aL setDir 340
+
+; Kamera na Partyzana
+_camera camSetTarget [5007.76,99553.69,14156.47]
+_camera camSetPos [9327.28,645.52,1.57]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+aGuard say "16v02"
+	
+~5
+aGuard setPos getMarkerPos "C1"
+aGuard setDir 180
+aP setPos getMarkerPos "C2"
+aP setDir 10
+aL setPos getMarkerPos "C3"
+aL setDir 340
+
+
+; Zaber na hrace
+_camera camSetTarget [-60304.52,-70805.27,-6735.00]
+_camera camSetPos [9328.50,643.95,0.55]
+_camera camSetFOV 0.509
+_camera camCommit 0
+
+aP say "16v03"
+
+~6
+
+; Kamera na Partyzana
+_camera camSetTarget [5007.76,99553.69,14156.47]
+_camera camSetPos [9327.28,645.52,1.57]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+aGuard say "16v04"
+	
+~3
+
+; A na Gast
+_camera camSetTarget [79007.82,-70738.36,-6921.47]
+_camera camSetPos [9324.31,643.62,1.45]
+_camera camSetFOV 0.172
+_camera camCommit 0
+@camCommitted _camera
+
+aL say "16v05"
+
+~6
+
+aP setbehaviour "AWARE"
+aL setbehaviour "AWARE"
+aGuard setbehaviour "AWARE"
+aP playmove "Combat"
+aL addweapon "NVgoggles"
+enableRadio true
+
+cont=true
+player cameraEffect ["terminate","back"]
+camDestroy _camera

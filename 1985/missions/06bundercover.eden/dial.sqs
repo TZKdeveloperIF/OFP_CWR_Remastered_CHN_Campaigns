@@ -1,0 +1,98 @@
+InScr=true
+titleCut ["","BLACK OUT", 1]
+~1
+setacctime 1.0
+_camera = "camera" camCreate [8526.48,3486.17,1.73] 
+_camera cameraEffect ["internal","back"]
+enableRadio false
+
+; Hodime ho na silnici
+Ur setpos getmarkerpos "Sem1"
+Ur setdir 250
+
+~1
+
+; A znovu, aby nenaboural
+Ur setpos getmarkerpos "Sem1"
+Ur setdir 250
+
+~0.5
+
+; Finalni pozice (uz by mel stat)
+Ur setpos getmarkerpos "Sem"
+Ur setdir 165
+
+; Ted je uplne zhasnuto - pokud jsme nekoho zabili, jsme prozrazeni
+
+? PoplachR : goto "Pryc"
+
+~1
+; Pro jistotu znovu na finalni pozici
+Ur setpos getmarkerpos "Sem"
+Ur setdir 165
+
+~0.5
+
+;=== 14:41:45
+_camera camSetTarget [55290.18,91869.92,-1085.92]
+_camera camSetPos [8526.48,3486.17,1.73]
+_camera camSetFOV 0.700
+_camera camCommit 0
+
+titleCut ["","BLACK IN", 1]
+
+~0.5
+
+; C1 jde k hlidce
+C1 setbehaviour "CARELESS"
+[C1] allowgetin False
+;C1 setbehaviour "CARELESS"
+C1 doMove GetMarkerPos "Go1"
+@unitReady C1
+C1 doWatch O1
+
+? PoplachR : goto "Pryc"
+
+; Tady chvili mluvej
+
+? PoplachR : goto "Pryc"
+C1 say "Go2"
+
+~10
+
+? PoplachR : goto "Pryc"
+O1 say "Go3"
+
+~3
+
+? PoplachR : goto "Pryc"
+C1 say "Go4"
+
+~8
+
+? PoplachR : goto "Pryc"
+O1 say "Go5"
+
+~3
+
+Dosel=true
+[C1] allowgetin true
+[C1] ordergetin true
+? PoplachR : goto "Pryc"
+@unitReady C1
+
+cont1=true
+
+C1 setbehaviour "AWARE"
+
+enableRadio true
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+InScr=false
+exit
+
+#Pryc
+titleCut ["","BLACK IN", 0]
+enableRadio true

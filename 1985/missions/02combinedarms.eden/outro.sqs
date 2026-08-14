@@ -1,0 +1,49 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+setacctime 1.0
+;5616221
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+
+titleCut ["","BLACK IN",16]
+
+;=== 15:44:00
+_camera camSetTarget [102610.71,27855.92,38.95]
+_camera camSetPos [5533.45,4029.96,5.87]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~10
+
+
+;=== 15:46:29
+_camera camSetTarget [103915.05,13166.39,-15073.10]
+_camera camSetPos [5512.22,4021.49,1.82]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 15:47:07
+_camera camSetTarget [103915.05,13166.39,-15072.74]
+_camera camSetPos [5550.16,4026.31,0.8]
+_camera camSetFOV 0.700
+_camera camCommit 45
+
+~15
+ptak = true
+~22
+titleCut ["","BLACK OUT",7]
+
+@camCommitted _camera
+
+konec = true
+
+
+
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

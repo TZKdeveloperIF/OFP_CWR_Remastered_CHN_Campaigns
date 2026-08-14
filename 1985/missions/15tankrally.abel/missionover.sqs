@@ -1,0 +1,27 @@
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+
+;=== 21:49:02
+_camera camSetTarget vehicle player
+_camera camSetRelPos [-4.69,-1.87,1.53]
+_camera camSetFOV 0.938
+_camera camCommit 0
+@camCommitted _camera
+
+
+;=== 21:50:03
+_camera camSetTarget vehicle player
+_camera camSetRelPos [-17.57,90.65,67.48]
+_camera camSetFOV 0.938
+_camera camCommit 8
+@camCommitted _camera
+
+forceEnd
+
+@camCommitted _camera
+
+;ukonceni kamer a skriptu
+player cameraEffect ["terminate","back"]
+camDestroy _camera

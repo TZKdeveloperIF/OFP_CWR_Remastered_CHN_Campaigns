@@ -1,0 +1,299 @@
+	;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+	; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+	;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",1]
+angel switchmove "FXangel2"
+angel setmimic "surprise"
+guba setmimic "angry"
+sluha3 setmimic "normal"
+setacctime 1.0
+0 fadeMusic 0.0
+8 fadeMusic 0.2
+playMusic ["track14", 10]
+
+	
+guba dowatch kuk1
+angel dowatch kuk2
+
+;NASTAVUJEME POZICE=-=-==-=-=--=-=-=-=-=-=-=-=-=-=-=
+	guba setPos [1896.126,7391.056,4]
+	guba setDir 120
+	guba setbehaviour "safe"
+	guba removeweapon "AK74"
+	angel removeweapon "AK74"
+	angel setPos [1899.644,7389.482,4]
+	angel  setDir -64
+	angel disableAI "autotarget"
+	angel setFormDir -64
+	angel stop true
+	angel setbehaviour "careless"
+	guba dowatch angel
+	angel dowatch guba
+	guba removeweapon "binocular"
+	angel removeweapon "binocular"
+		sluha1 setPos [1906.658,7388.322,4]
+		sluha2 setPos [1898.321,7394.271,3.058]
+		sluha2 setDir 173
+		sluha3 setbehaviour "careless"
+		sluha stop true
+		sud setPos [1898.280,7395.620,4]
+		sud setDir 64
+;NASTAVUJEME POZICE=-=-==-=-=--=-=-=-=-=-=-=-=-=-=-=
+
+
+;SOAP ZABER=-=-=-=-=-=-=-=-=-=-=-=-=-=--
+;=== 13:27:38
+_camera camSetTarget [9949.76,106061.97,14084.34]
+_camera camSetPos [1897.35,7368.42,1.16]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~4
+guba dowatch kuk1
+angel dowatch kuk2
+;SOAP ZABER=-=-=-=-=-=-=-=-=-=-=-=-=-=--
+
+
+;ANGEL1 (detail)
+_camera camSetTarget [98297.91,33981.07,132.15]
+_camera camSetPos [1898.14,7389.08,4.32]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+angel say "x10v01"
+~4.5
+
+;GUBA (detail)
+_camera camSetTarget [-86280.03,54559.34,135.10]
+_camera camSetPos [1896.63,7390.70,4.62]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+guba say "x10v02"
+~3.5
+
+;ANGEL (z dalky)
+_camera camSetTarget [100628.32,-8470.67,129.20]
+_camera camSetPos [1894.24,7390.68,4.58]
+_camera camSetFOV 0.240
+_camera camCommit 0
+@camCommitted _camera
+angel say "x10v03"
+~4.3
+
+;GUBA (z boku)
+_camera camSetTarget [19883.41,105758.84,128.75]
+_camera camSetPos [1895.90,7389.91,4.58]
+_camera camSetFOV 0.437
+_camera camCommit 1
+@camCommitted _camera
+guba say "x10v04"
+~3
+angel switchmove "FXangel"
+
+
+
+;ANGEL1 (detail)
+;=== 12:45:22
+_camera camSetTarget [69166.99,-65921.56,10151.50]
+_camera camSetPos [1898.98,7390.03,4.58]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+angel say "x10v05"
+~3
+
+;Prichazi killer
+
+
+
+;GUBA (ze spoda)
+_camera camSetTarget [-42235.08,91312.02,31899.45]
+_camera camSetPos [1897.00,7389.38,3.74]
+_camera camSetFOV 0.437
+_camera camCommit 0
+@camCommitted _camera
+guba say "x10v06"
+~5
+
+
+;ANGEL umira-=-=--=-=--=-=-=-=--=---
+;=== 11:04:19
+_camera camSetTarget [101259.38,7509.42,-11145.41]
+_camera camSetPos [1897.21,7388.89,4.60]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;guba addweapon "AK74"
+;guba setbehaviour "combat"
+;guba switchmove "EffectCombatStand"
+;guba setunitpos "up"
+angel say "x10v07"
+
+
+~0.7
+shot=true
+~0.3
+guba say "x10v13"
+angel setdammage 1
+angel switchmove "StandDyingVer2"
+
+_camera camSetTarget [101259.38,7509.42,-11145.41]
+_camera camSetPos [1897.21,7388.89,4.60]
+_camera camSetFOV 0.700
+_camera camCommit 0
+
+@adead
+~0.3
+shot=false
+;sluha3 setcombatmode "blue"
+;sluha3 setbehaviour "safe"
+;sluha3 switchmove "EffectStand"
+@camCommitted _camera
+
+0 fadeMusic 0
+8 fadeMusic 0.35
+
+playMusic ["track6", 63]
+
+setaccTime 0.5
+
+
+;GUANO APES zaber=-=-=-=-=-==-=-=-=-=
+	_camera camSetTarget [-19376.81,-3938.12,-96919.74]
+	_camera camSetPos [1899.21,7390.23,6.34]
+	_camera camSetFOV 0.593
+	_camera camCommit 0
+	@camCommitted _camera
+	_camera camSetTarget [1648.83,16920.65,-99412.56]
+	_camera camSetPos [1898.38,7389.67,6.34]
+	_camera camSetFOV 0.403
+	_camera camCommit 2
+	@camCommitted _camera
+	setaccTime 1
+;GUANO APES zaber=-=-=-=-=-==-=-=-=-=
+
+
+
+
+
+
+
+;=== 10:51:35
+_camera camSetTarget [-94713.42,-18064.00,-4173.30]
+_camera camSetPos [1896.71,7391.07,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;sluha3 move [1899.462,7389.889,3.058]
+;sluha3 setPos [1899.644,7389.482,2.908]
+;sluha3  setDir -64
+guba say "x10v08"
+~3
+
+;=== 12:02:36
+_camera camSetTarget [-39361.13,97628.81,12545.18]
+_camera camSetPos [1898.92,7387.70,3.44]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+sluha3 setPos [1899.644,7389.482,4]
+sluha3  setDir -59
+sluha3  setFormDir -59
+sluha3 stop true
+sluha3 disableAI "target"
+sluha3 disableAI "autotarget"
+~3
+;=== 12:25:39
+_camera camSetTarget [3316.89,106905.08,-9595.23]
+_camera camSetPos [1898.09,7389.15,3.33]
+_camera camSetFOV 0.462
+_camera camCommit 0
+@camCommitted _camera
+~2
+
+
+;=== 10:52:45
+_camera camSetTarget [93293.02,-32963.30,-4173.31]
+_camera camSetPos [1897.68,7390.44,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+sluha3 say "x10v09"
+~2.3
+guba say "x10v10"
+~1.5
+
+;=== 10:55:21
+_camera camSetTarget [-50588.95,92466.55,2847.66]
+_camera camSetPos [1896.71,7390.16,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+
+;=== 10:52:45
+_camera camSetTarget [93293.02,-32963.30,-4173.31]
+_camera camSetPos [1897.68,7390.44,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+sluha3 say "x10v11"
+~3
+
+;=== 10:55:21
+_camera camSetTarget [-50588.95,92466.55,2847.66]
+_camera camSetPos [1896.71,7390.16,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+guba say "x10v12"
+~4
+
+titleCut ["","BLACK OUT",1]
+~1
+guba moveincargo uaz
+sluha3 moveindriver uaz
+sluha3 move [2349.76,7155.18,-0.00]
+
+setacctime 1.3
+titleCut ["","BLACK IN",1]
+;=== 11:19:24
+_camera camSetTarget uaz
+_camera camSetPos [1893.76,7370.84,0.65]
+_camera camSetFOV 0.419
+_camera camCommit 0
+@camCommitted _camera
+
+~6
+5 fadeMusic 0.0
+~4
+
+;ANGEL umira-=-=--=-=--=-=-=-=--=---
+
+
+
+titleCut ["","BLACK OUT",1]
+~1
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
+
+
+;ZAHOZENE KAMERY, ktere se zatim nepouzivaj
+;zaber ze zadu saboteru
+_camera camSetTarget [-10377.56,-95117.25,19.10]
+_camera camSetPos [8153.44,3150.77,1.45]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+

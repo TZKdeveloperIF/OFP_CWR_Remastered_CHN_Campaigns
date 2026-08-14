@@ -1,0 +1,74 @@
+;titleCut ["Everon, May 8, 5:30am","BLACK IN",7]
+setacctime 1.0
+playMusic "Track8"
+
+setViewDistance 1500
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+;Nejprve vytvoøíme ptáky
+
+_racek = "seagull" camCreate [10754.81,8492.59,2.5]
+_racek camCommand "landed"
+
+_racek1 = "seagull" camCreate [10718.31,8554.73,27.01]
+_racek1 camSetPos [10760.81,8490.59,5]
+_racek2 = "seagull" camCreate [10718.31,8554.73,10.01]
+_racek2 camSetPos [10760.81,8520.59,5]
+
+;=== 15:08:30
+_camera camSetTarget [-13892.46,100949.32,29103.99]
+_camera camSetPos [10766.10,8509.98,10]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetTarget _racek
+_camera camSetPos [10766.10,8509.98,1.20]
+_camera camSetFOV 0.0700
+_camera camCommit 27
+;necháme ho zakroužit
+~23
+_racek camSetPos [2890, 1930, 30]
+~3
+titleCut ["","BLACK OUT",1]
+@camCommitted _camera
+titleCut ["","BLACK IN",1]
+
+
+_camera camSetTarget vrtulnik
+_camera camSetFOV 0.1400
+_camera camCommit 0
+@camCommitted _camera
+~6
+
+;=== 15:31:43
+_camera camSetTarget rybar
+rybar switchMove "effectStand"
+_camera camSetPos [10765.32,8557.37,7]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+;=== 15:32:14
+_camera camSetTarget vrtulnik1
+rybar doWatch vrtulnik
+_camera camSetPos [10758.34,8556.72,2]
+_camera camSetFOV 0.700
+_camera camCommit 16
+~6
+~6
+4 fadeMusic 0
+titleCut ["","BLACK OUT",4]
+@camCommitted _camera
+
+
+
+;ukonceni kamer a skriptu
+aP cameraEffect ["terminate","back"]
+_this switchMove ""
+camDestroy _camera
+konec = true
+exit

@@ -1,0 +1,54 @@
+_camera = "camera" camCreate [9763.24,4056.01,7.58]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+;=== 18:13:21 zezadu
+_camera camSetTarget aTr
+_camera camSetPos [9763.24,4056.01,7.58]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+; cekame nez dojede k kus cesty
+@phase==1
+
+;=== 18:15:34 Na betone
+_camera camSetTarget aTr
+;_camera camSetPos [10069.37,4023.51,0.58]
+;_camera camSetFOV 0.700
+;_camera camCommit 0
+;@camCommitted _camera
+_camera camSetPos [10093.82,4011.13,0.05]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+; cekame az vyjede
+@phase==2
+
+
+;detail na truck
+_camera camSetTarget aTr
+_camera camSetPos [10027.17,4040.62,0.37]
+_camera camSetFOV 0.70
+_camera camCommit 0
+@camCommitted _camera
+~2
+
+
+;detail na projizdejici truck zboku
+_camera camSetTarget aTr
+_camera camSetPos [10146.96,3998.36,1.08]
+_camera camSetFOV 0.400
+_camera camCommit 0
+@camCommitted _camera
+
+~5
+
+vypnout=true
+
+;exit
+cont2=true
+_this cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

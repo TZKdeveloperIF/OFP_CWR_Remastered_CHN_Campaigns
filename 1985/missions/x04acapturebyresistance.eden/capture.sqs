@@ -1,0 +1,431 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+playmusic "track9"
+0 fademusic 0.1
+setacctime 1.0
+_czechVoice = voiceLanguage == "Czech"
+
+titleCut ["","BLACK IN",3]
+
+;NASTAVUJEME POZICE-*-*-*-*-*-*
+david SetPos [5540.89,4835.68,0]
+david setdir 330
+david stop true
+david switchmove "FXStandSurUniv"
+david setmimic "normal"
+;c1 stop true
+;c2 stop true
+;hlidka1 stop true
+
+c1 SetPos [5544.49,4834.62,0]
+c1 setdir 270
+c1 setbehaviour "combat"
+c1 setunitpos "up"
+c2 SetPos [5541.29,4831.25,0]
+c2 setbehaviour "combat"
+c2 setunitpos "up"
+c2 setdir 350
+c1 stop true
+c1 reveal david
+c2 reveal david
+c2 dowatch david
+hlidka1 setbehaviour "combat"
+hlidka switchmove "EffectCombatStand"
+hlidka1  setunitpos "up"
+hlidka stop true
+
+;NASTAVUJEME POZICE***********
+
+;c1 mu odpovida
+_camera camSetTarget c1
+_camera camSetPos [5543.20,4835.27,1.31]
+_camera camSetFOV 0.523
+_camera camCommit 0
+@camCommitted _camera
+~0.5
+c1 say "x04av01"
+~5
+c2 stop false
+c2 dowatch david
+
+;david mluvi a vzdava se
+_camera camSetTarget [69056.43,-72400.23,-82.93]
+_camera camSetPos [5539.77,4837.13,1.63]
+_camera camSetFOV 0.569
+_camera camCommit 0
+@camCommitted _camera
+david say "x04av02"
+~2
+
+;c1 mu odpovida
+_camera camSetTarget c1
+_camera camSetPos [5543.20,4835.27,1.31]
+_camera camSetFOV 0.523
+_camera camCommit 0
+@camCommitted _camera
+c1 say "x04av03"
+~3
+
+;david mluvi a vzdava se
+_camera camSetTarget [69056.43,-72400.23,-82.93]
+_camera camSetPos [5539.77,4837.13,1.63]
+_camera camSetFOV 0.569
+_camera camCommit 0
+@camCommitted _camera
+david say "x04av04"
+~3
+
+;c2
+_camera camSetTarget [-38637.43,94483.83,3298.92]
+_camera camSetPos [5542.19,4830.85,1.20]
+_camera camSetFOV 0.523
+_camera camCommit 0
+@camCommitted _camera
+c2 say "x04av05"
+~2
+david say "x04av06"
+~2
+
+;david mluvi a vzdava se
+_camera camSetTarget [69056.43,-72400.23,-82.93]
+_camera camSetPos [5539.77,4837.13,1.63]
+_camera camSetFOV 0.569
+_camera camCommit 0
+@camCommitted _camera
+~1
+c1 say "x04av07"
+~1
+
+;c1 mu odpovida
+_camera camSetTarget c1
+_camera camSetPos [5543.20,4835.27,1.31]
+_camera camSetFOV 0.523
+_camera camCommit 0
+@camCommitted _camera
+~4
+david switchmove "EffectStandStill"
+~1.5
+david stop false
+c1 stop false
+
+;JDOU-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+[c2] join c1
+capture=true
+jdou=true
+c1 dowatch david
+c2 dowatch david
+david dowatch sef
+;JDOU*************************
+
+
+
+2 fademusic 0.2
+;zaber skrz hlidku*-*-**-*-*-**
+;=== 14:57:10
+_camera camSetTarget [-52428.44,86103.38,-5142.58]
+_camera camSetPos [5565.26,4804.15,1.44]
+_camera camSetFOV 0.375
+_camera camCommit 0
+@camCommitted _camera
+
+hlidka1 dowatch david
+hlidka2 dowatch david
+;=== 14:58:25
+_camera camSetTarget [-91866.55,24287.22,-11219.01]
+_camera camSetPos [5565.52,4804.83,1.42]
+_camera camSetFOV 0.700
+_camera camCommit 10
+
+~2
+hlidka1 say "x04av08"
+~4
+titleCut ["","BLACK OUT",3]
+~3
+@camCommitted _camera
+hlidka1 dowatch david
+hlidka2 dowatch david
+;zaber skrz hlidku************
+
+;CUT*-*-*-*-*-*-*-*-*-*-*-
+
+;nastavujeme pozice k rozhovoru*-*-*-
+[c2] join null
+david SetPos [5594.19,4779.78,0]
+david setdir 140
+david stop true
+c1 dowatch david
+c1 SetPos  [5590.48,4780.98,0]
+c1 stop true
+c2 dowatch  david
+c2 SetPos [5596.04,4783.96,0]
+c2 stop true
+titleCut ["","BLACK IN",3]
+;CUT******************
+david setmimic "normal"
+
+
+;nastaveno********************
+;=== 13:28:07
+_camera camSetTarget [-25548.37,-88446.73,-18308.10]
+_camera camSetPos [5596.59,4785.25,3.33]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+4 fademusic 0.00
+~4
+40 fademusic 0.06
+playMusic ["Track4", 70]
+
+;znova nastavujeme pozice k rozhovoru*-*-*-
+david SetPos [5594.19,4779.78,0]
+david dowatch sef
+c1 dowatch david
+c1 SetPos  [5590.48,4780.98,0]
+c2 dowatch  david
+c2 SetPos [5596.04,4783.96,0]
+;nastaveno********************
+sef setmimic "angry"
+
+;kamera na SEFA1*
+david dowatch sef
+_camera camSetTarget [54338.52,-80050.11,20760.02]
+_camera camSetPos [5594.79,4778.92,1.26]
+_camera camSetFOV 0.481
+_camera camCommit 0
+@camCommitted _camera
+~0.3
+sef say "x04av09"
+_wait = 4
+? _czechVoice : _wait = 6
+~_wait
+
+;kamera na davida1
+_camera camSetTarget [-88800.94,37773.75,-804.64]
+_camera camSetPos [5594.98,4779.15,1.52]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+david switchmove "CivilStillV1"
+david say "x04av10"
+~10
+
+;zaber skrz c1
+_camera camSetTarget [104587.05,-7486.88,-6924.23]
+_camera camSetPos [5589.07,4780.21,1.12]
+_camera camSetFOV 0.488
+_camera camCommit 0
+@camCommitted _camera
+sef say "x04av11"
+~3
+;detail na SEFA
+_camera camSetTarget [-9550.47,-93811.52,7195.72]
+_camera camSetPos [5595.87,4777.62,1.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+_wait = 4.5
+? _czechVoice : _wait = 6
+~_wait
+
+;kamera na davida2
+david dowatch sef
+;=== 13:40:04
+_camera camSetTarget [20736.39,103585.35,-2763.86]
+_camera camSetPos [5594.10,4779.07,1.58]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+david say "x04av12"
+_wait = 3
+? _czechVoice : _wait = 4
+~_wait
+
+;zaber skrz c1
+_camera camSetTarget [104587.05,-7486.88,-6924.23]
+_camera camSetPos [5589.07,4780.21,1.12]
+_camera camSetFOV 0.488
+_camera camCommit 0
+@camCommitted _camera
+sef say "x04av13"
+~5
+
+;kamera na SEFA1
+_camera camSetTarget [54338.52,-80050.11,20760.02]
+_camera camSetPos [5594.79,4778.92,1.26]
+_camera camSetFOV 0.481
+_camera camCommit 0
+@camCommitted _camera
+~4
+sef say "x04av14"
+david switchmove "CivilStillV1"
+~2
+
+;zaber na sefa skrz davida
+_camera camSetTarget [104968.31,15698.07,-1946.32]
+_camera camSetPos [5586.70,4778.67,0.86]
+_camera camSetFOV 0.391
+_camera camCommit 0
+@camCommitted _camera
+~0.7
+david say "x04av15"
+_wait = 1
+? _czechVoice : _wait = 2
+~_wait
+sef say "x04av16"
+~4
+_camera camSetTarget [17454.81,103409.63,11523.77]
+_camera camSetPos [5594.17,4778.35,1.40]
+_camera camSetFOV 0.585
+_camera camCommit 0
+@camCommitted _camera
+
+8 fademusic 0.0
+
+~3
+;=== 15:14:06
+_camera camSetTarget [33981.50,-91105.49,245.36]
+_camera camSetPos [5594.19,4780.54,1.70]
+_camera camSetFOV 0.461
+_camera camCommit 0
+@camCommitted _camera
+_wait = 4.5
+? _czechVoice : _wait = 5
+~_wait
+
+;kamera na davida2
+;=== 13:40:04
+_camera camSetTarget [20736.39,103585.35,-2763.86]
+_camera camSetPos [5594.10,4779.07,1.58]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+david switchmove "CivilStillV1"
+david say "x04av17"
+_wait = 8.5
+? _czechVoice : _wait = 15
+~_wait
+
+
+30 fademusic 0.1
+playMusic ["Track16", 0]
+
+;kamera na SEFA1
+_camera camSetTarget [54338.52,-80050.11,20760.02]
+_camera camSetPos [5594.79,4778.92,1.26]
+_camera camSetFOV 0.481
+_camera camCommit 0
+@camCommitted _camera
+sef say "x04av18"
+~8.5
+_camera camSetTarget [104968.31,15698.07,-1946.32]
+_camera camSetPos [5586.70,4778.67,0.86]
+_camera camSetFOV 0.391
+_camera camCommit 0
+@camCommitted _camera
+~5
+;=== 15:14:06
+_camera camSetTarget [33981.50,-91105.49,245.36]
+_camera camSetPos [5594.19,4780.54,1.70]
+_camera camSetFOV 0.461
+_camera camCommit 0
+@camCommitted _camera
+
+5 fademusic 0.0
+~5
+
+;kamera na davida1
+_camera camSetTarget [-88800.94,37773.75,-804.64]
+_camera camSetPos [5594.98,4779.15,1.52]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+david say "x04av19"
+~2
+david playmove "CivilStillV1"
+_wait = 5
+? _czechVoice : _wait = 10.5
+~_wait
+
+;zaber na davida skrz sefa
+_camera camSetTarget [-15292.89,101822.08,-11995.32]
+_camera camSetPos [5595.36,4775.13,1.40]
+_camera camSetFOV 0.560
+_camera camCommit 0
+@camCommitted _camera
+sef say "x04av20"
+~7.5
+;=== 13:41:10
+_camera camSetTarget [16538.00,-93756.47,13155.73]
+_camera camSetPos [5595.74,4777.97,1.58]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+_wait = 7
+? _czechVoice : _wait = 9
+~_wait
+
+0 fademusic 0.1
+playMusic ["Track1", 0]
+
+;kamera na davida2
+david dowatch sef
+_camera camSetTarget [20736.39,103585.35,-2763.86]
+_camera camSetPos [5594.10,4779.07,1.58]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+david say "x04av21"
+_wait = 4.5
+? _czechVoice : _wait = 8
+~_wait
+
+;kamera na davida1
+_camera camSetTarget [-88800.94,37773.75,-804.64]
+_camera camSetPos [5594.98,4779.15,1.52]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+sef say "x04av22"
+~4
+
+;zaber na davida skrz sefa
+_camera camSetTarget [-15292.89,101822.08,-11995.32]
+_camera camSetPos [5595.36,4775.13,1.40]
+_camera camSetFOV 0.560
+_camera camCommit 0
+@camCommitted _camera
+_wait = 2
+? _czechVoice : _wait = 3
+~_wait
+sef say "x04av23"
+
+~6
+
+;kamera na davida2
+david dowatch sef
+_camera camSetTarget [17454.81,103409.63,11523.77]
+_camera camSetPos [5594.17,4778.35,1.40]
+_camera camSetFOV 0.585
+_camera camCommit 0
+@camCommitted _camera
+david say "x04av24"
+david switchmove "CivilStillV1"
+~3
+
+2 fadeMusic 0
+
+titleCut ["","BLACK OUT",2]
+~5
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
+
+
+

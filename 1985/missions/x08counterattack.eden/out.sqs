@@ -1,0 +1,17 @@
+;
+
+_aunits = units grupa
+_i = 0
+_j = count _aunits
+
+#Here
+_aunits select _i action ["EJECT",UH]
+[_aunits select _i] allowgetin false 
+
+_i=_i+1
+~1
+?_j>_i:goto "Here"
+
+odlet=true
+
+exit

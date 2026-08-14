@@ -1,0 +1,59 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+; Kamera stoji
+
+;Nastavujeme pozice
+aP SetPos [5374.45,9941.97,0.00]
+;aP dowatch [-93376.54,25123.47,4299.72]
+aP setDir 151
+aG2 SetPos [5377.69,9942.20,0.00]
+aG2 dowatch [-93097.42,26793.61,4327.21]
+aL SetPos [5376.57,9938.90,0.00]
+aL dowatch [-68110.30,77705.27,-2670.80]
+aP switchmove "effectstand"
+aP setbehaviour "careless"
+aG2 setbehaviour "careless"
+aL setbehaviour "careless"
+jeep setPos [4780.82,11225.34,2.30]
+jeep setDir 23
+enableradio false
+;Nastavujeme pozice
+;=== 17:18:14
+
+
+
+;=== 15:40:12
+_camera camSetTarget [-62918.79,82864.64,4252.18]
+_camera camSetPos [5375.66,9940.42,1.28]
+_camera camSetFOV 0.481
+_camera camCommit 0
+@camCommitted _camera
+
+aP say "Go4"
+~2.5
+;=== 15:40:01
+_camera camSetTarget [89992.14,-43341.55,-554.27]
+_camera camSetPos [5372.52,9942.50,1.28]
+_camera camSetFOV 0.481
+_camera camCommit 0
+@camCommitted _camera
+
+aL say "Go3"
+~6
+
+aP playmove "StandToCombat"
+aP setbehaviour "AWARE"
+aL setbehaviour "AWARE"
+aGun setbehaviour "AWARE"
+aG2 setbehaviour "AWARE"
+enableradio true
+~1
+titletext ["","Plain Down"]
+
+velit sideRadio "Init1"
+
+jeep SetPos [5373.477,9960.849,-0.001]
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+

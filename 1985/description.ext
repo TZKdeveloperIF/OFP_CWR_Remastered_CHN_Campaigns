@@ -1,0 +1,1165 @@
+class CfgIdentities
+{
+	class James
+	{
+		name = "James Gastovski";
+		face = "Face24";
+		glasses="None";
+		speaker = "Adam";
+		pitch = 1.10;
+	};
+	class David
+	{
+		name = "David Armstrong";
+		face = "Face7";
+		glasses="None";
+		speaker = "Greg";
+		pitch = 1.05;
+	};
+	class Robert
+	{
+		name = "Robert Hammer";
+		face = "Face33";
+		glasses="None";
+		speaker = "John";
+		pitch = 1.10;
+	};
+	class Sam
+	{
+		name = "Sam Nichols";
+		face = "Face18";
+		glasses="Sunglasses";
+		speaker = "Patrick";
+		pitch = 1.00;
+	};
+
+	class Berghoff
+	{
+		name = "Arnold Wesley";
+		face = "Face23";
+		glasses="None";
+		speaker = "Rob";
+		pitch = 1.00;
+	};
+	class Kozlowski
+	{
+		name = "Ernst Smith";
+		face = "Face40";
+		glasses="None";
+		speaker = "Dan";
+		pitch = 1.00;
+	};
+	class Fowley
+	{
+		name = "John Davies";
+		face = "Face21"
+		glasses="None";
+		speaker = "John";
+		pitch = 1.00;
+	};
+	class Bormioli
+	{
+		name = "Peter Wayne";
+		face = "Face6";
+		glasses="None";
+		speaker = "Patrick";
+		pitch = 1.00;
+	};
+
+	class Blake
+	{
+		name = "Caper Blake";
+		face = "Face16";
+		glasses="spectacles";
+		speaker = "Greg";
+		pitch = 0.85;
+	};
+	class Guba
+	{
+		name = "Aleksei Vasilii Guba";
+		face = "Face15";
+		glasses="None";
+		speaker = "Adam";
+		pitch = 0.85;
+	};
+	class Angelina
+	{
+		name = "Angelina";
+		face = "Face99";
+		glasses="None";
+		speaker = "Adam";
+		pitch = 1.15;
+	};
+	class Resistance
+	{
+		name = "Ian Stoyan";
+		face = "Face14";
+		glasses="spectacles";
+		speaker = "Adam";
+		pitch = 0.85;
+	};
+	class Slava
+	{
+		name = "Slava";
+		face = "Face1";
+		glasses="spectacles";
+		speaker = "Adam";
+		pitch = 0.85;
+	};
+	class Eusev
+	{
+		name = "Col. Eusev";
+		face = "Face17";
+		glasses="spectacles";
+		speaker = "Adam";
+		pitch = 0.85;
+	};
+	
+	class Fuller
+	{
+		name = "Jack Fuller";
+		face = "Face25";
+		glasses="None";
+		speaker = "Rich";
+		pitch = 1.00;
+	};
+};
+
+
+
+
+
+class Awards
+{
+	class Award01
+	{
+		limit = 12;
+		abel = XXREWARD1.ABEL;
+		cain = XXREWARD1.CAIN;
+		eden = XXREWARD1.EDEN;
+	};
+	class Award02
+	{
+		limit = 40;
+		abel = XXREWARD2.ABEL;
+		cain = XXREWARD2.CAIN;
+		eden = XXREWARD2.EDEN;
+	};
+	class Award03
+	{
+		limit = 100;
+		abel = XXREWARD3.ABEL;
+		cain = XXREWARD3.CAIN;
+		eden = XXREWARD3.EDEN;
+	};
+};
+
+class Penalties
+{
+	class Penalty01
+	{
+		limit = -1;
+		abel = XXPUNISH1.ABEL;
+		cain = XXPUNISH1.CAIN;
+		eden = XXPUNISH1.EDEN;
+	};
+	class Penalty02
+	{
+		limit = -7;
+		abel = XXPUNISH2.ABEL;
+		cain = XXPUNISH2.CAIN;
+		eden = XXPUNISH2.EDEN;
+	};
+	class Penalty03
+	{
+		limit = -12;
+		abel = XXPUNISH3.ABEL;
+		cain = XXPUNISH3.CAIN;
+		eden = XXPUNISH3.EDEN;
+	};
+	class PenaltyGameOver
+	{
+		// total end of campaign - see exitScore
+		limit = -15;
+		abel = XXGAMEOVER.ABEL;
+		cain = XXGAMEOVER.CAIN;
+		eden = XXGAMEOVER.EDEN;
+	};
+};
+
+exitScore = -15;
+
+
+
+
+class MissionDefault
+{
+ 	lives = -1;
+
+	lost = ;
+	end1 = ;
+	end2 = ;
+	end3 = ;
+	end4 = ;
+	end5 = ;
+	end6 = ;
+};
+
+class Campaign
+{
+	name = "1985 - Cold War Crisis";
+	firstBattle = Prologue;
+	
+	
+
+	class Prologue
+	{
+		name = "PROLOGUE";
+		
+		cutscene = x00Grounds.Abel;
+
+		firstMission = Training;
+		end1 = Part1;
+		end2 = Part1;
+		end3 = Part1;
+		end4 = Part1;
+		end5 = Part1;
+		end6 = Part1;
+		lost = Part1;
+
+		class Training: MissionDefault
+		{
+			end1 = IansOffice;
+			end2 = IansOffice;
+			end3 = IansOffice;
+			end4 = IansOffice;
+			end5 = IansOffice;
+			end6 = IansOffice;
+			lost = Training;
+			template = 00Training.Abel;
+		};
+		class IansOffice: MissionDefault
+		{
+			noAward=true;
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = ;
+			template = x01IansOffice.Abel;
+		};
+	};
+	
+	class Part1
+	{
+		name = "Part I - BATTLESTATIONS";
+
+		cutscene = ;
+
+		firstMission = 01CDay;
+		lost = Part2;
+		end1 = Part2;
+		end2 = Part2;
+		end3 = Part2;
+		end4 = Part2;
+		end5 = Part2;
+		end6 = Part2;
+		
+
+		class 01CDay: MissionDefault
+		{
+			end1 = 02CombinedArms;
+			end2 = 02CombinedArms;
+			end3 = 02CombinedArms;
+			end4 = 02CombinedArms;
+			end5 = 02CombinedArms;
+			end6 = 02CombinedArms;
+			lost = 01CDay;
+			template = 01Flashpoint.Eden;
+		};
+		class 02CombinedArms: MissionDefault
+		{
+			end1 = 03aCamping;
+			end2 = 03aCamping;
+			end3 = 03aCamping;
+			end4 = 03aCamping;
+			end5 = 03aCamping;
+			end6 = 03aCamping;
+			lost = 02CombinedArms;
+			template = 02CombinedArms.Eden;
+		};
+		class 03aCamping: MissionDefault
+		{
+			end1 = 03bAlert;
+			end2 = 03bAlert;
+			end3 = 03bAlert;
+			end4 = 03bAlert;
+			end5 = 03bAlert;
+			end6 = 03bAlert;
+			lost = 03aCamping;
+			template = 03aCamping.Eden;
+		};
+		class 03bAlert: MissionDefault
+		{
+			end1 = 04OperaceMOPA;
+			end2 = 04OperaceMOPA;
+			end3 = 04OperaceMOPA;
+			end4 = 04OperaceMOPA;
+			end5 = 04OperaceMOPA;
+			end6 = 04OperaceMOPA;
+			lost = 03bAlert;
+			template = 03bAlert.Eden;
+		};		
+		class 04OperaceMOPA: MissionDefault
+		{
+			noAward=true;
+			end1 = 05aAfterMOPa;
+			end2 = 05bTransport;
+			end3 = 05bTransport;
+			end4 = 05bTransport;
+			end5 = 05bTransport;
+			end6 = 05bTransport;
+			lost = 04OperaceMOPA;
+			template = 04MontignacMustFall.Eden;
+		};		
+		class 05aAfterMOPa: MissionDefault
+		{
+			noAward=true;
+			end1 = x04aCaptureByResistance;
+			end2 = x04aCaptureByResistance;
+			end3 = x04aCaptureByResistance;
+			end4 = x04aCaptureByResistance;
+			end5 = x04aCaptureByResistance;
+			end6 = x04aCaptureByResistance;
+			lost = 05aAfterMOPa;
+			template = 05aAfterMontignac.Eden;
+		};
+		class 05bTransport: MissionDefault
+		{
+			noAward=true;
+			end1 = x04aCaptureByResistance;
+			end2 = x04aCaptureByResistance;
+			end3 = x04aCaptureByResistance;
+			end4 = x04aCaptureByResistance;
+			end5 = x04aCaptureByResistance;
+			end6 = x04aCaptureByResistance;
+			lost = 05bTransport;
+			template = 05bStrangeMeeting.Eden;
+		};
+
+		class x04aCaptureByResistance : MissionDefault
+		{
+			noAward=true;
+			end1 = 06aMissionRescue;
+			end2 = 06aMissionRescue;
+			end3 = 06aMissionRescue;
+			end4 = 06aMissionRescue;
+			end5 = 06aMissionRescue;
+			end6 = 06aMissionRescue;
+			lost = 06aMissionRescue;
+			template = X04ACaptureByResistance.EDEN;
+		};
+		class 06aMissionRescue: MissionDefault
+		{
+			noAward=true;
+			end1 = 06bLongJourney;
+			end2 = 06bLongJourney;
+			end3 = 06bLongJourney;
+			end4 = 06bLongJourney;
+			end5 = 06bLongJourney;
+			end6 = 06bLongJourney;
+			lost = 06aMissionRescue;
+			template = 06aRescue.Eden;
+		};
+		class 06bLongJourney: MissionDefault
+		{
+			noAward=true;
+			end1 = X04ResistanceCamp;
+			end2 = X04ResistanceCamp;
+			end3 = X04ResistanceCamp;
+			end4 = X04ResistanceCamp;
+			end5 = X04ResistanceCamp;
+			end6 = X04ResistanceCamp;
+			lost = 06bLongJourney;
+			template = 06bUndercover.EDEN;
+		};
+		class X04ResistanceCamp: MissionDefault
+		{
+			noAward=true;
+			end1 = 07aNightPatrol;
+			end2 = 07aNightPatrol;
+			end3 = 07aNightPatrol;
+			end4 = 07aNightPatrol;
+			end5 = 07aNightPatrol;
+			end6 = 07aNightPatrol;
+			lost = 07aNightPatrol;
+			template = X04ResistanceCamp.EDEN;
+		};		
+		
+		class 07aNightPatrol: MissionDefault
+		{
+			end1 = 07HoldMalden;
+			end2 = 07HoldMalden;
+			end3 = 07HoldMalden;
+			end4 = 07HoldMalden;
+			end5 = 07HoldMalden;
+			end6 = 07HoldMalden;
+			lost = 07aNightPatrol;
+			template = 07aNightPatrol.Abel;
+		};		
+		class 07HoldMalden: MissionDefault
+		{
+			end1 = 08Defender;
+			end2 = 08Defender;
+			end3 = 08Defender;
+			end4 = 08Defender;
+			end5 = 08Defender;
+			end6 = 08Defender;
+			lost = 07HoldMalden;
+			template = 07HoldMalden.Abel;
+		};
+		class 08Defender: MissionDefault
+		{
+			end1 = x05RobertProblems;
+			end2 = x05RobertProblems;
+			end3 = x05RobertProblems;
+			end4 = x05RobertProblems;
+			end5 = x05RobertProblems;
+			end6 = x05RobertProblems;
+			lost = 08Defender;
+			template = 08Defender.Abel;
+		};
+		class x05RobertProblems: MissionDefault
+		{
+			noAward=true;
+			end1 = 09TankTraining;
+			end2 = 09TankTraining;
+			end3 = 09TankTraining;
+			end4 = 09TankTraining;
+			end5 = 09TankTraining;
+			end6 = 09TankTraining;
+			lost = 09TankTraining;
+			template = X05RobertProblems.Abel;
+		};		
+		
+		class 09TankTraining: MissionDefault
+		{
+			end1 = 10BattleOfHoudan;
+			end2 = 10BattleOfHoudan;
+			end3 = 10BattleOfHoudan;
+			end4 = 10BattleOfHoudan;
+			end5 = 10BattleOfHoudan;
+			end6 = 10BattleOfHoudan;
+			lost = 09TankTraining;
+			template = 09TankTraining.ABEL;
+		};
+		class 10BattleOfHoudan: MissionDefault
+		{
+			end1 = 11Interdiction;
+			end2 = 11Interdiction;
+			end3 = 11Interdiction;
+			end4 = 11Interdiction;
+			end5 = 11Interdiction;
+			end6 = 11Interdiction;
+			lost = 10BattleOfHoudan;
+			template = 10BattleOfHoudan.ABEL;
+		};
+		class 11Interdiction: MissionDefault
+		{
+			end1 = 12aSpearhead;
+			end2 = 12aSpearhead;
+			end3 = 12aSpearhead;
+			end4 = 12aSpearhead;
+			end5 = 12aSpearhead;
+			end6 = 12aSpearhead;
+			lost = 11Interdiction;
+			template = 11Interdiction.ABEL;
+		};
+		class 12aSpearhead: MissionDefault
+		{
+			end1 = 13Pathfinder;
+			end2 = 13Pathfinder;
+			end3 = 13Pathfinder;
+			end4 = 13Pathfinder;
+			end5 = 13Pathfinder;
+			end6 = 13Pathfinder;
+			lost = 12aSpearhead;
+			template = 12aSpearhead.ABEL;
+		};
+		class 13Pathfinder: MissionDefault
+		{
+			end1 = 15TankRally;
+			end2 = 15TankRally;
+			end3 = 15TankRally;
+			end4 = 15TankRally;
+			end5 = 15TankRally;
+			end6 = 15TankRally;
+			lost = 13Pathfinder;
+			template = 13Pathfinder.ABEL;
+		};
+		class 15TankRally: MissionDefault
+		{
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = 15TankRally;
+			template = 15TankRally.ABEL;
+		};		
+	};
+
+	class Part2
+	{
+		name = "Part II - THE EVIL GENERAL";
+
+		cutscene = X06MEETING.ABEL;
+
+		firstMission = 16BackAgain;
+		lost = Part3;
+		end1 = Part3;
+		end2 = Part3;
+		end3 = Part3;
+		end4 = Part3;
+		end5 = Part3;
+		end6 = Part3;
+
+		class 16BackAgain: MissionDefault
+		{
+			noAward=true;
+			end1 = 17TakingCommand;
+			end2 = 17TakingCommand;
+			end3 = 17TakingCommand;
+			end4 = 17TakingCommand;
+			end5 = 17TakingCommand;
+			end6 = 17TakingCommand;
+			lost = 16BackAgain;
+			template = 16UnfinishedBusiness.EDEN;
+		};		
+		class 17TakingCommand: MissionDefault
+		{
+			end1 = 18AfterGoisse;
+			end2 = 18AfterGoisse;
+			end3 = 18AfterGoisse;
+			end4 = 18AfterGoisse;
+			end5 = 18AfterGoisse;
+			end6 = 18AfterGoisse;
+			lost = 17TakingCommand;
+			template = 17TakingCommand.ABEL;
+		};
+		class 18AfterGoisse: MissionDefault
+		{
+			end1 = 19GroupLeader;
+			end2 = 19GroupLeader;
+			end3 = 19GroupLeader;
+			end4 = 19GroupLeader;
+			end5 = 19GroupLeader;
+			end6 = 19GroupLeader;
+			lost = 18AfterGoisse;
+			template = 18Scouting.ABEL;
+		};		
+		class 19GroupLeader: MissionDefault
+		{
+			end1 = 20Saboteur;
+			end2 = 20Saboteur;
+			end3 = 20Saboteur;
+			end4 = 20Saboteur;
+			end5 = 20Saboteur;
+			end6 = 20Saboteur;
+			lost = 19GroupLeader;
+			template = 19TurningTheTide.ABEL;
+		};
+		class 20Saboteur: MissionDefault
+		{
+			noAward=true;
+			end1 = 21Guardian;
+			end2 = 21Guardian;
+			end3 = 21Guardian;
+			end4 = 21Guardian;
+			end5 = 21Guardian;
+			end6 = 21Guardian;
+			lost = 20Saboteur;
+			template = 20Saboteur.EDEN;
+		};
+		class 21Guardian: MissionDefault
+		{
+			end1 = x07Bunker;
+			end2 = x07Bunker;
+			end3 = x07Bunker;
+			end4 = x07Bunker;
+			end5 = x07Bunker;
+			end6 = x07Bunker;
+			lost = 21Guardian;
+			template = 21Guardian.ABEL;
+		};
+
+		class x07Bunker: MissionDefault
+		{
+			noAward=true;
+			end1 = 22ReturnToEden;
+			end2 = 22ReturnToEden;
+			end3 = 22ReturnToEden;
+			end4 = 22ReturnToEden;
+			end5 = 22ReturnToEden;
+			end6 = 22ReturnToEden;
+			lost = 22ReturnToEden;
+			template = X07BUNKER.CAIN;
+		};
+		class 22ReturnToEden: MissionDefault
+		{
+			end1 = 23HindAttack;
+			end2 = 23HindAttack;
+			end3 = 23HindAttack;
+			end4 = 23HindAttack;
+			end5 = 23HindAttack;
+			end6 = 23HindAttack;
+			lost = 22ReturnToEden;
+			template = 22ReturnToEden.EDEN;
+		};
+		class 23HindAttack: MissionDefault
+		{
+			end1 = 24Tsunami;
+			end2 = 24Tsunami;
+			end3 = 24Tsunami;
+			end4 = 24Tsunami;
+			end5 = 24Tsunami;
+			end6 = 24Tsunami;
+			lost = 23HindAttack;
+			template = 23HindAttack.EDEN;
+		};
+		
+		
+		class 24Tsunami: MissionDefault
+		{
+			end1 = 25Floatman;
+			end2 = 25Floatman;
+			end3 = 25Floatman;
+			end4 = 25Floatman;
+			end5 = 25Floatman;
+			end6 = 25Floatman;
+			lost = 24Tsunami;
+			template = 24RollingThunder.EDEN;
+		};
+		class 25Floatman: MissionDefault
+		{
+			end1 = 26AirCombat;
+			end2 = 26AirCombat;
+			end3 = 26AirCombat;
+			end4 = 26AirCombat;
+			end5 = 26AirCombat;
+			end6 = 26AirCombat;
+			lost = 25Floatman;
+			template = 25Airbourne.EDEN;
+		};		
+		class 26AirCombat: MissionDefault
+		{
+			end1 = 27Recon;
+			end2 = 27Recon;
+			end3 = 27Recon;
+			end4 = 27Recon;
+			end5 = 27Recon;
+			end6 = 27Recon;
+			lost = 26AirCombat;
+			template = 26AirSuperiority.EDEN;
+		};		
+		class 27Recon: MissionDefault
+		{
+			end1 = 28KilldozerParty;
+			end2 = 28KilldozerParty;
+			end3 = 28KilldozerParty;
+			end4 = 28KilldozerParty;
+			end5 = 28KilldozerParty;
+			end6 = 28KilldozerParty;
+			lost = 27Recon;
+			template = 27Recon.CAIN;
+		};		
+		class 28KilldozerParty: MissionDefault
+		{
+			end1 = 29Victory;
+			end2 = 29Victory;
+			end3 = 29Victory;
+			end4 = 29Victory;
+			end5 = 29Victory;
+			end6 = 29Victory;
+			lost = 28KilldozerParty;
+			template = 28Killdozer.EDEN;
+		};
+		class 29Victory: MissionDefault
+		{
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = 29Victory;
+			template = 29AirAssault.EDEN;
+		};
+	};
+	class Part3
+	{
+		name = "Part III - THE ROAD TO WAR";
+
+		cutscene = X08COUNTERATTACK.EDEN;
+
+		firstMission = 30Pioneer;
+		lost = Part4;
+		end1 = Part4;
+		end2 = Part4;
+		end3 = Part4;
+		end4 = Part4;
+		end5 = Part4;
+		end6 = Part4;
+
+		class 30Pioneer: MissionDefault
+		{
+			noAward=true;
+			end1 = 31aPlanesStart;
+			end2 = 31aPlanesStart;
+			end3 = 31aPlanesStart;
+			end4 = 31aPlanesStart;
+			end5 = 31aPlanesStart;
+			end6 = 31aPlanesStart;
+			lost = 30Pioneer;
+			template = 30WakeUpCall.CAIN;
+		};
+		class 31aPlanesStart: MissionDefault
+		{
+			noAward=true;
+			end1 = 31bAttackToCain;
+			end2 = 31bAttackToCain;
+			end3 = 31bAttackToCain;
+			end4 = 31bAttackToCain;
+			end5 = 31bAttackToCain;
+			end6 = 31bAttackToCain;
+			lost = 31aPlanesStart;
+			template = 31aPlanesStart.Abel;
+		};		
+		class 31bAttackToCain: MissionDefault
+		{
+			noAward=true;
+			end1 = x09aPilotDown;
+			end2 = x09aPilotDown;
+			end3 = x09aPilotDown;
+			end4 = x09aPilotDown;
+			end5 = x09aPilotDown;
+			end6 = x09aPilotDown;
+			lost = 31bAttackToCain;
+			template = 31bMaverick.Cain;
+		};
+		class x09aPilotDown: MissionDefault
+		{
+			noAward=true;
+			end1 = 32CounterStrike;
+			end2 = 32CounterStrike;
+			end3 = 32CounterStrike;
+			end4 = 32CounterStrike;
+			end5 = 32CounterStrike;
+			end6 = 32CounterStrike;
+			lost = 32CounterStrike;
+			template = x09aPilotDown.Cain;
+		};
+		class 32CounterStrike: MissionDefault
+		{
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = 32CounterStrike;
+			template = 32CounterStrike.Cain;
+		};
+	};
+	class Part4
+	{
+		name = "Part IV - COUNTDOWN TO ARMAGEDDON";
+
+		cutscene = X09BPILOTDOWN.CAIN;
+
+		firstMission = 33Escape;
+		lost = ;
+
+		end1 = Epilogue2;
+		end2 = Epilogue2;
+		end3 = Epilogue2;
+
+		end4 = Epilogue1;
+		end5 = Epilogue1;
+		end6 = Epilogue1;
+
+		class 33Escape: MissionDefault
+		{
+			end1 = 34BorderLineTrip;
+			end2 = 34BorderLineTrip;
+			end3 = 34BorderLineTrip;
+			end4 = 34BorderLineTrip;
+			end5 = 34BorderLineTrip;
+			end6 = 34BorderLineTrip;
+			lost = 33Escape;
+			template = 33Escape.Cain;
+		};
+
+		class 34BorderLineTrip: MissionDefault
+		{
+			end1 = 35SearchAndDestroy;
+			end2 = 35SearchAndDestroy;
+			end3 = 35SearchAndDestroy;
+			end4 = 35SearchAndDestroy;
+			end5 = 35SearchAndDestroy;
+			end6 = 35SearchAndDestroy;
+			lost = 34BorderLineTrip;
+			template = 34Incursion.CAIN;
+		};	
+		class 35SearchAndDestroy: MissionDefault
+		{
+			end1 = AngelinasD;
+			end2 = ;
+			end3 = AngelinasD;
+			end4 = ;
+			end5 = AngelinasD;
+			end6 = AngelinasD;
+			lost = 35SearchAndDestroy;
+			template = 35SearchAndDestroy.Cain;
+		};	
+		class AngelinasD: MissionDefault
+		{
+			noAward=true;
+			end1 = 36ArestOfGuba;
+			end2 = 36ArestOfGuba;
+			end3 = 36ArestOfGuba;
+			end4 = 36ArestOfGuba;
+			end5 = 36ArestOfGuba;
+			end6 = 36ArestOfGuba;
+			lost = 36ArestOfGuba;
+			template = x10AngelinasDeath.Cain;
+		};	
+		class 36ArestOfGuba: MissionDefault
+		{
+			noAward=true;
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = 36ArestOfGuba;
+			template = 36RedDawn.Cain;
+		};		
+	};
+
+	class Epilogue1
+	{
+		name = "EPILOGUE";
+
+		cutscene = X101aBadEnd.Eden;
+
+		firstMission = xCredits;
+		lost = ;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		class xCredits: MissionDefault
+		{
+			noAward=true;
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = ;
+			template = xxCredits.Eden;
+		};
+	};
+	class Epilogue2
+	{
+		name = "EPILOGUE";
+
+		cutscene = X101bHappyEnd.Eden;
+
+		firstMission = xCredits;
+		lost = ;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+
+		class xCredits: MissionDefault
+		{
+			noAward=true;
+			end1 = x11AfterYears;
+			end2 = x11AfterYears;
+			end3 = x11AfterYears;
+			end4 = x11AfterYears;
+			end5 = x11AfterYears;
+			end6 = x11AfterYears;
+			lost = x11AfterYears;
+			template = xxCredits.Eden;
+		};	
+
+		class x11AfterYears: MissionDefault
+		{
+			noAward=true;
+			end1 = 38HappyEnd;
+			end2 = 38HappyEnd;
+			end3 = 38HappyEnd;
+			end4 = 38HappyEnd;
+			end5 = 38HappyEnd;
+			end6 = 38HappyEnd;
+			lost = 38HappyEnd;
+			template = X11AFTERYEARS.abel;
+		};
+	
+		class 38HappyEnd: MissionDefault
+		{
+			noAward=true;
+			end1 = ;
+			end2 = ;
+			end3 = ;
+			end4 = ;
+			end5 = ;
+			end6 = ;
+			lost = ;
+			template = 38StatusQuo.Eden;
+		};
+	};	
+};
+
+
+
+class CfgSounds
+{
+	sounds[] = { };
+	class AwayArms
+	{
+		name = "AwayArms";
+		sound[] = {"L05.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRC_L05
+		};
+	};
+	class AwayGast
+	{
+		name = "AwayGast";
+		sound[] = {"L07.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRC_L07
+		};
+	};
+	class AwayHamm
+	{
+		name = "AwayHamm";
+		sound[] = {"L06.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRC_L06
+		};
+	};
+	class AwayNich
+	{
+		name = "AwayNich";
+		sound[] = {"L06a.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRC_L06a
+		};
+	};
+	
+	class CRus01
+	{
+		name = "";
+		sound[] = {"x99_01.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus02
+	{
+		name = "";
+		sound[] = {"x99_02.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus03
+	{
+		name = "";
+		sound[] = {"x99_03.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus04
+	{
+		name = "";
+		sound[] = {"x99_04.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus05
+	{
+		name = "";
+		sound[] = {"x99_05.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus06
+	{
+		name = "";
+		sound[] = {"x99_06.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus10
+	{
+		name = "";
+		sound[] = {"x99_10.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus11
+	{
+		name = "";
+		sound[] = {"x99_11.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus12
+	{
+		name = "";
+		sound[] = {"x99_12.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus13
+	{
+		name = "";
+		sound[] = {"x99_13.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus15
+	{
+		name = "";
+		sound[] = {"x99_15.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus16
+	{
+		name = "";
+		sound[] = {"x99_16.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus17
+	{
+		name = "";
+		sound[] = {"x99_17.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus18
+	{
+		name = "";
+		sound[] = {"x99_18.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus20
+	{
+		name = "";
+		sound[] = {"x99_20.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus21
+	{
+		name = "";
+		sound[] = {"x99_21.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus30
+	{
+		name = "";
+		sound[] = {"x99_30.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus31
+	{
+		name = "";
+		sound[] = {"x99_31.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus32
+	{
+		name = "";
+		sound[] = {"x99_32.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus33
+	{
+		name = "";
+		sound[] = {"x99_33.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus34
+	{
+		name = "";
+		sound[] = {"x99_34.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus35
+	{
+		name = "";
+		sound[] = {"x99_35.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus36
+	{
+		name = "";
+		sound[] = {"x99_36.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus37
+	{
+		name = "";
+		sound[] = {"x99_37.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus38
+	{
+		name = "";
+		sound[] = {"x99_38.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+	class CRus39
+	{
+		name = "";
+		sound[] = {"x99_39.ogg", db-30, 1.0};
+		titles[] = {};
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class AwayArmstrong
+	{
+		name = "L01";
+		sound[] = {"L01.ogg", db-40, 1.0};
+		title = $STRC_L01;
+	};
+	class AwayGastowski
+	{
+		name = "L02";
+		sound[] = {"L02.ogg", db-40, 1.0};
+		title = $STRC_L02;
+	};
+	class AwayHammer
+	{
+		name = "L03";
+		sound[] = {"L03.ogg", db-40, 1.0};
+		title = $STRC_L03;
+	};
+	class AwayNicholls
+	{
+		name = "L04";
+		sound[] = {"L04.ogg", db-40, 1.0};
+		title = $STRC_L04;
+	};
+};

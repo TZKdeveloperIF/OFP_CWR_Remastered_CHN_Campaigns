@@ -1,0 +1,162 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",3]
+setacctime 1.0
+_czechVoice = voiceLanguage == "Czech"
+0 fadeMusic 0.5
+
+playMusic ["track1", 0]
+
+
+;=== 19:11:05
+_camera camSetTarget fuelt
+_camera camSetPos [3058.97,6839.06,0.96]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~5
+
+;=== 19:12:30
+_camera camSetPos [3058.10,6835.19,14.70]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~6
+
+;=== 19:17:36
+_camera camSetTarget jeep
+_camera camSetPos [3196.17,6705.55,0.43]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~20
+
+;=== 19:19:35
+_camera camSetTarget jeep
+_camera camSetPos [3069.49,6833.64,6.85]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~10
+
+4 fadeMusic 0
+~2
+titleCut ["","BLACK OUT",2]
+
+~2
+
+titleCut ["","BLACK IN",1]
+
+blake playMove "FXStandDangle"
+
+
+
+;=== 19:35:57
+_camera camSetTarget [-64464.68,77954.27,-19319.85]
+_camera camSetPos [3045.74,6819.62,1.88]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+;=== 19:36:13
+_camera camSetTarget [-76152.97,50454.33,15.81]
+_camera camSetPos [3045.74,6819.62,1.56]
+_camera camSetFOV 0.276
+_camera camCommit 9
+~1
+blake say "17v29"
+
+~6
+0 fadeMusic 0.1
+playMusic ["7thdecide", 0]
+
+@camCommitted _camera
+
+
+;=== 19:47:00
+_camera camSetTarget [95153.96,-31490.20,7146.56]
+_camera camSetPos [3043.19,6821.14,1.4]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+_wait = 0
+? _czechVoice : _wait = 3.1
+~_wait
+david say "17v30"
+
+;=== 19:47:26
+_camera camSetFOV 0.4
+_camera camCommit 3.5
+@camCommitted _camera
+
+
+;=== 19:57:19
+_camera camSetTarget [-85866.49,52238.57,5872.27]
+_camera camSetPos [3045.24,6819.82,1.60]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+blake say "17v31"
+
+;=== 19:58:23
+_camera camSetTarget [-59819.49,-70742.77,5872.59]
+_camera camSetPos [3044.70,6820.71,1.60]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+
+;=== 19:59:03
+_camera camSetTarget [77279.13,67306.33,-28584.74]
+_camera camSetPos [3043.20,6818.96,1.80]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 19:59:19
+_camera camSetTarget [18100.02,101385.73,-28584.73]
+_camera camSetPos [3044.84,6818.86,1.80]
+_camera camSetFOV 0.700
+_camera camCommit 19
+
+_wait = 1
+? _czechVoice : _wait = 3.4
+~_wait
+blake say "17v32"
+
+@camCommitted _camera
+
+
+;=== 20:00:02
+_camera camSetTarget [-95384.83,22459.37,-7934.59]
+_camera camSetPos [3046.78,6820.14,1.64]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+david playMove "effectStandSalute"
+
+
+6 fadeMusic 0
+
+~1
+david say "17v33"
+~1
+titleCut ["","BLACK OUT",2]
+
+~4
+
+
+
+konec=true
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

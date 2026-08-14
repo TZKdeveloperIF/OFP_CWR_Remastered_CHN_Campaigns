@@ -1,0 +1,312 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",1]
+0 fadeMusic 0.5
+playmusic "track6"
+hammer setbehaviour "safe"
+hammer setmimic "normal"
+setacctime 1.0
+_czechVoice = voiceLanguage == "Czech"
+
+;STRATUJEJEME, ZABER NA PASY
+_camera camSetTarget [241.03,108535.57,123.44]
+_camera camSetPos [5968.49,8699.73,0.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [76533.31,79542.36,1512.93]
+	_camera camSetPos [5968.49,8699.73,3.15]
+	_camera camSetFOV 0.700
+	_camera camCommit 6
+	@camCommitted _camera
+	~2
+;***********************
+
+;POHLED NA TABOR
+;=== 12:04:17
+_camera camSetTarget [79262.55,-59265.41,-1706.70]
+_camera camSetPos [5977.86,8749.25,1.18]
+_camera camSetFOV 0.182
+_camera camCommit 0
+@camCommitted _camera
+
+	_camera camSetTarget [73288.98,-65182.17,-1706.74]
+	_camera camSetPos [5977.86,8749.25,1.18]
+	_camera camSetFOV 0.182
+	_camera camCommit 5
+
+	~1
+	hammer setspeedmode "full"
+	m60 setspeedmode "full"
+	hammer move [6002.10,8737.63,0.59]
+	~2.7
+	3 fademusic 0.25
+	newman say "x05v13"
+@camCommitted _camera
+
+;=== 16:47:10
+_camera camSetTarget [-71979.48,70938.96,7119.58]
+_camera camSetPos [5998.45,8725.65,1.54]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+;=== 16:48:50
+_camera camSetTarget [16244.12,108159.73,2950.63]
+_camera camSetPos [5998.36,8726.17,1.58]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+off say "x05v14"
+pozor=true
+~2
+;=== 10:14:17
+_camera camSetTarget [102347.98,-18039.13,124.05]
+_camera camSetPos [5996.69,8727.07,1.71]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+;********************
+
+off SetPos [5990.29,8720.93,0]
+newman SetPos [5992.29,8720.93,0]
+
+1 fademusic 1.5
+m60 SetPos [6005.76,8737.36,0]
+hammer move [6008.87,8707.41,0]
+
+
+;=== 14:12:17
+_camera camSetTarget m60
+_camera camSetPos [6015.38,8723.04,2.00]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~2
+
+;=== 15:23:07
+_camera camSetTarget m60
+_camera camSetPos [6020.48,8699.90,1.20]
+_camera camSetFOV 0.303
+_camera camCommit 0
+@camCommitted _camera
+~2
+
+
+;=== 15:27:43
+_camera camSetTarget m60
+_camera camSetPos [6027.88,8726.60,1.03]
+_camera camSetFOV 0.200
+_camera camCommit 0
+@camCommitted _camera
+
+~2
+;=== 15:45:18
+_camera camSetTarget m60
+_camera camSetRelPos [3.09,7.77,-3.13]
+_camera camSetFOV 0.708
+_camera camCommit 0
+@camCommitted _camera
+m60 stop true
+
+
+~1
+_pozice = getpos m60
+_x=_pozice select 0
+_y=_pozice select 1
+_z=_pozice select 2
+hammer SetPos [_x-3.4, _y,_z+7]
+[hammer] allowgetin false
+unassignvehicle hammer
+hammer switchmove "StandGetOutTank"
+3 fadeMusic 0.0
+
+~2
+titleCut ["","BLACK OUT",1]
+m60 SetPos getmarkerpos "sem"
+hammer say "x05v01"
+~1
+
+[hammer] allowgetin false
+unassignvehicle hammer
+hammer SetPos [6009.33,8720.73,0]
+hammer switchmove "EffectStand"
+hammer setspeedmode "limited"
+off SetPos [6000.71,8719.99,0]
+hammer move [6002.12,8719.55,0]
+off dowatch hammer
+hammer dowatch off 
+off reveal hammer
+hammer reveal off
+hammer SetPos [6002.12,8719.55,0]
+hammer setdir -90
+off SetPos [6000.71,8719.99,0]
+off setdir 90
+off setmimic "normal"
+
+ 
+
+
+titleCut ["","BLACK IN",1]
+;ZACINA ROZHOVOR************************
+;PRIBIHA
+
+;=== 18:04:28
+_camera camSetTarget [96042.03,49428.47,15444.64]
+_camera camSetPos [5998.24,8717.99,0.37]
+_camera camSetFOV 0.585
+_camera camCommit 0
+@camCommitted _camera
+
+;kuk co vy na to?
+off dowatch hammer
+hammer dowatch off 
+;kuk co vy na to?
+
+
+	;=== 18:04:46
+	_camera camSetTarget [70550.09,83539.23,15444.65]
+	_camera caMSetPos [5999.06,8716.81,0.40]
+	_camera camSetFOV 0.585
+	_camera camCommit 2
+	off stop true
+	hammer stop true
+	@camCommitted _camera
+
+hammer SetPos [6002.12,8719.55,0]
+off SetPos [6000.71,8719.99,0]
+[hammer] allowgetin flase
+hammer stop true
+hammer switchmove "EffectStand"
+ 
+_camera camSetTarget [-62593.70,-64044.12,123.86]
+_camera camSetPos [6001.46,8720.59,1.60]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+off say "x05v02"
+~3
+
+;ZABER NA OFF 2
+_camera camSetTarget [-79687.80,-40942.20,13926.21]
+_camera camSetPos [6003.47,8721.36,0.92]
+_camera camSetFOV 0.442
+_camera camCommit 0
+@camCommitted _camera
+~3
+
+
+;ZABER NA OBA
+_camera camSetTarget [-51505.85,-72960.36,-4415.97]
+_camera camSetPos [6003.81,8723.06,1.58]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+hammer say "x05v03"
+~4
+
+
+;ZABER NA OFF 2
+_camera camSetTarget [-62593.70,-64044.12,123.86]
+_camera camSetPos [6001.46,8720.59,1.60]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+off say "x05v04"
+_wait = 6
+? _czechVoice : _wait = 7.5
+~_wait
+
+;ZABER NA HAMMER 2
+_camera camSetTarget [89152.84,64080.66,-4415.88]
+_camera camSetPos [5999.65,8718.72,1.60]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+hammer say "x05v05"
+~3.5
+
+;ZABER NA OFF 
+;=== 19:08:34
+_camera camSetTarget [-79687.80,-40942.20,13926.21]
+_camera camSetPos [6003.47,8721.36,0.92]
+_camera camSetFOV 0.442
+_camera camCommit 0
+@camCommitted _camera
+
+
+
+off say "x05v06"
+~8
+
+;ZABER NA HAMMER
+;=== 19:28:25
+_camera camSetTarget [102256.38,35827.51,123.65]
+_camera camSetPos [6000.92,8719.46,1.53]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+hammer say "x05v07"
+~4.5
+
+;ZABER NA OFF 2
+_camera camSetTarget [-62593.70,-64044.12,123.86]
+_camera camSetPos [6001.46,8720.59,1.60]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+off say "x05v08"
+_wait = 6
+? _czechVoice : _wait = 8.2
+~_wait
+
+;ZABER NA HAMMER 2
+_camera camSetTarget [89152.84,64080.66,-4415.88]
+_camera camSetPos [5999.65,8718.72,1.60]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+hammer say "x05v09"
+~3
+
+;ZABER NA OFF 
+;=== 19:08:34
+_camera camSetTarget [-79687.80,-40942.20,13926.21]
+_camera camSetPos [6003.47,8721.36,0.92]
+_camera camSetFOV 0.442
+_camera camCommit 0
+@camCommitted _camera
+off say "x05v10"
+~7
+
+
+
+;ZABER NA OBA
+_camera camSetTarget [-51505.85,-72960.36,-4415.97]
+_camera camSetPos [6003.81,8723.06,1.58]
+_camera camSetFOV 0.370
+_camera camCommit 0
+@camCommitted _camera
+hammer say "x05v11"
+~1
+off say "x05v12"
+~4.5
+2 fademusic 1.5
+~2
+titleCut ["","BLACK OUT",2]
+~4
+7 fademusic 0.0
+~7
+;KONCI************************
+
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+

@@ -1,0 +1,657 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+_czechVoice = voiceLanguage == "Czech"
+
+;NASTAVUJEME POZICE-*-*-*-*-*-*-*-*-*-*
+david switchmove "EffectStandstill"
+straz1 switchmove "EffectStandstill"
+straz2 switchmove "EffectStandstill"
+david move [8157.68,3133.97,0]
+straz1 dowatch kuk1
+david dowatch straz1
+ian stop true
+;NASTAVUJEME POZICE*********************
+
+ptak = true
+;AKCE
+titleCut ["","BLACK IN",2]
+
+;BEZI K STRAZI-*-*-*-*-*-*-
+_camera camSetTarget [-75641.24,-51401.87,19.35]
+_camera camSetPos [8173.60,3142.34,1.40]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetTarget [-72875.27,-55363.04,-2980.55]
+_camera camSetPos [8169.71,3140.89,2.52]
+_camera camSetFOV 0.502
+_camera camCommit 4
+@camCommitted _camera
+3 fademusic 0.1
+~3
+straz1 SetPos [8155.79,3133.79,0]
+david SetPos [8157.68,3133.97,0]
+straz1 dowatch kuk1
+david dowatch straz1 
+david switchmove "EffectStandstill"
+;BEZI K STRAZI************
+
+
+
+
+1 fademusic 0.1
+;ROZHOVOR*-*-*-*-*-*-*-*-**
+straz1 switchmove "EffectStandstill" 
+
+_camera camSetTarget [92224.13,57284.58,18.91]
+_camera camSetPos [8155.11,3132.94,1.48]
+_camera camSetFOV 0.609
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v01"
+_wait = 2.5
+? _czechVoice : _wait = 2.7
+~_wait
+straz1 stop true
+;=== 19:34:59
+_camera camSetTarget [-89810.94,23015.66,-2505.24]
+_camera camSetPos [8160.08,3133.34,1.52]
+_camera camSetFOV 0.400
+_camera camCommit 0
+@camCommitted _camera
+straz1 say "x06v02"
+_wait = 4
+? _czechVoice : _wait = 4.6
+~_wait
+
+_camera camSetTarget [92224.13,57284.58,18.91]
+_camera camSetPos [8155.11,3132.94,1.48]
+_camera camSetFOV 0.609
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v03"
+_wait = 2
+? _czechVoice : _wait = 2.9
+~_wait
+
+straz1 playmove "EffectStandstill"  
+_camera camSetTarget [-89810.94,23015.66,-2505.24]
+_camera camSetPos [8160.08,3133.34,1.52]
+_camera camSetFOV 0.400
+_camera camCommit 0
+@camCommitted _camera
+straz1 say "x06v04"
+_wait = 2
+? _czechVoice : _wait = 3.0
+~_wait
+
+_camera camSetTarget [51156.40,93140.63,6985.63]
+_camera camSetPos [8153.66,3127.69,1.32]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+straz1 say  "x06v05"
+_wait = 2
+? _czechVoice : _wait = 2.4
+~_wait
+david say "x06v06"
+~2
+
+0 fadeMusic 0.1
+playMusic "track2"
+
+_camera camSetTarget [-89810.94,23015.66,-2505.24]
+_camera camSetPos [8160.08,3133.34,1.52]
+_camera camSetFOV 0.400
+_camera camCommit 0
+@camCommitted _camera
+straz1 say "x06v07"
+_wait = 2
+? _czechVoice : _wait = 2.4
+~_wait
+david say "x06v08"
+_wait = 1
+? _czechVoice : _wait = 2.7
+~_wait
+
+_camera camSetTarget [51156.40,93140.63,6985.63]
+_camera camSetPos [8153.66,3127.69,1.32]
+_camera camSetFOV 0.531
+_camera camCommit 0
+@camCommitted _camera
+~1.5
+david move [8163.86,3125.73,1.20]
+~1.5
+david setspeedmode  "limited"
+straz1 dowatch mujeep
+;ROZHOVOR*****************
+
+ptak = false
+
+
+
+
+
+15 fademusic 0.4
+;POKLIDNA PROCHAZKA*-*-*-*-*
+_camera camSetTarget [-88612.02,28072.95,2836.25]
+_camera camSetPos [8184.89,3124.43,2.64]
+_camera camSetFOV 0.636
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetTarget david
+_camera camSetPos [8177.93,3130.81,1.31]
+_camera camSetFOV 0.300
+_camera camCommit 10
+@camCommitted _camera
+;POKLIDNA PROCHAZKA********
+
+
+
+
+
+
+;PRIJIZDI BLAKE-*-*-*-*-*-*-*
+_camera camSetTarget [104329.33,-24194.44,-2129.11]
+_camera camSetPos [8158.37,3128.26,1.48]
+_camera camSetFOV 0.322
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetTarget [104329.33,-24194.44,-2129.11]
+_camera camSetPos [8158.37,3128.26,1.48]
+_camera camSetFOV 0.322
+_camera camCommit 7
+~5
+david dowatch kuk3
+velitel dowatch david
+3 fademusic 0.05
+@jetu
+
+@camCommitted _camera
+
+;PRIJIZDI JEEP*************
+
+
+;NASTAVOVANI POZICI-*-*-*-*-**
+velitel SetPos [8167.38,3126.24,0]
+velitel dowatch david
+david switchmove "EffectStandstill"
+straz1 switchmove "EffectStandstill"
+;NASTAVOVANI POZICI************
+
+
+
+
+;POTKAVAJI SE-*-*-*-*-*-*-*-*-
+_camera camSetTarget [-89704.45,-16354.16,-6445.57]
+_camera camSetPos [8166.54,3126.29,1.60]
+_camera camSetFOV 0.359
+_camera camCommit 0
+@camCommitted _camera
+david playmove "EffectStandSalute"
+david say "x06v09"
+_wait = 4
+? _czechVoice : _wait = 4.5
+~_wait
+
+_camera camSetTarget [108150.98,1604.86,19.10]
+_camera camSetPos [8162.56,3126.66,1.44]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+velitel say "x06v10"
+velitel playmove "EffectStandSalute"
+~1
+david playmove "EffectStandStill"
+velitel playmove "EffectStandStill"
+_wait = 3
+? _czechVoice : _wait = 3.5
+~_wait
+;POTKAVAJI SE*****************
+
+;TELEPORT DO STANU*-*-*-*-*
+
+
+titleCut ["","BLACK OUT",1]
+2 fadeMusic 0.0
+~1
+
+david SetPos [8151.90,3146.07,0]
+david setdir 25
+david dowatch velitel
+david stop true
+ian dowatch david
+conery dowatch david
+velitel dowatch david
+david reveal velitel
+velitel SetPos [8153.64,3148.58,0]
+velitel Setdir -142
+velitel stop true
+
+~1
+titleCut ["","BLACK IN",2]
+
+;zaber na vsechny*********
+ian playmove "EffectStandstill"
+conery playmove "EffectStandstill"
+david playmove "EffectStandstill"
+velitel playmove "EffectStandstill"
+ian dowatch david
+velitel dowatch david
+david dowatch velitel
+;ROZHOVOR*-*-**-*-*-*-*-*-*-*
+
+;TELEPORT DO STANU*-*-*-*-*
+
+;pohybuje se kamera nadstanem
+_camera camSetTarget [57642.46,89765.64,-6869.72]
+_camera camSetPos [8151.49,3144.97,3.96]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetTarget [50254.07,93810.03,-2661.36]
+_camera camSetPos [8151.88,3144.76,1.63]
+_camera camSetFOV 0.700
+_camera camCommit 4
+0 fadeMusic 0.1
+playMusic "Track5"
+@camCommitted _camera
+velitel say "x06v34"
+_wait = 5
+? _czechVoice : _wait = 4.4
+~_wait
+
+;zaber na hrace.
+_camera camSetTarget [-75765.80,-51236.40,19.17]
+_camera camSetPos [8153.43,3147.09,1.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v35"
+_wait = 2
+? _czechVoice : _wait = 2.2
+~_wait
+velitel say "x06v36"
+_wait = 2
+? _czechVoice : _wait = 1.5
+~_wait
+
+;deltail na Blakea
+_camera camSetTarget [-5957.33,102147.11,19.16]
+_camera camSetPos [8153.46,3147.77,1.67]
+_camera camSetFOV 0.757
+_camera camCommit 0
+@camCommitted _camera
+~3
+david say "x06v13"
+_wait = 2
+? _czechVoice : _wait = 2.4
+~_wait
+velitel say "x06v14"
+_wait = 1.5
+? _czechVoice : _wait = 2.5
+~_wait
+
+;zaber na hrace.
+_camera camSetTarget [-75765.80,-51236.40,19.17]
+_camera camSetPos [8153.43,3147.09,1.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+david say "x06v15"
+_wait = 2
+? _czechVoice : _wait = 2.4
+~_wait
+
+;deltail na Blakea
+_camera camSetTarget [-5957.33,102147.11,19.16]
+_camera camSetPos [8153.46,3147.77,1.67]
+_camera camSetFOV 0.757
+_camera camCommit 0
+@camCommitted _camera
+velitel say "x06v16"
+_wait = 6
+? _czechVoice : _wait = 6.6
+~_wait
+
+;detail na Ian a blake hovori
+_camera camSetTarget ian
+_camera camSetPos [8152.20,3148.11,1.44]
+_camera camSetFOV 0.568
+_camera camCommit 0
+@camCommitted _camera
+ian say "x06v17"
+_wait = 3.5
+? _czechVoice : _wait = 2.3
+~_wait
+
+_camera camSetTarget [50254.07,93810.03,-2661.36]
+_camera camSetPos [8151.88,3144.76,1.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v18"
+_wait = 3
+? _czechVoice : _wait = 3.5
+~_wait
+velitel say "x06v19"
+~3
+
+;NASTAVUJI DIVANI***************
+velitel stop false
+velitel dowatch kuk2
+;NASTAVUJI DIVANI***************
+
+
+;na blakea
+_camera camSetTarget [27267.00,100804.46,9904.55]
+_camera camSetPos [8153.54,3147.14,1.16]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+3 fadeMusic 0.0
+~3
+velitel dowatch zidle
+ian dowatch zidle
+velitel setmimic "normal"
+david setmimic "normal"
+
+;GUBA V TELEVEIZI -=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+;=== 13:12:10
+_camera camSetTarget [106233.73,19990.00,-9786.16]
+_camera camSetPos [8151.14,3147.79,1.83]
+_camera camSetFOV 1.017
+_camera camCommit 0
+@camCommitted _camera
+
+
+guba dowatch prekladatel
+~2
+
+;0 fadeMusic 0.1
+;playMusic "Track14"
+
+titleCut ["","BLACK OUT",0.5]
+~0.5
+titleCut ["","BLACK IN",0.5]
+
+_camera camSetTarget [68356.70,-69999.23,-3580.04]
+_camera camSetPos [7140.60,8987.94,8.16]
+_camera camSetFOV 0.331
+_camera camCommit 0
+@camCommitted _camera
+cutobj ["tvset","plain down",100] 
+guba say "x06v20"
+~8
+guba say "x06v21"
+~0.5
+prekladatel say "x06v20us"
+~7
+prekladatel say "x06v21us"
+~11
+guba say "x06v22"
+~3
+prekladatel say "x06v22us"
+~8
+titleCut ["","BLACK IN",0.5]
+;GUBA V TELEVEIZI -=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+;NASTAVUJI DIVANI***************
+velitel setPos [8154.279,3148.706,0.063]
+velitel setDir -143
+ian stop true
+velitel stop true
+david SetPos [8151.90,3146.07,0]
+david setdir 30
+velitel dowatch kuk2
+david dowatch kuk4
+;NASTAVUJI DIVANI***************
+
+
+
+;david1
+_camera camSetTarget [2430.50,-95709.98,13964.09]
+_camera camSetPos [8152.07,3147.48,1.04]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v23"
+_wait = 2
+? _czechVoice : _wait = 3.1
+~_wait
+
+
+
+;NASTAVUJI DIVANI***************
+velitel dowatch kuk2
+david dowatch kuk4
+;NASTAVUJI DIVANI***************
+
+
+
+;KECAJ PO TELEVIZI=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+blake stop true
+ian stop true
+
+playMusic ["Track5", 50]
+25 fadeMusic 0.05
+
+
+;blake
+_camera camSetTarget [14620.58,102325.86,11047.86]
+_camera camSetPos [8153.69,3146.53,1.24]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+velitel  say "x06v24"
+_wait = 7
+? _czechVoice : _wait = 8.4
+~_wait
+
+;detail na Ian a mluvi
+_camera camSetTarget ian
+_camera camSetPos [8152.20,3148.11,1.44]
+_camera camSetFOV 0.568
+_camera camCommit 0
+@camCommitted _camera
+ian say "x06v25"
+_wait = 12
+? _czechVoice : _wait = 10.9
+~_wait
+
+;zaber na hrace.
+_camera camSetTarget [-75765.80,-51236.40,19.17]
+_camera camSetPos [8153.43,3147.09,1.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v26"
+_wait = 2
+? _czechVoice : _wait = 2.2
+~_wait
+ian say "x06v27"
+_wait = 1
+? _czechVoice : _wait = 1.9
+~_wait
+
+;detail na Ian a mluvi
+_camera camSetTarget ian
+_camera camSetPos [8152.20,3148.11,1.44]
+_camera camSetFOV 0.568
+_camera camCommit 0
+@camCommitted _camera
+~2
+velitel  say "x06v28"
+_wait = 2
+? _czechVoice : _wait = 2.7
+~_wait
+
+;NEZNAMA KAMER NA BLAKEa
+_camera camSetTarget [-65905.86,69943.12,-7286.84]
+_camera camSetPos [8154.79,3147.32,1.51]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~8
+
+;detail na Ian a mluvi
+_camera camSetTarget ian
+_camera camSetPos [8152.20,3148.11,1.44]
+_camera camSetFOV 0.568
+_camera camCommit 0
+@camCommitted _camera
+ian say "x06v29"
+_wait = 4
+? _czechVoice : _wait = 5.9
+~_wait
+
+;Detail David
+_camera camSetTarget [-82929.30,-37954.35,3833.59]
+_camera camSetPos [8153.52,3146.92,1.32]
+_camera camSetFOV 0.516
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v30"
+_wait = 3
+? _czechVoice : _wait = 3.7
+~_wait
+
+;BLAKE=-=-=-=-=-=-=-
+_camera camSetTarget velitel
+_camera camSetPos [8151.37,3148.49,1.66]
+_camera camSetFOV 0.462
+_camera camCommit 0
+@camCommitted _camera
+velitel say "x06v31"
+_camera camSetTarget velitel
+_camera camSetPos [8153.36,3146.57,1.66]
+_camera camSetFOV 0.462
+_commit = 12.5
+? _czechVoice : _commit = 13.7
+_camera camCommit _commit
+@camCommitted _camera
+;BLAKE===================
+
+;DAVID=-=-=-=-=-=-=-=-=-=-=-
+_camera camSetTarget [-82929.30,-37954.35,3833.59]
+_camera camSetPos [8153.52,3146.92,1.32]
+_camera camSetFOV 0.516
+_camera camCommit 0
+@camCommitted _camera
+david say "x06v32"
+_wait = 4
+? _czechVoice : _wait = 5.8
+~_wait
+
+
+;BLAKE-=-=-=-=-=-=-=-=
+_camera camSetTarget [-19585.70,-92505.05,-8956.88]
+_camera camSetPos [8153.45,3150.42,1.60]
+_camera camSetFOV 0.627
+_camera camCommit 0
+@camCommitted _camera
+velitel say "x06v33"
+_wait = 7
+? _czechVoice : _wait = 7.3
+~_wait
+
+;=== 11:52:42
+_camera camSetTarget [-18199.94,99397.26,-6371.01]
+_camera camSetPos [8153.36,3144.38,1.37]
+_camera camSetFOV 0.627
+_camera camCommit 0
+@camCommitted _camera
+~10
+
+2 fadeMusic 0
+
+titleCut ["","BLACK OUT",1]
+~4
+@camCommitted _camera
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

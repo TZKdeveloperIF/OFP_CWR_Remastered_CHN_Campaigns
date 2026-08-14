@@ -1,0 +1,24 @@
+_camera = "camera" camCreate [44796.32,-89057.16,-12655.60]
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+
+;=== 15:39:10
+_camera camSetTarget serg
+_camera camSetRelPos [-0.00,2.15,1.01]
+_camera camSetFOV 0.418
+_camera camCommit 0
+@camCommitted _camera
+
+serg say "00v17"
+
+~3
+
+titulek=true
+
+titleCut ["","BLACK OUT", 2]
+~2
+
+Over=true
+
+_this cameraEffect ["terminate","back"]
+camDestroy _camera

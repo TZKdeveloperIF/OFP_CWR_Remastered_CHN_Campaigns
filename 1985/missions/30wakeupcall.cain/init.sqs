@@ -1,0 +1,93 @@
+titleCut ["","BLACK IN", 3]
+
+
+; ------------ Default promenne (nejsou-li definovany) -------------
+
+? GLB_ShA == GLB_ShA : goto "Vyhodnoceni"
+
+; Jinak nejsou promenne nastaveny, tak je nastavime
+
+i = random 1
+
+? i > 0.5 : goto "Jed1"
+GLB_ShA=0
+goto "Hop1"
+
+#Jed1
+GLB_ShA=1
+
+#Hop1
+
+j = random 1
+? j > 0.5 : goto "Jed2"
+GLB_ShB=0
+goto "Hop2"
+
+#Jed2
+GLB_ShB=1
+
+#Hop2
+
+k = random 1
+? k > 0.5 : goto "Jed3"
+GLB_ShC=0
+goto "Hop3"
+
+#Jed3
+GLB_ShC=1
+
+#Hop3
+
+_i = random 1
+? _i > 0.5 : goto "Jed4"
+GLB_ShilPos=1
+goto "Vyhodnoceni"
+
+#Jed4
+GLB_ShilPos=2
+
+
+#Vyhodnoceni
+
+? (GLB_ShC==1) : "S1" setMarkerType "Destroy"
+? (GLB_ShB==1) : "S1_2" setMarkerType "Destroy"
+? (GLB_ShA==1) and (GLB_ShilPos==1) : "S1_1" setMarkerType "Destroy"
+? (GLB_ShA==1) and (GLB_ShilPos==2) : "S1_3" setMarkerType "Destroy"
+
+; ------------ Nataveni prvniho waypointu -------------
+? GLB_ShC==1 : goto "Prvni"
+
+; Jinak o prvni nevi...
+
+? GLB_ShA==0 : goto "DruhaNe"
+
+; O druhe vi - fajn, ale je blizko?
+
+? GLB_ShilPos==1 : goto "Druha"
+
+#DruhaNe
+; Nevi ani o druhe, nebo je daleko - pokracujeme
+
+? GLB_ShB==1 : goto "Treti"
+? (GLB_ShA==1 and GLP_ShilPos==2) : goto "Ctvrta"
+
+Vim=5
+exit
+
+#Prvni
+Vim=1
+exit
+
+#Druha
+Vim=2
+exit
+
+#Treti
+Vim=3
+exit
+
+#Ctvrta
+; Tj. druha, ale na druhe pozici
+Vim=4
+exit
+

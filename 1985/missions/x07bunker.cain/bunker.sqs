@@ -1,0 +1,195 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",1]
+
+setacctime 1.0
+guba setPos [1896.126,7391.056,4]
+guba setDir 76
+guba setbehaviour "careless"
+guba removeweapon "AK74"
+angel setPos [1899.644,7389.482,4]
+angel  setDir -67
+angel stop true
+angel setbehaviour "careless"
+guba dowatch angel
+angel dowatch guba
+guba removeweapon "binocular"
+sluha1 setPos [1906.658,7388.322,4]
+sluha2  setPos [1900.207,7395.046,4]
+sluha3  setPos [1903.671,7385.575,4]
+sluha4 setPos [1903.556,7389.694,4]
+sluha3 switchmove "OnChair"
+sluha stop true
+guba setmimic "angry"
+angel setmimic "normal"
+;angel switchmove "FXStandhip"
+angel switchmove "FXangel"
+
+;SOAP ZABER
+_camera camSetTarget [27430.14,101718.09,21268.12]
+_camera camSetPos [1896.23,7372.57,0.96]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~1
+guba dowatch kuk1
+angel dowatch kuk2
+~3
+
+;GUBA DETAIL
+_camera camSetTarget [-27118.04,82945.40,58863.59]
+_camera camSetPos [1896.32,7390.65,4.45]
+_camera camSetFOV 0.617
+_camera camCommit 0
+@camCommitted _camera
+guba say "x07v01"
+
+	;=== 15:28:25
+	_camera camSetTarget [-92683.63,39411.15,5542.14]
+	_camera camSetPos [1896.58,7390.90,4.68]
+	_camera camSetFOV 0.700
+	_camera camCommit 10
+	@camCommitted _camera
+	~6
+
+;GUBA A angel
+_camera camSetTarget [101421.99,12948.29,-7836.70]
+_camera camSetPos [1894.93,7390.50,4.59]
+_camera camSetFOV 0.488
+_camera camCommit 0
+@camCommitted _camera
+guba say "x07v02"
+
+
+;=== 18:48:01
+_camera camSetTarget [96911.92,38266.07,4446.68]
+_camera camSetPos [1895.75,7390.56,4.64]
+_camera camSetFOV 0.803
+_camera camCommit 12
+@camCommitted _camera
+
+
+;GUBA
+_camera camSetTarget [-6552.91,107031.24,128.77]
+_camera camSetPos [1896.51,7388.84,4.18]
+_camera camSetFOV 0.653
+_camera camCommit 0
+@camCommitted _camera
+angel switchmove "FXangel2"
+;=== 15:29:13
+_camera camSetTarget [81547.63,67055.84,-9641.98]
+_camera camSetPos [1896.63,7388.26,4.58]
+_camera camSetFOV 0.700
+_camera camCommit 14
+~11
+angel say "x07v03"
+@camCommitted _camera
+
+
+
+
+;ANGEL
+
+~2
+
+;GUBA
+;=== 15:28:25
+_camera camSetTarget [-92683.63,39411.15,5542.04]
+_camera camSetPos [1896.58,7390.90,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+guba say "x07v04"
+~10
+
+_camera camSetTarget [-17338.71,-90486.53,-6864.67]
+_camera camSetPos [1899.85,7395.80,4.67]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~4
+
+_camera camSetTarget [-92683.63,39411.15,5542.04]
+_camera camSetPos [1896.58,7390.90,4.68]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~6
+
+
+_camera camSetTarget [21475.15,-90674.18,128.64]
+_camera camSetPos [1899.08,7390.98,4.50]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+guba say "x07v05"
+~6
+
+;=== 18:46:01
+_camera camSetTarget [-92208.20,39774.36,9906.03]
+_camera camSetPos [1896.73,7390.85,4.65]
+_camera camSetFOV 0.281
+_camera camCommit 0
+@camCommitted _camera
+~7
+
+
+;ANGEL
+_camera camSetTarget [95111.84,43119.75,-5739.75]
+_camera camSetPos [1897.36,7388.95,4.70]
+_camera camSetFOV 0.681
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [87943.56,-43257.52,-5438.69]
+	_camera camSetPos [1898.48,7390.25,4.52]
+	_camera camSetFOV 0.700
+	_camera camCommit 15
+
+	angel say "x07v06"
+	~6
+	angel say "x07v07"
+	~2
+	@camCommitted _camera
+;ANGEL
+
+
+;ANGEL
+;=== 16:02:04
+_camera camSetTarget [99346.26,29825.81,-299.12]
+_camera camSetPos [1896.70,7389.16,4.58]
+_camera camSetFOV 0.400
+_camera camCommit 0
+@camCommitted _camera
+~3
+angel say "x07v08"
+~5
+
+
+;GUBA
+_camera camSetTarget [-97847.19,13197.31,4299.23]
+_camera camSetPos [1897.02,7391.01,4.62]
+_camera camSetFOV 0.438
+_camera camCommit 0
+@camCommitted _camera
+~3
+guba say "x07v09"
+~4
+_camera camSetTarget [-39782.54,98232.92,-3011.86]
+_camera camSetPos [1898.69,7387.99,4.52]
+_camera camSetFOV 0.926
+_camera camCommit 0
+@camCommitted _camera
+~6
+;GUBA
+
+titleCut ["","BLACK OUT",1]
+~4
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+

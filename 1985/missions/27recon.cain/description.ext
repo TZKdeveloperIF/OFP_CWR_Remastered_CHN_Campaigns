@@ -1,0 +1,105 @@
+minScore=2001
+avgScore=5000
+maxScore=8999
+
+onLoadMission=$STRM_27n20
+
+showGPS=1
+
+
+class Weapons
+{
+    class M16
+    {
+        count = 3;
+    };
+};
+
+class Magazines
+{
+    class M16
+    {
+        count = 30;
+    };
+    class HandGrenade
+    {
+        count = 30;
+    };
+    class HK
+    {
+        count = 30;
+    };
+};
+
+
+class CfgSounds
+{
+	sounds[] = { };
+	class Far1
+	{
+		name = "Far1";
+		sound[] = {"sound/27v08.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRM_27v08
+		};
+	};
+
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class ZSU1
+	{
+		name = "ZSU1";
+		sound[] = {"sound/27r05.ogg", db-40, 1.0};
+		title = $STRM_27r05;
+	};
+	class ZSU2
+	{
+		name = "ZSU2";
+		sound[] = {"sound/27r06.ogg", db-40, 1.0};
+		title = $STRM_27r06;
+	};
+	class ZSU3
+	{
+		name = "ZSU3";
+		sound[] = {"sound/27r07.ogg", db-40, 1.0};
+		title = $STRM_27r07;
+	};
+	class War
+	{
+		name = "War";
+		sound[] = {"sound/27r04.ogg", db-40, 1.0};
+		title = $STRM_27r04;
+	};
+	class Radio2
+	{
+		name = "Radio2";
+		sound[] = {"sound/27r02.ogg", db-40, 1.0};
+		title = $STRM_27r02;
+	};
+	class Radio3
+	{
+		name = "Radio3";
+		sound[] = {"sound/27r03.ogg", db-40, 1.0};
+		title = $STRM_27r03;
+	};
+	class 27r09
+	{
+		name = "27r09";
+		sound[] = {"sound/27r09.ogg", db-40, 1.0};
+		title = $STRM_27r09;
+	};
+};
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};
+

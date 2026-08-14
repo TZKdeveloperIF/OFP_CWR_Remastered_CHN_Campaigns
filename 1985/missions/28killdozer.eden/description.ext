@@ -1,0 +1,77 @@
+minScore=6001
+avgScore=8000
+maxScore=14000
+
+onLoadMission=$STRM_28n20
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+			Obj1, Obj2, End, Tar1, Tar2, Mov1, Mov2
+		};
+
+	class Tar1
+	{
+		name = "Tar1";
+		sound[] = {"sound/28r01.ogg", db-40, 1.0};
+		title = $STRM_28r01;
+	};
+	class Tar2
+	{
+		name = "Tar2";
+		sound[] = {"sound/28r02.ogg", db-40, 1.0};
+		title = $STRM_28r02;
+	};
+	class Obj1
+	{
+		name = "Obj1";
+		sound[] = {"sound/28r03.ogg", db-40, 1.0};
+		title = $STRM_28r03;
+	};
+	class Obj2
+	{
+		name = "Obj2";
+		sound[] = {"sound/28r04.ogg", db-40, 1.0};
+		title = $STRM_28r04;
+	};
+	class Obj3
+	{
+		name = "Obj3";
+		sound[] = {"sound/28r05.ogg", db-40, 1.0};
+		title = $STRM_28r05;
+	};
+	class Obj4
+	{
+		name = "Obj4";
+		sound[] = {"sound/28r06.ogg", db-40, 1.0};
+		title = $STRM_28r06;
+	};
+	class Mov1
+	{
+		name = "Mov1";
+		sound[] = {"sound/28r08.ogg", db-40, 1.0};
+		title = $STRM_28r08;
+	};
+	class Mov2
+	{
+		name = "Mov2";
+		sound[] = {"sound/28r09.ogg", db-40, 1.0};
+		title = $STRM_28r09;
+	};
+
+	class End
+	{
+		name = "End";
+		sound[] = {"sound/Alone1.ogg", db-40, 1.0};
+		title = $STR_END;
+	};
+};
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

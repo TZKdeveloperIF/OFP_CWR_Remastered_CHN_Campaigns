@@ -1,0 +1,204 @@
+titleCut ["","BLACK IN",3]
+
+0 fadeMusic 0.2
+playmusic "track15"
+setViewDistance 1350
+setacctime 1.0
+_czechVoice = voiceLanguage == "Czech"
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+
+carillo say "15v1"
+
+;=== 20:45:28
+_camera camSetTarget [-81629.74,-45396.26,121.75]
+_camera camSetPos [5251.20,4118.73,0.23]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 20:45:47
+_camera camSetTarget [-81629.74,-45396.26,121.78]
+_camera camSetPos [5251.20,4118.73,1.23]
+_camera camSetFOV 0.700
+_camera camCommit 6
+
+~2
+gibbon say "15v2"
+@camCommitted _camera
+
+
+;=== 20:56:08
+_camera camSetTarget [69108.98,80469.93,9699.57]
+_camera camSetPos [5247.93,4115.42,1.75]
+_camera camSetFOV 0.221
+_camera camCommit 0
+@camCommitted _camera
+
+carillo say "15v3"
+~4
+
+gibbon say "15v4"
+~1
+
+;=== 20:57:25
+_camera camSetTarget [-53705.23,-75627.35,-12711.60]
+_camera camSetPos [5250.59,4119.20,1.69]
+_camera camSetFOV 0.562
+_camera camCommit 0
+@camCommitted _camera
+;=== 20:57:39
+_camera camSetTarget [-2142.02,-94777.59,-12712.02]
+_camera camSetPos [5249.88,4119.62,1.73]
+_camera camSetFOV 0.562
+_camera camCommit 6
+~3
+carillo say "15v5"
+~2
+titleCut ["","BLACK OUT",1]
+@camCommitted _camera
+
+
+vojak moveingunner jeep
+gibbon moveInDriver jeep
+gibbon doMove getMarkerPos "chapoi"
+titleCut ["","BLACK IN",2]
+
+;=== 21:10:12
+_camera camSetTarget [-8206.68,103210.63,119.80]
+_camera camSetPos [5558.59,4176.57,1.80]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~10
+
+titleCut ["","BLACK OUT",1]
+~1
+carillo setPos [5869.197,3559.873,-0.001]
+carillo setDir -162
+
+titleCut ["","BLACK IN",2]
+
+
+;=== 21:22:15
+_camera camSetTarget [-58877.34,-72643.50,53.95]
+_camera camSetPos [5870.93,3563.36,1.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 21:22:36
+_camera camSetTarget [49053.50,-86629.47,54.43]
+_camera camSetPos [5866.57,3563.98,1.36]
+_camera camSetFOV 0.538
+_camera camCommit 6
+
+carillo say "15v6"
+~5
+ltn say "15v7"
+@camCommitted _camera
+
+carillo say "15v8"
+;=== 21:33:20
+_camera camSetTarget [68543.84,81478.81,53.96]
+_camera camSetPos [5867.46,3558.13,0.80]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 21:33:36
+_camera camSetTarget [68543.84,81478.81,54.26]
+_camera camSetPos [5867.46,3558.13,1.68]
+_camera camSetFOV 0.530
+_camera camCommit 3
+@camCommitted _camera
+
+ltn setPos [5871.948,3560.499,-0.001]
+ltn setDir 10
+
+ltn say "15v9"
+;=== 21:42:54
+_camera camSetTarget [-58365.59,-66840.70,-30221.75]
+_camera camSetPos [5872.64,3563.51,1.32]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~3
+;=== 21:43:18
+_camera camSetTarget [49674.42,-81080.61,-30222.01]
+_camera camSetPos [5871.09,3563.41,1.32]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+_wait = 2
+? _czechVoice : _wait = 3.9
+~_wait
+ltn say "15v10"
+~1
+
+;=== 21:43:37
+_camera camSetTarget [63182.91,79708.66,-30223.07]
+_camera camSetPos [5871.23,3559.65,1.92]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 21:44:48
+_camera camSetTarget [54461.38,68120.48,-58860.07]
+_camera camSetPos [5871.60,3560.13,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 8
+~5
+3 fadeMusic 0.0
+@camCommitted _camera
+
+nastoupit = true
+
+0.0 fadeMusic 0.3
+playMusic "track13"
+
+;delsi cesky 15v10 - podrzet kameru u porucika, aby doznela replika pred strihem
+_wait = 0
+? _czechVoice : _wait = 1.5
+~_wait
+
+;=== 21:53:02
+_camera camSetTarget [41811.94,-90103.33,20.97]
+_camera camSetPos [7406.76,3789.02,5.48]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 21:53:19
+_camera camSetTarget [-2529.36,-95734.80,20.93]
+_camera camSetPos [7412.53,3767.14,2.33]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+
+;=== 21:54:07
+_camera camSetTarget [23668.02,102121.43,7742.50]
+_camera camSetPos [7420.25,3752.88,1.05]
+_camera camSetFOV 0.681
+_camera camCommit 0
+@camCommitted _camera
+;=== 21:54:25
+_camera camSetTarget [-81809.16,-40727.17,7742.71]
+_camera camSetPos [7420.25,3752.88,1.05]
+_camera camSetFOV 0.681
+_camera camCommit 20
+~17
+titleCut ["","BLACK OUT",3]
+3 fadeMusic 0.0
+@camCommitted _camera
+
+
+;ukonceni kamer a skriptu
+aP cameraEffect ["terminate","back"]
+_this switchMove ""
+camDestroy _camera
+konec = true
+exit

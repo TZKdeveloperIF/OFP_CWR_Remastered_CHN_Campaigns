@@ -1,0 +1,14 @@
+; Skript pro vyhazeni vsech vystoupenych z grupy
+
+HracU=units Hrac
+_i=0
+_pocet = count HracU
+
+#Znovu
+_nekdo=HracU select _i
+?vehicle _nekdo==_nekdo:[_nekdo] join Off
+?_i==_pocet:goto "Pryc"
+_i=_i+1
+goto "Znovu"
+
+#Pryc

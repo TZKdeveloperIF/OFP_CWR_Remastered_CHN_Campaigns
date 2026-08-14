@@ -1,0 +1,105 @@
+class CfgSounds
+{
+	sounds[] = 
+		{
+				atomovka, x101v03b, x101v04b
+};
+
+
+	class x101v03b
+	{
+		name = "x101v03";
+		sound[] = {"sound/x101v03b.ogg", db+10, 1.0};
+		titles[] = 
+		{
+			0, $STR_x101v03b
+		};
+	};
+
+
+	class x101v04b
+	{
+		name = "x101v04";
+		sound[] = {"sound/x101v04b.ogg", db+10, 1.0};
+		titles[] = 
+		{
+			0, ""
+		};
+	};
+	
+	class atomovka
+	{
+		name = "atomovka";
+		sound[] = {"sound/atomovka.ogg", db+10, 1.0};
+		titles[] = {};
+	};	
+	
+};
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+			
+		};
+
+	
+};
+class CfgSFX
+{
+	sounds[] =
+		{
+			 ann, ann2, zachod, polka, noradio
+		};
+
+	 class ann
+	 {
+		  sounds[]={sound1};
+		  name = "ann";
+		  
+		  sound1[]={"sound/x101v01b.ogg", db+10,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+	 class ann2
+	 {
+		  sounds[]={sound1};
+		  name = "ann2";
+		  
+		  sound1[]={"sound/x101v02b.ogg", db+10,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+
+
+	 class zachod
+	 {
+		  sounds[]={sound1};
+		  name = "zachod";
+		  
+		  sound1[]={"sound/zachod.ogg", db-40,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+	 
+	 class polka
+	 {
+		  sounds[]={sound1};
+		  name = "polka";
+		  
+		  sound1[]={"sound/polka.ogg", db+40,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+
+	 class noradio
+	 {
+		  sounds[]={sound1};
+		  name = "noradio";
+		  
+		  sound1[]={"sound/noradio.ogg", db+40,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+
+
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

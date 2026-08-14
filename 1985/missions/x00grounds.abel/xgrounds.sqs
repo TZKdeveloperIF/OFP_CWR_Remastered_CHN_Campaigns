@@ -1,0 +1,291 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+titleCut ["","BLACK IN",10000]
+of setmimic "normal"
+SetAccTime 1.0
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+title1=true
+0 fadesound 0
+~3
+7 fadesound 1
+titleCut ["","BLACK IN",3]
+radioprijmac SetPos [11662.43,4475.64,0.20]
+znovu=true
+;of SetPos [11614.57,4422.86,0.00]
+;goto "konec"
+;*nahled na tabor
+_camera camSetTarget truck
+_camera camSetPos [11689.38,4478.08,8.83]
+_camera camSetFOV 0.461
+_camera camCommit 0
+@camCommitted _camera
+~5
+phudba=true
+~7
+title2=true
+~3
+phudba=false
+
+;zaber na kecy skrz plot
+_camera camSetTarget [20175.38,104002.06,-2803.49]
+_camera camSetPos [11655.93,4405.55,2.54]
+_camera camSetFOV 0.082
+_camera camCommit 0
+@camCommitted _camera
+~5
+
+;sedi
+_camera camSetTarget [22813.99,-94408.08,-9837.77]
+_camera camSetPos [11661.83,4478.44,1.72]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+
+
+;fowley
+_camera camSetTarget [2171.41,-105096.56,1910.41]
+_camera camSetPos [11662.12,4476.83,0.90]
+_camera camSetFOV 0.265
+_camera camCommit 0
+@camCommitted _camera
+fow say "x00v01"
+~4
+
+; koz
+;_camera camSetTarget koz
+;_camera camSetPos [11658.38,4474.96,1.26]
+;_camera camSetFOV 0.236
+;_camera camCommit 0
+;@camCommitted _camera
+;koz say "roz2"
+;~5
+
+;fowley
+;_camera camSetTarget [2171.41,-105096.56,1910.41]
+;_camera camSetPos [11662.12,4476.83,0.90]
+;_camera camSetFOV 0.265
+;_camera camCommit 0
+;@camCommitted _camera
+;fow say "roz3"
+;~8
+
+;bor
+_camera camSetTarget [103018.13,43061.00,12853.29]
+_camera camSetPos [11660.08,4475.24,0.41]
+_camera camSetFOV 0.359
+_camera camCommit 0
+@camCommitted _camera
+bor say "x00v04"
+~8
+~2
+play=true
+;sedi
+_camera camSetTarget [22813.99,-94408.08,-9837.77]
+_camera camSetPos [11661.83,4478.44,1.72]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~1
+bor say "x00v05"
+ cutText [localize "STR_x00v16","plain down",1]
+~2
+play=false
+
+;=== 11:21:55
+_camera camSetTarget [81816.57,-57349.75,-35420.13]
+_camera camSetPos [11660.97,4477.02,1.23]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [100549.84,-28780.76,-31494.57]
+	_camera camSetPos [11661.36,4476.04,0.89]
+	_camera camSetFOV 0.700
+	_camera camCommit 14
+	~13
+	koz say "x00v13"
+	~0.3
+	bor say "x00v15"
+	@camCommitted _camera
+
+
+
+;bor
+_camera camSetTarget [103018.13,43061.00,12853.29]
+_camera camSetPos [11660.08,4475.24,0.41]
+_camera camSetFOV 0.359
+_camera camCommit 0
+@camCommitted _camera
+bor say "x00v06"
+~3
+play2=true
+cutText [localize "STR_x00v17","plain down",1]
+;radio******************************
+;=== 16:04:46
+_camera camSetTarget [27549.15,-83462.05,-44862.77]
+_camera camSetPos [11662.04,4478.25,2.41]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 16:04:55
+_camera camSetTarget [85760.16,-45473.59,-44862.80]
+_camera camSetPos [11660.26,4477.39,2.37]
+_camera camSetFOV 0.700
+_camera camCommit 14
+~2
+play2=false
+@camCommitted _camera
+
+
+;=== 15:43:31
+_camera camSetTarget [-64802.52,-59738.61,5426.89]
+_camera camSetPos [11663.81,4476.69,0.58]
+_camera camSetFOV 0.862
+_camera camCommit 0
+@camCommitted _camera
+~2
+cutText [localize "STR_x00v18","plain down",1]
+~6
+;=== 15:43:13
+_camera camSetTarget [58637.62,-83389.48,-8499.79]
+_camera camSetPos [11658.59,4476.70,1.50]
+_camera camSetFOV 0.862
+_camera camCommit 0
+@camCommitted _camera
+;=== 15:43:16
+_camera camSetTarget [103871.04,-33264.03,-8499.77]
+_camera camSetPos [11658.59,4476.70,1.50]
+_camera camSetFOV 0.862
+_camera camCommit 10
+@camCommitted _camera
+;konec radia****************************
+
+
+; koz
+_camera camSetTarget koz
+_camera camSetPos [11658.38,4474.96,1.26]
+_camera camSetFOV 0.236
+_camera camCommit 0
+@camCommitted _camera
+koz say "x00v07"
+~4
+
+;fowley
+_camera camSetTarget [2171.41,-105096.56,1910.41]
+_camera camSetPos [11662.12,4476.83,0.90]
+_camera camSetFOV 0.265
+_camera camCommit 0
+@camCommitted _camera
+fow say "x00v08"
+~2
+
+; koz
+_camera camSetTarget koz
+_camera camSetPos [11658.38,4474.96,1.26]
+_camera camSetFOV 0.236
+_camera camCommit 0
+@camCommitted _camera
+koz say "x00v09"
+~2
+
+;bor
+_camera camSetTarget [-21602.04,-89786.45,2860.96]
+_camera camSetPos [11662.11,4475.92,0.89]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+fow say "x00v10"
+
+of dowatch [11660.89,4472.24,1.73]
+~2.5
+
+;=== 13:02:51
+_camera camSetTarget [-78125.05,-38983.87,7008.33]
+_camera camSetPos [11665.01,4476.75,0.54]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~3
+#konec
+;=== 16:16:28
+_camera camSetTarget of
+_camera camSetPos [11663.41,4478.45,1.04]
+_camera camSetFOV 0.200
+_camera camCommit 0
+@camCommitted _camera
+of SetPos [11660.85,4471.57,-0.00]
+of say "x00v11"
+~2
+0 fadeMusic 0.3
+playMusic "track7"
+
+koz dowatch of
+bor dowatch of
+fow dowatch of
+~2
+koz playmove "effectstand"
+bor playmove "effectstand"
+fow playmove "effectstand"
+
+of say "x00v12"
+of switchmove "effectstandtalk"
+;=== 15:28:28
+_camera camSetTarget [102639.33,42913.79,-15644.52]
+_camera camSetPos [11659.93,4475.12,1.56]
+_camera camSetFOV 0.710
+_camera camCommit 0
+@camCommitted _camera
+~5
+
+
+;=== 17:22:24
+_camera camSetTarget [-7456.51,-92893.81,-12400.16]
+_camera camSetPos [11661.17,4473.40,1.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~4
+titleCut ["","BLACK OUT",1]
+~1
+titleCut ["","BLACK IN",1]
+
+;=== 21:29:05
+_camera camSetTarget [104192.54,42045.83,-2452.62]
+_camera camSetPos [11567.99,4435.19,7.96]
+_camera camSetFOV 0.309
+_camera camCommit 0
+@camCommitted _camera
+
+
+	;=== 21:29:19
+	_camera camSetTarget [102736.99,45448.45,-2452.86]
+	_camera camSetPos [11566.60,4434.57,6.38]
+	_camera camSetFOV 0.309
+	_camera camCommit 8
+	~1
+	title3=true
+	
+	@camCommitted _camera
+	
+	;=== 21:29:32
+	_camera camSetTarget [102736.99,45448.45,-2452.86]
+	_camera camSetPos [11566.27,4434.42,5.97]
+	_camera camSetFOV 0.309
+	_camera camCommit 4
+	~2
+	titleCut ["","BLACK OUT",2]
+	2 fadeMusic 0
+	@camCommitted _camera
+
+
+konec=true
+@camCommitted _camera
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+

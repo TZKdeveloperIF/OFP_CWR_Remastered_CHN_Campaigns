@@ -1,0 +1,67 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",3]
+setacctime 1.0
+0 fadeMusic 0.5
+playMusic "Track6"
+
+;=== 17:03:29
+_camera camSetTarget [-59042.83,80126.35,69.15]
+_camera camSetPos [5301.85,3577.27,2.02]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:03:50
+_camera camSetTarget [-76945.13,60481.37,69.57]
+_camera camSetPos [5293.38,3588.24,1.82]
+_camera camSetFOV 0.700
+_camera camCommit 14
+@camCommitted _camera
+
+
+;=== 17:05:08
+_camera camSetTarget hlidka
+_camera camSetPos [5263.45,3616.06,1.46]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 17:05:08
+_camera camSetFOV 0.350
+_camera camCommit 20
+@camCommitted _camera
+
+;=== 17:15:07
+_camera camSetTarget tank
+_camera camSetPos [5221.01,3536.08,0.04]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~55
+
+;=== 17:21:47
+_camera camSetTarget [-76004.74,58031.09,-20776.31]
+_camera camSetPos [5224.76,3642.87,2.47]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:21:27
+_camera camSetTarget [-76004.74,58031.09,-20776.33]
+_camera camSetPos [5287.81,3600.64,23.49]
+_camera camSetFOV 0.700
+_camera camCommit 40
+~35
+titleCut ["","BLACK OUT",5]
+
+5 fadeMusic 0.0
+
+@camCommitted _camera
+
+
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+konec = true

@@ -1,0 +1,47 @@
+; Nastavujeme dalsi waypoint
+
+; Kdo ... kdo je znicen, Vim ... o kom jsem zrovna vedel
+; Pokud zabil jineho, je to irelevantni
+? Kdo != Vim : exit
+
+; Znicena posledni
+? Kdo == 4 : goto "Konec"
+
+? Kdo != 3 : goto "Dva"
+; ---------------- Znicena treti
+
+? (GLB_ShA==1) and (SGB_ShilPos==2) : goto "Posledni"
+
+goto "Konec"
+
+#Posledni
+Vim=4
+exit
+
+#Dva
+? Kdo != 2 : goto "Jedna"
+; ----------------- Znicena druha
+
+? GLB_ShB==1 : goto "UkazTreti"
+? (GLB_ShA==1) and (SGB_ShilPos==2) : goto "Posledni"
+goto "Konec"
+
+#UkazTreti
+Vim=3
+exit
+
+#Jedna
+; ----------------- Znicena prvni
+
+? (GLB_ShA==1) and (SGB_ShilPos==1) : goto "UkazDruhou"
+? GLB_ShB==1 : goto "UkazTreti"
+? (GLB_ShA==1) and (SGB_ShilPos==2) : goto "Posledni"
+goto "Konec"
+
+#UkazDruhou
+Vim=2
+exit
+
+
+#Konec
+Vim=5

@@ -1,0 +1,67 @@
+titleCut ["","BLACK OUT",2]
+
+0 fadeMusic 0.0
+8 fadeMusic 0.5
+playMusic "track3"
+
+~2
+
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+titleCut ["","BLACK IN",2]
+
+20 setOvercast 0.2
+
+;=== 22:06:18
+_camera camSetTarget [-76788.86,64763.85,452.97]
+_camera camSetPos [4338.18,6227.22,1.92]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 22:17:15
+_camera camSetTarget [-66789.23,21294.76,69089.53]
+_camera camSetPos [4363.32,6203.08,2.18]
+_camera camSetFOV 0.700
+_camera camCommit 25
+
+titleCut [localize "STRCAMP_title2","BLACK OUT",10]
+
+_i = 0
+
+#loop
+_i = _i + 1
+skipTime 0.015
+~0.1
+? _i > 150 : goto "konec"
+goto "loop"
+#konec
+
+60 fadeMusic 0.0
+
+? phaseN : goto "preskoc"
+skipTime 3
+#preskoc
+
+
+~3
+
+
+
+player setPos [4953.826,4166.887,-0.013]
+player setDir -84
+
+
+phaseN = true
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+savegame
+
+~1
+
+titleCut ["","BLACK IN",3]
+
+

@@ -1,0 +1,911 @@
+version=11.000000;
+
+class Mission
+
+{
+
+	randomSeed=2904067.000000;
+
+	class Intel
+
+	{
+
+		briefingName="$STR_CAMPAIGN_1985_X101BHAPPYEND_EDEN_BRIEFING_NAME";
+		viewDistance=900;
+
+	};
+
+};
+
+class Intro
+
+{
+
+	randomSeed=14165507.000000;
+
+	class Intel
+
+	{
+
+		briefingName="$STR_CAMPAIGN_1985_X101BHAPPYEND_EDEN_BRIEFING_NAME";
+
+		day=4.000000;
+
+		hour=17.000000;
+
+		minute=5.000000;
+
+	};
+
+	class Groups
+
+	{
+
+		items=7.000000;
+
+		class Item0
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9529.011719,25.919998,1551.369629};
+
+					id=0.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWLAW";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="vojak";
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+		class Item1
+
+		{
+
+			side="CIV";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9511.128906,25.252083,1532.320557};
+
+					azimut=145.000000;
+
+					id=1.000000;
+
+					side="CIV";
+
+					vehicle="Civilian3";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="ma1";
+
+					markers[]={};
+
+					init="this switchmove ""onchair""";
+
+				};
+
+			};
+
+		};
+
+		class Item2
+
+		{
+
+			side="CIV";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9512.072266,25.179689,1531.115112};
+
+					azimut=340.000000;
+
+					id=2.000000;
+
+					side="CIV";
+
+					vehicle="Civilian";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="ma3";
+
+					markers[]={};
+
+					init="this switchmove ""onchair""";
+
+				};
+
+			};
+
+		};
+
+		class Item3
+
+		{
+
+			side="CIV";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9512.633789,25.014057,1532.666260};
+
+					azimut=215.000000;
+
+					id=3.000000;
+
+					side="CIV";
+
+					vehicle="Civilian2";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="ma2";
+
+					markers[]={};
+
+					init="this switchmove ""onchair""";
+
+				};
+
+			};
+
+		};
+
+		class Item4
+
+		{
+
+			side="CIV";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9559.583008,24.446491,1542.306396};
+
+					azimut=185.000000;
+
+					id=7.000000;
+
+					side="CIV";
+
+					vehicle="Civilian";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="ma4";
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+		class Item5
+
+		{
+
+			side="CIV";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9554.986328,24.400669,1538.337646};
+
+					azimut=185.000000;
+
+					id=8.000000;
+
+					side="CIV";
+
+					vehicle="Civilian2";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					text="ma5";
+
+					markers[]={};
+
+				};
+
+			};
+
+		};
+
+		class Item6
+
+		{
+
+			side="WEST";
+
+			class Vehicles
+
+			{
+
+				items=1.000000;
+
+				class Item0
+
+				{
+
+					position[]={9116.037109,201.275452,1303.522583};
+
+					id=11.000000;
+
+					side="WEST";
+
+					vehicle="SoldierWB";
+
+					player="PLAYER COMMANDER";
+
+					leader=1.000000;
+
+					skill=0.200000;
+
+					markers[]={};
+
+					init="this exec ""happyend.sqs""";
+
+				};
+
+			};
+
+		};
+
+	};
+
+	class Vehicles
+
+	{
+
+		items=5.000000;
+
+		class Item0
+
+		{
+
+			position[]={9518.366211,24.395414,1533.392334};
+
+			id=4.000000;
+
+			side="EMPTY";
+
+			vehicle="TablePub";
+
+			skill=0.200000;
+
+			text="stul";
+
+			markers[]={};
+
+		};
+
+		class Item1
+
+		{
+
+			position[]={9516.784180,24.471363,1531.510132};
+
+			id=5.000000;
+
+			side="EMPTY";
+
+			vehicle="ChairX";
+
+			skill=0.200000;
+
+			text="zidle1";
+
+			markers[]={};
+
+		};
+
+		class Item2
+
+		{
+
+			position[]={9518.407227,24.243454,1531.349121};
+
+			azimut=185.000000;
+
+			id=6.000000;
+
+			side="EMPTY";
+
+			vehicle="ChairX";
+
+			skill=0.200000;
+
+			text="zidle2";
+
+			markers[]={};
+
+		};
+
+		class Item3
+
+		{
+
+			position[]={9545.114258,25.919998,1553.183716};
+
+			azimut=190.000000;
+
+			id=9.000000;
+
+			side="EMPTY";
+
+			vehicle="Skoda";
+
+			skill=0.200000;
+
+			markers[]={};
+
+		};
+
+		class Item4
+
+		{
+
+			position[]={9541.878906,25.621777,1546.751465};
+
+			azimut=250.000000;
+
+			id=10.000000;
+
+			side="EMPTY";
+
+			vehicle="SkodaBlue";
+
+			skill=0.200000;
+
+			markers[]={};
+
+		};
+
+	};
+
+	class Sensors
+
+	{
+
+		items=14.000000;
+
+		class Item0
+
+		{
+
+			position[]={9485.036133,25.919998,1619.464966};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			age="UNKNOWN";
+
+			text="createCAM";
+
+			expCond="cheat1";
+
+			expActiv="player exec ""camera.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item1
+
+		{
+
+			position[]={9505.059570,25.919998,1619.432739};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="playCAM";
+
+			expCond="cheat2";
+
+			expActiv="player exec ""happyend.sqs""";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item2
+
+		{
+
+			position[]={9535.006836,24.776726,1629.266357};
+
+			a=20.000000;
+
+			b=20.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			type="END1";
+
+			age="UNKNOWN";
+
+			text="endmission";
+
+			expCond="konec";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item3
+
+		{
+
+			position[]={9504.406250,25.919998,1596.264404};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="playCAM";
+
+			expCond="cheat3";
+
+			expActiv="player exec ""test.sqs""; cheat3=false";
+
+			class Effects
+
+			{
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item4
+
+		{
+
+			position[]={9542.013672,30.012684,1555.726562};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a1";
+
+			expCond="a1";
+
+			class Effects
+
+			{
+
+				soundDet="ann";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item5
+
+		{
+
+			position[]={9541.988281,30.012684,1555.768555};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a2";
+
+			expCond="a2";
+
+			class Effects
+
+			{
+
+				soundDet="ann2";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item6
+
+		{
+
+			position[]={9538.751953,30.015566,1550.917725};
+
+			a=10.000000;
+
+			b=10.000000;
+
+			rectangular=1.000000;
+
+			age="UNKNOWN";
+
+			expCond="bum";
+
+			class Effects
+
+			{
+
+				soundDet="CA_Expl1";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item7
+
+		{
+
+			position[]={9541.988281,30.012684,1555.735840};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a3";
+
+			expCond="a3";
+
+			class Effects
+
+			{
+
+				soundDet="ann3";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item8
+
+		{
+
+			position[]={9541.957031,30.012684,1555.735962};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a4";
+
+			expCond="a4";
+
+			class Effects
+
+			{
+
+				soundDet="ann4";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item9
+
+		{
+
+			position[]={9541.989258,30.012684,1555.735840};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a5";
+
+			expCond="a5";
+
+			class Effects
+
+			{
+
+				soundDet="ann5";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item10
+
+		{
+
+			position[]={9541.989258,30.012684,1555.766357};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a6";
+
+			expCond="a6";
+
+			class Effects
+
+			{
+
+				soundDet="ann6";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item11
+
+		{
+
+			position[]={9541.957031,30.012684,1555.797852};
+
+			a=1.000000;
+
+			b=1.000000;
+
+			rectangular=1.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="a7";
+
+			expCond="a7";
+
+			class Effects
+
+			{
+
+				soundDet="ann7";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item12
+
+		{
+
+			position[]={9537.236328,30.015215,1556.412354};
+
+			a=2.000000;
+
+			b=2.000000;
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			text="zachod";
+
+			expCond="zachod";
+
+			class Effects
+
+			{
+
+				soundDet="zachod";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+		class Item13
+
+		{
+
+			position[]={9541.125000,30.012684,1552.204834};
+
+			repeating=1.000000;
+
+			age="UNKNOWN";
+
+			expCond="polka";
+
+			class Effects
+
+			{
+
+				soundDet="polka";
+
+			};
+
+			synchronizations[]={};
+
+		};
+
+	};
+
+};
+
+class OutroWin
+
+{
+
+	randomSeed=2904067.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+
+class OutroLoose
+
+{
+
+	randomSeed=6223363.000000;
+
+	class Intel
+
+	{
+
+	};
+
+};
+

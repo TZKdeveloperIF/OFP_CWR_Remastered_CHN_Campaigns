@@ -1,0 +1,309 @@
+debriefing = 0;
+showNotepad = 0;
+
+onLoadMission=$STRM_00n22
+onLoadIntro=$STRM_00n21
+
+class CfgSounds
+{
+	sounds[] = { };
+
+	class song
+	{
+		name = "Song";
+		sound[] = {"sound/song.wss", db-38, 1.0};
+		titles[] = 
+		{
+		};		
+	};
+	
+	class 00v33
+	{
+		name = "00v33";
+		sound[] = {"sound/00v33.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v33a,
+			5, $STRM_00v33b,
+			13, $STRM_00v33c,
+			21, $STRM_00v33d,
+			25, $STRM_00v33e,
+			26, $STRM_00v33f
+		};
+	};
+	class 00v34
+	{
+		name = "00v34";
+		sound[] = {"sound/00v34.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v34a,
+			3, $STRM_00v34b
+		};
+	};
+
+	class 00v01
+	{
+		name = "00v01";
+		sound[] = {"sound/00v01.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v01
+		};
+	};
+	class 00v02
+	{
+		name = "00v02";
+		sound[] = {"sound/00v02.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v02
+		};
+	};
+	class 00v05
+	{
+		name = "00v05";
+		sound[] = {"sound/00v05.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v05
+		};
+	};
+	class 00v06
+	{
+		name = "00v06";
+		sound[] = {"sound/00v06.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v06a,
+			2, $STRM_00v06b
+		};
+	};
+	class 00v07
+	{
+		name = "00v07";
+		sound[] = {"sound/00v07.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v07
+		};
+	};
+	class 00v08
+	{
+		name = "00v08";
+		sound[] = {"sound/00v08.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v08
+		};
+	};
+	class 00v09
+	{
+		name = "00v09";
+		sound[] = {"sound/00v09.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v09
+		};
+	};
+	class 00v10
+	{
+		name = "00v10";
+		sound[] = {"sound/00v10.ogg", db+10, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v10a,
+			2, $STRM_00v10b,
+			6, $STRM_00v10c
+		};
+	};
+	class 00v11
+	{
+		name = "00v11";
+		sound[] = {"sound/00v11.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v11
+		};
+	};
+	class 00v12
+	{
+		name = "00v12";
+		sound[] = {"sound/00v12.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v12
+		};
+	};
+	class 00v13
+	{
+		name = "00v13";
+		sound[] = {"sound/00v13.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v13
+		};
+	};
+	class 00v14
+	{
+		name = "00v14";
+		sound[] = {"sound/00v14.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v14a,
+			4, $STRM_00v14b
+		};
+	};
+	class 00v15
+	{
+		name = "00v15";
+		sound[] = {"sound/00v15.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v15
+		};
+	};
+	class 00v16
+	{
+		name = "00v16";
+		sound[] = {"sound/00v16.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v16a
+		};
+	};
+	class 00v17
+	{
+		name = "00v17";
+		sound[] = {"sound/00v17.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v17
+		};
+	};
+	class 00v18
+	{
+		name = "00v18";
+		sound[] = {"sound/00v18.ogg", db, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v18
+		};
+	};
+	class 00v29
+	{
+		name = "00v29";
+		sound[] = {"sound/00v29.ogg", db-20, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v29
+		};
+	};
+	class 00v30
+	{
+		name = "00v30";
+		sound[] = {"sound/00v30.ogg", db-20, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v30
+		};
+	};
+	class 00v31
+	{
+		name = "00v31";
+		sound[] = {"sound/00v31.ogg", db-20, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v31
+		};
+	};
+	class 00v32
+	{
+		name = "00v32";
+		sound[] = {"sound/00v32.ogg", db-20, 1.0};
+		titles[] = 
+		{
+			0, $STRM_00v32
+		};
+	};
+
+
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+	
+	class 00r29
+	{
+		name = "00r29";
+		sound[] = {"sound/00r29.ogg", db-40, 1.0};
+		title = $STRM_00r29;
+	};
+	class 00r21
+	{
+		name = "00r21";
+		sound[] = {"sound/00r21.ogg", db-40, 1.0};
+		title = $STRM_00r21;
+	};
+	class 00r22
+	{
+		name = "00r22";
+		sound[] = {"sound/00r22.ogg", db-40, 1.0};
+		title = $STRM_00r22;
+	};
+	class 00r23
+	{
+		name = "00r23";
+		sound[] = {"sound/00r23.ogg", db-40, 1.0};
+		title = $STRM_00r23;
+	};
+	class 00r24
+	{
+		name = "00r24";
+		sound[] = {"sound/00r24.ogg", db-40, 1.0};
+		title = $STRM_00r24;
+	};
+	class 00r25
+	{
+		name = "00r25";
+		sound[] = {"sound/00r25.ogg", db-40, 1.0};
+		title = $STRM_00r25;
+	};
+	class 00r26
+	{
+		name = "00r26";
+		sound[] = {"sound/00r26.ogg", db-40, 1.0};
+		title = $STRM_00r26;
+	};
+	class 00r36
+	{
+		name = "00r36";
+		sound[] = {"sound/00r36.ogg", db-40, 1.0};
+		title = $STRM_00r36;
+	};
+	class 00r50
+	{
+		name = "00r50";
+		sound[] = {"sound/00r50.ogg", db-40, 1.0};
+		title = $STRM_00r50;
+	};
+	class 00r51
+	{
+		name = "00r51";
+		sound[] = {"sound/00r51.ogg", db-40, 1.0};
+		title = $STRM_00r51;
+	};
+
+};
+
+
+class CfgSFX
+{
+	sounds[] = {};
+};
+
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

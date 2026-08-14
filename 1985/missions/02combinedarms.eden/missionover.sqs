@@ -1,0 +1,32 @@
+;titleCut ["","BLACK OUT",2]
+setacctime 1.0
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+;detail na hlavu
+_camera camSetTarget player
+_camera camSetRelPos [0.33,-0.23,1.51]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 15:16:15
+_camera camSetTarget player
+_camera camSetRelPos [6.30,-21.27,8.29]
+_camera camSetFOV 0.528
+_camera camCommit 10
+~2
+;titleCut ["","BLACK IN",1]
+~2
+titleText [localize "STRC_Completed","PLAIN",0.5]
+
+~4
+
+forceEnd
+
+@camCommitted _camera
+
+;ukonceni kamer a skriptu
+player cameraEffect ["terminate","back"]
+camDestroy _camera

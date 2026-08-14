@@ -1,0 +1,73 @@
+;zruseno pracovne
+exit
+
+
+;Nejprve vytvoøíme ptáky
+
+_minpohyb = 20
+_pocetptaku = 60
+;poznamka: ptaci se vytvori na obou plazich - tj. celkovy pocet bude dvojnasobny
+
+_maxvyska = 20
+_rozlet = 80
+
+_x = getMarkerPos "h" select 0
+_z = getMarkerPos "h" select 1
+_y = 0.5
+_x1 = 5400
+_z1 = 3750
+_ptaci = []
+
+_i = 0
+#vytvarimptaky
+_target = "seagull" camCreate [_x + (random 3) - 3, _z + (random 3) - 3, _y]
+_target camCommand "landed"
+_ptaci = _ptaci + [_target]
+_target = "seagull" camCreate [_x1 + (random 3) - 3, _z1 + (random 3) - 3, _y]
+_target camCommand "landed"
+_ptaci = _ptaci + [_target]
+_i = _i + 1
+? _i < _pocetptaku : goto "vytvarimptaky"
+
+_pocetptaku = count _ptaci
+
+
+#krouzeni
+
+_i = 0
+_randt = random ( 15 / _pocetptaku )
+
+#krouzimptaky
+_target = _ptaci select _i
+
+_pozice = getPos _target
+_xp = _pozice select 0
+_zp = _pozice select 1
+_yp = _pozice select 2
+
+
+_xpp = (random _rozlet) - (random _rozlet)
+_zpp = (random _rozlet) - (random _rozlet)
+_ypp = random 20
+_yp = 0
+
+? not ( ( (_xpp < _minpohyb) and (_xpp > - _minpohyb) ) and ( (_zpp < _minpohyb ) and (_zpp > - _minpohyb) ) ) : _yp = _ypp; goto "nastav"
+
+_xpp = 0; _zpp=0; yp = 0; _target camCommand "landed"
+
+#nastav
+
+_target camSetPos [_xp + _xpp, _zp + _zpp, _yp]
+
+~_randt
+
+_i = _i + 1
+? _i < _pocetptaku : goto "krouzimptaky"
+
+goto "krouzeni"
+
+
+;_target1 camCommand "landed"
+
+
+exit

@@ -1,0 +1,80 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",3]
+
+0 fadeMusic 0.0
+2 fadeMusic 0.5
+
+playMusic ["track7", 20]
+
+
+
+;=== 17:17:32
+_camera camSetTarget jeep
+_camera camSetRelPos [5.74,52.09,-1.24]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:17:32
+_camera camSetTarget jeep
+_camera camSetRelPos [5.74,52.09,-1.24]
+_camera camSetFOV 0.0700
+_camera camCommit 8
+@camCommitted _camera
+
+
+;=== 17:21:16
+_camera camSetTarget jeep
+_camera camSetRelPos [-1.37,3.23,-0.01]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+5 fadeMusic 0.3
+
+
+;=== 17:21:43
+_camera camSetTarget jeep
+_camera camSetRelPos [-3.77,2.64,-0.02]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+
+
+blake setMimic "smile"
+blake say "xxReward3"
+
+;=== 17:23:10
+_camera camSetTarget blake
+_camera camSetRelPos [-0.40,0.94,1.56]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+
+;=== 17:23:27
+_camera camSetTarget blake
+_camera camSetRelPos [-0.18,0.57,1.56]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+
+~2
+5 fadeMusic 0
+
+~3
+titleCut ["","BLACK OUT",2]
+
+~2
+
+
+
+konec=true
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

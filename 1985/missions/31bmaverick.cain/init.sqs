@@ -1,0 +1,27 @@
+;inicializace shilek
+
+
+? glb_shilka1 == glb_shilka1 : goto "next"
+
+glb_shilka1 = 0
+glb_shilka2 = 0
+glb_shilka3 = 0
+glb_shilka4 = 0
+
+? random 1 > 0.5 : glb_shilka1 = 1
+? random 1 > 0.5 : glb_shilka2 = 1
+? random 1 > 0.5 : glb_shilka3 = 1
+? random 1 > 0.5 : glb_shilka4 = 1
+
+#next
+
+? glb_shilka1 == 0 : shilka1 setDammage 1
+? glb_shilka2 == 0 : shilka2 setDammage 1
+? glb_shilka3 == 0 : shilka3 setDammage 1
+? glb_shilka4 == 1 : shilka2 setPos getMarkerPos "shilka4"
+
+player setIdentity "sam"
+group player setGroupId ["November", "GroupColor0"]
+titleCut ["","BLACK IN", 2]
+setviewdistance 1750
+"start" objStatus "done"

@@ -1,0 +1,109 @@
+minScore=-400
+avgScore=200
+maxScore=3000
+
+onLoadMission=$STRM_02n01
+
+class CfgSounds
+{
+	sounds[] = 	{ };
+
+
+	class 02v1
+	{
+		name = "";
+		sound[] = {"sound/02v1.ogg", db-10, 1.0};
+		titles[] = {0,$STRCAMP_02v1};
+	};
+	class 02v2
+	{
+		name = "";
+		sound[] = {"sound/02v2.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_02v2
+		};
+	};
+	class 02v3
+	{
+		name = "";
+		sound[] = {"sound/02v3.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_02v3
+		};
+	};
+	class 02v4
+	{
+		name = "";
+		sound[] = {"sound/02v4.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_02v4
+		};
+	};
+	class 02v5
+	{
+		name = "";
+		sound[] = {"sound/02v5.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_02v5
+		};
+	};
+	class 02v6
+	{
+		name = "";
+		sound[] = {"sound/02v6.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRCAMP_02v6
+		};
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+		};
+
+	class 02r1
+	{
+		name = "";
+		sound[] = {"sound/02r1.ogg", db-40, 1.0};
+		title = $STRCAMP_02r1;
+	};
+	class 02r2
+	{
+		name = "";
+		sound[] = {"sound/02r2.ogg", db-40, 1.0};
+		title = $STRCAMP_02r2;
+	};
+	class 02r3
+	{
+		name = "";
+		sound[] = {"sound/02r3.ogg", db-40, 1.0};
+		title = $STRCAMP_02r3;
+	};
+};
+
+
+class CfgSFX
+{
+	sounds[] = { Taps};
+
+	
+	class Taps
+	{
+		name = "Taps - Solo";
+		sounds[]={sound1};
+		sound1[]={"sound/taps.wss", db-20,1, 1, 1, 1, 1};
+		empty[]= {, , , , 1 , 5, 20};
+	};	
+};
+
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

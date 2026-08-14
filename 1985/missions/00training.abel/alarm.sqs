@@ -1,0 +1,14 @@
+; Skript na prepnuti vsech vojaku senzoru Zapad do combat modu
+
+_pocet = count list Zapad
+_i=0
+
+#Znovu
+
+((list Zapad) select _i) setbehaviour "COMBAT"
+_i=_i+1
+?_i==_pocet:goto "Pryc"
+goto "Znovu"
+
+#Pryc
+exit

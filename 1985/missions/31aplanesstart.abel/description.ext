@@ -1,0 +1,44 @@
+minScore=-500
+avgScore=0
+maxScore=100
+
+
+onLoadMission = $STRM_31m01
+onLoadIntro = $STRM_31m02
+debriefing = 0;
+
+
+class CfgRadio
+{
+	sounds[] = 
+	{
+	};
+
+	class 31ar01
+	{
+		name = "";
+		sound[] = {"sound/31ar01.ogg", db-40, 1.0};
+		title = $STRM_31ar01;
+	};
+	class 31ar02
+	{
+		name = "";
+		sound[] = {"sound/31ar02.ogg", db-40, 1.0};
+		title = $STRM_31ar02;
+	};
+	class 31ar03
+	{
+		name = "";
+		sound[] = {"sound/31ar03.ogg", db-40, 1.0};
+		title = $STRM_31ar03;
+	};
+	class 31ar04
+	{
+		name = "";
+		sound[] = {"sound/31ar04.ogg", db-40, 1.0};
+		title = $STRM_31ar04;
+	};
+
+};
+
+

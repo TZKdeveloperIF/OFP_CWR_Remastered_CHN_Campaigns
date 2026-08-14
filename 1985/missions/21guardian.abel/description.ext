@@ -1,0 +1,181 @@
+minScore=601
+avgScore=6800
+maxScore=12000
+
+onLoadMission=$STRM_21n21
+
+class CfgSounds
+{
+	sounds[] = { };
+	class Init1
+	{
+		name = "Init1";
+		sound[] = {"sound/21v02.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRM_21v02
+		};
+	};
+
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class Far1
+	{
+		name = "Far1";
+		sound[] = {"sound/21r13.ogg", db-40, 1.0};
+		title = $STRM_21r13;
+	};
+	class Init2
+	{
+		name = "Init2";
+		sound[] = {"sound/21r03.ogg", db-40, 1.0};
+		title = $STRM_21r03;
+	};
+	class Direct4
+	{
+		name = "Direct4";
+		sound[] = {"sound/21r05.ogg", db-40, 1.0};
+		title = $STRM_21r05;
+	};
+	class Direct5
+	{
+		name = "Direct5";
+		sound[] = {"sound/21r06.ogg", db-40, 1.0};
+		title = $STRM_21r06;
+	};
+	class Direct7
+	{
+		name = "Direct7";
+		sound[] = {"sound/21r07.ogg", db-40, 1.0};
+		title = $STRM_21r07;
+	};
+	class Direct1
+	{
+		name = "Direct1";
+		sound[] = {"sound/21r04.ogg", db-40, 1.0};
+		title = $STRM_21r04;
+	};
+	class Warning
+	{
+		name = "Warning";
+		sound[] = {"sound/21r01.ogg", db-40, 1.0};
+		title = $STRM_21r01;
+	};
+	class Con1
+	{
+		name = "Con1";
+		sound[] = {"sound/21r08.ogg", db-40, 1.0};
+		title = $STRM_21r08;
+	};
+	class Con2
+	{
+		name = "Con2";
+		sound[] = {"sound/21r09.ogg", db-40, 1.0};
+		title = $STRM_21r09;
+	};
+	class Con3
+	{
+		name = "Con3";
+		sound[] = {"sound/21r10.ogg", db-40, 1.0};
+		title = $STRM_21r10;
+	};
+	class Con4
+	{
+		name = "Con4";
+		sound[] = {"sound/21r11.ogg", db-40, 1.0};
+		title = $STRM_21r11;
+	};
+	class Con5
+	{
+		name = "Con5";
+		sound[] = {"sound/21r12.ogg", db-40, 1.0};
+		title = $STRM_21r12;
+	};
+	class Radio2
+	{
+		name = "Radio2";
+		sound[] = {"sound/21r14.ogg", db-40, 1.0};
+		title = $STRM_21r14;
+	};
+	class Radio4
+	{
+		name = "Radio4";
+		sound[] = {"sound/21r15.ogg", db-40, 1.0};
+		title = $STRM_21r15;
+	};
+};
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};
+
+
+class Weapons
+{
+    class M16
+    {
+        count = 2;
+    };
+    class M4
+    {
+        count = 2;
+    };
+    class M16GrenadeLauncher
+    {
+        count = 2;
+    };
+    class M60
+    {
+        count = 1;
+    };
+    class LAWLauncher
+    {
+        count = 1;
+    };
+    class M21
+    {
+        count = 1;
+    };
+    
+};
+
+class Magazines
+{
+    class M16
+    {
+        count = 20;
+    };
+    class M4
+    {
+        count = 20;
+    };
+    class HandGrenade
+    {
+        count = 20;
+    };
+    class M60
+    {
+        count = 10;
+    };
+    class GrenadeLauncher
+    {
+        count = 10;
+    };
+    class M21
+    {
+        count = 10;
+    };
+    class LAWLauncher
+    {
+        count = 4;
+    };
+};
+

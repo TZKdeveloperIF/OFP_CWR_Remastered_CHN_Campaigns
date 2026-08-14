@@ -1,0 +1,160 @@
+minScore=1201
+avgScore=2800
+maxScore=4399
+
+onLoadMission=$STRM_26n30
+
+class CfgSounds
+{
+	sounds[] = { };
+	class Go1
+	{
+		name = "Go1";
+		sound[] = {"sound/26v10.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRM_26v10
+		};
+	};
+	class Go2
+	{
+		name = "Go2";
+		sound[] = {"sound/26v11.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRM_26v11
+		};
+	};
+	class Go3
+	{
+		name = "Go3";
+		sound[] = {"sound/26v12.ogg", db+40, 1.0};
+		titles[] = 
+		{
+			0, $STRM_26v12
+		};
+	};
+	class Go4
+	{
+		name = "Go4";
+		sound[] = {"sound/26v13.ogg", db-10, 1.0};
+		titles[] = 
+		{
+			0, $STRM_26v13
+		};
+	};
+	class Go5
+	{
+		name = "Go5";
+		sound[] = {"sound/26v14.ogg", db-40, 1.0};
+		titles[] = 
+		{
+			0, $STRM_26v14
+		};
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class Init1
+	{
+		name = "Init1";
+		sound[] = {"sound/26r01.ogg", db-40, 1.0};
+		title = $STRM_26r01;
+	};
+	class Fight1
+	{
+		name = "Fight1";
+		sound[] = {"sound/26r03.ogg", db-40, 1.0};
+		title = $STRM_26r03;
+	};
+	class Fight2
+	{
+		name = "Fight2";
+		sound[] = {"sound/26r04.ogg", db-40, 1.0};
+		title = $STRM_26r04;
+	};
+	class Fight3
+	{
+		name = "Fight3";
+		sound[] = {"sound/26r05.ogg", db-40, 1.0};
+		title = $STRM_26r05;
+	};
+	class Voy1
+	{
+		name = "Voy1";
+		sound[] = {"sound/26r02.ogg", db-40, 1.0};
+		title = $STRM_26r02;
+	};
+	class Init
+	{
+		name = "Init";
+		sound[] = {"sound/26r01.ogg", db-40, 1.0};
+		title = $STRM_26r01;
+	};
+	class DestrV
+	{
+		name = "DestrV";
+		sound[] = {"sound/26r06v.ogg", db-40, 1.0};
+		title = $STRM_26r06;
+	};
+	class DestrP
+	{
+		name = "DestrP";
+		sound[] = {"sound/26r06p.ogg", db-40, 1.0};
+		title = $STRM_26r06;
+	};
+	class Destr2
+	{
+		name = "Destr2";
+		sound[] = {"sound/26r07.ogg", db-40, 1.0};
+		title = $STRM_26r07;
+	};
+	class Destr3
+	{
+		name = "Destr3";
+		sound[] = {"sound/26r08.ogg", db-40, 1.0};
+		title = $STRM_26r08;
+	};
+	class Destr4
+	{
+		name = "Destr4";
+		sound[] = {"sound/26r09.ogg", db-40, 1.0};
+		title = $STRM_26r09;
+	};
+	class Far1
+	{
+		name = "Far1";
+		sound[] = {"sound/26r15.ogg", db-40, 1.0};
+		title = $STRM_26r15;
+	};
+	class Far2
+	{
+		name = "Far2";
+		sound[] = {"sound/26r16.ogg", db-40, 1.0};
+		title = $STRM_26r16;
+	};
+	class Tak1
+	{
+		name = "Tak1";
+		sound[] = {"sound/26r17.ogg", db-40, 1.0};
+		title = $STRM_26r17;
+	};
+	class Gun1
+	{
+		name = "Gun1";
+		sound[] = {"sound/26r18.ogg", db-40, 1.0};
+		title = $STRM_26r18;
+	};
+	
+};
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

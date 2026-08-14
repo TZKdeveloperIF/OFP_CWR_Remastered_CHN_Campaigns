@@ -1,0 +1,157 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+	
+	
+	0 fadeMusic 0.0
+	setacctime 1.0
+	60 fadeMusic 0.09
+	playMusic ["track7", 80]
+	ruch=true
+	
+	tel2 SetPos [668.94,12086.16,0.70]
+	pc SetPos [668.74,12085.56,0.71]
+	ian=ian_3
+	ian_3  setidentity "james"
+	ian setidentity "james"
+	titleCut ["","BLACK IN",2]
+	ian_3 disableAi "autotarget"
+	ian_3 disableAi "target"
+	ian_3 stop true
+	ian stop true
+	ian_3  setPos [669.930,12086.157,0.001]
+	ian_3  setDir -85
+
+	man2 SetPos [697.53,12125.53,0.84]
+	man2 stop true
+	;zaber na hangar=-=-=-=-==-=-=-=-=-=-=-==-=-=
+	_camera camSetTarget [-45412.03,-75023.66,16862.02]
+	_camera camSetPos [670.50,12114.69,0.83]
+	_camera camSetFOV 0.627
+	_camera camCommit 0
+	@camCommitted _camera
+	~1
+	ian_3 switchmove "FXstandtotel"
+	ian_3 playmove "FXstandtotelHand"
+	~6
+	;zaber na hangar=-=-=-=-==-=-=-=-=-=-=-==-=-=
+
+	
+	
+	;zaber v hangaru=-=-=-=-=-=-==-=-=-=-=---=-=--=
+	_camera camSetTarget [49516.58,-75034.11,-4720.36]
+	_camera camSetPos [654.68,12085.88,7.38]
+	_camera camSetFOV 0.793
+	_camera camCommit 0
+	@camCommitted _camera
+	_camera camSetTarget [99129.77,12989.65,-17334.81]
+	_camera camSetPos [654.68,12085.88,5.13]
+	_camera camSetFOV 0.793
+	_camera camCommit 8
+	~1
+	ian say "x11v01"
+	@camCommitted _camera
+	;zaber v hangaru=-=-=-=-=-=-==-=-=-=-=---=-=--=
+
+	
+	;IAN (zaber skrz flasky)
+	_camera camSetTarget [74455.30,-55393.90,1384.14]
+	_camera camSetPos [667.99,12086.66,1.08]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ian say "x11v02"
+	~10.5
+
+	
+	
+	;IAN (zaber ze zadu)
+	_camera camSetTarget [-95978.72,-3032.24,-20714.60]
+	_camera camSetPos [670.75,12085.45,1.24]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ian say "x11v03"
+	
+	
+	_camera camSetTarget [3185.86,109876.69,-20715.10]
+	_camera camSetPos [669.38,12084.43,1.23]
+	_camera camSetFOV 0.700
+	_camera camCommit 7.4
+	@camCommitted _camera
+
+
+;=== 13:21:42
+_camera camSetTarget [-35349.49,-79292.43,18811.25]
+_camera camSetPos [667.19,12086.10,0.64]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+;=== 13:21:52
+_camera camSetTarget [-96873.16,548.33,18811.38]
+_camera camSetPos [667.19,12086.10,0.64]
+_camera camSetFOV 0.700
+_camera camCommit 18
+~1
+droptel=true
+~0.5
+droptel=false
+telefon=true
+~2
+telefon=false
+
+call=true
+~5
+call=false
+
+
+@camCommitted _camera
+
+
+
+	;IAN (ze zadu do strany)
+	;=== 15:52:20
+	_camera camSetTarget [-41185.11,102176.44,-11443.65]
+	_camera camSetPos [669.84,12084.66,1.23]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+
+		_camera camSetTarget [94006.82,47379.23,6528.10]
+		_camera camSetPos [668.33,12084.81,1.02]
+		_camera camSetFOV 0.700
+		_camera camCommit 10
+		
+		ian say "x11v04"
+		~10
+		
+		;=== 14:48:42
+		_camera camSetTarget [-46762.17,-52335.89,-59970.30]
+		_camera camSetPos [669.55,12085.94,1.46]
+		_camera camSetFOV 0.998
+		_camera camCommit 0
+		@camCommitted _camera
+
+
+		ian say "x11v05"
+		5 fademusic 0.0
+		~3
+		titleCut ["","BLACK OUT",2]
+		~4
+		@camCommitted _camera
+
+	
+	
+
+
+
+konec=true
+@camCommitted _camera
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

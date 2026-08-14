@@ -1,0 +1,67 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",3]
+
+0 fadeMusic 0.0
+2 fadeMusic 0.4
+
+playMusic ["track7", 0]
+
+blake setMimic "smile"
+
+;=== 15:30:27
+_camera camSetTarget blake
+_camera camSetRelPos [-0.10,2.07,1.23]
+_camera camSetFOV 0.636
+_camera camCommit 0
+@camCommitted _camera
+
+
+
+;=== 15:30:48
+_camera camSetTarget blake
+_camera camSetRelPos [-1.13,0.73,1.59]
+_camera camSetFOV 0.336
+_camera camCommit 7
+
+
+
+
+blake switchMove "FXStandFromTable"
+
+~0.5
+
+blake say "xxReward2"
+
+~6.5
+
+
+;=== 16:20:26
+_camera camSetTarget vlajka
+_camera camSetRelPos [2.35,-2.32,-1.94]
+_camera camSetFOV 1.001
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 16:21:16
+_camera camSetRelPos [2.62,0.33,-1.66]
+_camera camSetFOV 0.672
+_camera camCommit 12
+
+~5
+7 fadeMusic 0
+
+
+~5
+titleCut ["","BLACK OUT",2]
+
+~2
+
+
+
+konec=true
+
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

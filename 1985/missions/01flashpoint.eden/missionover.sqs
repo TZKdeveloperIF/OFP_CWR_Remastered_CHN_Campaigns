@@ -1,0 +1,54 @@
+;titleCut ["","BLACK OUT",2]
+setacctime 1.0
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+;=== 14:34:23
+_camera camSetTarget [-61289.30,76502.50,-18147.72]
+_camera camSetPos [5067.77,3933.72,8.43]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 14:34:58
+_camera camSetTarget [-61289.30,76502.50,-18147.72]
+_camera camSetPos [5116.58,3880.35,43.37]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+
+
+
+;=== 14:39:43
+_camera camSetTarget [-83468.24,-41643.69,-4319.25]
+_camera camSetPos [5353.88,4090.12,2.00]
+_camera camSetFOV 0.359
+_camera camCommit 0
+@camCommitted _camera
+;=== 14:40:11
+_camera camSetTarget [-72972.72,-57916.40,-4319.25]
+_camera camSetPos [5335.55,4121.90,0.56]
+_camera camSetFOV 0.359
+forceEnd
+_camera camCommit 10
+@camCommitted _camera
+
+;=== 14:42:16
+_camera camSetTarget [31628.76,100126.88,-6315.57]
+_camera camSetPos [4792.99,4003.31,1.44]
+_camera camSetFOV 1.032
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 14:42:33
+_camera camSetTarget [99884.20,-26287.94,-6315.56]
+_camera camSetPos [4792.99,4003.31,1.44]
+_camera camSetFOV 1.032
+_camera camCommit 10
+
+@camCommitted _camera
+
+;ukonceni kamer a skriptu
+player cameraEffect ["terminate","back"]
+camDestroy _camera

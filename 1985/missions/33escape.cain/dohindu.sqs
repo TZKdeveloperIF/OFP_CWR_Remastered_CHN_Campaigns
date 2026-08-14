@@ -1,0 +1,49 @@
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+;=== 20:44:27
+_camera camSetTarget hlidka1
+_camera camSetRelPos [-0.32,1.30,1.55]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+hlidka1 say "33v25"
+
+;=== 20:45:00
+_camera camSetTarget hlidka1
+_camera camSetRelPos [-0.08,0.74,1.55]
+_camera camSetFOV 0.700
+_camera camCommit 3
+@camCommitted _camera
+
+
+;=== 20:47:00
+_camera camSetTarget [89368.84,56325.17,125.53]
+_camera camSetPos [2170.93,7370.84,1.96]
+_camera camSetFOV 0.545
+_camera camCommit 0
+@camCommitted _camera
+
+titleCut ["","BLACK OUT",2]
+
+;=== 20:47:29
+_camera camSetTarget [89368.84,56325.17,125.64]
+_camera camSetPos [2184.66,7381.81,1.96]
+_camera camSetFOV 0.545
+_camera camCommit 1
+@camCommitted _camera
+
+
+
+
+
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+titleCut ["","BLACK IN",3]
+
+aP moveInCargo hind
+
+~2

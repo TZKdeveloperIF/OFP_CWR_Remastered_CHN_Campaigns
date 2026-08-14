@@ -1,0 +1,96 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+titleCut ["","BLACK IN",3]
+enableradio false
+hrac=aP
+velitel=offCom
+hrac setmimic "normal"
+velitel setmimic "normal"
+; The Helfenburk tower-roof platform sits ~21.5 m above the terrain; setPos z=0
+; drops the pair into the terrain pit below the eye-level roof camera.
+hrac setPosASL [9374.479,1059.282,212.924]
+velitel setPosASL [9377.381,1057.408,212.924]
+hrac setdir 120
+
+hrac switchmove "effectstand"
+velitel switchmove "effectstand"
+
+hrac reveal velitel
+velitel reveal hrac
+hrac dotarget  velitel
+velitel dotarget hrac 
+
+;zaber okolo
+;=== 12:13:10
+_camera camSetTarget [27714.23,-95046.58,20889.06]
+_camera camSetPos [9377.00,1058.75,22.85]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+velitel say "06Bv52"
+;=== 12:13:37
+_camera camSetTarget [-88261.76,21084.63,8290.27]
+_camera camSetPos [9378.73,1057.60,22.32]
+_camera camSetFOV 0.700
+_camera camCommit 6
+~1
+hrac dotarget  velitel
+velitel dotarget hrac 
+
+@camCommitted _camera
+
+;=== 12:15:33
+_camera camSetTarget [-77165.23,51136.65,-1500.34]
+_camera camSetPos [9375.32,1058.46,23]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+hrac say "06Bv53"
+~2
+
+;=== 13:14:24
+_camera camSetTarget [85219.16,-40190.07,50675.59]
+_camera camSetPos [9376.85,1057.87,22.70]
+_camera camSetFOV 0.838
+_camera camCommit 0
+@camCommitted _camera
+velitel say "06Bv54"
+~11
+
+;=== 13:15:05
+_camera camSetTarget [-57992.71,74909.64,2827.62]
+_camera camSetPos [9378.02,1056.08,22.50]
+_camera camSetFOV 0.345
+_camera camCommit 0
+@camCommitted _camera
+velitel  say "06Bv55"
+~8
+
+;=== 13:18:09
+_camera camSetTarget [-87304.16,23681.80,-11589.00]
+_camera camSetPos [9385.26,1058.11,25.80]
+_camera camSetFOV 0.781
+_camera camCommit 0
+@camCommitted _camera
+~2
+
+contin=true
+
+titleCut ["","BLACK OUT",2]
+~2
+
+@camCommitted _camera
+
+~2
+
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+
+
+ForceEnd

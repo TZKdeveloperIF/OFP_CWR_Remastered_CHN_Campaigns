@@ -1,0 +1,135 @@
+minScore=601
+avgScore=2000
+maxScore=5199
+
+onLoadMission=$STRM_19n20
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class Init1
+	{
+		name = "Init1";
+		sound[] = {"sound/19r01.ogg", db-40, 1.0};
+		title = $STRM_19r01;
+	};
+	class Rad1
+	{
+		name = "Rad1";
+		sound[] = {"sound/19r02.ogg", db-40, 1.0};
+		title = $STRM_19r02;
+	};
+	class Rad2
+	{
+		name = "Rad2";
+		sound[] = {"sound/19r03.ogg", db-40, 1.0};
+		title = $STRM_19r03;
+	};
+	class Go1
+	{
+		name = "Go1";
+		sound[] = {"sound/19r04.ogg", db-40, 1.0};
+		title = $STRM_19r04;
+	};
+	class Go2
+	{
+		name = "Go2";
+		sound[] = {"sound/19r05.ogg", db-40, 1.0};
+		title = $STRM_19r05;
+	};
+	class Cam1
+	{
+		name = "Cam1";
+		sound[] = {"sound/19r06.ogg", db-40, 1.0};
+		title = $STRM_19r06;
+	};
+	class Cam2
+	{
+		name = "Cam2";
+		sound[] = {"sound/19r07.ogg", db-40, 1.0};
+		title = $STRM_19r07;
+	};
+	class Far1
+	{
+		name = "Far1";
+		sound[] = {"sound/19r08.ogg", db-40, 1.0};
+		title = $STRM_19r08;
+	};
+	class 19r09
+	{
+		name = "19r09";
+		sound[] = {"sound/19r09.ogg", db-40, 1.0};
+		title = $STRM_19r09;
+	};
+};
+	
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};
+
+class Weapons
+{
+    class M16
+    {
+        count = 2;
+    };
+    class M4
+    {
+        count = 2;
+    };
+    class M16GrenadeLauncher
+    {
+        count = 2;
+    };
+    class M60
+    {
+        count = 1;
+    };
+    class LAWLauncher
+    {
+        count = 1;
+    };
+    class M21
+    {
+        count = 1;
+    };
+    
+};
+
+class Magazines
+{
+    class M16
+    {
+        count = 20;
+    };
+    class M4
+    {
+        count = 20;
+    };
+    class HandGrenade
+    {
+        count = 20;
+    };
+    class M60
+    {
+        count = 10;
+    };
+    class GrenadeLauncher
+    {
+        count = 10;
+    };
+    class M21
+    {
+        count = 10;
+    };
+    class LAWLauncher
+    {
+        count = 4;
+    };
+};

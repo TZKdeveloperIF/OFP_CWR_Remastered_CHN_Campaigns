@@ -1,0 +1,95 @@
+minScore=3001
+avgScore=3600
+maxScore=12999
+
+showGPS=1
+
+onLoadMission=$STRM_34n20
+
+class Weapons
+{
+    class M16
+    {
+        count = 1;
+    };
+    class M4
+    {
+        count = 1;
+    };
+    class LAWLauncher
+    {
+        count = 1;
+    };
+    class M21
+    {
+        count = 1;
+    };    
+};
+
+class Magazines
+{
+    class M16
+    {
+        count = 10;
+    };
+    class HandGrenade
+    {
+        count = 10;
+    };
+    class M4
+    {
+        count = 10;
+    };
+    class LAWLauncher
+    {
+        count = 5;
+    };
+    class M21
+    {
+        count = 10;
+    };
+    class HK
+    {
+        count = 10;
+    };
+    class PipeBomb
+    {
+        count = 10;
+    };
+    
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+};
+
+class CfgRadio
+{
+	sounds[] = { };
+
+	class 34r01
+	{
+		name = "34r01";
+		sound[] = {"sound/34r01.ogg", db-40, 1.0};
+		title = $STRM_34r01;
+	};
+	class 34r02
+	{
+		name = "34r02";
+		sound[] = {"sound/34r02.ogg", db-40, 1.0};
+		title = $STRM_34r02;
+	};
+
+};
+
+class CfgSFX
+{
+	sounds[] = {};
+	
+};
+
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

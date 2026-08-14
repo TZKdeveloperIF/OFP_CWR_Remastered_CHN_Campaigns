@@ -1,0 +1,77 @@
+minScore=-3000
+avgScore=1500
+maxScore=3500
+
+onLoadMission=$STRM_08n01
+onLoadIntro=$STRM_08n02
+
+class CfgSounds
+{
+	sounds[] = 	{ };
+};
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+			08r1, 08r2, 08r3, 08r4, 08r5, 08r6
+		};
+
+	class 08r1
+	{
+		name = "";
+		sound[] = {"sound/08r1.ogg", db-40, 1.0};
+		title = $STRCAMP_08r1;
+	};
+	class 08r2
+	{
+		name = "";
+		sound[] = {"sound/08r2.ogg", db-40, 1.0};
+		title = $STRCAMP_08r2;
+	};
+	class 08r3
+	{
+		name = "";
+		sound[] = {"sound/08r3.ogg", db-40, 1.0};
+		title = $STRCAMP_08r3;
+	};
+	class 08r4
+	{
+		name = "";
+		sound[] = {"sound/08r4.ogg", db-40, 1.0};
+		title = $STRCAMP_08r4;
+	};
+	class 08r5
+	{
+		name = "";
+		sound[] = {"sound/08r5.ogg", db-40, 1.0};
+		title = $STRCAMP_08r5;
+	};
+	class 08r6
+	{
+		name = "";
+		sound[] = {"sound/08r6.ogg", db-40, 1.0};
+		title = $STRCAMP_08r6;
+	};
+	class 08r7
+	{
+		name = "";
+		sound[] = {"sound/08r7.ogg", db-40, 1.0};
+		title = $STRCAMP_08r7;
+	};
+	class 08r8
+	{
+		name = "";
+		sound[] = {"sound/08r8.ogg", db-40, 1.0};
+		title = $STRCAMP_08r8;
+	};};
+
+
+class CfgSFX
+{
+	sounds[] = {};
+};
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

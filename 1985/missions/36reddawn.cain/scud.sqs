@@ -1,0 +1,52 @@
+;inicializace kamer
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+0 fadeMusic 0.1
+playMusic "track9"
+
+
+scud action ["SCUD Launch"]
+
+;=== 17:13:55
+_camera camSetTarget scud
+_camera camSetRelPos [9.98,-25.29,18.85]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:14:16
+_camera camSetTarget scud
+_camera camSetRelPos [7.58,-20.11,8.23]
+_camera camSetFOV 0.515
+_camera camCommit 3
+@camCommitted _camera
+
+;=== 17:14:45
+_camera camSetTarget scud
+_camera camSetRelPos [4.45,4.25,2.16]
+_camera camSetFOV 0.515
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:15:07
+_camera camSetTarget scud
+_camera camSetRelPos [-3.96,7.69,-0.48]
+_camera camSetFOV 1.515
+_camera camCommit 24
+
+~10
+
+scud action ["SCUD Start"]
+
+~6
+
+10 fadeMusic 0
+~7
+titleCut ["","BLACK OUT", 3]
+
+~3
+
+nukeLaunched = true
+
+forceEnd

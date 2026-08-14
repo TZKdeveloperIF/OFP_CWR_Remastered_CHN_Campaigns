@@ -1,0 +1,73 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+titleCut ["","BLACK IN",1]
+;=== 11:57:57
+_camera camSetTarget [97521.50,11751.16,40945.81]
+_camera camSetPos [6474.15,5463.34,0.05]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+gogo=true
+	_camera camSetTarget [28907.64,102868.90,-2859.12]
+	_camera camSetPos [6477.43,5461.15,6.14]
+	_camera camSetFOV 0.700
+	_camera camCommit 10
+	~1
+	playmusic "track13"
+	@camCommitted _camera
+
+;=== 11:59:11
+_camera camSetTarget [52939.50,-82976.16,-2864.89]
+_camera camSetPos [6475.38,5524.98,1.46]
+_camera camSetFOV 0.509
+_camera camCommit 0
+@camCommitted _camera
+	_camera camSetTarget [19057.96,-93636.75,-2864.88]
+	_camera camSetPos [6475.38,5524.98,1.46]
+	_camera camSetFOV 0.509
+	_camera camCommit 5
+	@camCommitted _camera
+
+;=== 12:00:24
+_camera camSetTarget tank4
+_camera camSetRelPos [9.17,24.21,-2.59]
+_camera camSetFOV 0.509
+_camera camCommit 0
+@camCommitted _camera
+~7
+
+;=== 12:06:32
+_camera camSetTarget tank3
+_camera camSetPos [6534.49,5452.47,0.12]
+_camera camSetFOV 0.317
+_camera camCommit 0
+@camCommitted _camera
+~5
+
+;=== 12:03:53
+_camera camSetTarget [14539.88,-94198.63,2066.47]
+_camera camSetPos [6502.53,5457.90,0.57]
+_camera camSetFOV 0.322
+_camera camCommit 0
+@camCommitted _camera
+
+	;=== 12:04:14
+	_camera camSetTarget [19658.31,-93655.82,2066.97]
+	_camera camSetPos [6506.00,5435.38,7.34]
+	_camera camSetFOV 0.898
+	_camera camCommit 9.5
+	~7.5
+	2 fadesound 0
+	titleCut ["","BLACK OUT",2]
+	@camCommitted _camera
+~2
+konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

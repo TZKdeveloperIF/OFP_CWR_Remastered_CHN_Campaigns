@@ -1,0 +1,195 @@
+class CfgSounds
+{
+	sounds[] = 
+		{
+			};
+	class x00v01
+	{
+		name = "x00v01";
+		sound[] = {"sound/x00v01.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v01
+		};
+	};
+	
+	class x00v04
+	{
+		name = "x00v04";
+		sound[] = {"sound/x00v04.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v04
+		};
+	};
+	
+	class x00v05
+	{
+		name = "x00v05";
+		sound[] = {"sound/x00v05.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v05
+		};
+	};
+	
+	class x00v06
+	{
+		name = "x00v06";
+		sound[] = {"sound/x00v06.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v06
+		};
+	};
+	
+	class x00v07
+	{
+		name = "x00v07";
+		sound[] = {"sound/x00v07.ogg", db+35, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v07
+		};
+	};
+	
+	class x00v08
+	{
+		name = "x00v08";
+		sound[] = {"sound/x00v08.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v08
+		};
+	};
+	
+	class x00v09
+	{
+		name = "x00v09";
+		sound[] = {"sound/x00v09.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v09
+		};
+	};
+	
+	class x00v10
+	{
+		name = "x00v10";
+		sound[] = {"sound/x00v10.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v10
+		};
+	};
+	
+	class x00v11
+	{
+		name = "x00v11";
+		sound[] = {"sound/x00v11.ogg", db+35, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v11
+		};
+	};
+	
+	class x00v12
+	{
+		name = "x00v12";
+		sound[] = {"sound/x00v12.ogg", db+35, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v12
+		};
+	};
+	
+	class x00v13
+	{
+		name = "x00v13";
+		sound[] = {"sound/x00v13.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v13
+		};
+	};
+	class x00v15
+	{
+		name = "x00v15";
+		sound[] = {"sound/x00v15.ogg", db-15, 1.0};
+		titles[] = 
+		{
+			0, $STR_x00v15
+		};
+	};
+	
+
+	class x00v02
+	{
+		name = "x00v02";
+		sound[] = {"sound/x00v02.ogg", db-15, 1.0};
+		titles[] =
+		{
+			0, $STR_x00v02
+		};
+	};
+
+	class x00v03
+	{
+		name = "x00v03";
+		sound[] = {"sound/x00v03.ogg", db-15, 1.0};
+		titles[] =
+		{
+			0, $STR_x00v03
+		};
+	};
+};
+
+class CfgRadio
+{
+	sounds[] = 
+		{
+		};
+
+		
+};
+class CfgSFX
+{
+	sounds[] =
+		{
+			 Radio, Radio2, hudba
+		};
+
+	 class Radio
+	 {
+		  sounds[]={sound1};
+		  name = "Radio";
+		  
+		  sound1[]={"sound/x00v16.ogg", db+40,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+
+	 class Radio2
+	 {
+		  sounds[]={sound1};
+		  name = "Radio2";
+		  
+		  sound1[]={"sound/x00v17.ogg", db+40,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+  
+  	class hudba
+	 {
+		  sounds[]={sound1};
+		  name = "hudba";
+		  
+		  sound1[]={"sound/hudba.ogg", db-60,1, 1, 0, 0, 0};
+		  empty[]= {, , , , , , ,};
+	 };
+ 	
+ };
+
+
+class CfgEnvSounds
+{
+	sounds[] = {};
+};

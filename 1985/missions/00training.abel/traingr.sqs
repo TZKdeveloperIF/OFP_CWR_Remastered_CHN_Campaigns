@@ -1,0 +1,90 @@
+_camera = "camera" camCreate [44796.32,-89057.16,-12655.60]
+_camera cameraEffect ["internal","back"]
+; Sledovani vojaku, odbihajicich do opicarny
+setacctime 1.0
+0 fadeMusic 0.0
+5 fadeMusic 0.15
+playMusic ["track1", 48]
+
+;=== 18:12:49
+_camera camSetTarget [56334.50,-84313.61,-9818.22]
+_camera camSetPos [10507.28,4022.38,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+; Bludiste
+_camera camSetTarget [-55526.21,-70427.95,-9817.98]
+_camera camSetPos [10507.94,4022.53,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 13
+@camCommitted _camera
+
+
+;detail na prolejzacku
+_camera camSetTarget [106446.16,-23558.17,5827.48]
+_camera camSetPos [10501.38,4018.88,0.66]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+
+~6
+
+; Lavka
+_camera camSetTarget [-37375.86,75837.59,50517.83]
+_camera camSetPos [10505.85,4030.12,0.84]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~14
+
+
+; Plazidlo
+
+_camera camSetTarget [14949.20,85488.40,-57834.01]
+_camera camSetPos [10505.28,4042.01,7.97]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~2
+
+;=== 18:28:39
+_camera camSetTarget [-85644.47,31521.98,11.16]
+_camera camSetPos [10507.88,4049.70,0.52]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~2
+
+titleCut ["","BLACK OUT", 2]
+; move soldiers!
+
+~2
+
+cont3=true
+
+aS1 setpos getmarkerpos "PoB"
+Peter setpos getmarkerpos "PoB_1"
+aS2 setpos getmarkerpos "PoB_2"
+aS3 setpos getmarkerpos "PoB_3"
+aS4 setpos getmarkerpos "PoB_4"
+
+aS1 setunitpos "AUTO"
+Peter setunitpos "AUTO"
+aS2 setunitpos "AUTO"
+aS3 setunitpos "AUTO"
+aS4 setunitpos "AUTO"
+
+vypnout=true
+
+titleCut ["","BLACK IN", 2]
+
+;exit
+
+_this cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

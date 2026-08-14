@@ -1,0 +1,248 @@
+;definovat senzor v krajine cheat1 s onactivation cheat1=false; jmenovojaka exec "nazev.sqs"
+; spustit script camera.sqs a to treba pres debug window Rshift+C. zde vypis player exec camera.sqs. Camera se ukoncuje "V"
+;init (START kamery nutne ke spusteni kamery)
+_camera = "camera" camCreate [-89784.22,7493.73,-8681.15] 
+_camera cameraEffect ["internal","back"]
+setacctime 1.0
+;nastavujeme pozice___________________
+ma1 setbehaviour "safe"
+ma2 setbehaviour "safe"
+ma3 setbehaviour "safe"
+stul SetPos [9534.088,1550.487,0.0568]
+stul setDir 109
+zidle1 setPos [9535.123,1550.023,0.0568]
+zidle1 setDir -135
+zidle2 setPos [9534.891,1551.421,0.0568]
+zidle2 setDir 94
+ma1 setPos [9535.123,1550.023,-2.868]
+ma1 setDir -44
+ma2 setPos[9534.763,1551.354,-2.868]
+ma2 setDir -172
+ma3 setPos [9537.788,1553.861,-2.868]
+ma3 setDir 154
+ma4 setPos [9538.454,1556.250,-2.868]
+ma4 setDir -167
+ma5 setPos [9538.836,1552.184,-2.868]
+ma5 setDir -32
+ma3 dowatch kuk
+ma3 dowatch [47700.81,-90878.44,25.36]
+ma5 dowatch [-85501.08,32585.79,-1998.15]
+ma1 dowatch [-25116.02,95353.78,428.77]
+
+;-------------------------------------
+m1 disableAI "target"
+m2 disableAI "target"
+m3 disableAI "target"
+m1 disableAI "autotarget"
+m2 disableAI "autotarget"
+m3 disableAI "autotarget"
+m1 stop true
+m2 stop true
+m3 stop true
+;-------------------------------------
+ma1 switchmove "FXStandUnivTable"
+ma2 switchmove "FXStandUnivTable"
+ma3 switchmove "FXStandRotateTable"
+;nastavujeme pozice********************
+
+titleCut ["","BLACK IN",3]
+polka=true
+;=== 16:01:21
+_camera camSetTarget [-52581.79,79707.25,-2825.04]
+_camera camSetPos [9624.91,1463.17,19.53]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+	;=== 16:01:30
+	_camera camSetTarget [-58834.09,74011.48,7107.91]
+	_camera camSetPos [9624.91,1463.17,8.35]
+	_camera camSetFOV 0.700
+	_camera camCommit 5
+	@camCommitted _camera
+	polka=false
+
+;=== 19:38:16
+_camera camSetTarget [-14168.04,98293.59,8253.57]
+_camera camSetPos [9557.20,1498.13,3.00]
+_camera camSetFOV 0.313
+_camera camCommit 0
+@camCommitted _camera
+
+~3
+~3
+
+
+;=== 11:50:14
+_camera camSetTarget [-85802.58,-28476.64,2400.73]
+_camera camSetPos [9551.99,1554.54,1.49]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+	;=== 11:50:24
+	_camera camSetTarget [8219.97,101506.03,2400.46]
+	_camera camSetPos [9541.10,1542.96,2.06]
+	_camera camSetFOV 0.700
+	_camera camCommit 13
+	~4
+	a1=true
+	cutText [localize "STR_x101v01","plain down",1]
+	~2
+	a1=false
+	@camCommitted _camera
+
+;=== 14:00:03
+_camera camSetTarget [-21707.26,-92014.52,-16361.90]
+_camera camSetPos [9538.51,1554.28,1.91]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+a2=true
+cutText [localize "STR_x101v02","plain down",1]
+	
+~2
+
+				a2=false
+~4
+zachod=true
+;=== 11:58:23
+_camera camSetTarget [-90433.61,-413.43,-1140.76]
+_camera camSetPos [9540.02,1560.36,1.42]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+	;=== 11:58:30
+	_camera camSetTarget [-21445.79,-93168.23,-8107.11]
+	_camera camSetPos [9540.79,1561.31,1.42]
+	_camera camSetFOV 0.700
+	_camera camCommit 7
+	~6
+	zachod=false
+	a3=true
+	cutText [localize "STR_x101v03","plain down",1]
+	@camCommitted _camera
+				a3=false
+	
+		;=== 11:58:34
+		_camera camSetTarget [74343.98,-73988.62,-9596.68]
+		_camera camSetPos [9540.61,1562.20,1.42]
+		_camera camSetFOV 0.700
+		_camera camCommit 5
+		@camCommitted _camera
+
+;=== 12:02:14
+_camera camSetTarget [57518.88,89284.59,-1100.60]
+_camera camSetPos [9540.73,1553.00,1.34]
+_camera camSetFOV 0.335
+_camera camCommit 0
+@camCommitted _camera
+
+	;=== 12:02:27
+	_camera camSetTarget [57518.88,89284.59,-1101.07]
+	_camera camSetPos [9541.23,1553.92,1.34]
+	_camera camSetFOV 0.335
+	_camera camCommit 10
+	~3
+	ma4 setPos [9541.781,1559.480,-3.8]
+	ma4 setDir 167			
+	~3
+	
+
+	a4=true
+	cutText [localize "STR_x101v04","plain down",1]
+	~1
+	a4=false
+	~1
+	ma4 move [9540.17,1552.70,-3.8]
+		@camCommitted _camera
+
+;=== 13:58:09
+_camera camSetTarget [37761.98,96742.66,-11881.28]
+_camera camSetPos [9539.29,1549.88,2.72]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+	;=== 13:58:44
+	_camera camSetTarget [-89857.52,12482.91,789.35]
+	_camera camSetPos [9540.26,1551.10,1.77]
+	_camera camSetFOV 0.700
+	_camera camCommit 8
+	@camCommitted _camera
+
+	a5=true
+	titleCut [localize "STR_x101v05","plain down",1]
+;=== 12:56:29
+_camera camSetTarget [-36153.66,-80994.54,-33095.80]
+_camera camSetPos [9541.34,1557.37,3.14]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+ma4 dowatch [100623.47,42731.65,-2911.27]
+
+;=== 12:56:29
+_camera camSetTarget [-36153.66,-80994.54,-33095.80]
+_camera camSetPos [9541.34,1557.37,3.14]
+_camera camSetFOV 0.700
+_camera camCommit 8
+	~1
+		a5=false
+	~5
+	a6=true
+	~1
+		a6=false
+@camCommitted _camera
+
+
+
+
+
+;=== 13:02:23
+_camera camSetTarget [96323.51,51216.05,1022.19]
+_camera camSetPos [9534.29,1550.80,1.22]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+	ma2 say "x101v08"
+	~4
+	
+	_camera camSetTarget [95822.73,50929.41,10828.99]
+	_camera camSetPos [9537.52,1551.66,1.46]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ma5 say "x101v09"
+	~4.5
+	
+	_camera camSetTarget [-57171.20,76024.46,-1852.36]
+	_camera camSetPos [9536.41,1549.19,1.54]
+	_camera camSetFOV 0.700
+	_camera camCommit 0
+	@camCommitted _camera
+	ma2 say "x101v10"
+	
+	_camera camSetTarget [97758.39,48630.36,26.13]
+	_camera camSetPos [9534.23,1550.68,1.30]
+	_camera camSetFOV 0.700
+	_camera camCommit 6
+	~2
+	a7=true
+	~1
+		a7=flase
+	@camCommitted _camera
+	~1
+	~4
+	titleCut ["","BLACK OUT",1]
+	~7
+
+	
+
+
+	konec=true
+;exit (ukonceni kamery)
+player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit
+
+
