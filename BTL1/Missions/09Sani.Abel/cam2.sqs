@@ -1,0 +1,78 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+
+_camera camSetTarget [87467.80,-24452.23,-43203.27]
+_camera camSetPos [2958.55,6657.98,54.60]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 11:29:24
+_camera camSetTarget [38573.35,85217.96,-50356.88]
+_camera camSetPos [3063.03,6626.02,25.17]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+;=== 11:30:07
+_camera camSetTarget [-80823.80,-17899.51,-48089.44]
+_camera camSetPos [3161.94,6786.23,30.07]
+_camera camSetFOV 0.700
+_camera camCommit 15
+@camCommitted _camera
+~3
+
+;=== 11:39:42
+_camera camSetTarget [99496.67,42258.36,-14085.00]
+_camera camSetPos [6364.93,8718.81,1.32]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 11:39:53
+_camera camSetTarget [95280.03,40739.81,-32556.90]
+_camera camSetPos [6366.14,8719.24,37.62]
+_camera camSetFOV 0.700
+_camera camCommit 3
+@camCommitted _camera
+;=== 11:40:50
+_camera camSetTarget [-78812.17,-30757.00,-32119.25]
+_camera camSetPos [7113.63,8951.46,25.89]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 11:41:21
+_camera camSetTarget [-72637.23,-42006.56,-32118.63]
+_camera camSetPos [7133.04,8963.75,6.21]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+;=== 11:41:31
+_camera camSetTarget [-15426.46,-82963.19,-32116.95]
+_camera camSetPos [7121.39,8976.77,5.94]
+_camera camSetFOV 0.700
+_camera camCommit 4
+@camCommitted _camera
+;=== 11:41:39
+_camera camSetTarget [59733.93,-75510.15,-32116.89]
+_camera camSetPos [7143.17,8971.86,6.04]
+_camera camSetFOV 0.700
+_camera camCommit 6
+@camCommitted _camera
+;=== 11:41:54
+_camera camSetTarget [94545.61,-27403.12,-32127.73]
+_camera camSetPos [7155.74,8961.34,6.50]
+_camera camSetFOV 0.700
+_camera camCommit 8
+@camCommitted _camera
+;=== 11:42:05
+_camera camSetTarget [-84393.77,32866.53,-32133.50]
+_camera camSetPos [7182.98,8914.69,10.19]
+_camera camSetFOV 0.700
+_camera camCommit 8
+@camCommitted _camera
+
+
+
+camDestroy _camera
+exit

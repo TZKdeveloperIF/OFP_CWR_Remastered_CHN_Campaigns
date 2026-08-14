@@ -1,0 +1,28 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+;=== 15:20:25
+_camera camSetTarget [-88880.90,39083.95,130.99]
+_camera camSetPos [6345.12,8555.22,1.82]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~6
+;=== 15:20:45
+_camera camSetTarget [103669.16,-7059.71,-16865.72]
+_camera camSetPos [6367.08,8535.67,5.64]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~7
+;=== 15:21:04
+_camera camSetTarget [99616.03,-27213.90,6090.38]
+_camera camSetPos [6411.83,8526.76,1.34]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~6
+camDestroy _camera
+exit

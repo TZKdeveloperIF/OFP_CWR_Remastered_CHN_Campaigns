@@ -1,0 +1,49 @@
+_bomber = _this select 0
+_explox = _this select 1
+_exploy = _this select 2
+_count  = _this select 3
+_spread = _this select 4
+
+; bomber should not die
+_bomber AllowDammage FALSE
+
+;RemoveAllWeapons _bomber
+
+#loop
+
+; now the bomber gets 2 bombs to plant
+_bomber addmagazine "pipebomb"
+_bomber addmagazine "pipebomb"
+
+; spread the explosions
+_x = _explox - _spread/2 + (random _spread)
+_y = _exploy - _spread/2 + (random _spread)
+
+; put bomber high in the air (invisible)
+_bomber setpos [_x, _y, 2000]
+
+; let him put a satchel charge (it appears on the ground)
+_bomber fire ["put","pipebomb"]
+
+; wait until the satchel is placed (essential - too short and nothing happens)
+~3
+
+; put several bombs at random
+? ((random 10) < 5) : goto "onlyone"
+
+_bomber setpos [_x + (random _spread), _y + (random _spread), 2000]
+_bomber fire ["put","pipebomb"]
+~3
+
+#onlyone
+
+; move bomber closer to bomb or else it will not be set off
+_bomber setpos [_x, _y, 200]
+_bomber action ["touchoff"]
+
+; move bomber away again
+_bomber setpos [0,0,0]
+
+_count = _count - 1
+? (_count > 0) : goto "loop"
+

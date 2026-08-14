@@ -1,0 +1,89 @@
+playmusic "party"
+1 fademusic 1.5
+1 fadesound 2
+
+_camera = "camera" camCreate Getpos cam_start
+_camera camsetTarget laber1
+_camera camSetPos GetPos cam_start
+titleCut ["","BLACK IN",15]
+_camera cameraEffect ["internal","back"]
+_camera camCommand "inertia on"
+_camera camsetTarget laber1
+_camera camCommit 1
+@camCommitted _camera
+
+;load the scene so it doesn't mess up the graphics
+
+_camera camSetRelPos [4,2,8]
+_camera camCommit 6
+~6
+_camera camsetTarget sitz1
+_camera camSetRelPos [-2,5,3]
+_camera camCommit 0
+_camera camSetRelPos [-2,-2,2]
+_camera camCommit 7
+~3
+CutText [localize "STRNG_10000","PLAIN DOWN",1]
+~4
+_camera camsetTarget bar
+_camera camSetRelPos [-2,3,2]
+_camera camCommit 0
+_camera camSetRelPos [1,2,2]
+_camera camCommit 6
+CutText [localize "STRNG_10001","PLAIN DOWN",1]
+~4
+_camera camsetTarget zuhoer1
+_camera camSetRelPos [2,3,1]
+_camera camCommit 0
+~1
+_camera camsetTarget laber1_1
+_camera camSetRelPos [2,3,1]
+_camera camCommit 0
+~.8
+_camera camsetTarget sitz2
+_camera camSetRelPos [4,3,1]
+_camera camCommit 0
+~.2
+_camera camsetTarget laber3
+_camera camSetRelPos [2,5,1]
+_camera camCommit 0
+~.2
+CutText [localize "STRNG_10002","PLAIN DOWN",1]
+_camera camsetTarget dance1
+_camera camSetRelPos [2,-5,1]
+_camera camCommit 0
+_camera camSetRelPos [5,-3,2]
+_camera camCommit 4
+~7
+_camera camsetTarget dance1
+_camera camSetPos GetPos cam_start
+_camera camCommit 0
+~3
+_camera camsetTarget sitz1
+_camera camSetPos GetPos cam_start
+_camera camCommit 0
+~2
+_camera camsetTarget dance2
+_camera camSetPos GetPos cam2
+_camera camCommit 0
+~2.2
+cam3 setpos[getpos cam3 select 0,getpos cam3 select 1,10]
+_camera camsetTarget cam3
+_camera camSetPos GetPos cam4
+_camera camCommit 0
+_camera camSetRelPos [20,-25,-3]
+_camera camCommit 18
+~12
+CutText [localize "STRNG_10003","PLAIN",1]
+~8
+CutText [localize "STRNG_10004","PLAIN",1]
+~4
+CutText [localize "STRNG_10005","PLAIN",1]
+~4
+CutText ["Welcome to the real world...","PLAIN",1]
+
+~24
+
+camDestroy _camera
+
+exit

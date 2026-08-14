@@ -1,0 +1,62 @@
+; script
+
+_stellung = _this select 0
+_stellung1 = _this select 1
+_stellung2 = _this select 2
+_stellung3 = _this select 3
+_unit = _this select 4
+_m2 = _this select 5
+
+_stellungx = (getpos _unit select 0) +(sin getdir(_unit)*1.5)
+_stellungy = (getpos _unit select 1) +(cos getdir(_unit)*1.5)
+
+_stellung1x = (getpos _unit select 0) +(sin getdir(_unit)*1.5)
+_stellung1y = (getpos _unit select 1) +(cos getdir(_unit)*1.5)
+
+_stellung2x = (getpos _unit select 0) +(sin getdir(_unit)*1.5)
+_stellung2y = (getpos _unit select 1) +(cos getdir(_unit)*1.5)
+
+_stellung3x = (getpos _unit select 0) +(sin getdir(_unit)*1.5)
+_stellung3y = (getpos _unit select 1) +(cos getdir(_unit)*1.5)
+
+_m2x = (getpos _unit select 0) +(sin getdir(_unit)*1)
+_m2y = (getpos _unit select 1) +(cos getdir(_unit)*1)
+
+
+_stellung setpos [_stellungx,_stellungy,0]
+_stellung setdir ((getdir _unit)-90)
+
+_stellung1 setpos [_stellung1x,_stellung1y,0.3]
+_stellung1 setdir ((getdir _unit)-90)
+
+_stellung2 setpos [_stellung2x,_stellung2y,0.6]
+_stellung2 setdir ((getdir _unit)-90)
+
+_stellung3 setpos [_stellung3x,_stellung3y,0.9]
+_stellung3 setdir ((getdir _unit)-90)
+
+~0.5
+ap playmove "medictocombat"
+
+~0.5
+
+_stellung3 setpos [0,0,0]
+
+~1
+
+_stellung2 setpos [0,0,0]
+
+~1
+
+_stellung1 setpos [0,0,0]
+
+~1
+
+_stellung setpos [0,0,0]
+
+~0.4
+
+_m2 setpos [_m2x,_m2y,0]
+_m2 setdir ((getdir _unit)-90)
+
+exit

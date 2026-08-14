@@ -1,0 +1,29 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+;=== Von oben
+_camera camSetTarget [-37884.10,-78656.16,-21043.78]
+_camera camSetPos [7299.34,7993.54,7.82]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~6
+;=== Von hinten
+_camera camSetTarget [43654.16,100974.41,5667.65]
+_camera camSetPos [7291.36,7982.43,0.65]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~8
+;=== Truck
+_camera camSetTarget [105003.23,27090.97,9617.69]
+_camera camSetPos [7293.11,8025.85,2.36]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+;titlecut ["Auf ein gutes Gelingen.","BLACK OUT",4]
+camDestroy _camera
+exit

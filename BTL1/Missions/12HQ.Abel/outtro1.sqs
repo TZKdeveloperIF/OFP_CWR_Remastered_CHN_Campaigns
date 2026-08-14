@@ -1,0 +1,21 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+;=== Kreuzung hoch
+_camera camSetTarget [-36229.70,95321.70,-23231.14]
+_camera camSetPos [4894.49,7291.13,9.45]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~14
+;=== Straﬂe tief
+_camera camSetTarget [-68536.02,-60368.32,3579.94]
+_camera camSetPos [4949.34,7380.24,0.51]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~10
+camDestroy _camera
+exit

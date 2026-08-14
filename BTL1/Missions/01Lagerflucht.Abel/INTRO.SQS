@@ -1,0 +1,299 @@
+q stop true
+r stop true
+s stop true
+
+playmusic "summer"
+1 fademusic 1.5
+1 fadesound 2
+CarAngek = false
+CarAngek2 = false
+_camera = "camera" camCreate Getpos startCam
+_camera camsetTarget Z1
+_camera camSetRelPos [34,60,20]
+titleCut [localize "STRNG_10000","BLACK IN",8]
+_camera cameraEffect ["internal","back"]
+_camera camCommand "inertia on"
+_camera camsetTarget Z1
+_camera camCommit 1
+@camCommitted _camera
+
+;load the scene so it doesn't mess up the graphics
+~8
+CutText [localize "STRNG_445","PLAIN DOWN",1]
+_camera camSetRelPos [34,68,40]
+_camera camCommit 3
+@camCommitted _camera
+;_camera camSetRelPos [34,20,20]
+;_camera camCommit 3
+;@camCommitted _camera
+_camera camSetRelPos [5/6,7,1.5]
+_camera camCommit 3
+~2
+@camCommitted _camera
+_camera camSetRelPos[-.5,-3.5,2.3]
+_camera camCommit 3
+~3
+_camera camSetRelPos [.5,3,0.3]
+_camera camCommit 4
+~4
+_camera camsetRelPos getpos Laeufer
+_camera camsetTarget T1
+
+_camera camsetRelPos [.5,4,3]
+_camera camCommit 0
+_camera camsetRelPos[-37,25,2]
+_camera camCommit 10
+~10
+_camera camsetTarget Z1
+_camera camsetRelPos [.5,4,1]
+_camera camCommit 0
+_camera camsetRelPos[37,-18,30]
+_camera camCommit 10
+~8
+_camera camsetRelPos[-19,6,4]
+_camera camCommit 5
+fahren=true
+~4
+1 fademusic 2
+cutrsc ["default","plain down",100]
+_camera camsetRelPos getpos Panzer1
+;_camera camsetFOV 1
+_camera camsetTarget Panzer3
+_camera camsetRelPos[-15,25,2]
+_camera camCommit 0
+~0
+CutText [localize "STRNG_446","PLAIN DOWN",1]
+;cutrsc ["default","plain down",100]
+;_camera camsetRelPos getpos ship
+;_camera camsetTarget ship
+;_camera camsetRelPos [.5,4,1]
+
+_camera camCommit 0
+_camera camsetRelPos[15,36,19]
+
+_camera camCommit 10
+~12
+_camera camsetRelPos getpos Soldat1
+_camera camsetTarget Heli2
+_camera camsetRelPos[-15,25,2]
+_camera camCommit 0
+~0
+_camera camsetRelPos[8,4,8]
+_camera camCommit 10
+~5
+Angriff=true
+_camera camsetTarget Opfer1
+_camera camsetRelPos[3,-20,2]
+_camera camCommit 0
+~0
+_camera camsetRelPos[8,4,8]
+_camera camCommit 4
+~3
+_camera camsetRelPos[20,4,4]
+_camera camCommit 10
+~3
+_camera camsetTarget Mine1
+_camera camsetRelPos[10,20,5]
+_camera camCommit 0
+~0
+gotomine = true
+;Mine1 setdemmage 1
+_camera camsetRelPos[8,4,8]
+_camera camCommit 4
+overflyer = true
+OPilot moveindriver overfly
+~3
+_camera camsetTarget BMPOst1
+_camera camsetRelPos[15,20,2]
+_camera camCommit 0
+~0
+gotomine = true
+;Mine1 setdemmage 1
+_camera camsetRelPos[7,-14,3]
+_camera camCommit 4
+~3
+_camera camsetTarget Heli2
+_camera camsetRelPos[-25,25,2]
+_camera camCommit 0
+~0
+_camera camsetRelPos[8,4,8]
+_camera camCommit 10
+~1
+yesyes = true
+overfly flyinheight 20
+~4
+_camera camsetTarget Haus_view
+_camera camsetRelPos[-20,15,6]
+_camera camCommit 0
+~0
+_camera camsetRelPos[-28,30,4]
+_camera camCommit 10
+~3
+exploded = true
+~6
+Z1 setdammage 0
+_camera camsetTarget Z1
+_camera camsetRelPos [-4,4,3]
+_camera camCommit 0
+CutText [localize "STRNG_447","PLAIN DOWN",1]
+_camera camsetRelPos[8,-18,6]
+_camera camCommit 10
+~6
+_camera camsetTarget Z2
+BMP1  setdammage 1.0
+Panzer2 setdammage 1.0
+Panzer1 setdammage 1.0
+Panzer3 setdammage 1.0
+Panzer4 setdammage 1.0
+US01 setdammage 1.0
+US02 setdammage 1.0
+US03 setdammage 1.0
+US04 setdammage 1.0
+US05 setdammage 1.0
+RHel01 setdammage 1.0
+RHel02 setdammage 1.0
+heli2 setdammage 1.0
+Z2 setdammage 0
+_camera camSetRelPos [-34,-60,20]
+~7
+CutText [localize "STRNG_448","PLAIN DOWN",1]
+_camera camsetRelPos [.5,4,3]
+_camera camCommit 0
+_camera camsetRelPos[20,-15,6]
+_camera camCommit 8
+~10
+Z3 moveindriver FluchtCar1
+FluchtCarGo = True
+~2
+CutText [localize "STRNG_449","PLAIN DOWN",1]
+_camera camsetTarget FluchtCar1
+_camera camsetRelPos [.5,4,3]
+_camera camCommit 0
+_camera camsetRelPos[20,-15,6]
+_camera camCommit 10
+~6
+Z1 setdammage 1.0
+Z2 setdammage 1.0
+
+;_camera camsetTarget FluchtCar1
+_camera camsetRelPos [7,4,3]
+_camera camCommit 0
+_camera camsetRelPos[-18,5,4]
+_camera camCommit 10
+~6
+_camera camsetTarget FluchtCar1
+_camera camsetRelPos [-11,-14,9]
+_camera camCommit 0
+;_camera camsetRelPos[8,5,6]
+;_camera camCommit 10
+;CarAngek2 = false
+@CarAngek2
+
+;_camera camsetTarget FluchtCar1
+;_camera camsetPos GetPos explodecam
+;_camera camCommit 0
+_camera camsetRelPos[8,5,6]
+_camera camCommit 0
+@camCommitted _camera
+@CarAngek
+
+SetAccTime 0.1
+_camera camsetTarget FluchtCar1
+_camera camsetPos GetPos explodecam2
+_camera camCommit 0
+
+gefangen = true
+~2
+Z3 setdammage 0.0
+~1
+Z3 setdammage 0.0
+~1
+Z3 setdammage 0.0
+SetAccTime 1.0
+_camera camsetTarget Z3
+_camera camsetPos GetPos explodecam2
+_camera camCommit 0
+_camera camsetRelPos[8,5,2]
+_camera camCommit 10
+~10
+boot1go = true
+CutText [localize "STRNG_450","PLAIN DOWN",3]
+~2
+_camera camsetTarget boot1
+_camera camsetPos GetPos boot1
+_camera camCommit 0
+_camera camsetRelPos[1,.5,2]
+_camera camCommit 10
+CutText ["","PLAIN DOWN",3]
+~8
+;_camera camsetTarget boot1
+_camera camsetRelPos [-11,-14,3]
+_camera camCommit 0
+_camera camsetRelPos[8,5,2]
+_camera camCommit 10
+~5
+;_camera camsetTarget boot1
+_camera camsetPos GetPos Wasser1
+_camera camCommit 0
+_camera camsetRelPos[1,1,8]
+_camera camCommit 10
+~7
+boot2move = true
+~1
+_camera camsetTarget Ural1
+_camera camsetPos GetPos boot1target
+_camera camCommit 0
+_camera camsetRelPos[10,4,3]
+_camera camCommit 10
+~1
+ausbootraus = true
+raushier = true
+~6
+lkw2 = true
+;_camera camsetTarget Z4_1
+;_camera camsetPos GetPos boot2
+;_camera camsetRelPos[0,0,3]
+;_camera camCommit 0
+_camera camsetRelPos[15,8,6]
+_camera camCommit 10
+~16
+_camera camsetTarget Ural2
+_camera camsetRelPos[0,0,3]
+_camera camCommit 0
+_camera camsetRelPos[55,18,6]
+_camera camCommit 10
+~10
+_camera camsetTarget Ural2
+_camera camsetRelPos[7,5,6]
+_camera camCommit 0
+_camera camsetRelPos[-35,8,3]
+_camera camCommit 10
+CutText [localize "STRNG_451","PLAIN DOWN",1]
+~10
+
+_camera camsetRelPos[3,8,2]
+_camera camCommit 10
+~5
+_camera camsetTarget Ural2
+_camera camsetRelPos[0,0,6]
+_camera camCommit 0
+_camera camsetRelPos[6,-28,6]
+_camera camCommit 10
+~6
+letzteraus = true
+~1
+_camera camsetTarget p1
+_camera camsetRelPos[0,0,6]
+_camera camCommit 0
+_camera camsetRelPos[36,20,8]
+_camera camCommit 10
+~12
+_camera camsetRelPos[-46,-20,10]
+_camera camCommit 10
+~12
+12 fademusic 0
+12 fadesound .5
+_camera cameraEffect ["terminate","back"]
+camDestroy _camera
+titleCut ["","BLACK IN",5]
+exit

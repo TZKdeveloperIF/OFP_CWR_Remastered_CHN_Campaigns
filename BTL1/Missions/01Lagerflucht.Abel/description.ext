@@ -1,0 +1,45 @@
+minScore=1000
+avgScore=3000
+maxScore=8000
+
+onLoadIntro=$STRNG_452
+
+onLoadMission=$STRNG_453
+
+debriefing = 1;
+
+showGPS=1
+
+class CfgIdentities
+{
+	class Roos
+	{
+		name = "Dr. Roos";
+		face = "Face32";
+		glasses = "Sunglasses";
+		speaker = "John";
+		pitch = 1.10;
+	};
+};
+
+class CfgMusic
+{
+	tracks[]={summer,lagerflucht,september};
+
+        class summer
+        {
+           name = "summer";
+           sound[] = {\..\..\..\..\addons\btlmusic\summer_morning.ogg, db+0, 1.0};
+        };
+	class september
+        {
+           name = "september";
+           sound[] = {\..\..\..\..\addons\btlmusic\september.ogg, db+0, 1.0};
+        };
+	class lagerflucht
+        {
+           name = "lagerflucht";
+           sound[] = {\..\..\..\..\addons\btlmusic\lagerflucht.ogg, db+0, 1.0};
+        };
+
+};

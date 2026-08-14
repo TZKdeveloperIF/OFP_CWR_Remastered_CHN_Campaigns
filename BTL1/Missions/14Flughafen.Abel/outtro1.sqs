@@ -1,0 +1,29 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+;=== Truck von vorn
+_camera camSetTarget [91594.66,61653.57,-15570.90]
+_camera camSetPos [7828.55,9314.48,8.48]
+_camera camSetFOV 0.700
+_camera camCommit 0
+~4
+@camCommitted _camera
+;=== Truck mit Tor
+_camera camSetTarget [-91229.62,16094.57,11915.68]
+_camera camSetPos [7830.23,9308.71,0.97]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~8
+;=== Minen
+_camera camSetTarget [98999.23,50873.88,-5565.00]
+_camera camSetPos [7913.44,9983.39,0.24]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+titlecut ["","BLACK OUT",4]
+camDestroy _camera
+exit

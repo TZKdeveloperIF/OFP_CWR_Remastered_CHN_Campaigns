@@ -1,0 +1,87 @@
+;OutroLoose scripting
+
+_camera = "camera" camCreate [7268.41,7779.23,2.009]
+_camera cameraEffect ["internal","back"]
+titlecut ["","BLACK IN",12]
+setacctime 1.0
+0 fadeMusic 0.5
+playMusic "better_days1"
+titleCut [localize"STRNG_5002","BLACK IN",20]
+;=== 19:53:45
+_camera camSetTarget [7268.41,107779.23,167.83]
+_camera camSetPos [7268.41,7779.23,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+
+;=== 19:53:56
+_camera camSetTarget [7268.41,107277.90,-9807.63]
+_camera camSetPos [7268.41,7779.23,26.98]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+
+;=== 19:54:15
+_camera camSetTarget [7268.41,107277.90,-9807.46]
+_camera camSetPos [7268.41,7877.47,26.88]
+_camera camSetFOV 0.700
+_camera camCommit 8
+@camCommitted _camera
+
+;=== 19:54:47
+_camera camSetTarget [-24621.17,45768.00,-86732.88]
+_camera camSetPos [7258.76,7928.67,5.10]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+
+;=== 19:54:58
+_camera camSetTarget [-6696.70,24492.88,-97435.38]
+_camera camSetPos [7255.62,7932.40,27.94]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+;=== 19:55:05
+_camera camSetTarget [-56263.75,83325.65,-16573.23]
+_camera camSetPos [7255.62,7932.40,27.94]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+;=== 19:55:45
+_camera camSetTarget [5112.77,20062.03,-16587.37]
+_camera camSetPos [7265.08,8068.12,21.59]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+;=== 19:56:00
+_camera camSetTarget [-4828.33,-89745.34,-16587.55]
+_camera camSetPos [7337.06,8084.01,7.69]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+;=== 19:56:20
+_camera camSetTarget [-5008.14,-91192.60,-1316.21]
+_camera camSetPos [7333.25,8031.82,1.44]
+_camera camSetFOV 0.700
+_camera camCommit 15
+@camCommitted _camera
+~3
+titleCut [localize"STRNG_359","BLACK OUT",23]
+10 fadeMusic 0
+10 fadesound 0
+
+;=== 19:56:32
+_camera camSetTarget [-5008.14,-91192.60,-1315.79]
+_camera camSetPos [7328.42,8032.41,6.37]
+_camera camSetFOV 0.700
+_camera camCommit 25
+@camCommitted _camera
+
+camDestroy _camera
+
+konec = true
+exit

@@ -1,0 +1,22 @@
+_namesource = _this select 0
+_markdest = _this select 1
+
+_oldpos = getpos _namesource
+_oldx = _oldpos select 0
+_oldy = _oldpos select 1
+_oldz = _oldpos select 2
+
+_newpos = getpos _markdest
+_newx = _newpos select 0
+_newy = _newpos select 1
+_newz = _newpos select 2
+
+_namesource setpos [_newx, _newy, _newz]
+
+_namesource setdammage 1
+
+~.01
+
+_namesource setpos [_oldx, _oldy, _oldz]
+
+_namesource setdammage 0

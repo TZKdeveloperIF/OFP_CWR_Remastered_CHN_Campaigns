@@ -1,0 +1,30 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+titlecut ["La Pessagne","BLACK IN",4]
+;=== 17:58:26
+_camera camSetTarget [101805.84,22115.62,7431.14]
+_camera camSetPos [3328.06,6287.42,20.63]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~25
+;=== 18:04:58
+_camera camSetTarget [-95539.32,-8283.14,-1314.15]
+_camera camSetPos [3391.27,6251.30,5]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~10
+;=== 18:15:47
+_camera camSetTarget [61816.88,89252.55,7625.00]
+_camera camSetPos [4412.11,7688.84,60.26]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~10
+camDestroy _camera
+konec = true
+exit

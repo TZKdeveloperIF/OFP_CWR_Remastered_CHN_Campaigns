@@ -1,0 +1,48 @@
+;OutroWin scripting
+
+_camera = "camera" camCreate [6712.87,8038.47,0.96]
+_camera cameraEffect ["internal","back"]
+titlecut ["","BLACK IN",12]
+setacctime 1.0
+0 fadeMusic 0.5
+playMusic "last_hope"
+titleCut [localize"STRNG_5000","BLACK IN",20]
+
+
+;=== 22:11:13
+_camera camSetTarget [105550.95,1715.67,-13587.63]
+_camera camSetPos [6739.40,7997.42,59.35]
+_camera camSetFOV 0.700
+_camera camCommit 10
+@camCommitted _camera
+
+;=== 22:11:52
+_camera camSetTarget [104620.52,23093.14,-13592.02]
+_camera camSetPos [6706.85,7996.78,13.72]
+_camera camSetFOV 0.700
+_camera camCommit 15
+@camCommitted _camera
+
+;=== 22:12:30
+_camera camSetTarget [105519.63,1131.18,-13589.11]
+_camera camSetPos [6735.09,8003.99,1.25]
+_camera camSetFOV 0.700
+_camera camCommit 15
+@camCommitted _camera
+Dam=true
+~13
+
+titleCut [localize"STRNG_5001","BLACK OUT",12]
+10 fadeMusic 0
+10 fadesound 0
+
+;=== 22:12:30
+_camera camSetTarget [105519.63,1131.18,-13589.11]
+_camera camSetPos [6735.09,8003.99,1.25]
+_camera camSetFOV 0.700
+_camera camCommit 15
+@camCommitted _camera
+camDestroy _camera
+
+konec = true
+exit

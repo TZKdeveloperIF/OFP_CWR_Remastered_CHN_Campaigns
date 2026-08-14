@@ -1,0 +1,38 @@
+;intro scripting
+
+_camera = "camera" camCreate [3000,2500,20]
+_camera cameraEffect ["internal","back"]
+
+
+;=== 17:03:48 Panzer
+_camera camSetTarget tank1
+_camera camSetPos [4549.10,7785.16,8.34]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~30
+;=== 17:04:29 Gasse
+_camera camSetTarget [-31488.65,93415.13,-37067.40]
+_camera camSetPos [4533.52,7982.56,25.56]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~5
+;=== 17:46:00 Gefecht
+_camera camSetTarget [9256.55,-90227.27,-17238.09]
+_camera camSetPos [4451.95,8092.61,2.48]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~15
+;=== 17:31:21 Toter
+_camera camSetTarget [-57253.47,86700.30,1681.45]
+_camera camSetPos [4484.63,8046.88,0.05]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~4.5
+;CutText [localize "STRNG_510","PLAIN",4]
+titlecut [localize "STRNG_484","BLACK OUT",4]
+camDestroy _camera
+exit

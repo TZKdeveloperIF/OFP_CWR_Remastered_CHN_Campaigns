@@ -1,0 +1,330 @@
+class CfgIdentities
+{
+};
+
+class Awards
+{
+    class Award01
+    {
+        limit = 12;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+    class Award02
+    {
+        limit = 40;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+    class Award03
+    {
+        limit = 100;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+};
+
+class Penalties
+{
+    class Penalty01
+    {
+        limit = -1;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+    class Penalty02
+    {
+        limit = -7;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+    class Penalty03
+    {
+        limit = -12;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+    class PenaltyGameOver
+    {
+        limit = -15;
+        abel = ;
+        cain = ;
+        eden = ;
+    };
+};
+
+exitScore = -15;
+
+
+
+
+class MissionDefault
+{
+     lives = -1;
+
+    lost = ;
+    end1 = ;
+    end2 = ;
+    end3 = ;
+    end4 = ;
+    end5 = ;
+    end6 = ;
+};
+
+class Campaign
+{
+    name =  "闪点行动：生死一线三部曲之生死一线";
+    firstBattle = Part1;
+
+
+
+    class Part1
+    {
+        name = "Between the Lines";
+
+        cutscene = Abspann.Abel;
+
+        firstMission = 01Lagerflucht;
+        lost = ;
+        end1 = ;
+        end2 = ;
+        end3 = ;
+        end4 = ;
+        end5 = ;
+        end6 = ;
+
+        class 01Lagerflucht: MissionDefault
+        {
+            end1 = 02Zuflucht;
+            end2 = 02Zuflucht;
+            end3 = 02Zuflucht;
+            end4 = 02Zuflucht;
+            end5 = 02Zuflucht;
+            end6 = 02Zuflucht;
+            lost = 01Lagerflucht;
+            template = 01Lagerflucht.Abel;
+        };
+        class 02Zuflucht: MissionDefault
+        {
+            end1 = 03Convoy;
+            end2 = 03Convoy;
+            end3 = 03Convoy;
+            end4 = 03Convoy;
+            end5 = 03Convoy;
+            end6 = 03Convoy;
+            lost = 02Zuflucht;
+            template = 02Zuflucht.Abel;
+        };
+        class 03Convoy: MissionDefault
+        {
+            end1 = 04Benzinversorgung;
+            end2 = 04Benzinversorgung;
+            end3 = 04Benzinversorgung;
+            end4 = 04Benzinversorgung;
+            end5 = 04Benzinversorgung;
+            end6 = 04Benzinversorgung;
+            lost = 03Convoy;
+            template = 03Convoy.Abel;
+        };
+        class 04Benzinversorgung: MissionDefault
+        {
+            end1 = 05Depotangriff;
+            end2 = 05Depotangriff;
+            end3 = 05Depotangriff;
+            end4 = 05Depotangriff;
+            end5 = 05Depotangriff;
+            end6 = 05Depotangriff;
+            lost = 04Benzinversorgung;
+            template = 04Benzinversorgung.Abel;
+        };
+        class 05Depotangriff: MissionDefault
+        {
+            end1 = 06Lagerverlegung;
+            end2 = 06Lagerverlegung;
+            end3 = 06Lagerverlegung;
+            end4 = 06Lagerverlegung;
+            end5 = 06Lagerverlegung;
+            end6 = 06Lagerverlegung;
+            lost = 05Depotangriff;
+            template = 05Depotangriff.Abel;
+        };
+        class 06Lagerverlegung: MissionDefault
+        {
+            end1 = 07Patroullie;
+            end2 = 07Patroullie;
+            end3 = 07Patroullie;
+            end4 = 07Patroullie;
+            end5 = 07Patroullie;
+            end6 = 07Patroullie;
+            lost = 06Lagerverlegung;
+            template = 06Lagerverlegung.abel;
+        };
+        class 07Patroullie: MissionDefault
+        {
+            end1 = 08Rueckzug;
+            end2 = 08Rueckzug;
+            end3 = 08Rueckzug;
+            end4 = 08Rueckzug;
+            end5 = 08Rueckzug;
+            end6 = 08Rueckzug;
+            lost = 07Patroullie;
+            template = 07Patroullie.Abel;
+        };
+        class 08Rueckzug: MissionDefault
+        {
+            end1 = 09Sani;
+            end2 = 09Sani;
+            end3 = 09Sani;
+            end4 = 09Sani;
+            end5 = 09Sani;
+            end6 = 09Sani;
+            lost = 08Rueckzug;
+            template = 08Rueckzug.Abel;
+        };
+        class 09Sani: MissionDefault
+        {
+            end1 = 10Wiederstandskaempfer;
+            end2 = 10Wiederstandskaempfer;
+            end3 = 10Wiederstandskaempfer;
+            end4 = 10Wiederstandskaempfer;
+            end5 = 10Wiederstandskaempfer;
+            end6 = 10Wiederstandskaempfer;
+            lost = 09Sani;
+            template = 09Sani.Abel;
+        };
+        class 10Wiederstandskaempfer: MissionDefault
+        {
+            end1 = 11SKUD;
+            end2 = 11SKUD;
+            end3 = 11SKUD;
+            end4 = 11SKUD;
+            end5 = 11SKUD;
+            end6 = 11SKUD;
+            lost = 10Wiederstandskaempfer;
+            template = 10Wiederstandskaempfer.Abel;
+        };
+        class 11SKUD: MissionDefault
+        {
+            end1 = 12HQ;
+            end2 = 12HQ;
+            end3 = 12HQ;
+            end4 = 12HQ;
+            end5 = 12HQ;
+            end6 = 12HQ;
+            lost = 11SKUD;
+            template = 11SKUD.Abel;
+        };
+        class 12HQ: MissionDefault
+        {
+            end1 = 13Sniper;
+            end2 = 13Sniper;
+            end3 = 13Sniper;
+            end4 = 13Sniper;
+            end5 = 13Sniper;
+            end6 = 13Sniper;
+            lost = 12HQ;
+            template = 12HQ.Abel;
+        };
+        class 13Sniper: MissionDefault
+        {
+            end1 = 14Flughafen;
+            end2 = 14Flughafen;
+            end3 = 14Flughafen;
+            end4 = 14Flughafen;
+            end5 = 14Flughafen;
+            end6 = 14Flughafen;
+            lost = 13Sniper;
+            template = 13Sniper.Abel;
+        };
+        class 14Flughafen: MissionDefault
+        {
+            end1 = 15HQverteidigung;
+            end2 = 15HQverteidigung;
+            end3 = 15HQverteidigung;
+            end4 = 15HQverteidigung;
+            end5 = 15HQverteidigung;
+            end6 = 15HQverteidigung;
+            lost = 14Flughafen;
+            template = 14Flughafen.Abel;
+        };
+        class 15HQverteidigung: MissionDefault
+        {
+            end1 = 16CIA1;
+            end2 = 16CIA1;
+            end3 = 16CIA1;
+            end4 = 16CIA1;
+            end5 = 16CIA1;
+            end6 = 16CIA1;
+            lost = 15HQverteidigung;
+            template = 15HQverteidigung.Abel;
+        };
+        class 16CIA1: MissionDefault
+        {
+            end1 = 17CIA2;
+            end2 = 17CIA2;
+            end3 = 17CIA2;
+            end4 = 17CIA2;
+            end5 = 17CIA2;
+            end6 = 17CIA2;
+            lost = 16CIA1;
+            template = 16CIA1.Abel;
+        };
+        class 17CIA2: MissionDefault
+        {
+            end1 = 18Boote;
+            end2 = 18Boote;
+            end3 = 18Boote;
+            end4 = 18Boote;
+            end5 = 18Boote;
+            end6 = 18Boote;
+            lost = 17CIA2;
+            template = 17CIA2.Abel;
+        };
+        class 18Boote: MissionDefault
+        {
+            end1 = 19Landung;
+            end2 = 19Landung;
+            end3 = 19Landung;
+            end4 = 19Landung;
+            end5 = 19Landung;
+            end6 = 19Landung;
+            lost = 18Boote;
+            template = 18Boote.Abel;
+        };
+        class 19Landung: MissionDefault
+        {
+            end1 = 20Anfuehrer;
+            end2 = 20Anfuehrer;
+            end3 = 20Anfuehrer;
+            end4 = 20Anfuehrer;
+            end5 = 20Anfuehrer;
+            end6 = 20Anfuehrer;
+            lost = 19Landung;
+            template = 19Landung.Abel;
+        };
+        class 20Anfuehrer: MissionDefault
+        {
+            end1 = ;
+            end2 = ;
+            end3 = ;
+            end4 = ;
+            end5 = ;
+            end6 = ;
+            lost = ;
+            template = 20Anfuehrer.Abel;
+        };
+    };
+
+};
+
+
+class CfgRadio
+{
+    sounds[] = { };
+};
