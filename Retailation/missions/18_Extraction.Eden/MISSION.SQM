@@ -18,7 +18,7 @@ class Mission
 	randomSeed=16700931;
 	class Intel
 	{
-		briefingName="ОПЕРАЦИЯ ""ЛИФТ""";
+		briefingName="иЎЊеЉЁ ""з”µжўЇ""";
 		startWeather=0.062281;
 		forecastWeather=0.106053;
 		day=14;
@@ -2944,7 +2944,7 @@ class Mission
 				class Item0
 				{
 					position[]={7560.702637,134.313950,4447.325195};
-					description="Район поиска";
+					description="жђњзґўеЊє";
 					expCond="gohome";
 					class Effects
 					{
@@ -2955,7 +2955,7 @@ class Mission
 				{
 					position[]={4382.046875,14.664107,9475.795898};
 					type="GETOUT";
-					description="Вернуться на базу";
+					description="иї”е›ћеџєењ°";
 					class Effects
 					{
 					};
@@ -2965,7 +2965,7 @@ class Mission
 				{
 					position[]={4421.841309,16.648073,9481.386719};
 					idStatic=98;
-					description="Зайти в местный бар";
+					description="еЋ»и¶џеЅ“ењ°й…’еђ§";
 					class Effects
 					{
 					};
@@ -3608,7 +3608,7 @@ class Mission
 		{
 			position[]={4478.136230,14.111442,9380.159180};
 			name="e1";
-			text="База миротворческих сил";
+			text="з»ґе’ЊйѓЁйџеџєењ°";
 			type="Marker";
 			colorName="ColorRed";
 		};
@@ -3616,7 +3616,7 @@ class Mission
 		{
 			position[]={4802.958984,24.660000,11841.249023};
 			name="e2";
-			text="Аэродром";
+			text="жњєењє";
 			type="Marker";
 			colorName="ColorRed";
 		};
@@ -3679,7 +3679,7 @@ class Mission
 		{
 			position[]={7600.683105,138.640274,4439.549316};
 			name="rev1";
-			text="Зона поиска";
+			text="жђњзґўеЊєеџџ";
 			type="Dot";
 			colorName="ColorGreen";
 			a=0.000100;
@@ -3836,7 +3836,7 @@ class Mission
 			b=0.000000;
 			repeating=1;
 			age="UNKNOWN";
-			text="дать сигнал дымом";
+			text="еЏ‘ж”ѕзѓџй›ѕдїЎеЏ·";
 			expCond="tar_ver distance udav <= 800";
 			expActiv="udav fire [""throw"",""SmokeShellRed"",""SmokeShellRed""]; udav setcaptive false; [] exec ""radio2.sqs""";
 			class Effects
@@ -3850,7 +3850,7 @@ class Mission
 			b=0.000000;
 			repeating=1;
 			age="UNKNOWN";
-			text="команда на пошрузку в вертолет";
+			text="е‘Ѕд»¤з™»дёЉз›ґеЌ‡жњє";
 			expCond="tar_ver distance udav <= 200";
 			expActiv="[] exec ""posadka.sqs""";
 			class Effects
@@ -3863,7 +3863,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="сеиванов в вертолете, можно лететь";
+			text="и°ўе€©з“¦иЇєе¤«е·Із™»жњєпјЊеЏЇд»Ґиµ·йЈћ";
 			expCond="true";
 			expActiv="[] exec ""checkinheli.sqs""";
 			class Effects
@@ -3877,7 +3877,7 @@ class Mission
 			b=0.000000;
 			repeating=1;
 			age="UNKNOWN";
-			text="дать сигнал дымом";
+			text="еЏ‘ж”ѕзѓџй›ѕдїЎеЏ·";
 			expCond="tar_ver distance udav <= 400";
 			expActiv="udav fire [""throw"",""SmokeShellRed"",""SmokeShellRed""]; ""0"" objstatus ""Done""; ""1"" objstatus ""Active""";
 			class Effects
@@ -3890,7 +3890,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="селиванова убили";
+			text="и°ўе€©з“¦иЇєе¤«иў«жќЂ";
 			expCond="!alive udav";
 			expActiv="[] exec ""lost1.sqs""";
 			class Effects
@@ -3907,7 +3907,7 @@ class Mission
 			timeoutMax=250.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="снимаем неуязвимость с селиванова по времени - ветеран";
+			text="жЊ‰ж—¶й—ґи§Јй™¤и°ўе€©з“¦иЇєе¤«зљ„ж— ж•ЊпјљиЂЃе…µ";
 			expCond="!cadetMode";
 			expActiv="udav setcaptive false";
 			class Effects
@@ -3922,7 +3922,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="начать заварушку";
+			text="ејЂе§‹дє¤зЃ«";
 			expActiv="voina=true; kanonadago=true; [] exec ""kanonada.sqs""";
 			class Effects
 			{
@@ -3937,7 +3937,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="концовка";
+			text="з»“е°ѕ";
 			expCond="this && udav in tar_ver && getPos tar_ver select 2 < 0.1 && !(tarakan in tar_ver)";
 			expActiv="[] exec ""goodend.sqs""; kanonadaend=true; ""2"" objstatus ""Done""";
 			class Effects
@@ -3950,7 +3950,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="погоня джипом за селивановым";
+			text="й©ѕеђ‰ж™®иїЅе‡»и°ўе€©з“¦иЇєе¤«";
 			expCond="j1 knowsabout udav >= 3";
 			expActiv="[j1,udav] exec ""pogonya.sqs""";
 			class Effects
@@ -3963,7 +3963,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="погоня джипом за селивановым";
+			text="й©ѕеђ‰ж™®иїЅе‡»и°ўе€©з“¦иЇєе¤«";
 			expCond="j2 knowsabout udav >= 3";
 			expActiv="[j2,udav] exec ""pogonya.sqs""";
 			class Effects
@@ -3976,7 +3976,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="погоня бредли за селивановым";
+			text="й©ѕеёѓй›·еѕ·е€©иїЅе‡»и°ўе€©з“¦иЇєе¤«";
 			expCond="m1 knowsabout udav >= 3";
 			expActiv="[m1,udav] exec ""pogonya.sqs""";
 			class Effects
@@ -3990,7 +3990,7 @@ class Mission
 			b=0.000000;
 			type="END1";
 			age="UNKNOWN";
-			text="миссия выполнена";
+			text="д»»еЉЎж€ђеЉџ";
 			expCond="goodend";
 			class Effects
 			{
@@ -4005,7 +4005,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="радио: зона поиска";
+			text="ж— зєїз”µпјљжђњзґўеЊє";
 			expActiv="[] exec ""radio1.sqs""";
 			class Effects
 			{
@@ -4031,7 +4031,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="проигрыш: вы потеряли вертолет";
+			text="е¤±иґҐпјљдЅ жЌџе¤±дє†з›ґеЌ‡жњє";
 			expCond="getDammage tar_ver >= 1 && alive tarakan && alive udav";
 			expActiv="[] exec ""lost2.sqs""";
 			class Effects
@@ -4045,7 +4045,7 @@ class Mission
 			b=0.000000;
 			type="END2";
 			age="UNKNOWN";
-			text="селиванов убит";
+			text="и°ўе€©з“¦иЇєе¤«йµдєЎ";
 			expCond="udavdead";
 			class Effects
 			{
@@ -4058,7 +4058,7 @@ class Mission
 			b=0.000000;
 			type="END3";
 			age="UNKNOWN";
-			text="вертолет сбит";
+			text="з›ґеЌ‡жњєиў«е‡»иђЅ";
 			expCond="verdead";
 			class Effects
 			{
@@ -4070,7 +4070,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="lost2 часть 2";
+			text="lost2 з¬¬дєЊйѓЁе€†";
 			expCond="!(canMove tar_ver) && tarakan distance tar_ver > 70";
 			expActiv="[] exec ""Lost2.sqs""";
 			class Effects
@@ -4087,7 +4087,7 @@ class Mission
 			timeoutMax=360.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="снимаем неуязвимость с селиванова по времени - кадет";
+			text="жЊ‰ж—¶й—ґи§Јй™¤и°ўе€©з“¦иЇєе¤«зљ„ж— ж•Њпјљж–°е…µ";
 			expCond="true";
 			expActiv="udav setcaptive false";
 			class Effects
@@ -4102,7 +4102,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="спеть песню";
+			text="е”±ж­Њ";
 			expActiv="tarakan say ""napev5""";
 			class Effects
 			{
@@ -4118,7 +4118,7 @@ class Mission
 			timeoutMax=2.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="а нам все пох";
+			text="ж€‘д»¬ж‰ЌдёЌењЁд№Ћ";
 			expCond="getDammage tar_ver > 0.3";
 			expActiv="tarakan say ""napev3""";
 			class Effects
@@ -4133,7 +4133,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="спеть песню";
+			text="е”±ж­Њ";
 			expActiv="tarakan say ""napev1""";
 			class Effects
 			{
@@ -4148,7 +4148,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="спеть песню";
+			text="е”±ж­Њ";
 			expActiv="tarakan say ""napev1""";
 			class Effects
 			{
@@ -4163,7 +4163,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="спеть песню";
+			text="е”±ж­Њ";
 			expActiv="tarakan say ""napev1""";
 			class Effects
 			{
@@ -4178,7 +4178,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="спеть песню";
+			text="е”±ж­Њ";
 			expActiv="tarakan say ""napev1""";
 			class Effects
 			{
@@ -4192,7 +4192,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=188;
-			text="спеть песню";
+			text="е”±ж­Њ";
 			expCond="this && gohome";
 			expActiv="tarakan say ""napev4""";
 			class Effects
@@ -6043,7 +6043,7 @@ class Intro
 		{
 			position[]={6771.710938,60.132813,4888.432129};
 			name="exp1";
-			text="фПЮЛБ ЬЧБЛХБГЙЙ 1";
+			text="ж’¤з¦»з‚№ 1";
 			type="Pickup";
 			colorName="ColorRed";
 		};
@@ -6051,7 +6051,7 @@ class Intro
 		{
 			position[]={7003.292480,56.773994,3482.854492};
 			name="exp1_1";
-			text="фПЮЛБ ЬЧБЛХБГЙЙ 2";
+			text="ж’¤з¦»з‚№ 2";
 			type="Pickup";
 			colorName="ColorRed";
 		};
@@ -6059,7 +6059,7 @@ class Intro
 		{
 			position[]={7549.307129,193.641052,3915.968018};
 			name="exp1_2";
-			text="фПЮЛБ ЬЧБЛХБГЙЙ 3";
+			text="ж’¤з¦»з‚№ 3";
 			type="Pickup";
 			colorName="ColorRed";
 		};
@@ -6067,7 +6067,7 @@ class Intro
 		{
 			position[]={8386.684570,214.556290,4813.389648};
 			name="exp1_3";
-			text="фПЮЛБ ЬЧБЛХБГЙЙ 4";
+			text="ж’¤з¦»з‚№ 4";
 			type="Pickup";
 			colorName="ColorRed";
 		};
@@ -6075,7 +6075,7 @@ class Intro
 		{
 			position[]={8925.278320,11.578591,5480.860352};
 			name="exp1_4";
-			text="фПЮЛБ ЬЧБЛХБГЙЙ 5";
+			text="ж’¤з¦»з‚№ 5";
 			type="Pickup";
 			colorName="ColorRed";
 		};
@@ -6160,14 +6160,14 @@ class Intro
 		{
 			position[]={4478.136230,14.111442,9380.159180};
 			name="e1";
-			text="вБЪБ НЙТПФЧПТЮЕУЛЙИ УЙМ";
+			text="з»ґе’ЊйѓЁйџеџєењ°";
 			type="Flag";
 		};
 		class Item14
 		{
 			position[]={4802.958984,24.660000,11841.249023};
 			name="e2";
-			text="бЬТПДТПН";
+			text="жњєењє";
 			type="Marker";
 			colorName="ColorRed";
 		};

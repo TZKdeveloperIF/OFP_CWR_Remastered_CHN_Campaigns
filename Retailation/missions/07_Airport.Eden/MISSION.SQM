@@ -16,7 +16,7 @@ class Mission
         randomSeed=13341187;
         class Intel
         {
-                briefingName="ЧЕРНЫЙ ЯСТРЕБ";
+                briefingName="й»‘й№°";
                 startWeather=0.305903;
                 forecastWeather=0.174587;
                 forecastFog=0.224612;
@@ -3718,7 +3718,7 @@ class Mission
                 {
                         position[]={4783.474121,24.660000,11961.490234};
                         name="aerp";
-                        text="Аэропорт";
+                        text="жњєењє";
                         type="Flag";
                         colorName="ColorRed";
                 };
@@ -3726,7 +3726,7 @@ class Mission
                 {
                         position[]={4497.010254,17.813604,9593.951172};
                         name="str";
-                        text="База в МЕУКСЕ";
+                        text="й»е…‹ж–Їеџєењ°";
                         type="Start";
                         colorName="ColorGreen";
                 };
@@ -3734,7 +3734,7 @@ class Mission
                 {
                         position[]={9103.139648,63.577061,2209.730713};
                         name="bp1";
-                        text="Блок-пост";
+                        text="жЈЂжџҐз«™";
                         type="Marker";
                         colorName="ColorGreen";
                 };
@@ -3742,7 +3742,7 @@ class Mission
                 {
                         position[]={7565.215332,118.892822,4663.966797};
                         name="bp1_1";
-                        text="Блок-пост";
+                        text="жЈЂжџҐз«™";
                         type="Marker";
                         colorName="ColorGreen";
                 };
@@ -4113,7 +4113,7 @@ class Mission
                         activationBy="WEST";
                         activationType="NOT PRESENT";
                         age="UNKNOWN";
-                        text="конец миссии";
+                        text="д»»еЉЎз»“жќџ";
                         expCond="this && eaststart";
                         expActiv="[] exec ""ingameintro4.sqs""";
                         class Effects
@@ -4165,7 +4165,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="грохнуть танк";
+                        text="е№ІжЋ‰еќ¦е…‹";
                         expCond="getDammage tank1 > 0.8";
                         expActiv="tank1 setDammage 1";
                         class Effects
@@ -4196,7 +4196,7 @@ class Mission
                         activationType="GUER D";
                         age="UNKNOWN";
                         idVehicle=29;
-                        text="выбегает АТ солдат";
+                        text="еЏЌеќ¦е…‹ж­Ґе…µе†Іе‡єжќҐ";
                         class Effects
                         {
                         };
@@ -4209,7 +4209,7 @@ class Mission
                         b=1000.000000;
                         activationBy="GUER";
                         age="UNKNOWN";
-                        text="добиваем резистов по количеству";
+                        text="жЊ‰ж•°й‡Џж¶€зЃ­жЉµжЉ—йµиђҐеЌ•дЅЌ";
                         name="cresist";
                         expCond="this && resistance countSide list cresist < 3";
                         expActiv="""_x setDammage 1"" foreach thislist";
@@ -4228,7 +4228,7 @@ class Mission
                         timeoutMax=60.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="добиваем вестов по количеству";
+                        text="жЊ‰ж•°й‡Џж¶€зЃ­иҐїйµиђҐеЌ•дЅЌ";
                         name="cwest";
                         expCond="this && resistance countSide list cwest < 2 && eaststart";
                         expActiv="""_x setDammage 1"" foreach thislist";
@@ -4655,7 +4655,7 @@ class Mission
                         activationType="GUER D";
                         age="UNKNOWN";
                         idVehicle=29;
-                        text="scream: замечен игрок";
+                        text="screamпјљеЏ‘зЋ°зЋ©е®¶";
                         expActiv="q2 say ""res_scream1_30""";
                         class Effects
                         {
@@ -4669,7 +4669,7 @@ class Mission
                         activationBy="VEHICLE";
                         age="UNKNOWN";
                         idVehicle=29;
-                        text="дисбат";
+                        text="жѓ©ж€’иђҐ";
                         expCond="this && rating gamer < 500 && (!alive cw1 or !alive cw2 or !alive cw3 or !alive cw4)";
                         expActiv="[] exec ""disbat.sqs""";
                         class Effects
@@ -4683,7 +4683,7 @@ class Mission
                         b=0.000000;
                         type="END6";
                         age="UNKNOWN";
-                        text="дисбат";
+                        text="жѓ©ж€’иђҐ";
                         expCond="disbata";
                         class Effects
                         {

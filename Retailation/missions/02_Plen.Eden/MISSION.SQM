@@ -15,7 +15,7 @@ class Mission
 	randomSeed=3786755;
 	class Intel
 	{
-		briefingName="ВЫХОДА НЕТ";
+		briefingName="ж— и·ЇеЏЇйЂѓ";
 		startWeather=0.718759;
 		startFog=0.443972;
 		forecastWeather=0.743722;
@@ -4452,7 +4452,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="создать группу s4";
+			text="е€›е»є s4 е°Џз»„";
 			expCond="firelesnik or alarm";
 			expActiv="[s1,s2,s3] join s4; s4 setcombatmode ""RED""; s4 setBehaviour ""AWARE""";
 			class Effects
@@ -4601,7 +4601,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=22;
-			text="концовка";
+			text="з»“е°ѕ";
 			expActiv="[] exec ""outro.sqs""";
 			class Effects
 			{
@@ -4639,7 +4639,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			idVehicle=22;
-			text="игрок не в доме \ тревога";
+			text="зЋ©е®¶дёЌењЁж€їе†… \ и­¦жЉҐ";
 			expCond="this && !firelesnik";
 			expActiv="alarm=true";
 			expDesactiv="alarm=false";
@@ -4653,7 +4653,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="установка максимальной скорости для всех групп";
+			text="дёєж‰Ђжњ‰е°Џйџи®ѕзЅ®жњЂй«йЂџеє¦";
 			expCond="pogonya";
 			expActiv="leader a1 setSpeedMode ""FULL""; leader c1 setSpeedMode ""FULL""; leader r1 setSpeedMode ""FULL""; leader e1 setSpeedMode ""FULL""; leader t1 setSpeedMode ""FULL""";
 			class Effects
@@ -4667,7 +4667,7 @@ class Mission
 			b=0.000000;
 			type="END1";
 			age="UNKNOWN";
-			text="конец";
+			text="з»“жќџ";
 			expCond="konec";
 			class Effects
 			{
@@ -4679,7 +4679,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="запрещаем отступать";
+			text="з¦Ѓж­ўж’¤йЂЂ";
 			expCond="pogonya";
 			expActiv="leader a1 allowFleeing 0";
 			class Effects
@@ -4692,7 +4692,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Подкова";
+			text="й©¬и№„й“Ѓ";
 			expCond="gamer distance pod <= 0.85";
 			expActiv="podkova=true; pod addAction [localize ""STRM_action1"", ""podkova.sqs""]";
 			class Effects
@@ -4705,7 +4705,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="добавить карту когда игрок в джипе";
+			text="зЋ©е®¶дёЉеђ‰ж™®иЅ¦ж—¶з»™ењ°е›ѕ";
 			expCond="player in jeep1";
 			expActiv="showmap true";
 			class Effects
@@ -4721,7 +4721,7 @@ class Mission
 			timeoutMid=1.000000;
 			timeoutMax=1.000000;
 			age="UNKNOWN";
-			text="хинт - нет горючего";
+			text="жЏђз¤є - жІЎжњ‰з‡ѓжІ№";
 			expCond="player in jeep1 and fuel jeep1 == 0";
 			expActiv="hint localize ""STRM_hint_3""";
 			class Effects
@@ -4734,7 +4734,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Игрок ударил подковой охранника";
+			text="зЋ©е®¶з”Ёй©¬и№„й“Ѓж‰“дє†е®€еЌ«";
 			expCond="podkova and getDammage g1 > 0";
 			expActiv="g1 setDammage 1";
 			class Effects
@@ -4747,7 +4747,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="охранник в тревоге";
+			text="е®€еЌ«иї›е…Ґи­¦ж€’";
 			expCond="alarm or firelesnik";
 			expActiv="g1 setCombatmode ""RED""; g1 setBehaviour ""AWARE""";
 			class Effects
@@ -4794,7 +4794,7 @@ class Mission
 			timeoutMax=10.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="лесник убегает после удачного выстрела";
+			text="жЉ¤жћ—е‘еѕ—ж‰‹еђЋйЂѓиµ°";
 			expCond="firelesnik";
 			expActiv="lesnik lockWP false; lesnik setCombatMode ""BLUE""";
 			class Effects
@@ -4947,7 +4947,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="показать карту когда игрок залазит в джип";
+			text="зЋ©е®¶дёЉеђ‰ж™®иЅ¦ж—¶жѕз¤єењ°е›ѕ";
 			expCond="player in jeep1";
 			expActiv="mapfounded=true";
 			class Effects
@@ -5044,7 +5044,7 @@ class Mission
 			timeoutMax=1.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="взорвать бочку после выстрела лесника";
+			text="жЉ¤жћ—е‘ејЂжћЄеђЋеј•з€†жІ№жЎ¶";
 			expCond="firelesnik && lesnik ammo ""HuntingRifleMag"" < 6";
 			expActiv="b5 setdammage 1 ";
 			class Effects
@@ -5137,7 +5137,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			idVehicle=22;
-			text="игрок не в доме \ говорит охранник";
+			text="зЋ©е®¶дёЌењЁж€їе†… \ е®€еЌ«иЇґиЇќ";
 			expCond="this && !firelesnik";
 			expActiv="g1 say ""game1_3""";
 			class Effects
@@ -5154,7 +5154,7 @@ class Mission
 			timeoutMax=2.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="пора рвать когти";
+			text="жЇж—¶еЂ™ејЂжєњдє†";
 			expCond="firelesnik";
 			expActiv="gamer say ""game1_6""";
 			class Effects
@@ -5167,7 +5167,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Абар убит";
+			text="йїе·ґе°”иў«жќЂ";
 			expCond="firelesnik && getDammage g1 >= 1";
 			expActiv="e1 say ""game1_9""";
 			class Effects
@@ -5257,7 +5257,7 @@ class Mission
 			timeoutMax=1.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="шухер";
+			text="е‡єдє‹дє†";
 			expCond="firelesnik && !alarm";
 			expActiv="leader c1 move getpos shuher";
 			class Effects
@@ -5274,7 +5274,7 @@ class Mission
 			activationType="NOT PRESENT";
 			age="UNKNOWN";
 			idVehicle=22;
-			text="снимаем captive после выстрела лесника";
+			text="жЉ¤жћ—е‘ејЂжћЄеђЋеЏ–ж¶€ captive зЉ¶жЂЃ";
 			expCond="this && firelesnik";
 			expActiv="pogonya=true; s2 say ""game1_8""; gamer setCaptive false";
 			class Effects

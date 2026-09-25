@@ -13,7 +13,7 @@ class Mission
 	randomSeed=5538819;
 	class Intel
 	{
-		briefingName="ПОХОД В ГОСТИ";
+		briefingName="з™»й—ЁеЃље®ў";
 		day=6;
 		hour=18;
 		minute=15;
@@ -49,7 +49,7 @@ class Mission
 					position[]={8541.883789,130.792709,3519.300049};
 					placement=20.000000;
 					type="GETOUT";
-					description="Доехать до перекрестка";
+					description="ејЂе€°еЌЃе­—и·ЇеЏЈ";
 					class Effects
 					{
 					};
@@ -66,7 +66,7 @@ class Mission
 				class Item2
 				{
 					position[]={8904.581055,212.269913,3782.092285};
-					description="Взять 'языка'";
+					description="жЉ“дёЄвЂи€Ње¤ґвЂ™";
 					class Effects
 					{
 					};
@@ -75,7 +75,7 @@ class Mission
 				class Item3
 				{
 					position[]={9119.544922,62.639996,2165.701904};
-					description="Доставить пленного";
+					description="жЉЉдїи™ЏйЂЃиѕѕ";
 					class Effects
 					{
 					};
@@ -3799,7 +3799,7 @@ class Mission
 		{
 			position[]={8916.137695,212.159836,3765.962402};
 			name="Lesnik";
-			text="Сторожка лесника";
+			text="жЉ¤жћ—е‘е°Џе±‹";
 			type="Join";
 			colorName="ColorGreen";
 		};
@@ -3807,7 +3807,7 @@ class Mission
 		{
 			position[]={9112.488281,62.639996,2184.808350};
 			name="Start1";
-			text="Блокпост";
+			text="жЈЂжџҐз«™";
 			type="Start";
 			colorName="ColorGreen";
 		};
@@ -4037,7 +4037,7 @@ class Mission
 			position[]={8464.506836,148.597260,3767.349121};
 			activationBy="ALPHA";
 			age="UNKNOWN";
-			text="База! Нужна помощь!";
+			text="еџєењ°пјЃиЇ·ж±‚ж”ЇжЏґпјЃ";
 			expCond="raciya";
 			expActiv="[] exec ""raciya.sqs""";
 			class Effects
@@ -4200,7 +4200,7 @@ class Mission
 			class Effects
 			{
 				titleType="TEXT";
-				title="смерть";
+				title="йµдєЎ";
 			};
 		};
 		class Item21
@@ -4281,13 +4281,13 @@ class Mission
 			b=0.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="текст бандит мертв";
+			text="ж–‡жЎ€пјљеЊЄеѕ’е·Іж­»";
 			expCond="(not alive Bandit)";
 			expActiv="""1"" objStatus ""FAILED""; ""2"" objStatus ""FAILED""";
 			class Effects
 			{
 				titleType="TEXT";
-				title="МИССИЯ ПРОВАЛЕНА: лидер боевиков убит";
+				title="д»»еЉЎе¤±иґҐпјљеЊЄеѕ’е¤ґз›®иў«жќЂ";
 			};
 		};
 		class Item27
@@ -4297,13 +4297,13 @@ class Mission
 			b=0.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="текст бандит сбежал";
+			text="ж–‡жЎ€пјљеЊЄеѕ’йЂѓиµ°";
 			expCond="(Bandit in Kat)";
 			expActiv="""1"" objStatus ""FAILED""; ""2"" objStatus ""FAILED""";
 			class Effects
 			{
 				titleType="TEXT";
-				title="МИССИЯ ПРОВАЛЕНА: лидер боевиков покинул остров.";
+				title="д»»еЉЎе¤±иґҐпјљеЊЄеѕ’е¤ґз›®е·ІйЂѓз¦»иЇҐеІ›гЂ‚";
 			};
 		};
 		class Item28

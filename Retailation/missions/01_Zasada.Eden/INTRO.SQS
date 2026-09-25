@@ -23,12 +23,12 @@ _camera camCommit 10
 @camCommitted _camera
 ~12
 
-;переход на вид внутри кабины
+;РїРµСЂРµС…РѕРґ РЅР° РІРёРґ РІРЅСѓС‚СЂРё РєР°Р±РёРЅС‹
 playsound "fx01"
 titleCut ["","BLACK IN",2]
 ~0.05
 
-;цикл внутри кабины - разговор
+;С†РёРєР» РІРЅСѓС‚СЂРё РєР°Р±РёРЅС‹ - СЂР°Р·РіРѕРІРѕСЂ
 
 ;#here
 ;_camera camSettarget celcam
@@ -50,7 +50,7 @@ _camera camcommit 0
 goto"here"
 #start
 
-;переход на вид с берега
+;РїРµСЂРµС…РѕРґ РЅР° РІРёРґ СЃ Р±РµСЂРµРіР°
 playsound "fx06"
 titleCut ["","BLACK IN",2]
 _camera camSetTarget Mi
@@ -64,7 +64,7 @@ _camera camCommit 0
 goto "met"
 #met1
 
-;переход на главный вид с посадочной площадки
+;РїРµСЂРµС…РѕРґ РЅР° РіР»Р°РІРЅС‹Р№ РІРёРґ СЃ РїРѕСЃР°РґРѕС‡РЅРѕР№ РїР»РѕС‰Р°РґРєРё
 _camera camSetTarget Mi
 _camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 5]
 _camera camSetFOV 0.800
@@ -76,14 +76,14 @@ _camera camCommit 20
 goto "met2"
 #met3
 
-;камера переключается на офицера
+;РєР°РјРµСЂР° РїРµСЂРµРєР»СЋС‡Р°РµС‚СЃСЏ РЅР° РѕС„РёС†РµСЂР°
 _camera camSetTarget Off
 _camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 2]
 _camera camSetFOV 0.800
 _camera camCommit 7
 @camCommitted _camera
 
-;переход с офицера на урал
+;РїРµСЂРµС…РѕРґ СЃ РѕС„РёС†РµСЂР° РЅР° СѓСЂР°Р»
 #met7
 ?scen==20: goto "met8"
 ~0.1
@@ -102,7 +102,7 @@ _camera camCommit 5
 goto "met4"
 
 #met5
-;переход камеры на дорогу по поти колонны
+;РїРµСЂРµС…РѕРґ РєР°РјРµСЂС‹ РЅР° РґРѕСЂРѕРіСѓ РїРѕ РїРѕС‚Рё РєРѕР»РѕРЅРЅС‹
 ~3
 titleCut ["","BLACK IN",5]
 playsound "fx05"
@@ -122,7 +122,7 @@ _camera camCommit 12
 ~11
 3 fademusic 0
 
-;переход на засаду
+;РїРµСЂРµС…РѕРґ РЅР° Р·Р°СЃР°РґСѓ
 ~2
 titleCut ["","BLACK OUT",4]
 ~3

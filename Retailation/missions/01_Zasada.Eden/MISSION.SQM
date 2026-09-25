@@ -16,7 +16,7 @@ class Mission
         randomSeed=1785347;
         class Intel
         {
-                briefingName="ПЕРВАЯ КРОВЬ";
+                briefingName="з¬¬дёЂж»ґиЎЂ";
                 startWeather=0.125062;
                 startFog=0.106303;
                 forecastWeather=0.112556;
@@ -335,7 +335,7 @@ class Mission
                                         formation="COLUMN";
                                         speed="NORMAL";
                                         combat="CARELESS";
-                                        description="Тирон";
+                                        description="и’‚йѕ™";
                                         class Effects
                                         {
                                         };
@@ -1643,7 +1643,7 @@ class Mission
                 {
                         position[]={4916.479004,30.304350,9085.146484};
                         name="tyron";
-                        text="Блок-пост миротворческих сил";
+                        text="з»ґе’ЊйѓЁйџжЈЂжџҐз«™";
                         type="Join";
                         colorName="ColorGreen";
                 };
@@ -1651,7 +1651,7 @@ class Mission
                 {
                         position[]={1221.543091,65.105164,6071.627930};
                         name="str";
-                        text="Место отправки";
+                        text="е‡єеЏ‘ењ°з‚№";
                         type="Start";
                         colorName="ColorGreen";
                         angle=-631.789001;
@@ -1732,7 +1732,7 @@ class Mission
                 {
                         position[]={5212.488281,23.229685,9386.317383};
                         name="objective1";
-                        text="Уничтожить грузовик с боеприпасами!";
+                        text="ж‘§жЇЃеј№иЌЇеЌЎиЅ¦пјЃ";
                         type="Empty";
                         colorName="ColorRed";
                 };
@@ -1762,7 +1762,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="астахов один и ему предлагают сдаться в плен";
+                        text="йїж–ЇеЎ”йњЌе¤«иђЅеЌ•дє†пјЊж•ЊдєєеЉќд»–жЉ•й™Ќ";
                         expCond="count units group_e1 == 1 && leader player == player && alive player && !tocaptive && !incaptive";
                         expActiv="plenask=true";
                         class Effects
@@ -1775,7 +1775,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="мало людей - взорват грузовик";
+                        text="дєєе¤Єе°‘зљ„иЇќпјЊд»–д»¬дјљз‚ёжЋ‰еЌЎиЅ¦";
                         expCond="cap>0 && count units group s1 < 4 && alive gamer && !uralbom";
                         expActiv="uralbom=true";
                         class Effects
@@ -1801,7 +1801,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="грузовик взорван";
+                        text="еЌЎиЅ¦е·Іиў«з‚ёжЇЃ";
                         expCond="uralbom && getdammage ural2 >= 1";
                         expActiv="""2"" Objstatus ""Done""; objdone=true; gamer addRating 5000";
                         class Effects
@@ -1831,7 +1831,7 @@ class Mission
                         timeoutMax=15.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="сдача в плен с помощью оглушки";
+                        text="еЂџеЉ©йњ‡ж’јеј№жЉ•й™Ќ";
                         expCond="alive gamer && tocaptive && !incaptive";
                         expActiv="sm1 = ""HEAT120"" camCreate [getpos gamer select 0, (getpos gamer select 1) + 30, getpos gamer select 2]; [] exec ""tocaptive.sqs""";
                         class Effects
@@ -1906,7 +1906,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="бандиты близко и астахову предлагают сдаться в плен";
+                        text="еЊЄеѕ’йЂјиї‘пјЊеЉќйїж–ЇеЎ”йњЌе¤«жЉ•й™Ќ";
                         expCond="resclose && !tocaptive && !incaptive && alive gamer";
                         expActiv="plenask=true";
                         class Effects
@@ -1935,7 +1935,7 @@ class Mission
                         timeoutMid=3.000000;
                         timeoutMax=3.000000;
                         age="UNKNOWN";
-                        text="астахов сдался в плен добровольно";
+                        text="йїж–ЇеЎ”йњЌе¤«дё»еЉЁжЉ•й™Ќ";
                         expCond="primaryWeapon player == """" && secondaryWeapon player == """" && plenask && alive player";
                         expActiv="[] exec ""tocaptivity.sqs""";
                         class Effects
@@ -1952,7 +1952,7 @@ class Mission
                         timeoutMax=2.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="CADET: хинт как сдаться в плен добровольно";
+                        text="CADETпјљдё»еЉЁжЉ•й™Ќзљ„жЏђз¤є";
                         expCond="cadetMode && plenask";
                         expActiv="hint localize ""STRM_hint1""";
                         class Effects
@@ -1985,7 +1985,7 @@ class Mission
                         rectangular=1;
                         activationBy="GUER";
                         age="UNKNOWN";
-                        text="подсчет бандитов и приказ взорвать грузовик";
+                        text="жё…з‚№еЊЄеѕ’дєєж•°е№¶дё‹иѕѕз‚ёиЅ¦е‘Ѕд»¤";
                         expCond="resistance countSide thislist > 10";
                         expActiv="uralbom=true";
                         class Effects
@@ -1998,7 +1998,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="приказ взорвать грузовик";
+                        text="е‘Ѕд»¤з‚ёжЇЃеЌЎиЅ¦";
                         expCond="uralbom";
                         expActiv="""objective1"" setMarkerPos getpos ural2; ""objective1"" setMarkerType ""Marker""; leader gamer sideRadio ""ingame0_6""; enableRadio true; ""2"" Objstatus ""Active""; gamer commandtarget ural2; gamer commandmove getpos ural2; ural2 addmagazinecargo [""Pipebomb"",1]";
                         expDesactiv="enableRadio false";
@@ -2012,7 +2012,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="принудительная сдача в плен по количесву солдат, но только после взрыва грузовика";
+                        text="жЊ‰дєєж•°ејєе€¶жЉ•й™ЌпјЊдЅ†еї…йЎ»ењЁеЌЎиЅ¦з€†з‚ёд№‹еђЋ";
                         expCond="objdone && count units group_e1 < 3";
                         expActiv="tocaptive=true";
                         class Effects
@@ -2029,7 +2029,7 @@ class Mission
                         timeoutMax=60.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="в плен принудительно по времени после взрыва грузовика";
+                        text="еЌЎиЅ¦з€†з‚ёеђЋи¶…ж—¶ејєе€¶жЉ•й™Ќ";
                         expCond="objdone";
                         expActiv="tocaptive=true";
                         class Effects
@@ -2066,7 +2066,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="увеличиваем скил в зависимости от умений игрока";
+                        text="ж №жЌ®зЋ©е®¶ж°ґе№іжЏђеЌ‡жЉЂиѓЅ";
                         expCond="epoteri > 20";
                         expActiv="eskill=1";
                         class Effects
@@ -2079,7 +2079,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="Еремин убит";
+                        text="еЏ¶зЅ—жЋйµдєЎ";
                         expCond="getDammage s2 >= 1";
                         expActiv="s5 say ""ingame0_2""";
                         class Effects
@@ -2092,7 +2092,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="Пузанцев убит";
+                        text="ж™®иµћй‡‡е¤«йµдєЎ";
                         expCond="getDammage s5 >= 1";
                         expActiv="s2 say ""ingame0_7""";
                         class Effects
@@ -2109,7 +2109,7 @@ class Mission
                         timeoutMax=70.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="Вижу группу противника справа";
+                        text="ж€‘зњ‹е€°еЏізїјжњ‰ж•Ње†›";
                         expCond="cap==1";
                         expActiv="s3 say ""ingame0_12""";
                         class Effects
@@ -2122,7 +2122,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="У меня патроны ек";
+                        text="ж€‘жІЎе­ђеј№дє†";
                         expCond="s5 ammo ""AK74"" < 10";
                         expActiv="s5 say ""ingame0_13""";
                         class Effects
@@ -2138,7 +2138,7 @@ class Mission
                         rectangular=1;
                         activationBy="GUER";
                         age="UNKNOWN";
-                        text="Если слева зайдут - нам крышка";
+                        text="и¦ЃжЇд»–д»¬д»Ће·¦иѕ№ж‘ёдёЉжќҐпјЊж€‘д»¬е°±е®Њдє†";
                         expActiv="leader player say ""ingame0_14""";
                         class Effects
                         {
@@ -2152,7 +2152,7 @@ class Mission
                         angle=-165.565994;
                         activationBy="GUER";
                         age="UNKNOWN";
-                        text="Эти гады нас окружают";
+                        text="иї™её®ж··и›‹ењЁеЊ…е›ґж€‘д»¬";
                         expActiv="s3 say ""ingame0_15""";
                         class Effects
                         {
@@ -2164,7 +2164,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="Врача!";
+                        text="е†›еЊ»пјЃ";
                         expCond="getDammage s7 > 0.4";
                         expActiv="s7 say ""ingame0_10""";
                         class Effects
@@ -2177,7 +2177,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="ААААА НЕЕЕЕЕЕЕТ";
+                        text="е•Ље•Ље•Ље•Љ дёЌвЂ”вЂ”";
                         expCond="getDammage s8 > 0.7";
                         expActiv="s8 say ""ingame0_9""";
                         class Effects
@@ -2190,7 +2190,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="ААА черт меня зацепило";
+                        text="е•ЉпјЃиЇҐж­»пјЊж€‘дё­еј№дє†";
                         expCond="getDammage s4 > 0.2";
                         expActiv="s4 say ""ingame0_8""";
                         class Effects
@@ -2459,7 +2459,7 @@ class Mission
                         b=0.000000;
                         type="END6";
                         age="UNKNOWN";
-                        text="трибунал";
+                        text="е†›дє‹жі•еє­";
                         expCond="loosed1";
                         class Effects
                         {
@@ -2475,7 +2475,7 @@ class Mission
                         timeoutMax=15.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="крик после атаки";
+                        text="иў­е‡»еђЋзљ„е–ЉеЏ«";
                         expCond="cap==1";
                         expActiv="gamer say ""ast_brek2""";
                         class Effects
@@ -2488,7 +2488,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="бандиты предлагают сдаться в плен 1";
+                        text="еЊЄеѕ’еЉќй™Ќ 1";
                         expCond="plenask && !tocaptive && !incaptive";
                         class Effects
                         {
@@ -2505,7 +2505,7 @@ class Mission
                         timeoutMax=5.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="бандиты предлагают сдаться в плен 2";
+                        text="еЊЄеѕ’еЉќй™Ќ 2";
                         expCond="plenask && !tocaptive && !incaptive";
                         class Effects
                         {
@@ -2521,7 +2521,7 @@ class Mission
                         activationBy="VEHICLE";
                         age="UNKNOWN";
                         idVehicle=11;
-                        text="дисбат";
+                        text="жѓ©ж€’иђҐ";
                         expCond="this && cap!=0";
                         expActiv="[] exec ""loosed.sqs""";
                         class Effects
@@ -2537,7 +2537,7 @@ class Mission
                         activationBy="VEHICLE";
                         age="UNKNOWN";
                         idVehicle=11;
-                        text="дисбат";
+                        text="жѓ©ж€’иђҐ";
                         expCond="this && cap!=0";
                         expActiv="[] exec ""loosed.sqs""";
                         class Effects
@@ -2553,7 +2553,7 @@ class Mission
                         activationBy="VEHICLE";
                         age="UNKNOWN";
                         idVehicle=11;
-                        text="дисбат";
+                        text="жѓ©ж€’иђҐ";
                         expCond="this && cap!=0";
                         expActiv="[] exec ""loosed.sqs""";
                         class Effects
@@ -2569,7 +2569,7 @@ class Mission
                         activationBy="VEHICLE";
                         age="UNKNOWN";
                         idVehicle=11;
-                        text="дисбат";
+                        text="жѓ©ж€’иђҐ";
                         expCond="this && cap!=0";
                         expActiv="[] exec ""loosed.sqs""";
                         class Effects
@@ -2582,7 +2582,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="дополнительные сили бандитов по рейтингу группы астахова";
+                        text="жЊ‰йїж–ЇеЎ”йњЌе¤«е°ЏйџиЇ„зє§еўћжЏґзљ„еЊЄеѕ’е…µеЉ›";
                         expCond="(rating gamer) + (rating s1)  + (rating s2) + (rating s3) + (rating s4) + (rating s5) + (rating s6) + (rating s7) + (rating s8) + (rating s9) > 15000";
                         expActiv="wave2=true";
                         class Effects
@@ -2595,7 +2595,7 @@ class Mission
                         a=0.000000;
                         b=0.000000;
                         age="UNKNOWN";
-                        text="иллюзия обстрела";
+                        text="з‚®е‡»еЃ‡и±Ў";
                         expCond="ammo1_fire";
                         expActiv="[ammo1, 90, 35, 4.5, 3, 0.5, 200] exec ""underfire.sqs""";
                         class Effects
@@ -2612,7 +2612,7 @@ class Mission
                         timeoutMax=40.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="убираем иллюзию обстрела";
+                        text="и§Јй™¤з‚®е‡»еЃ‡и±Ў";
                         expCond="ammo1_fire";
                         expActiv="ammo1_fire=false";
                         class Effects
@@ -2627,7 +2627,7 @@ class Mission
                         timeoutMax=10.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="огонь по уралу";
+                        text="еђ‘д№Њж‹‰е°”еЌЎиЅ¦ејЂзЃ«";
                         expCond="cap>0";
                         expActiv="g1_3 doFire ural1";
                         class Effects
@@ -2642,7 +2642,7 @@ class Mission
                         timeoutMax=5.000000;
                         interruptable=1;
                         age="UNKNOWN";
-                        text="огонь";
+                        text="ејЂзЃ«";
                         expCond="cap>0";
                         expActiv="g1_2 doFire s3";
                         class Effects

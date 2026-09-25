@@ -20,7 +20,7 @@ class Mission
 	randomSeed=14084611;
 	class Intel
 	{
-		briefingName="СВЯЗНОЙ";
+		briefingName="йЂљдїЎе…µ";
 		day=7;
 		hour=14;
 		minute=5;
@@ -3193,7 +3193,7 @@ class Mission
 					formation="WEDGE";
 					speed="NORMAL";
 					combat="COMBAT";
-					description="Обнаружить и уничтожить противника";
+					description="еЏ‘зЋ°е№¶ж¶€зЃ­ж•Њдєє";
 					class Effects
 					{
 					};
@@ -3315,7 +3315,7 @@ class Mission
 					position[]={4779.007324,155.786545,7218.554199};
 					placement=30.000000;
 					type="GETOUT";
-					description="Обнаружить и уничтожить противника";
+					description="еЏ‘зЋ°е№¶ж¶€зЃ­ж•Њдєє";
 					class Effects
 					{
 					};
@@ -3328,7 +3328,7 @@ class Mission
 					formation="WEDGE";
 					speed="NORMAL";
 					combat="COMBAT";
-					description="Обнаружить и уничтожить противника";
+					description="еЏ‘зЋ°е№¶ж¶€зЃ­ж•Њдєє";
 					class Effects
 					{
 					};
@@ -4605,7 +4605,7 @@ class Mission
 		{
 			position[]={4938.663574,159.029999,6975.506348};
 			name="oficer";
-			text="Дежурный офицер";
+			text="еЂјзЏ­е†›е®";
 			type="Empty";
 			colorName="ColorRed";
 		};
@@ -4613,7 +4613,7 @@ class Mission
 		{
 			position[]={4463.886230,15.164999,9493.564453};
 			name="gener";
-			text="Штаб миротворческих сил";
+			text="з»ґе’ЊйѓЁйџеЏёд»¤йѓЁ";
 			type="Empty";
 			colorName="ColorRed";
 		};
@@ -4621,7 +4621,7 @@ class Mission
 		{
 			position[]={4926.605957,159.029999,6922.990234};
 			name="base1";
-			text="База в Монтигнаке";
+			text="и’™и’‚е°јдєље…‹еџєењ°";
 			type="Marker";
 			colorName="ColorRed";
 		};
@@ -4629,7 +4629,7 @@ class Mission
 		{
 			position[]={4489.999023,15.164999,9442.338867};
 			name="base2";
-			text="База в Меуксе";
+			text="й»е…‹ж–Їеџєењ°";
 			type="Marker";
 			colorName="ColorRed";
 		};
@@ -4662,7 +4662,7 @@ class Mission
 			activationBy="EAST";
 			activationType="NOT PRESENT";
 			age="UNKNOWN";
-			text="бандиты бегут к монтигнаку";
+			text="еЊЄеѕ’ж­ЈйЂѓеђ‘и’™и’‚е°јдєље…‹";
 			expCond="this && ambush";
 			class Effects
 			{
@@ -4678,7 +4678,7 @@ class Mission
 			timeoutMid=2.000000;
 			timeoutMax=2.000000;
 			age="UNKNOWN";
-			text="отсоеденить игрока от группы";
+			text="и®©зЋ©е®¶и„±з¦»е°Џйџ";
 			expCond="ambush";
 			expActiv="[player] join grpnull";
 			class Effects
@@ -4694,7 +4694,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=15;
-			text="запускаем мувик с докладом игрока";
+			text="ж’­ж”ѕзЋ©е®¶жЉҐе‘Љзљ„иї‡ењєеЉЁз”»";
 			expCond="this && speed vehicle gamer == 0 && speed gamer == 0 && !(gamer in c1) && !(gamer in c2) && !(gamer in c3) && !(gamer in c4) && !(gamer in c5) && !(gamer in ural1) && !(gamer in ural2) && !(gamer in uaz) && !(gamer in pv1) && !(gamer in pv2) && !(gamer in t1) && !(gamer in t2)";
 			expActiv="[] exec ""ingameintro0.sqs""";
 			class Effects
@@ -4707,7 +4707,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="остановить водителей";
+			text="и®©еЏёжњєеЃњиЅ¦";
 			expCond="ambush";
 			expActiv="driver pv1 stop true; driver pv2 stop true";
 			class Effects
@@ -4915,7 +4915,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=1;
-			text="взрыв колонны";
+			text="иЅ¦йџз€†з‚ё";
 			expActiv="sm1 = ""Shell105"" camCreate [getpos ural1 select 0, getpos ural1 select 1, getpos ural1 select 2]; sm1 = ""Shell105"" camCreate [getpos ural1 select 0, getpos ural1 select 1, (getpos ural1 select 2) + 3]; ambush=true";
 			class Effects
 			{
@@ -4931,7 +4931,7 @@ class Mission
 			timeoutMax=180.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="атака бандитами монтиньяка по времени";
+			text="жЊ‰ж—¶й—ґи§¦еЏ‘еЊЄеѕ’иї›ж”»и’™и’‚е°јдєље…‹";
 			expCond="ambush";
 			class Effects
 			{
@@ -4951,7 +4951,7 @@ class Mission
 			timeoutMax=5.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="проигрыш по первому типу";
+			text="з¬¬дёЂз§Ќе¤±иґҐе€¤е®љ";
 			expCond="this && ambush && !part2";
 			expActiv="part2failed=true";
 			class Effects
@@ -4994,7 +4994,7 @@ class Mission
 			timeoutMax=600.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="проигрыш по третьему типу";
+			text="з¬¬дё‰з§Ќе¤±иґҐе€¤е®љ";
 			expCond="part2 && !part3";
 			expActiv="part3failed=true";
 			class Effects
@@ -5008,7 +5008,7 @@ class Mission
 			b=180.000000;
 			activationBy="GUER";
 			age="UNKNOWN";
-			text="счетчик резистов";
+			text="жЉµжЉ—йµиђҐи®Ўж•°е™Ё";
 			name="cres";
 			class Effects
 			{
@@ -5024,7 +5024,7 @@ class Mission
 			timeoutMax=30.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="победа CADET";
+			text="CADETпјљиѓње€©";
 			expCond="cadetMode && (resistance countSide list cres < 6) && part4";
 			expActiv="[] exec ""pobeda.sqs""";
 			class Effects
@@ -5049,7 +5049,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="перенос резистов";
+			text="иЅ¬з§»жЉµжЉ—йµиђҐеЌ•дЅЌ";
 			expCond="part4";
 			expActiv="[] exec ""rsperenos.sqs""";
 			class Effects
@@ -5074,7 +5074,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="подрезаем скил танку";
+			text="дё‹и°ѓеќ¦е…‹жЉЂиѓЅ";
 			expCond="cadetMode";
 			expActiv="tank3 setSkill 0.25";
 			class Effects
@@ -5087,7 +5087,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="подрезаем скил танку";
+			text="дё‹и°ѓеќ¦е…‹жЉЂиѓЅ";
 			expCond="cadetMode";
 			expActiv="tank5 setSkill 0.3";
 			class Effects
@@ -6031,7 +6031,7 @@ class Mission
 			timeoutMax=60.000000;
 			age="UNKNOWN";
 			idVehicle=15;
-			text="на трибунал";
+			text="йЂЃдє¤е†›дє‹жі•еє­";
 			expCond="this && part4 && lastfight && (resistance countSide list cres > 6)";
 			expActiv="[] exec ""loosed.sqs""";
 			class Effects
@@ -6046,7 +6046,7 @@ class Mission
 			activationBy="MEMBER";
 			age="UNKNOWN";
 			idVehicle=166;
-			text="проверка на начало боя в Монтигнаке для трибунала";
+			text="дёєе†›дє‹жі•еє­жЈЂжџҐи’™и’‚е°јдєље…‹ж€ж–—жЇеђ¦ж‰“е“Ќ";
 			expCond="this && count units group grp3 < 8";
 			expActiv="lastfight=true";
 			class Effects
@@ -6060,7 +6060,7 @@ class Mission
 			b=0.000000;
 			type="END6";
 			age="UNKNOWN";
-			text="трибунал";
+			text="е†›дє‹жі•еє­";
 			expCond="loosed2";
 			class Effects
 			{
@@ -6188,7 +6188,7 @@ class Mission
 			timeoutMax=10.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="направить игрока в Монтигнак";
+			text="жЉЉзЋ©е®¶жґѕеѕЂи’™и’‚е°јдєље…‹";
 			expCond="ambush";
 			expActiv="gamer domove getpos of";
 			class Effects
@@ -6541,7 +6541,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=157;
-			text="телепорт";
+			text="дј йЂЃ";
 			expActiv="[] exec ""teleport.sqs""";
 			class Effects
 			{
@@ -6557,7 +6557,7 @@ class Mission
 			timeoutMax=30.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="победа VETERAN";
+			text="VETERANпјљиѓње€©";
 			expCond="!cadetMode && (resistance countSide list cres < 3) && part4";
 			expActiv="[] exec ""pobeda.sqs""";
 			class Effects

@@ -16,7 +16,7 @@ class Mission
 	randomSeed=8731139;
 	class Intel
 	{
-		briefingName="СОННОЕ ЦАРСТВО";
+		briefingName="жІ‰зќЎд№‹е›Ѕ";
 		day=8;
 		hour=5;
 		minute=37;
@@ -129,7 +129,7 @@ class Mission
 				{
 					position[]={4822.021484,16.334999,3991.661133};
 					combat="AWARE";
-					description="Пост №1";
+					description="1еЏ·е“Ёж‰Ђ";
 					synchronizations[]={1};
 					class Effects
 					{
@@ -139,7 +139,7 @@ class Mission
 				class Item2
 				{
 					position[]={5128.929199,16.334999,3888.892090};
-					description="Пост №2";
+					description="2еЏ·е“Ёж‰Ђ";
 					synchronizations[]={2};
 					class Effects
 					{
@@ -149,7 +149,7 @@ class Mission
 				class Item3
 				{
 					position[]={5717.506348,9.702207,3414.114502};
-					description="Пост №3";
+					description="3еЏ·е“Ёж‰Ђ";
 					synchronizations[]={3};
 					class Effects
 					{
@@ -159,7 +159,7 @@ class Mission
 				class Item4
 				{
 					position[]={5150.143066,16.334999,3999.785156};
-					description="Пост №4";
+					description="4еЏ·е“Ёж‰Ђ";
 					synchronizations[]={4};
 					class Effects
 					{
@@ -169,7 +169,7 @@ class Mission
 				class Item5
 				{
 					position[]={5082.547852,16.334999,3997.269775};
-					description="Доклад";
+					description="жЉҐе‘Љ";
 					synchronizations[]={5};
 					class Effects
 					{
@@ -4054,7 +4054,7 @@ class Mission
 		{
 			position[]={5136.479980,16.334999,3888.009033};
 			name="Post2";
-			text="Пост №2";
+			text="2еЏ·е“Ёж‰Ђ";
 			type="Dot";
 			colorName="ColorGreen";
 		};
@@ -4062,7 +4062,7 @@ class Mission
 		{
 			position[]={5717.534180,9.703096,3412.346191};
 			name="Post3";
-			text="Пост №3";
+			text="3еЏ·е“Ёж‰Ђ";
 			type="Dot";
 			colorName="ColorGreen";
 		};
@@ -4070,7 +4070,7 @@ class Mission
 		{
 			position[]={5154.973145,16.334999,3998.896729};
 			name="Post4";
-			text="Пост №4";
+			text="4еЏ·е“Ёж‰Ђ";
 			type="Dot";
 			colorName="ColorGreen";
 		};
@@ -4078,7 +4078,7 @@ class Mission
 		{
 			position[]={4822.234863,16.334999,3996.991455};
 			name="Post1";
-			text="Пост №1";
+			text="1еЏ·е“Ёж‰Ђ";
 			type="Dot";
 			colorName="ColorGreen";
 			angle=-88.797478;
@@ -4087,7 +4087,7 @@ class Mission
 		{
 			position[]={5092.827148,20.466064,3996.569824};
 			name="shtab";
-			text="Штаб";
+			text="еЏёд»¤йѓЁ";
 			type="Flag1";
 			colorName="ColorGreen";
 		};
@@ -4247,7 +4247,7 @@ class Mission
 			activationBy="ALPHA";
 			repeating=1;
 			age="UNKNOWN";
-			text="Тревога!";
+			text="и­¦жЉҐпјЃ";
 			expActiv="[] exec ""trevoga.sqs""";
 			class Effects
 			{
@@ -4286,7 +4286,7 @@ class Mission
 			b=0.000000;
 			repeating=1;
 			age="UNKNOWN";
-			text="Доклад";
+			text="жЉҐе‘Љ";
 			expCond="Up distance ofser < 5 and (not (up in ural))";
 			expActiv="[] exec ""doklad.sqs""";
 			class Effects
@@ -4379,7 +4379,7 @@ class Mission
 			class Effects
 			{
 				titleType="TEXT";
-				title="Вы несправляетесь с порученной вам задачей.";
+				title="дЅ д»¬ж— жі•е®Њж€ђеЏ—йў†зљ„д»»еЉЎгЂ‚";
 			};
 		};
 		class Item19
@@ -4457,7 +4457,7 @@ class Mission
 			timeoutMax=3.000000;
 			type="END2";
 			age="UNKNOWN";
-			text="Конец - нет доклада";
+			text="з»“жќџ - жњЄж”¶е€°жЉҐе‘Љ";
 			expCond="proval";
 			class Effects
 			{
@@ -4499,7 +4499,7 @@ class Mission
 			class Effects
 			{
 				titleType="TEXT";
-				title="Вы прозевали нападение";
+				title="дЅ д»¬жІЎжњ‰еЇџи§‰ж•Њдєєзљ„иї›ж”»";
 			};
 		};
 		class Item27
@@ -4508,7 +4508,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="регулятор скила";
+			text="жЉЂиѓЅи°ѓиЉ‚е™Ё";
 			expCond="Wpoteri > 20 and (cadetMode)";
 			expActiv="Wskill = 0.4";
 			class Effects
@@ -4521,7 +4521,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="регулятор скила";
+			text="жЉЂиѓЅи°ѓиЉ‚е™Ё";
 			expCond="Wpoteri > 30 and (cadetMode)";
 			expActiv="Wskill = 0.7";
 			class Effects
@@ -4537,7 +4537,7 @@ class Mission
 			timeoutMid=20.000000;
 			timeoutMax=20.000000;
 			age="UNKNOWN";
-			text="запись после доклада";
+			text="жЉҐе‘ЉеђЋзљ„еЅ•йџі";
 			expCond="doklad";
 			expActiv="savegame";
 			class Effects
@@ -4554,7 +4554,7 @@ class Mission
 			timeoutMax=10.000000;
 			type="END3";
 			age="UNKNOWN";
-			text="Конец - не заметил врага";
+			text="з»“жќџ - жњЄеЏ‘зЋ°ж•Њдєє";
 			expCond="proval2";
 			class Effects
 			{
@@ -4580,7 +4580,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="регулятор скила";
+			text="жЉЂиѓЅи°ѓиЉ‚е™Ё";
 			expCond="Wpoteri > 15 and (! cadetMode)";
 			expActiv="Wskill = 0.7";
 			class Effects
@@ -4593,7 +4593,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="регулятор скила";
+			text="жЉЂиѓЅи°ѓиЉ‚е™Ё";
 			expCond="Wpoteri > 30 and (! cadetMode)";
 			expActiv="Wskill = 0.9";
 			class Effects

@@ -25,7 +25,7 @@ class Mission
 	randomSeed=10840067;
 	class Intel
 	{
-		briefingName="ПЕРЕХВАТ";
+		briefingName="ж‹¦ж€Є";
 		startWeather=0.000000;
 		startFog=0.124562;
 		forecastWeather=0.343421;
@@ -4071,7 +4071,7 @@ class Mission
 		{
 			position[]={1279.116089,65.594803,5856.246582};
 			name="kon_start";
-			text="Точка отправления ""пассажира""";
+			text="е‡єеЏ‘з‚№ ""д№е®ў""";
 			type="Start";
 			colorName="ColorBlack";
 			angle=-240.255005;
@@ -4080,7 +4080,7 @@ class Mission
 		{
 			position[]={5022.152344,16.334999,3990.678467};
 			name="finish_obj";
-			text="Вероятное место прибытия ""пассажира""";
+			text="еЏЇиѓЅе€°иѕѕењ°з‚№ ""д№е®ў""";
 			type="Unknown";
 			colorName="ColorBlack";
 		};
@@ -4160,7 +4160,7 @@ class Mission
 		{
 			position[]={2604.115479,84.448036,5460.110840};
 			name="stop_obj";
-			text="Место временной стоянки ""пассажира""";
+			text="дёґж—¶еЃњиЅ¦з‚№ ""д№е®ў""";
 			type="Flag";
 			colorName="ColorBlack";
 		};
@@ -4189,7 +4189,7 @@ class Mission
 		{
 			position[]={2702.287354,7.726545,3884.302002};
 			name="start_east";
-			text="Место высадки";
+			text="дё‹иЅ¦ењ°з‚№";
 			type="Start";
 			colorName="ColorRed";
 			angle=-310.443115;
@@ -4247,7 +4247,7 @@ class Mission
 		{
 			position[]={4879.814941,42.278618,5732.125000};
 			name="east_extr";
-			text="Точка подбора";
+			text="жЋҐеє”з‚№";
 			type="Empty";
 			colorName="ColorRed";
 		};
@@ -4268,7 +4268,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="убираем вертолет поддержки";
+			text="з§»й™¤ж”ЇжЏґз›ґеЌ‡жњє";
 			expCond="ver_sup distance ver_sup_pos <= 200";
 			expActiv="deletevehicle ver_sup";
 			class Effects
@@ -4284,7 +4284,7 @@ class Mission
 			activationType="WEST D";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="обнаружена группа селиванова";
+			text="еЏ‘зЋ°и°ўе€©з“¦иЇєе¤«е°Џз»„";
 			expActiv="obnarugenu=true; [] exec ""wg1_2rasklin.sqs""; [wg1,udav,50] exec ""pogonya.sqs""; [wg2,udav,50] exec ""pogonya.sqs""; [m1,udav,150] exec ""pogonya.sqs""";
 			class Effects
 			{
@@ -4296,7 +4296,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="заправка вертолета и отлет генерала";
+			text="з›ґеЌ‡жњєеЉ жІ№пјЊе°†е†›иµ·йЈћз¦»ејЂ";
 			expCond="passagir in ver_ex";
 			expActiv="ver_ex setfuel 1";
 			class Effects
@@ -4313,7 +4313,7 @@ class Mission
 			timeoutMax=5.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="высадка генерала из хаммера";
+			text="е°†е†›д»Ћж‚Ќй©¬дё‹иЅ¦";
 			expCond="pinmorton";
 			expActiv="unassignVehicle passagir; passagir action [""GETOUT"",hummer2]; passagir setbehaviour ""AWARE""; passagir setcombatmode ""BLUE""; passagir assignAsCargo ver_ex; [passagir] orderGetIn true";
 			class Effects
@@ -4330,7 +4330,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=86;
-			text="проигрыш: генерал улетел";
+			text="е¤±иґҐпјље°†е†›йЈћиµ°дє†";
 			expActiv="[] exec ""lost2.sqs""";
 			class Effects
 			{
@@ -4345,7 +4345,7 @@ class Mission
 			activationType="WEST D";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="обнаружена группа селиванова";
+			text="еЏ‘зЋ°и°ўе€©з“¦иЇєе¤«е°Џз»„";
 			expActiv="obnarugenu=true; t1 move getpos udav; t1 setcombatmode ""RED""; m2 move getpos udav";
 			class Effects
 			{
@@ -4360,7 +4360,7 @@ class Mission
 			activationType="WEST D";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="обнаружена группа селиванова";
+			text="еЏ‘зЋ°и°ўе€©з“¦иЇєе¤«е°Џз»„";
 			expActiv="obnarugenu=true; [] exec ""wg3_4_5rasklin.sqs""; [wg3,udav,50] exec ""pogonya.sqs""; [wg4,udav,50] exec ""pogonya.sqs""; [wg5,udav,50] exec ""pogonya.sqs""; t5 move getpos udav";
 			class Effects
 			{
@@ -4375,7 +4375,7 @@ class Mission
 			activationType="WEST D";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="обнаружена группа селиванова";
+			text="еЏ‘зЋ°и°ўе€©з“¦иЇєе¤«е°Џз»„";
 			expActiv="obnarugenu=true; m3 move getpos udav; m4 move getpos udav; [] exec ""wg6_7rasklin.sqs""; [wg6,udav,100] exec ""pogonya""; [wg7,udav,100] exec ""pogonya""; t6 move getpos udav";
 			class Effects
 			{
@@ -4387,7 +4387,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="увеличить скорость из-за обнаружения селиванова";
+			text="е› еЏ‘зЋ°и°ўе€©з“¦иЇєе¤«иЂЊеЉ еї«йЂџеє¦";
 			expCond="r_obnarugenu";
 			expActiv="driver1 setspeedmode ""FULL""";
 			class Effects
@@ -4400,7 +4400,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="стартует группа десанта по захвату селиванова";
+			text="жЉ“жЌ•и°ўе€©з“¦иЇєе¤«зљ„з©єй™ЌзЄЃе‡»з»„ејЂе§‹иЎЊеЉЁ";
 			expCond="obnarugenu";
 			expActiv="ver_at setfuel 1";
 			class Effects
@@ -4413,7 +4413,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="убираем вертолет поддержки";
+			text="з§»й™¤ж”ЇжЏґз›ґеЌ‡жњє";
 			expCond="ver_at distance ver_at_base <= 200";
 			expActiv="deletevehicle ver_at";
 			class Effects
@@ -4478,7 +4478,7 @@ class Mission
 			activationType="WEST D";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="триггер сопровождения пассажира";
+			text="д№е®ўжЉ¤йЂЃи§¦еЏ‘е™Ё";
 			name="soprovogdenie";
 			expActiv="obnarugenu=true";
 			class Effects
@@ -4491,7 +4491,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="вытащить полковника из машины";
+			text="жЉЉдёЉж Ўд»ЋиЅ¦й‡Њж‹‰е‡єжќҐ";
 			expCond="player distance hummer2 <= 3.5 && !alive passagir && passagir in hummer2 && getDammage hummer2 < 1";
 			expActiv="player addaction [localize ""STRM_action1"", ""search_out.sqs""]";
 			class Effects
@@ -4507,7 +4507,7 @@ class Mission
 			activationType="WEST D";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="обнаружена группа селиванова";
+			text="еЏ‘зЋ°и°ўе€©з“¦иЇєе¤«е°Џз»„";
 			expActiv="obnarugenu=true";
 			class Effects
 			{
@@ -4523,7 +4523,7 @@ class Mission
 			timeoutMax=1.000000;
 			interruptable=1;
 			age="UNKNOWN";
-			text="полковник убит: обект 1 выполнен";
+			text="дёЉж Ўиў«е‡»жЇ™пјљз›®ж ‡1е®Њж€ђ";
 			expCond="!alive passagir";
 			expActiv="""0"" objstatus ""Done""; udav say ""ud_brek1""";
 			class Effects
@@ -4536,7 +4536,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="запускаем скрипт проверки посадки в грузовик";
+			text="еђЇеЉЁжЈЂжџҐжЇеђ¦з™»дёЉеЌЎиЅ¦зљ„и„љжњ¬";
 			expCond="this && doctaken";
 			expActiv="[] exec ""happyend.sqs""";
 			class Effects
@@ -4550,7 +4550,7 @@ class Mission
 			b=0.000000;
 			type="END1";
 			age="UNKNOWN";
-			text="миссия выполнена: конец";
+			text="д»»еЉЎе®Њж€ђпјљз»“жќџ";
 			expCond="happyend";
 			class Effects
 			{
@@ -4562,7 +4562,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="обыск пассажира";
+			text="жђњжџҐд№е®ў";
 			expCond="player distance passagir < 2 && !alive passagir && !(passagir in hummer2)";
 			expActiv="player addaction [localize ""STRM_action2"", ""search.sqs""]";
 			class Effects
@@ -4591,7 +4591,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="провал миссии";
+			text="д»»еЉЎе¤±иґҐ";
 			expCond="passagir in hummer2 && getDammage hummer2 >= 1 && !alive passagir";
 			expActiv="[] exec ""lost.sqs""";
 			class Effects
@@ -4605,7 +4605,7 @@ class Mission
 			b=0.000000;
 			type="END2";
 			age="UNKNOWN";
-			text="доки уничтожены";
+			text="ж–‡д»¶е·Ій”ЂжЇЃ";
 			expCond="proigral";
 			class Effects
 			{
@@ -4617,7 +4617,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="провал миссии 2: пассажир улетел";
+			text="д»»еЉЎе¤±иґҐ2пјљд№е®ўйЈћиµ°дє†";
 			expActiv="[] exec ""lost2.sqs""";
 			class Effects
 			{
@@ -4630,7 +4630,7 @@ class Mission
 			b=0.000000;
 			type="END3";
 			age="UNKNOWN";
-			text="пассажир улетел";
+			text="д№е®ўйЈћиµ°дє†";
 			expCond="proigral2";
 			class Effects
 			{
@@ -4642,7 +4642,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="пассажир быстро уезжает при нападении";
+			text="йЃ‡иў­ж—¶д№е®ўиї…йЂџж’¤з¦»";
 			expCond="obnarugenu && passagir in hummer2 && driver2 in hummer2 && udav distance passagir < 300";
 			expActiv="[driver2] join passagir; hummer2 lock true; passagir setSpeedMode ""FULL""; passagir setBehaviour ""CARELESS""";
 			class Effects
@@ -4657,7 +4657,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=1;
-			text="анлок хаммер";
+			text="и§Јй”Ѓж‚Ќй©¬";
 			expActiv="hummer2 lock false";
 			class Effects
 			{
@@ -4671,7 +4671,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=86;
-			text="отсоединяем от группы пассажира водителя";
+			text="жЉЉеЏёжњєд»Ћд№е®ўе°Џз»„дё­е€†з¦»е‡єжќҐ";
 			expCond="this && !(passagir in hummer2)";
 			expActiv="[driver2] join grpNull; pinmorton2=true";
 			class Effects
@@ -4684,7 +4684,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="пассажир утонул";
+			text="д№е®ўжєєж°ґиє«дєЎ";
 			expCond="getPos passagir select 2 < - 0.3 && !doctaken";
 			expActiv="[] exec ""lost.sqs""";
 			class Effects
@@ -4724,7 +4724,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=0;
-			text="пасс приехал";
+			text="д№е®ўжЉµиѕѕ";
 			expCond="this && !obnarugenu";
 			expActiv="inf sideRadio ""radio1_0""";
 			class Effects
@@ -4740,7 +4740,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=0;
-			text="пасс выезжает";
+			text="д№е®ўе‡єеЏ‘";
 			expCond="this && !obnarugenu";
 			expActiv="inf sideRadio ""radio1_1""";
 			class Effects
@@ -4791,7 +4791,7 @@ class Mission
 			activationBy="MEMBER";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="запускаем скрипт проверки посадки в грузовик";
+			text="еђЇеЉЁжЈЂжџҐжЇеђ¦з™»дёЉеЌЎиЅ¦зљ„и„љжњ¬";
 			expCond="this && doctaken";
 			expActiv="backuped=true";
 			class Effects
@@ -4804,7 +4804,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="убираем затемнение в случае смерти";
+			text="ж­»дєЎж—¶еЏ–ж¶€й»‘е±Џ";
 			expCond="!alive udav";
 			expActiv="titleCut ["""",""BLACK IN"",0]";
 			class Effects
@@ -4817,7 +4817,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="прибаутки удава";
+			text="иџ’и›‡зљ„дїЏзљ®иЇќ";
 			expCond="udav knowsAbout hummer2 >= 3";
 			expActiv="udav say ""ud_firm""";
 			class Effects
@@ -4833,7 +4833,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="сбились с курса";
+			text="еЃЏз¦»и€Єзєї";
 			expCond="this && doctaken";
 			expActiv="udav say ""ud_zablud1""";
 			class Effects
@@ -4849,7 +4849,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="сбились с курса";
+			text="еЃЏз¦»и€Єзєї";
 			expCond="this && doctaken";
 			expActiv="udav say ""ud_zablud1""";
 			class Effects
@@ -4865,7 +4865,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=20;
-			text="сбились с курса";
+			text="еЃЏз¦»и€Єзєї";
 			expCond="this && doctaken";
 			expActiv="udav say ""ud_zablud1""";
 			class Effects
@@ -4880,7 +4880,7 @@ class Mission
 			activationBy="VEHICLE";
 			age="UNKNOWN";
 			idVehicle=144;
-			text="погоня вертолета";
+			text="з›ґеЌ‡жњєиїЅйЂђ";
 			expActiv="ver_at setBehaviour ""CARELESS""; ver_at move getpos ver_at_move";
 			class Effects
 			{

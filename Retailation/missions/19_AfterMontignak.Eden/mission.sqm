@@ -17,7 +17,7 @@ class Mission
 	randomSeed=3274243;
 	class Intel
 	{
-		briefingName="ОХОТА";
+		briefingName="з‹©зЊЋ";
 		startWeather=0.656279;
 		startFog=0.237469;
 		forecastWeather=1.000000;
@@ -754,7 +754,7 @@ class Mission
 				{
 					position[]={4539.222656,38.915154,6009.095215};
 					combat="SAFE";
-					description="Обыскать заданный район";
+					description="жђњжџҐжЊ‡е®љеЊєеџџ";
 					synchronizations[]={0};
 					class Effects
 					{
@@ -2684,7 +2684,7 @@ class Mission
 		{
 			position[]={4230.503906,37.460320,5759.114746};
 			name="kvadrat";
-			text="Ваш квадрат";
+			text="дЅ зљ„ж–№ж ј";
 			type="Dot";
 		};
 		class Item2
@@ -3087,14 +3087,14 @@ class Mission
 		{
 			position[]={5238.629395,110.999840,4541.601563};
 			name="Ea64";
-			text="зачистка";
+			text="жё…е‰ї";
 			type="Flag";
 		};
 		class Item39
 		{
 			position[]={5064.354980,86.772125,4780.421387};
 			name="4otd";
-			text="4е отделение";
+			text="з¬¬4зЏ­";
 			type="Join";
 			colorName="ColorGreen";
 		};
@@ -3102,7 +3102,7 @@ class Mission
 		{
 			position[]={4541.529297,60.045746,6232.711914};
 			name="sp1";
-			text="СП1";
+			text="SP1";
 			type="Flag1";
 			colorName="ColorGreen";
 		};
@@ -3110,7 +3110,7 @@ class Mission
 		{
 			position[]={4121.979004,80.760750,5306.473145};
 			name="sp2";
-			text="СП2";
+			text="SP2";
 			type="Flag1";
 			colorName="ColorGreen";
 		};
@@ -3546,8 +3546,8 @@ class Mission
 			age="UNKNOWN";
 			idVehicle=39;
 			expCond="this and (alive Up)";
-			expActiv="hint ""Вы вошли в квадрат поиска""";
-			expDesactiv="hint ""Вы покинули квадрат поиска""";
+			expActiv="hint ""дЅ е·Іиї›е…ҐжђњзґўеЊєеџџ""";
+			expDesactiv="hint ""дЅ е·Із¦»ејЂжђњзґўеЊєеџџ""";
 			class Effects
 			{
 			};
@@ -4270,7 +4270,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Сдача";
+			text="з§»дє¤дїи™Џ";
 			expCond="w4 distance bmp < 30";
 			expActiv="[w4] join BMP; ""1"" objStatus ""Done""; plenniy = True";
 			class Effects
@@ -4542,7 +4542,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Пленный убит";
+			text="дїи™Џиў«жќЂ";
 			expCond="(not alive W4) and leader W4 == Up ";
 			expActiv="disbat = ""Monti""; disbat_status = True; saveVar ""disbat""; saveVar ""disbat_status""; ""1"" objStatus ""Failed""";
 			class Effects
@@ -6040,7 +6040,7 @@ class OutroWin
 		{
 			position[]={5238.139160,111.041168,4541.089844};
 			name="Ea64";
-			text="зачистка";
+			text="жё…е‰ї";
 			type="Flag";
 		};
 	};

@@ -20,7 +20,7 @@ class Mission
 	randomSeed=11616259;
 	class Intel
 	{
-		briefingName="КРАСНАЯ ТОЧКА";
+		briefingName="зєўз‚№";
 		day=11;
 		hour=4;
 		minute=0;
@@ -1862,7 +1862,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Красная Точка";
+			text="зєўз‚№";
 			expCond="(nearestObject [BMP, ""LaserTargetW""] distance BMP < 10)";
 			expActiv="[] exec ""dial.sqs""";
 			class Effects
@@ -1927,7 +1927,7 @@ class Mission
 			b=600.000000;
 			activationBy="WEST";
 			age="UNKNOWN";
-			text="счетчик2";
+			text="и®Ўж•°е™Ё2";
 			name="schet2";
 			class Effects
 			{
@@ -1956,7 +1956,7 @@ class Mission
 			timeoutMax=5.000000;
 			type="LOOSE";
 			age="UNKNOWN";
-			text="поражение";
+			text="е¤±иґҐ";
 			expCond="(getDammage tk1 + getDammage tk2 + getDammage tk3 + getDammage tk4 + getDammage bmp) > 3";
 			expActiv="""3"" objStatus ""Failed""";
 			class Effects
@@ -1970,7 +1970,7 @@ class Mission
 			b=600.000000;
 			activationBy="WEST";
 			age="UNKNOWN";
-			text="счетчик1";
+			text="и®Ўж•°е™Ё1";
 			name="schet1";
 			class Effects
 			{
@@ -1998,7 +1998,7 @@ class Mission
 			timeoutMax=20.000000;
 			type="END1";
 			age="UNKNOWN";
-			text="Победа";
+			text="иѓње€©";
 			expCond="(west countside list schet2 < 2)";
 			expActiv="""3"" objStatus ""done""";
 			class Effects
@@ -2014,7 +2014,7 @@ class Mission
 			timeoutMid=3.000000;
 			timeoutMax=3.000000;
 			age="UNKNOWN";
-			text="Забор";
+			text="е›ґж Џ";
 			expCond="(getDammage (object 28091) >= 1 or getDammage (object 28092) >= 1 or getDammage (object 28099) >= 1) and ! bomb";
 			expActiv="storoj say ""zabor""";
 			class Effects
@@ -2040,7 +2040,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Lasernik убит до разговора";
+			text="Lasernik ењЁи°€иЇќе‰Ќиў«жќЂ";
 			expCond="(not alive laser) and !dial";
 			expActiv="Up sideRadio ""rad_10b""; Dej sideRadio ""rad_11b""; Up sideRadio ""rad_12""; las_kom domove (getpos black); ""0"" objstatus ""HIDDEN""; ""1"" objstatus ""ACTIVE""; ""3"" objstatus ""ACTIVE""; ogon1 inflame true;";
 			class Effects
@@ -2056,7 +2056,7 @@ class Mission
 			timeoutMid=6.000000;
 			timeoutMax=6.000000;
 			age="UNKNOWN";
-			text="Забор";
+			text="е›ґж Џ";
 			expCond="(getDammage (object 28091) >= 1 or getDammage (object 28092) >= 1 or getDammage (object 28099) >= 1) and ! bomb";
 			expActiv="up say ""ast_brek2""";
 			class Effects
@@ -2069,7 +2069,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Потери в группе";
+			text="е°Џйџдј¤дєЎ";
 			expCond="count units group up < 4";
 			expActiv="up say ""ast_brek1""";
 			class Effects
@@ -2082,7 +2082,7 @@ class Mission
 			a=0.000000;
 			b=0.000000;
 			age="UNKNOWN";
-			text="Сторож убит до разговора";
+			text="зњ‹е®€ењЁи°€иЇќе‰Ќиў«жќЂ";
 			expCond="(not alive storoj) and rating up < 1500 and !dial";
 			expActiv="up addRating -10000";
 			class Effects
