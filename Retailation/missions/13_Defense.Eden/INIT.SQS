@@ -1,0 +1,55 @@
+astahov setIdentity "Dmitriy"
+
+[] exec "intro.sqs"
+
+0 setfog 0.4
+
+publicvariable "mm_poteri"
+mm_poteri = 0
+
+publicvariable "tanki_poteri"
+tanki_poteri = 0
+
+endwfire=false
+ogr=false
+wataka=false
+pobeda=false
+poragenie=false
+konecmis=false
+westinback=false
+westbackuped=false
+disbat=false
+
+grpt1 = group tank1
+grpt2 = group tank2
+grpi1 = group wg1
+grpi2 = group wg2
+grpi3 = group wg3
+grpi4 = group wg4
+grpi5 = group wg5
+grpi6 = group w_sol1
+grpi7 = group w_sol2
+
+grpt1 allowFleeing 0
+grpt2 allowFleeing 0
+grpi1 allowFleeing 0
+grpi2 allowFleeing 0
+grpi3 allowFleeing 0
+grpi4 allowFleeing 0
+grpi5 allowFleeing 0
+grpi6 allowFleeing 0
+grpi7 allowFleeing 0
+
+"0" objstatus "Active"
+"1" objstatus "Hidden"
+
+?!cadetmode: tank1 removemagazine "Heat105"; tank1 setskill 0.7
+?!cadetmode: tank1_1 removemagazine "Heat105"; tank1 setskill 0.6
+?!cadetmode: tank1_2 removemagazine "Heat105"; tank1 setskill 0.5
+?!cadetmode: tank1_3 removemagazine "Heat105"; tank1 setskill 0.4
+?!cadetmode: tank2 removemagazine "Heat105"; tank1 setskill 0.7
+?!cadetmode: tank2_1 removemagazine "Heat105"; tank1 setskill 0.6
+?!cadetmode: tank2_2 removemagazine "Heat105"; tank1 setskill 0.5
+?!cadetmode: tank2_3 removemagazine "Heat105"; tank1 setskill 0.4
+
+exit

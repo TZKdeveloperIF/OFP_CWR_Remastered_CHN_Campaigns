@@ -1,0 +1,18 @@
+_Mesto = _this select 0
+_napr = _This select 1
+_Ugol = _This select 2
+_vert = _This select 3
+_Ug_vert = _This select 4
+_intensiv = _This select 5
+_sila = _This select 6
+
+
+#start
+?!(ammo1_fire): goto "End1"
+Ch55 = "BulletSilencedSingle" camcreate [getpos _Mesto select 0, getpos _Mesto select 1, (getpos _Mesto select 2) + 2];
+Ch55 setVelocity [sin(_napr - _Ugol/2 + (random _ugol))*_sila, cos(_napr - _Ugol/2 + (random _ugol))*_sila, sin(_vert - _Ug_vert/2 + (random _ug_vert))*_sila];
+~(random _intensiv)
+goto"start"
+
+#End1
+exit

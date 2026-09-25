@@ -1,0 +1,95 @@
+part3=true
+
+setacctime 1.0
+
+titlecut["","black out",1]
+
+0.5 fadesound 0
+~1
+
+?!alive gamer: goto "#ex"
+
+?(gamer in c1) or (gamer in c2) or (gamer in c3) or (gamer in c4) or (gamer in c5) or (gamer in ural1) or (gamer in ural2) or (gamer in t1) or (gamer in t2) or (gamer in pv1) or (gamer in pv2) or (gamer in uaz) or (gamer in r_car1): vehicle gamer setpos getpos pos3
+"2" objstatus "Done"
+dubler setpos [(getpos gubin select 0) - 0, (getpos gubin select 1) - 2, (getpos gubin select 2)]
+dubler setbehaviour "CARELESS"
+dubler switchmove "Stand"
+dubler setdir 0
+dubler stop true
+gubin stop true
+gubin dowatch dubler
+udav dowatch dubler
+
+1 fadesound 1
+
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget dubler
+_camera camsetrelpos [1,-1.5,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~1
+dubler switchmove "EffectStandSalute"
+~1
+dubler switchmove "EffectStandSaluteEnd"
+~1
+dubler say "ingame4_0"
+~3
+
+dubler say "ingame4_1"
+~4.5
+
+_camera camsettarget dubler
+_camera camsetrelpos [2,-1.5,1.3]
+_camera camsetfov 0.500
+_camera camCommit 3
+dubler say "ingame4_2"
+~4.5
+
+_camera camsettarget gubin
+_camera camsetrelpos [0,1,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+gubin say "ingame4_3"
+~5
+
+_camera camsettarget gubin
+_camera camsetrelpos [0,0.7,1.5]
+_camera camsetfov 0.600
+_camera camCommit 1
+gubin say "ingame4_4"
+~5
+
+
+titlecut["","black out",1]
+~1
+
+dubler setpos getpos pos12
+gamer setpos [(getpos gubin select 0) - 0, (getpos gubin select 1) - 2, (getpos gubin select 2)]
+unassignvehicle gamer
+gamer assignascargo bmp3
+
+titlecut["","black in",1]
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+[gamer] join grp3
+
+~1
+part3_1=true
+
+"3" objstatus "Active"
+
+~2
+savegame
+~1
+
+0 fademusic 1
+playmusic "inside_music1_4"
+
+#ex
+exit

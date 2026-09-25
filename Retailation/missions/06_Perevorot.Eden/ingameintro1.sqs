@@ -1,0 +1,54 @@
+
+setacctime 1.0
+titlecut["","black out",1]
+~0.5
+player setpos [(getpos gubin select 0) - 0, (getpos gubin select 1) - 2, (getpos gubin select 2)]
+dubler switchmove "Stand"
+player setpos getpos pos1
+player dowatch gubin
+gubin dowatch player
+udav dowatch player
+~0.5
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget player
+_camera camsetrelpos [0,-1.5,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+player switchmove "EffectStandSalute"
+~1
+player switchmove "EffectStandSaluteEnd"
+
+_camera camsettarget gubin
+_camera camsetrelpos [0,1,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera camsettarget gubin
+_camera camsetrelpos [0,0.7,1.5]
+_camera camsetfov 0.600
+_camera camCommit 1
+~5
+
+udav dowatch gubin
+_camera camsettarget player
+_camera camsetrelpos [0,1,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+[player] join grp3
+
+~2
+part3=true
+
+exit

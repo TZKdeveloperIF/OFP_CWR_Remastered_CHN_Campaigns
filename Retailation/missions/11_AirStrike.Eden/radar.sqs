@@ -1,0 +1,17 @@
+_vulkan = _this select 0
+Playsound "est2"
+?_vulkan == v1: "V1_tochka" setMarkerType "DOT"; "V1_sector" setMarkerSize [1200, 1200]; "V1_sector" setMarkerPos [getpos V1 select 0, getpos V1 select 1]; "V1_tochka" setMarkerPos [getpos V1 select 0, getpos V1 select 1]
+?_vulkan == v2: "V2_tochka" setMarkerType "DOT"; "V2_sector" setMarkerSize [1200, 1200]; "V2_sector" setMarkerPos [getpos V2 select 0, getpos V2 select 1]; "V2_tochka" setMarkerPos [getpos V2 select 0, getpos V2 select 1]
+?_vulkan == v3: "V3_tochka" setMarkerType "DOT"; "V3_sector" setMarkerSize [1200, 1200]; "V3_sector" setMarkerPos [getpos V3 select 0, getpos V3 select 1]; "V3_tochka" setMarkerPos [getpos V3 select 0, getpos V3 select 1]
+?_vulkan == v4: "V4_tochka" setMarkerType "DOT"; "V4_sector" setMarkerSize [1200, 1200]; "V4_sector" setMarkerPos [getpos V4 select 0, getpos V4 select 1]; "V4_tochka" setMarkerPos [getpos V4 select 0, getpos V4 select 1]
+?_vulkan == v5: "V5_tochka" setMarkerType "DOT"; "V5_sector" setMarkerSize [1200, 1200]; "V5_sector" setMarkerPos [getpos V5 select 0, getpos V5 select 1]; "V5_tochka" setMarkerPos [getpos V5 select 0, getpos V5 select 1]
+?_vulkan == v6: "V6_tochka" setMarkerType "DOT";  "V6_tochka" setMarkerPos [getpos V6 select 0, getpos V6 select 1]
+
+#start
+?(_vulkan distance mi > 1001) or (getdammage _vulkan  > 0.9) or (getdammage mi  == 1) or (not (up in mi)): goto "end"
+
+~((_vulkan distance mi)/1000 + 1)
+Playsound "est"
+goto "start"
+#end
+exit

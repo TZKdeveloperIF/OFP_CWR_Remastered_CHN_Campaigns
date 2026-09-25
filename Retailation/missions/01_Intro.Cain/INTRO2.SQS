@@ -1,0 +1,63 @@
+;titlecut["","black in",999999999999999999999999999999999999999999999999]
+;titletext [localize "STR_Load3_3","plain",1]
+;~5
+;titletext [localize "STR_Load3_4","plain",1]
+
+titletext ["","plain",1]
+
+playsound "fx05"
+cutRsc ["Rmedia", "PLAIN", 5]
+~3
+playsound "intro_marsh"
+~2
+
+;titlecut["","black in",1]
+
+;titletext ["","plain",1]
+
+uazed=true
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+astahov switchmove "FXStandDip"
+puzo switchmove "FXStandDip"
+_camera camsettarget camera2_1
+_camera camsetpos [(getpos camera2 select 0) - 0, (getpos camera2 select 1) + 0, (getpos camera2 select 2) + 0.1]
+_camera camsetfov 0.600
+_camera camCommit 0
+~1
+puzo say "intro4_0"
+~2
+
+astahov switchmove "FXStandDip"
+astahov say "intro4_1"
+puzo switchmove "FXStandDip"
+~3
+
+astahov switchmove "FXStandDip"
+puzo switchmove "FXStandDip"
+~3
+
+astahov switchmove "FXStandDip"
+puzo switchmove "FXStandDip"
+_camera camsettarget camera2_2
+_camera camsetpos [(getpos camera2 select 0) - 2, (getpos camera2 select 1) + 0, (getpos camera2 select 2) + 1.6]
+_camera camsetfov 1.000
+_camera camCommit 3
+of1 say "intro4_2"
+
+cutRsc ["P_END", "PLAIN", 5]
+
+~3
+
+astahov switchmove "FXStandDip"
+puzo switchmove "FXStandDip"
+~2
+
+;titlecut["","black out",1]
+;~1
+
+[] exec "intro3.sqs"
+
+exit

@@ -1,0 +1,133 @@
+? disbat == "Monti": out = 10
+_camera = "camera" camCreate (getpos Pk1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Спустя 15 минут.","PLAIN"]
+titleCut ["","BLACK IN",5]
+
+0 FadeMusic 0.5
+Playmusic "inside_music1_14"
+
+_camera camSetTarget tr1
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 1]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~2
+_camera camSetTarget tr2
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 1]
+_camera camSetFOV 0.800
+_camera camCommit 5
+@camCommitted _camera
+
+_camera camSetTarget Up
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 1]
+_camera camSetFOV 0.800
+_camera camCommit 5
+@camCommitted _camera
+
+_camera camSetTarget serj
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 1]
+_camera camSetFOV 0.800
+_camera camCommit 5
+@camCommitted _camera
+
+@out == 1
+serj dowatch Up
+serj say "David00"
+~2
+_camera camSetTarget up
+_camera camSetRelPos [0,0.9,0.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up say "David01"
+~4
+serj say "David02"
+~6
+Up say "David03"
+~5
+serj say "David04"
+~8
+5 FadeMusic 0
+David say "david05"
+_camera camSetTarget david
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 1]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~4
+Up setbehaviour "Aware"
+_camera camSetTarget up
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 1]
+_camera camSetFOV 0.800
+_camera camCommit 1
+@camCommitted _camera
+Up say "David06"
+Up_1 setbehaviour "Aware"
+Up_2 setbehaviour "Aware"
+Up_3 setbehaviour "Aware"
+Up_4 setbehaviour "Aware"
+Up_5 setbehaviour "Aware"
+Up_6 setbehaviour "Combat"
+~3
+serj setbehaviour "Combat"
+Up reveal david
+Up dowatch David
+~1
+serj dowatch David
+Up_1 dowatch David
+Up_2 dowatch David
+Up_3 dowatch David
+Up_4 dowatch David
+Up_5 dowatch David
+Up_6 dowatch David
+~1
+Up setunitpos "up"
+Up domove getpos pos_arest
+
+@(up distance pos_arest < 1) or (up distance pos_arest < 3 and speed up < 0.2)
+up say "David07"
+~2
+_camera camSetTarget david
+_camera camSetRelPos [0,2,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+David action ["drop weapon",David,0,0,"M16"]
+david say "David08"
+~4
+david switchmove "FXStandSurUniv"
+serj setunitpos "up"
+serj setbehaviour "Aware"
+serj domove getpos pos_arest2
+~2
+up say "David09"
+~4
+david say "David10"
+~4
+_camera camSetTarget Up
+_camera camSetRelPos [0,2,1.4]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+up say "David11"
+~4
+@serj distance pos_arest2 < 4
+Up setbehaviour "CARELESS"
+Up setunitpos "Auto"
+Up setspeedMode "Limited"
+up say "david12"
+Up dowatch serj
+~3
+;serj say "david13"
+;~4
+[Up_1,Up_2,Up_3] join Up
+out=4
+~4
+Up domove getpos off
+
+~10
+titleCut ["","BLACK out",5]
+~5
+out = 10
+exit

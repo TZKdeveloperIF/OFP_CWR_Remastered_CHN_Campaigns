@@ -1,0 +1,115 @@
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext [localize "STR_Load4_0","plain",1]
+~5
+titlecut["","black in",1]
+
+playmusic "inside_music1_10"
+1 fademusic 0.5
+
+titletext ["","plain",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+w2 setmimic "Sad"
+w1 setmimic "Angry"
+
+westgo=true
+
+w1 say "intro7_0"
+_camera camsettarget w1
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+~3.5
+
+w1 say "intro7_1"
+_camera camsettarget w1
+_camera camsetrelpos [0.7,0.7,1.65]
+_camera camsetfov 0.500
+_camera camCommit 5
+~8.5
+
+w1 say "intro7_2"
+_camera camsettarget w1
+_camera camsetrelpos [0,4,1.65]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0
+
+_camera camsettarget w1
+_camera camsetrelpos [0,4,1.65]
+_camera camsetfov 0.400
+_camera camCommit 5
+~5
+
+w1 say "intro7_3"
+_camera camsettarget w1
+_camera camsetrelpos [-0.2,-0.5,1.65]
+_camera camsetfov 0.800
+_camera camCommit 0
+~6
+
+w1 say "intro7_4"
+_camera camsettarget w1
+_camera camsetrelpos [0.2,-0.5,1.65]
+_camera camsetfov 0.800
+_camera camCommit 5
+~6
+
+w1 say "intro7_5"
+_camera camsettarget w1
+_camera camsetrelpos [0.3,0.3,1.5]
+_camera camsetfov 0.500
+_camera camCommit 0
+~8
+
+w1 say "intro7_6"
+_camera camsettarget w1
+_camera camsetrelpos [0.1,0.5,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+~2
+
+3 fademusic 0.4
+
+w2 say "intro7_7"
+_camera camsettarget w2
+_camera camsetrelpos [-0.1,0.5,1.65]
+_camera camsetfov 0.700
+_camera camCommit 0
+~3
+
+w2 say "intro7_8"
+_camera camsettarget w2
+_camera camsetrelpos [0.1,0.5,1.65]
+_camera camsetfov 0.700
+_camera camCommit 5
+~5.5
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+w1 say "intro7_9"
+_camera camsettarget w1
+_camera camsetrelpos [0.1,0.5,1.5]
+_camera camsetfov 0.300
+_camera camCommit 0
+
+_camera camsettarget w1
+_camera camsetrelpos [0.1,1.5,1.5]
+_camera camsetfov 0.500
+_camera camCommit 7
+~8
+
+5 fademusic 0
+titlecut["","black out",5]
+~5
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+konec=true
+
+exit

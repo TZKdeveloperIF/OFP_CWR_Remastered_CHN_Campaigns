@@ -1,0 +1,53 @@
+kolesnik removeaction 0
+
+kolesnik say "game1_13"
+~4
+
+k2 say "game1_14"
+~1
+
+titlecut["","black out",1]
+~0.5
+titlecut["","black in",1]
+
+k2 setdir 0
+k2 stop true
+k2 setpos [(getpos abrams1 select 0) + 6, (getpos abrams1 select 1) - 0, getpos abrams1 select 2]
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+?k2 in abrams1: goto "ex"
+k2 switchmove "CombatToMedic"
+~4
+
+trackdone=true
+
+k2 stop false
+
+#ex
+k2 say "game1_14_1"
+hint localize "STRM_hint_2"
+trackdone=true
+exit

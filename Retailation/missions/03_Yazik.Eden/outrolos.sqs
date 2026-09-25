@@ -1,0 +1,27 @@
+gscen = 0
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",5]
+
+_camera camSetTarget up
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+up switchmove "FXStandBug"
+up say "outroL01"
+~6
+up say "outroL02"
+~6
+_camera camSetTarget offser_1
+_camera camSetRelPos [0,0.9,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Offser_1 say "outroL03"
+~4
+~4
+titleCut ["","BLACK OUT",5]
+~5
+scen = 1
+exit

@@ -1,0 +1,145 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Коммандный пункт.\n10 мая, 22.17","PLAIN"]
+titleCut ["","BLACK IN",5]
+_camera camSetTarget gen
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+"zone" setMarkerSize [0, 0]
+
+gen dowatch udav
+udaw  dowatch gen
+gen stop true
+udav stop true
+
+~5
+gen say "intro1"
+~4
+Udav say "intro2"
+~8
+Udav say "intro3"
+~6
+gen say "intro4"
+~2
+
+gen say "intro5"
+_camera camSetTarget t_map
+_camera camSetRelPos  [0,  0.3, 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 3
+titleCut ["","BLACK OUT",3]
+@camCommitted _camera
+#Map
+forceMap true
+mapAnimAdd [0,1, getMarkerPos "Port"]
+mapAnimCommit
+@mapAnimDone
+titleCut ["","BLACK IN",1]
+
+
+mapAnimAdd [2,0.3, getMarkerPos "Port"]
+mapAnimCommit
+@mapAnimDone
+cutRsc ["PhotoZona", "PLAIN", 8]
+~1
+"Port" setMarkerType "Start"
+~1
+Udav say "intro6"
+mapAnimAdd [5,0.3, getMarkerPos "Morton"]
+mapAnimCommit
+@mapAnimDone
+~3
+gen say "intro7"
+mapAnimAdd [2,0.3, getMarkerPos "Tanki_v"]
+mapAnimCommit
+@mapAnimDone
+cutRsc ["PhotoTank", "PLAIN", 8]
+~3
+"Tanki_v" setMarkerType "Unknown"
+~8
+Udav say "intro8"
+~2
+gen say "intro9"
+~11
+
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+forceMap false
+
+Udav say "intro10"
+~2
+gen say "intro11"
+~3
+Udav say "intro12"
+~5
+forceMap true
+~1
+Udav say "intro13"
+mapAnimAdd [5,0.3, getMarkerPos "Monti"]
+mapAnimCommit
+@mapAnimDone
+~2
+
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+forceMap false
+gen say "intro14"
+~3
+Udav say "intro15"
+~8
+gen say "intro16"
+~9
+gen say "intro17"
+~7
+gen say "intro18"
+~9
+gen say "intro19"
+~8
+Udav say "intro20"
+~4
+forceMap true
+mapAnimAdd [0,0.3, getMarkerPos "zone"]
+mapAnimCommit
+@mapAnimDone
+gen say "intro21"
+~3
+"zone" setMarkerSize [2000, 1500]
+~1
+"zone" setMarkerSize [0, 0]
+~1
+"zone" setMarkerSize [2000, 1500]
+~1
+"zone" setMarkerSize [0, 0]
+~1
+"zone" setMarkerSize [2000, 1500]
+~1
+
+gen say "intro22"
+~8
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+forceMap false
+gen say "intro23"
+~9
+gen say "intro24"
+~10
+udav say "intro25"
+~2
+gen say "intro26"
+~2
+
+titleCut ["","BLACK OUT",5]
+~3
+end = true
+exit

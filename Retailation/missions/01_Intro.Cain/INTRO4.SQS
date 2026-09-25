@@ -1,0 +1,76 @@
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext [localize "STR_Load3_6","plain",1]
+~5
+tar_ver setfuel 1
+titlecut["","black in",1]
+
+titletext ["","plain",1]
+
+uazgo=true
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget general1
+_camera camsetrelpos [0,0.7,1.7]
+_camera camsetfov 0.800
+_camera camCommit 0
+general1 say "intro6_0"
+~5
+
+_camera camsettarget general1
+_camera camsetrelpos [1,0.7,1.7]
+_camera camsetfov 0.800
+_camera camCommit 5
+~0.1
+general1 say "intro6_1"
+~5
+
+_camera camsettarget general1
+_camera camsetrelpos [1,1,1.5]
+_camera camsetfov 0.600
+_camera camCommit 5
+~0.1
+general1 say "intro6_2"
+~7.7
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget general1
+_camera camsetrelpos [-1,-1,1.6]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.1
+general1 say "intro6_3"
+~5
+
+_camera camsettarget sel
+_camera camsetrelpos [0,0.7,1.6]
+_camera camsetfov 0.700
+_camera camCommit 0
+~0.1
+sel say "intro6_4"
+~3
+
+_camera camsettarget general1
+_camera camsetrelpos [3,5,1.7]
+_camera camsetfov 0.600
+_camera camCommit 0
+~0.1
+general1 say "intro6_5"
+~5
+
+titlecut["","black out",3]
+~3
+
+
+;_camera cameraeffect ["terminate", "back"]
+;camdestroy _camera
+;
+;konec=true
+
+[] exec "intro4_1.sqs"
+
+exit

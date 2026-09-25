@@ -1,0 +1,15 @@
+
+#start
+~5
+@count (units s1) < 5
+? (not alive S1) or (not alive B4) or (Spoteri > 12): Goto "pause"
+#Resp
+
+_b = "SoldierESaboteur" createUnit [getPos S1baze, group S1, "", B4skill ];
+Spoteri = Spoteri + 1
+goto "start"
+
+
+#pause
+s1 setdammage 1
+exit

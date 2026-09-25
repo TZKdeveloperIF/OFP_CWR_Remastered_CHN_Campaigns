@@ -1,0 +1,60 @@
+
+setacctime 1.0
+enableradio false
+disableuserinput true
+lesniki setcombatmode "BLUE"
+lesniki dowatch gam1
+
+titlecut["","black in",99999999999999999999999999999999]
+titletext [localize "STR_Load1","plain",1]
+~5
+titletext ["","plain down",1]
+
+titlecut["","black in",1]
+
+playmusic "inside_music1_1"
+0 fademusic 1
+
+lesniki switchCamera "gunner"
+~10
+disableuserinput false
+
+titlecut["","black out",1]
+titlecut["","black in",1]
+
+_camera = "camera" camCreate getpos lesniki
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget gam1
+_camera camsetpos [(getpos lesniki select 0) - 0.4, (getpos lesniki select 1) + 1 , (getpos lesniki select 2) + 1.5]
+_camera camsetfov 0.200
+_camera camCommit 1
+~8
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget lesniki
+_camera camsetrelpos [-1,1,1.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~1
+
+_camera camsettarget lesniki
+_camera camsetrelpos [0.3,2,1.3]
+_camera camsetfov 0.800
+_camera camCommit 2
+~2
+
+_camera camsettarget lesniki
+_camera camsetrelpos [0.3,0,1.3]
+_camera camsetfov 0.800
+_camera camCommit 0.5
+
+titlecut["","black out",0.4]
+~1
+
+[] exec "intro1.sqs"
+
+exit

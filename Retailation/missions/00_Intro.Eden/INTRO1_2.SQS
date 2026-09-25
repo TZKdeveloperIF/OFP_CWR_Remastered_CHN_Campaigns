@@ -1,0 +1,60 @@
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+;бой с полицейскими
+_camera camsettarget camera2
+_camera camsetpos [(getpos ecar1 select 0) - 0.7, (getpos ecar1 select 1) - 1.9, (getpos ecar1 select 2) + 1]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.01
+
+_camera camsettarget camera2
+_camera camsetpos [(getpos ecar1 select 0) - 1, (getpos ecar1 select 1) - 2, (getpos ecar1 select 2) + 1.55]
+_camera camsetfov 0.800
+_camera camCommit 5
+~5
+
+_camera camsettarget camera2
+_camera camsetpos [(getpos ecar1 select 0) + 1.8, (getpos ecar1 select 1) - 0, (getpos ecar1 select 2) + 1.55]
+_camera camsetfov 0.800
+_camera camCommit 5
+~5
+
+playsound "fx05"
+titlecut["","black out",1]
+~1
+policecar_pas setdammage 1
+(driver policecar) setdammage 1
+police1 setdammage 1
+titlecut["","black in",1]
+
+_camera camsettarget police1
+_camera camsetrelpos [1,0,3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+_camera camsettarget policecar
+_camera camsetrelpos [1,0,3]
+_camera camsetfov 0.800
+_camera camCommit 5
+~5
+
+_camera camsettarget pv1
+_camera camsetrelpos [0,-10,3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+_camera camsettarget pv1
+_camera camsetrelpos [3,-8,2]
+_camera camsetfov 0.800
+_camera camCommit 5
+~13
+5 fadeMusic 0
+~7
+
+[] exec "intro1_3.sqs"
+
+exit

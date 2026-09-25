@@ -1,0 +1,21 @@
+titlecut["","black out",3]
+5 fadesound 0
+~5
+
+titletext [localize "STRM_Load_6","plain",1]
+etank1 setpos getpos tp1
+bmp3 setpos getpos tp1_1
+bmp4 setpos getpos tp1_2
+~5
+
+5 fadesound 1
+~2
+
+part4=true
+
+titlecut["","black in",3]
+~7
+
+savegame
+
+exit

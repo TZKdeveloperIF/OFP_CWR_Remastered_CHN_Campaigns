@@ -1,0 +1,12 @@
+endwfire=false
+
+#start
+_ugol1 = random (360)
+_toch1 = random (100)
+target1 say "snaryad"
+~1.5
+_sn1 = "Heat125" camcreate [(getpos target1 select 0) + _toch1*cos(_ugol1),(getpos target1 select 1) + _toch1*0.7*sin(_ugol1), 2]
+~5
+?!endwfire: goto "start"
+
+exit

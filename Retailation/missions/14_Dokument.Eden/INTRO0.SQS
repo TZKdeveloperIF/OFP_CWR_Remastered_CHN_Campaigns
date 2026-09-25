@@ -1,0 +1,174 @@
+cam2 setpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 1.3]
+
+setacctime 1.0
+
+titlecut["","black in",9999999999999999999999999999999999999999999999999]
+;titletext [localize "STR_Load1","plain",1]
+~3
+titlecut["","black in",1]
+
+gen stop true
+gen dowatch sel
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget cam2
+_camera camsetpos [(getpos cam1 select 0),(getpos cam1 select 1),(getpos cam1 select 2)+ 1.3]
+_camera camsetfov 0.300
+_camera camCommit 0
+
+sel say "intro0_1"
+~1
+
+sel switchmove "EffectStandSalute"
+~1
+sel switchmove "EffectStandSaluteEnd"
+~1.5
+
+gen switchmove "FXStandToTable"
+~1
+gen say "intro0_2"
+~1
+
+sel switchmove "FXToTable"
+~2
+
+_camera camsettarget gen
+_camera camsetrelpos [0,0.6,1.2]
+_camera camsetfov 0.800
+_camera camCommit 5
+~2
+gen say "intro0_3"
+gen switchmove "FXSitLeftHandDown"
+~4
+
+_camera camsettarget gen
+_camera camsetrelpos [-0.5,0.8,1.2]
+_camera camsetfov 0.800
+_camera camCommit 5
+~7
+gen say "intro0_4"
+~6.5
+
+gen switchmove "FXSitRightHandDown"
+_camera camsettarget gen
+_camera camsetrelpos [-0.5,0.2,1.2]
+_camera camsetfov 0.800
+_camera camCommit 5
+gen say "intro0_5"
+~5
+
+_camera camsettarget gen
+_camera camsetrelpos [0,0.6,1.2]
+_camera camsetfov 0.800
+_camera camCommit 0
+gen say "intro0_6"
+~5
+
+_camera camsettarget gen
+_camera camsetrelpos [0,0.7,1.1]
+_camera camsetfov 0.400
+_camera camCommit 3
+gen say "intro0_7"
+~3
+
+sel switchmove "FXSitLeftHandDown"
+sel setmimic "smile"
+_camera camsettarget sel
+_camera camsetrelpos [0,0.6,1.2]
+_camera camsetfov 0.500
+_camera camCommit 0
+sel say "intro0_8"
+~2.5
+
+_camera camsettarget gen
+_camera camsetrelpos [0,0.8,1.2]
+_camera camsetfov 0.700
+_camera camCommit 0
+gen say "intro0_9"
+~8.8
+
+_camera camsettarget gen
+_camera camsetrelpos [0.7,0.7,1.2]
+_camera camsetfov 0.800
+_camera camCommit 5
+gen setmimic "smile"
+gen say "intro0_10"
+~9
+
+gen switchmove "FXSitHandsOnTable"
+_camera camsettarget gen
+_camera camsetrelpos [0.7,0,1.2]
+_camera camsetfov 0.800
+_camera camCommit 3
+gen say "intro0_11"
+~6.5
+
+_camera camsettarget gen
+_camera camsetrelpos [0,0.6,1.2]
+_camera camsetfov 0.800
+_camera camCommit 0
+gen say "intro0_12"
+~6
+
+gen switchmove "FXSitRightHandDown"
+_camera camsettarget gen
+_camera camsetrelpos [1,1,1.1]
+_camera camsetfov 0.800
+_camera camCommit 5
+gen say "intro0_13"
+~7
+
+sel switchmove "FXSitLeftHandDown"
+sel setmimic "smile"
+_camera camsettarget sel
+_camera camsetrelpos [0,0.8,1.2]
+_camera camsetfov 0.700
+_camera camCommit 0
+sel say "intro0_14"
+~3.3
+
+_camera camsettarget gen
+_camera camsetrelpos [0,0.9,1.1]
+_camera camsetfov 0.400
+_camera camCommit 0
+gen say "intro0_15"
+~6.4
+
+_camera camsettarget sel
+_camera camsetrelpos [0,0.7,1.2]
+_camera camsetfov 0.900
+_camera camCommit 0
+sel say "intro0_16"
+~1
+sel switchmove "FXFromTable"
+~1
+
+gen say "intro0_17"
+_camera camsettarget cam2
+_camera camsetpos [(getpos cam1 select 0),(getpos cam1 select 1),(getpos cam1 select 2)+ 1.5]
+_camera camsetfov 0.500
+_camera camCommit 0
+~1
+gen switchmove "FXFromTable"
+~4
+
+sel switchmove "EffectStandSalute"
+~1
+sel switchmove "EffectStandSaluteEnd"
+~1
+
+gen switchmove "EffectStandSalute"
+~1
+;gen switchmove "EffectStandSaluteEnd"
+
+titlecut["","black out",3]
+~3
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+konecintro=true
+
+exit

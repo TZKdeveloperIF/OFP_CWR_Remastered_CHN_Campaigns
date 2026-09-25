@@ -1,0 +1,18 @@
+Up sideradio "trev1"
+ofser sideradio "trev2"
+~5
+?!obnarujenie: goto "Loj"
+Up sideradio "trev3"
+ofser sideradio "trev4"
+~6
+trevoga = true
+1 setRadioMsg "Null"
+~10
+[] exec "telep_rus.sqs"
+exit
+
+
+#Loj
+Up sideradio "trev3loj"
+ofser sideradio "trev4loj"
+exit

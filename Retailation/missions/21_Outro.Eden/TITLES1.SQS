@@ -1,0 +1,94 @@
+;180
+0 fademusic 0
+
+tit_uaz stop false
+
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+~3
+titlecut["","black in",3]
+
+playmusic "titles"
+0 fademusic 1
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget tit_camera1_1
+_camera camsetpos [(getpos tit_camera1 select 0) - 0, (getpos tit_camera1 select 1) + 0, (getpos tit_camera1 select 2) + 0.5]
+_camera camsetfov 0.900
+_camera camCommit 0
+
+_camera camsettarget tit_camera1_1
+_camera camsetpos [(getpos tit_camera1 select 0) - 0, (getpos tit_camera1 select 1) + 0, (getpos tit_camera1 select 2) + 1.5]
+_camera camsetfov 0.600
+_camera camCommit 10
+~10
+
+titlecut["","black out",0.5]
+~0.5
+titlecut["","black in",0.5]
+
+tit_gubin switchmove "EffectStandTalk"
+
+_camera camsettarget tit_camera1_2_1
+_camera camsetpos [(getpos tit_camera1_2 select 0) - 0, (getpos tit_camera1_2 select 1) + 0, (getpos tit_camera1_2 select 2) + 0.5]
+_camera camsetfov 0.900
+_camera camCommit 0
+
+_camera camsettarget tit_camera1_2_1
+_camera camsetpos [(getpos tit_camera1_2 select 0) - 0, (getpos tit_camera1_2 select 1) + 0, (getpos tit_camera1_2 select 2) + 1.5]
+_camera camsetfov 0.600
+_camera camCommit 10
+~1
+
+cutRsc ["Scenar", "PLAIN", 5]
+
+~7
+tit_udav switchmove "EffectStandSalute"
+~1
+tit_udav switchmove "EffectStandSaluteEnd"
+~1
+tit_udavgo=true
+
+titlecut["","black out",0.5]
+~0.5
+tit_udav moveincargo tit_uaz
+tit_gubingo=true
+titlecut["","black in",0.5]
+
+
+_camera camsettarget tit_camera1_1
+_camera camsetpos [(getpos tit_camera1 select 0) - 0, (getpos tit_camera1 select 1) + 0, (getpos tit_camera1 select 2) + 1.5]
+_camera camsetfov 0.900
+_camera camCommit 0
+
+_camera camsettarget tit_camera1_1
+_camera camsetpos [(getpos tit_camera1 select 0) - 0, (getpos tit_camera1 select 1) + 0, (getpos tit_camera1 select 2) + 1]
+_camera camsetfov 0.600
+_camera camCommit 3
+~1
+
+cutRsc ["Produce", "PLAIN", 5]
+
+~2
+
+_camera camsettarget tit_uaz
+_camera camsetpos [(getpos tit_camera1 select 0) - 0, (getpos tit_camera1 select 1) + 0, (getpos tit_camera1 select 2) + 1]
+_camera camsetfov 0.600
+_camera camCommit 1
+~5
+
+_camera camsettarget tit_uaz
+_camera camsetrelpos [-3,10,-0.5]
+_camera camsetfov 0.500
+_camera camCommit 0
+~5
+
+titlecut["","black out",0.5]
+~0.5
+[] exec "titles2.sqs"
+;34.5 sec
+
+;_camera cameraeffect ["terminate", "back"]
+;camdestroy _camera
+
+exit

@@ -1,0 +1,5 @@
+_trigger = _this select 0
+_marker = _this select 1
+
+? (west countside list _trigger < 1): _marker setmarkercolor "colorgreen"
+exit

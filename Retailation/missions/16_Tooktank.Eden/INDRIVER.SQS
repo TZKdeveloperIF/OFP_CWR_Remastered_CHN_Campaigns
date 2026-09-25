@@ -1,0 +1,27 @@
+
+?rocknroll: goto "ex"
+abrams1 lock true
+
+hint localize "STRM_hint_1"
+
+?rocknroll: goto "ex"
+kolesnik say "game1_7"
+~7
+
+?rocknroll: goto "ex"
+?fuel abrams1 == 0 && !rocknroll: kolesnik say "game1_8"; goto "pause"
+?fuel abrams1 != 0 && !rocknroll: goto "skeep"
+#pause
+~5
+
+#skeep
+?rocknroll: goto "ex"
+?!rocknroll: kolesnik say "game1_9"
+~3.5
+
+#ex
+abrams1 lock false
+
+indriver=true
+
+exit

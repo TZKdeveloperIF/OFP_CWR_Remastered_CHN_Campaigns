@@ -1,0 +1,16 @@
+_posDrop = _this select 0
+_velocity = _this select 1
+_lifeTime = _this select 2
+_object = _this select 3
+_delay = 0.3
+_lifeTicks = _lifeTime / _delay
+_lifeTick = _lifeTicks
+
+#Begin
+
+drop ["cl_basic", "", "Billboard", 1, 10, _posDrop, _velocity, 1, 0.005, 0.0042, 0.5, [0.2,10], [[0,0,0,0], [0.3,0.3,0.3,1 * _lifeTick/_lifeTicks], [0.8,0.8,0.8,0.1 * _lifeTick/_lifeTicks], [0.8,0.8,0.8,0]], [0,1,0,1,0,1], 0.2, 0.2, "", "", _object]
+
+~_delay
+
+_lifeTick = _lifeTick - 1
+?_lifeTick > 0 : goto "Begin"

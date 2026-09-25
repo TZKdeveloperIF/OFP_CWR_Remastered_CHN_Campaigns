@@ -1,0 +1,24 @@
+
+[m2,m3] join grpnull
+~0.5
+
+[m2] join m3
+m3 setbehaviour "AWARE"
+m2 setbehaviour "AWARE"
+
+m3 setspeedmode "FULL"
+m3 move getpos m2m3_up
+@m3 distance m2m3_up < 10
+
+unassignvehicle (driver m2)
+unassignvehicle (driver m3)
+
+(driver m2) leavevehicle m2
+(driver m3) leavevehicle m3
+(driver m2) action ["GETOUT",m2]
+(driver m3) action ["GETOUT",m3]
+~2
+m3 setbehaviour "AWARE"
+m3 move getpos m2m3_rn
+
+exit

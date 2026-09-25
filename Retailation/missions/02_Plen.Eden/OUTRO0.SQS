@@ -1,0 +1,126 @@
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+
+titletext [localize "STR_Outro1","plain",1]
+~5
+titletext ["","plain down",1]
+
+titlecut["","black in",1]
+
+playmusic "inside_music1_11"
+0 fademusic 1
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget of1o
+_camera camsetrelpos [-2,0,1.6]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+_camera camsettarget of1o
+_camera camsetrelpos [0,1,1.5]
+_camera camsetfov 0.800
+_camera camCommit 2
+~2
+mv1=true; mv2=true; mv3=true
+~1
+
+_camera camsettarget a10o
+_camera camsetpos [(getpos of1o select 0) - 1, (getpos of1o select 1) - 1, (getpos of1o select 2) + 1.7]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+_camera camsettarget a12o
+_camera camsetpos [(getpos of1o select 0) - 1, (getpos of1o select 1) - 1, (getpos of1o select 2) + 1.7]
+_camera camsetfov 0.800
+_camera camCommit 1
+~1
+
+airshow=true
+_camera camsettarget hhh
+_camera camsetpos [(getpos camera1o select 0) - 0, (getpos camera1o select 1) - 0, (getpos camera1o select 2) + 1.8]
+_camera camsetfov 0.800
+_camera camCommit 0
+~2
+
+_camera camsettarget hhh
+_camera camsetpos [(getpos camera1o select 0) - 0, (getpos camera1o select 1) - 0, (getpos camera1o select 2) + 1.8]
+_camera camsetfov 0.200
+_camera camCommit 1
+~3
+
+_camera camsettarget of1o
+_camera camsetrelpos [0,0.5,1.7]
+_camera camsetfov 0.800
+_camera camCommit 0
+of1o setmimic "angry"
+panic=true
+~4
+
+_camera camsettarget hhh
+_camera camsetrelpos [0,14,-0.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+playsound "radio1_0"
+~6
+playsound "radio1_1"
+~2
+
+_camera camsettarget hhh
+_camera camsetrelpos [0,14,-0.3]
+_camera camsetfov 0.500
+_camera camCommit 3
+~1
+[hhh] exec "fireatwill.sqs"
+gogogo=true
+~3
+
+_camera camsettarget hhh
+_camera camsetrelpos [7,0,0.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera camsettarget hhh
+_camera camsetrelpos [0,20,-5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~4
+gohome=true
+~1
+
+_camera camsettarget hhh
+_camera camsetrelpos [0,120,-5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~10
+
+gunner hhh switchcamera "gunner"
+enableradio false
+showcinemaborder true
+
+_cycle1=400
+
+#cycle
+_camera camsettarget hhh
+_camera camsetrelpos [0,9,-0.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.005
+_cycle1=_cycle1-1
+?_cycle1==0: goto "end"
+goto "cycle"
+
+#end
+5 fademusic 0
+titlecut["","black out",5]
+~5
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+ends=true
+
+exit

@@ -1,0 +1,54 @@
+;20.5
+
+titlecut["","black in",0.5]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget tit_ural3_1_1
+_camera camsetrelpos [-2,-9,2]
+_camera camsetfov 0.700
+_camera camCommit 0
+
+_camera camsettarget tit_ural3_1_1
+_camera camsetrelpos [-4,-15,-0.5]
+_camera camsetfov 0.700
+_camera camCommit 5
+~5
+
+titlecut["","black out",0.5]
+~0.5
+titlecut["","black in",0.5]
+
+_camera camsettarget tit_camera6_1
+_camera camsetpos [(getpos tit_camera6 select 0) - 0, (getpos tit_camera6 select 1) + 0, (getpos tit_camera6 select 2) + 0.5]
+_camera camsetfov 0.700
+_camera camCommit 0
+
+_camera camsettarget tit_camera6_1
+_camera camsetpos [(getpos tit_camera6 select 0) - 0, (getpos tit_camera6 select 1) + 0, (getpos tit_camera6 select 2) + 0.5]
+_camera camsetfov 0.700
+_camera camCommit 10
+~1
+cutRsc ["Akter3", "PLAIN", 5]
+~9
+
+titlecut["","black out",0.5]
+~0.5
+titlecut["","black in",0.5]
+
+tit_udav3 dowatch tit_udav3w
+tit_udav3 setmimic "angry"
+_camera camsettarget tit_udav3
+_camera camsetrelpos [0,0.5,1.6]
+_camera camsetfov 0.500
+_camera camCommit 0
+~5
+
+titlecut["","black out",0.5]
+~0.5
+[] exec "titles7.sqs"
+
+;total time:
+
+exit

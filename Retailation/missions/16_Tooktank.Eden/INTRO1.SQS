@@ -1,0 +1,148 @@
+setacctime 1.0
+
+;kol switchmove "FXStandStraight"
+kol stop true
+
+titlecut["","black in",9999999999999999999999999999999999999999999999999]
+
+titletext [localize "STR_Load0_1","plain",1]
+~5
+titlecut["","black in",1]
+
+titletext ["","plain down",1]
+
+_camera = "camera" camCreate getpos cam1
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget cam2_1
+_camera camsetpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 1]
+_camera camsetfov 0.800
+_camera camCommit 0
+kol say "intro1_1"
+~1
+_camera camsettarget cam2_1
+_camera camsetpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 1]
+_camera camsetfov 0.400
+_camera camCommit 5
+~3.5
+kol switchmove "EffectStandSalute"
+~1
+kol switchmove "EffectStandSaluteEnd"
+~1
+sel say "intro1_2"
+~2
+
+_camera camsettarget sel
+_camera camsetrelpos [0,0.7,1.55]
+_camera camsetfov 0.600
+_camera camCommit 0
+sel say "intro1_3"
+~4
+
+kol setmimic "smile"
+_camera camsettarget kol
+_camera camsetrelpos [0,0.7,1.55]
+_camera camsetfov 0.700
+_camera camCommit 0
+kol say "intro1_4"
+~2
+
+sel say "intro1_5"
+_camera camsettarget sel
+_camera camsetrelpos [0,1,1.55]
+_camera camsetfov 0.700
+_camera camCommit 0
+
+_camera camsettarget sel
+_camera camsetrelpos [1,0.5,1.55]
+_camera camsetfov 0.700
+_camera camCommit 5
+~8
+
+sel say "intro1_6"
+_camera camsettarget sel
+_camera camsetrelpos [-0.5,0.2,1.4]
+_camera camsetfov 0.700
+_camera camCommit 0
+~5.5
+
+_camera camsettarget sel
+_camera camsetrelpos [-0.5,0.7,1.4]
+_camera camsetfov 0.700
+_camera camCommit 3
+~3
+
+kol say "intro1_7"
+_camera camsettarget kol
+_camera camsetrelpos [1,1,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+sel say "intro1_8"
+_camera camsettarget sel
+_camera camsetrelpos [-1,1,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5.5
+
+sel say "intro1_9"
+_camera camsettarget sel
+_camera camsetrelpos [0,1.5,1.0]
+_camera camsetfov 0.800
+_camera camCommit 5
+~6
+
+sel say "intro1_10"
+_camera camsettarget sel
+_camera camsetrelpos [0,0.7,1.55]
+_camera camsetfov 0.700
+_camera camCommit 0
+~8
+
+sel say "intro1_11"
+_camera camsettarget sel
+_camera camsetrelpos [0,0.7,1.55]
+_camera camsetfov 0.600
+_camera camCommit 3
+~3
+
+kol say "intro1_12"
+_camera camsettarget kol
+_camera camsetrelpos [0,0.7,1.55]
+_camera camsetfov 0.600
+_camera camCommit 0
+~1
+
+sel say "intro1_13"
+_camera camsettarget cam2_1
+_camera camsetpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 1]
+_camera camsetfov 0.700
+_camera camCommit 0
+~3.5
+
+sel say "intro1_14"
+_camera camsettarget cam2_1
+_camera camsetpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~4.3
+
+kol say "intro1_15"
+_camera camsettarget kol
+_camera camsetrelpos [0,1,1.55]
+_camera camsetfov 0.800
+_camera camCommit 0
+kol switchmove "EffectStandSalute"
+~1
+kol switchmove "EffectStandSaluteEnd"
+
+titlecut["","black out",3]
+~3
+
+konecintro=true
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+exit

@@ -1,0 +1,23 @@
+titlecut ["","black in",4]
+
+udav setIdentity "Selivanov"
+base setIdentity "Gnezdo"
+inf setIdentity "Nabludatel"
+passagir setIdentity "Passagir"
+
+"0" objstatus "Active"
+"1" objstatus "Active"
+"2" objstatus "Hidden"
+
+[] exec "trigger_sopr.sqs"
+[] exec "game1.sqs"
+
+eaststart=false
+r_obnarugenu=false
+obnarugenu=false
+doctaken=false
+backup=false
+pinmorton=false
+pinmorton2=false
+proigral=false
+happyend=false

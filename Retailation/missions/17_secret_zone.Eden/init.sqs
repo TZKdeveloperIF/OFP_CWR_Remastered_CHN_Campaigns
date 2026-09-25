@@ -1,0 +1,36 @@
+(object 0) setfuelcargo 0
+; переменная, дает право на передачу координат.
+cel = false
+; переменная, говорит об ошибке наведения.
+fal = false
+; переменная, говорит о том что координаты переданы.
+koord = false
+; переменная, говорит о начале бомбардировки.
+bomb = false
+; переменная, говорит о работе скрипта диалога.
+dial = false
+; переменная, отвечает за подтверждение 0- не определено, 1-ложь, 2-истина.
+dial_pod = 0
+; переменная, говорит о обнаружении ложной базы.
+baza1_obn = false
+; переменная, говорит о обнаружении истинной базы.
+baza2_obn = false
+; переменная, отслеживает возврат.
+vozvrat = false
+; переменная, отслеживает конец интро.
+end = false
+konec_mis = false
+publicvariable "U2_17"; U2_17 = false; savevar "U2_17"
+publicvariable "U3_17"; U3_17 = false; savevar "U3_17"
+publicvariable "U4_17"; U4_17 = false; savevar "U4_17"
+
+"1" objstatus "HIDDEN"
+"2" objstatus "HIDDEN"
+"3" objstatus "HIDDEN"
+hum addaction ["Обыскать машину",{karta.sqs}]
+track1 addaction ["Обыскать грузовик",{karta.sqs}]
+track2 addaction ["Обыскать грузовик",{karta.sqs}]
+track3 addaction ["Обыскать грузовик",{karta.sqs}]
+1 setRadioMsg "Null"
+2 setRadioMsg "Null"
+exit

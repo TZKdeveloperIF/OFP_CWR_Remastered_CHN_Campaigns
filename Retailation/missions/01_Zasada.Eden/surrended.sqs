@@ -1,0 +1,31 @@
+titlecut ["","black in",3]
+
+surend switchmove "FXStandSurUniv"
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget surend
+_camera camsetrelpos [2,2,1.5]
+_camera camSetFOV 0.8
+_camera camcommit 0
+~2
+
+_camera camsettarget surend
+_camera camsetrelpos [2,4,1.5]
+_camera camSetFOV 0.9
+_camera camcommit 2
+~3
+
+playsound "ingameintro1_3"
+~2
+
+titlecut ["","black out",1]
+~1
+
+_camera cameraEffect ["terminate","BACK"]
+camDestroy _camera
+
+ends=1
+
+exit

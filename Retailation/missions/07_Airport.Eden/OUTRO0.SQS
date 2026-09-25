@@ -1,0 +1,95 @@
+setAccTime 1.0
+
+endoutro=false
+
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext [localize "STRM_Outro1_0","plain",1]
+~5
+titletext [localize "STRM_Outro1_1","plain",1]
+~5
+titlecut["","black in",1]
+
+0 fademusic 1
+playmusic "inside_music1_14"
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+titletext ["","plain",1]
+
+_camera camsettarget gener
+_camera camsetrelpos [1,-1,1.65]
+_camera camsetfov 0.600
+_camera camCommit 0
+gener say "outro0_1"
+~3
+
+_camera camsettarget astahov
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.900
+_camera camCommit 0
+
+astahov say "outro0_2"
+_camera camsettarget astahov
+_camera camsetrelpos [1,1,1.65]
+_camera camsetfov 0.900
+_camera camCommit 4.5
+~4.5
+
+_camera camsettarget seliv
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 0
+seliv say "outro0_3"
+~4.7
+
+_camera camsettarget gener
+_camera camsetrelpos [-1,1,1.65]
+_camera camsetfov 0.600
+_camera camCommit 5
+gener say "outro0_4"
+~8
+
+astahov stop false
+_camera camsettarget gener
+_camera camsetrelpos [1,1,1.65]
+_camera camsetfov 0.600
+_camera camCommit 5
+gener say "outro0_5"
+~5
+
+_camera camsettarget seliv
+_camera camsetrelpos [1,3,1.65]
+_camera camsetfov 0.600
+_camera camCommit 0
+seliv say "outro0_6"
+~3.5
+seliv say "outro0_7"
+~5.5
+
+_camera camsettarget gener
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+gener say "outro0_8"
+~3.5
+
+_camera camsettarget seliv
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+seliv say "outro0_9"
+5 fademusic 0
+~5
+
+titlecut["","black out",3]
+~3
+
+titletext ["","plain",1]
+
+endoutro=true
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+exit

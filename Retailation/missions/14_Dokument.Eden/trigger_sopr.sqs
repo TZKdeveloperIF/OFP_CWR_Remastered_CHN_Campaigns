@@ -1,0 +1,9 @@
+
+#start
+soprovogdenie setpos getpos passagir
+~0.05
+?getdammage passagir >= 1: goto "end"
+goto "start"
+
+#end
+exit

@@ -1,0 +1,240 @@
+onLoadIntro=$STR_Load1
+onLoadMission=$STR_Load2
+
+showRadio=1
+showCompass=1
+showGPS=1
+showMap=1
+showNotepad=1
+showWatch=1
+debriefing=1
+briefing=1
+
+class CfgSounds
+{
+      sounds[] = { };
+      class missle
+      {
+            name = "missle";
+            sound[] = {"missle.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class intro0_1
+      {
+            name = "intro0_1";
+            sound[] = {"intro0_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_1
+            };
+      };
+      class intro0_2
+      {
+            name = "intro0_2";
+            sound[] = {"intro0_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_2
+            };
+      };
+      class intro0_3
+      {
+            name = "intro0_3";
+            sound[] = {"intro0_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_3
+            };
+      };
+      class intro0_4
+      {
+            name = "intro0_4";
+            sound[] = {"intro0_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_4
+            };
+      };
+      class intro0_5
+      {
+            name = "intro0_5";
+            sound[] = {"intro0_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_5
+            };
+      };
+      class intro0_6
+      {
+            name = "intro0_6";
+            sound[] = {"intro0_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_6
+            };
+      };
+      class intro1_0
+      {
+            name = "intro1_0";
+            sound[] = {"intro1_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_0
+            };
+      };
+      class intro1_1
+      {
+            name = "intro1_1";
+            sound[] = {"intro1_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_1
+            };
+      };
+      class game1_6
+      {
+            name = "game1_6";
+            sound[] = {"game1_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_game1_6
+            };
+      };
+      class napev1
+      {
+            name = "napev1";
+            sound[] = {"napev1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class napev2
+      {
+            name = "napev2";
+            sound[] = {"napev2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class napev3
+      {
+            name = "napev3";
+            sound[] = {"napev3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class napev4
+      {
+            name = "napev4";
+            sound[] = {"napev4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class napev5
+      {
+            name = "napev5";
+            sound[] = {"napev5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+};
+
+class CfgRadio
+{
+      sounds[] = {};
+      class radio1_0
+      {
+            name = "";
+            sound[] = {"radio1_0.ogg", db+10, 1.0};
+            title = $STRM_radio1_0;
+      };
+      class radio1_1
+      {
+            name = "";
+            sound[] = {"radio1_1.ogg", db+10, 1.0};
+            title = $STRM_radio1_1;
+      };
+      class radio1_2
+      {
+            name = "";
+            sound[] = {"radio1_2.ogg", db+10, 1.0};
+            title = $STRM_radio1_2;
+      };
+      class radio1_3
+      {
+            name = "";
+            sound[] = {"radio1_3.ogg", db+10, 1.0};
+            title = $STRM_radio1_3;
+      };
+      class radio1_4
+      {
+            name = "";
+            sound[] = {"radio1_4.ogg", db+10, 1.0};
+            title = $STRM_radio1_4;
+      };
+      class radio1_5
+      {
+            name = "";
+            sound[] = {"radio1_5.ogg", db+10, 1.0};
+            title = $STRM_radio1_5;
+      };
+      class radio1_6
+      {
+            name = "";
+            sound[] = {"radio1_6.ogg", db+10, 1.0};
+            title = $STRM_radio1_6;
+      };
+      class radio1_7
+      {
+            name = "";
+            sound[] = {"radio1_7.ogg", db+10, 1.0};
+            title = $STRM_radio1_7;
+      };
+      class radio1_8
+      {
+            name = "";
+            sound[] = {"radio1_8.ogg", db+10, 1.0};
+            title = $STRM_radio1_8;
+      };
+      class radio1_9
+      {
+            name = "";
+            sound[] = {"radio1_9.ogg", db+10, 1.0};
+            title = $STRM_radio1_9;
+      };
+      class radio1_10
+      {
+            name = "";
+            sound[] = {"radio1_10.ogg", db+10, 1.0};
+            title = $STRM_radio1_10;
+      };
+      class radio1_11
+      {
+            name = "";
+            sound[] = {"radio1_11.ogg", db+10, 1.0};
+            title = $STRM_radio1_11;
+      };
+      class radio1_12
+      {
+            name = "";
+            sound[] = {"radio1_12.ogg", db+10, 1.0};
+            title = $STRM_radio1_12;
+      };
+      class rad_5
+      {
+            name = "rad_5";
+            sound[] = {"rad_5.ogg", db+20, 1.0};
+            title = $STRM_rad_5;
+      };
+};

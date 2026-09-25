@@ -1,0 +1,568 @@
+#define FontM "tahomaB36"
+#define FontHTML "CourierNewB64"
+
+#define ST_LEFT       0
+#define ST_RIGHT      1
+#define ST_CENTER     2
+#define ST_FRAME      64
+#define ST_PICTURE    48
+
+#define CT_STATIC     0
+#define CT_BUTTON     1
+#define CT_EDIT       2
+#define CT_COMBO      4
+#define CT_LISTBOX    5
+#define CT_ACTIVETEXT 11
+
+onLoadIntro=$STR_Load3_0
+
+debriefing=0
+briefing=0
+
+class CfgSounds
+{
+      sounds[] = { };
+      class ring
+      {
+            name = "ring";
+            sound[] = {"ring.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class intro_marsh
+      {
+            name = "intro_marsh";
+            sound[] = {"intro_marsh.ogg", db+0, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class intro3_0
+      {
+            name = "intro3_0";
+            sound[] = {"intro3_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_0
+            };
+      };
+      class intro3_1
+      {
+            name = "intro3_1";
+            sound[] = {"intro3_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_1
+            };
+      };
+      class intro3_2
+      {
+            name = "intro3_2";
+            sound[] = {"intro3_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_2
+            };
+      };
+      class intro3_3
+      {
+            name = "intro3_3";
+            sound[] = {"intro3_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_3
+            };
+      };
+      class intro3_4
+      {
+            name = "intro3_4";
+            sound[] = {"intro3_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_4
+            };
+      };
+      class intro3_5
+      {
+            name = "intro3_5";
+            sound[] = {"intro3_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_5
+            };
+      };
+      class intro3_6
+      {
+            name = "intro3_6";
+            sound[] = {"intro3_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_6
+            };
+      };
+      class intro3_7
+      {
+            name = "intro3_7";
+            sound[] = {"intro3_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_7
+            };
+      };
+      class intro3_8
+      {
+            name = "intro3_8";
+            sound[] = {"intro3_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_8
+            };
+      };
+      class intro3_9
+      {
+            name = "intro3_9";
+            sound[] = {"intro3_9.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3_9
+            };
+      };
+      class intro4_0
+      {
+            name = "intro4_0";
+            sound[] = {"intro4_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4_0
+            };
+      };
+      class intro4_1
+      {
+            name = "intro4_1";
+            sound[] = {"intro4_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4_1
+            };
+      };
+      class intro4_2
+      {
+            name = "intro4_2";
+            sound[] = {"intro4_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4_2
+            };
+      };
+      class intro5_0
+      {
+            name = "intro5_0";
+            sound[] = {"intro5_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_0
+            };
+      };
+      class intro5_1
+      {
+            name = "intro5_1";
+            sound[] = {"intro5_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_1
+            };
+      };
+      class intro5_2
+      {
+            name = "intro5_2";
+            sound[] = {"intro5_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_2
+            };
+      };
+      class intro5_3
+      {
+            name = "intro5_3";
+            sound[] = {"intro5_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_3
+            };
+      };
+      class intro5_4
+      {
+            name = "intro5_4";
+            sound[] = {"intro5_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_4
+            };
+      };
+      class intro5_5
+      {
+            name = "intro5_5";
+            sound[] = {"intro5_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_5
+            };
+      };
+      class intro5_6
+      {
+            name = "intro5_6";
+            sound[] = {"intro5_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5_6
+            };
+      };
+      class intro6_0
+      {
+            name = "intro6_0";
+            sound[] = {"intro6_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_0
+            };
+      };
+      class intro6_1
+      {
+            name = "intro6_1";
+            sound[] = {"intro6_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_1
+            };
+      };
+      class intro6_2
+      {
+            name = "intro6_2";
+            sound[] = {"intro6_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_2
+            };
+      };
+      class intro6_3
+      {
+            name = "intro6_3";
+            sound[] = {"intro6_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_3
+            };
+      };
+      class intro6_4
+      {
+            name = "intro6_4";
+            sound[] = {"intro6_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_4
+            };
+      };
+      class intro6_5
+      {
+            name = "intro6_5";
+            sound[] = {"intro6_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_5
+            };
+      };
+      class intro6_6
+      {
+            name = "intro6_6";
+            sound[] = {"intro6_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_6
+            };
+      };
+      class intro6_7
+      {
+            name = "intro6_7";
+            sound[] = {"intro6_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_7
+            };
+      };
+      class intro6_8
+      {
+            name = "intro6_8";
+            sound[] = {"intro6_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6_8
+            };
+      };
+      class intro7_0
+      {
+            name = "intro7_0";
+            sound[] = {"intro7_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_0
+            };
+      };
+      class intro7_1
+      {
+            name = "intro7_1";
+            sound[] = {"intro7_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_1
+            };
+      };
+      class intro7_2
+      {
+            name = "intro7_2";
+            sound[] = {"intro7_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_2
+            };
+      };
+      class intro7_3
+      {
+            name = "intro7_3";
+            sound[] = {"intro7_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_3
+            };
+      };
+      class intro7_4
+      {
+            name = "intro7_4";
+            sound[] = {"intro7_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_4
+            };
+      };
+      class intro7_5
+      {
+            name = "intro7_5";
+            sound[] = {"intro7_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_5
+            };
+      };
+      class intro7_6
+      {
+            name = "intro7_6";
+            sound[] = {"intro7_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_6
+            };
+      };
+      class intro7_7
+      {
+            name = "intro7_7";
+            sound[] = {"intro7_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_7
+            };
+      };
+      class intro7_8
+      {
+            name = "intro7_8";
+            sound[] = {"intro7_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_8
+            };
+      };
+      class intro7_9
+      {
+            name = "intro7_9";
+            sound[] = {"intro7_9.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7_9
+            };
+      };
+};
+
+class RscText
+{
+      type=0;
+      idc=-1;
+      style=0;
+      h=0.040000;
+      colorBackground[]={0,0,0,0};
+      colorText[]={0.080000,0.080000,0.120000,0.750000};
+      font="tahomaB24";
+      size=1;
+};
+class RscPicture
+{
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTilePicture
+{
+      type=0;
+      idc=-1;
+      style=144;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTitles
+{     Titles[] ={};
+      class Default
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=0.1;
+      };
+      class DefPic : Default
+      {
+            type=0;
+            idc=-1;
+            style=48;
+            colorBackground[]={0,0,0,0};
+            colorText[]={1,1,1,1};
+            font="tahomaB24";
+            size=0;
+      };
+      class Glab
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=5;
+            name="Glab";
+            controls[]={"Glab"};
+            class Glab : RscPicture
+            {
+                  text="jlab.jpg";
+                  x=0.000000;
+                  y=0.000000;
+                  w=1.000000;
+                  h=1.000000;
+            };
+
+      };
+      class Rmedia
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=5;
+            name="Rmedia";
+            controls[]={"Rmedia"};
+            class Rmedia : RscPicture
+            {
+                  text="Rmedia.jpg";
+                  x=0.000000;
+                  y=0.000000;
+                  w=1.000000;
+                  h=1.000000;
+            };
+
+      };
+      class OU
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=5;
+            name="OU";
+            controls[]={"Rmedia"};
+            class Rmedia : RscPicture
+            {
+                  text="peace.paa";
+                  x=0.100000;
+                  y=0.100000;
+                  w=0.800000;
+                  h=0.800000;
+            };
+
+      };
+
+      class Predstav
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Predstav";
+            controls[]={"text0", "text0_t"};
+
+            class text0_t : RscText
+            {
+                  style=ST_CENTER;
+                  lineSpacing=1.000000;
+                  text="ÏÐÅÄÑÒÀÂËßÞÒ";
+                  x=0.000000;
+                  y=0.400000;
+                  w=1.000000;
+                  h=0.300000;
+                  colorText[]={1,0,0,1};
+                  font="SteelfishB128";
+                  size=1;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_CENTER;
+                  lineSpacing=1.000000;
+                  text="ÏÐÅÄÑÒÀÂËßÞÒ";
+                  x=0.002000;
+                  y=0.402000;
+                  w=1.000000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=1;
+            };
+      };
+     class P_END
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="P_END";
+            controls[]={"text0", "text0_t"};
+
+            class text0_t : RscText
+            {
+                  style=ST_CENTER;
+                  lineSpacing=1.000000;
+                  text="È";
+                  x=0.000000;
+                  y=0.400000;
+                  w=1.000000;
+                  h=0.300000;
+                  colorText[]={1,0,0,1};
+                  font="SteelfishB128";
+                  size=1;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_CENTER;
+                  lineSpacing=1.000000;
+                  text="È";
+                  x=0.002000;
+                  y=0.402000;
+                  w=1.000000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=1;
+            };
+      };
+
+};

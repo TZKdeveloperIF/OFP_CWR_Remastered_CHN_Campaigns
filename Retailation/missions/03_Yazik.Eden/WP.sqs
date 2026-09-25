@@ -1,0 +1,11 @@
+[(group up), 2] setWPPos [getPos up select 0,getPos up select 1]
+
+#start
+~15
+[(group up), 3] setWPPos [getPos bandit select 0,getPos bandit select 1]
+"yashar" setMarkerPos (getpos bandit)
+?Leader bandit == Up: goto "end"
+goto "start"
+
+#end
+exit

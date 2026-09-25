@@ -1,0 +1,59 @@
+setacctime 1
+storoj say "dial_1"
+Dial = true
+player removeweapon "NVGoggles"
+_camera = "camera" camCreate (getpos player)
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",8]
+0 fademusic 1
+playmusic "inside_music1_0"
+ogon1 inflame true
+ogon2 inflame true
+_camera camSetTarget BMP
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+storoj setdir 180
+storoj dowatch BMP
+up setpos (getpos p1)
+up setunitpos "UP"
+up switchmove "stand"
+up setdir 160
+Up dowatch BMP
+~8
+up say "dial_2"
+~4
+_camera camSetTarget BMP
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.400
+_camera camCommit 7
+TitleText ["","PLAIN"]
+up sideradio "rad_1"
+~4
+dej sideradio "rad_2"
+~3
+up sideradio "rad_3"
+~8
+dej sideradio "rad_4"
+~5
+up sideradio "rad_5"
+~4
+dej sideradio "rad_6"
+~6
+dej sideradio "rad_7"
+~7
+up sideradio "rad_8"
+~5
+dej sideradio "rad_9"
+~2
+"0" objstatus "HIDDEN"
+"1" objstatus "ACTIVE"
+"2" objstatus "ACTIVE"
+"3" objstatus "ACTIVE"
+player addweapon "NVGoggles"
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+[st1,st2] join storoj
+trev = true
+exit

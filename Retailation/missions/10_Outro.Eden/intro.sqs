@@ -1,0 +1,506 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Аэродром Эверона.\n8 мая, 5.55","PLAIN"]
+titleCut ["","BLACK IN",5]
+_camera camSetTarget shilka
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+playsound "Fx05"
+@camCommitted _camera
+
+~7
+shilka say "int1"
+~3
+shilka say "int2"
+~5
+;@getdammage shilka > 0
+_gg = "Maverick" camcreate [(getpos shilka select 0),(getpos shilka select 1)-50,(getpos shilka select 2)+3]
+~2
+trevoga = true
+_camera camSetTarget pilot
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+krikun say "int3"
+~2
+pilot say "int4"
+~3
+krikun say "int5"
+~3
+@speed mi > 0.1
+_camera camSetTarget mi
+_camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+playsound "int6"
+0 Fademusic 1
+Playmusic "inside_music1_9"
+_camera camSetTarget A2
+_camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 4
+@camCommitted _camera
+
+
+@bomb
+~8
+_camera camSetTarget A2
+_camera camSetPos  [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 10]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~5
+_cycl = 0
+Ar commandmove (getpos put)
+~1
+_camera camSetTarget AR
+_camera camSetRelPos [150,0,0]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Mi FlyInHeight 35
+
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+AR fire ["MachineGun30A10Burst", "Bullet30"]
+~0.1
+
+[getpos kost1, [0,0,0], 25, 10, ""] exec "firesource.sqs"
+[getpos kost2, [0,0,0], 25, 20, ""] exec "firesource.sqs"
+[getpos kost3, [0,0,0], 25, 10, ""] exec "firesource.sqs"
+[getpos kost4, [0,0,0], 25, 20, ""] exec "firesource.sqs"
+vv1 setpos getpos kost1
+vv3 setpos getpos kost1
+_camera camSetTarget Mi
+_camera camSetRelPos [50,0,0]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~2
+_bb = "Bullet30" camcreate (getpos Mi)
+~2
+[Mi] exec "fire2.sqs"
+
+Mi domove (getpos put2)
+~4
+playsound "int7r"
+~11
+5 Fademusic 0
+~5
+titleCut ["","BLACK Out",2]
+playsound "Fx12"
+trevoga = false
+fire2 = true
+~2
+Skiptime 12
+_camera camSetTarget AH1
+_camera camSetRelPos [100,50,0]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+TitleText ["8 мая, 18.00","PLAIN"]
+~2
+titleCut ["","BLACK IN",2]
+
+~2
+
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 10
+
+~2
+TitleText ["Временный командный пункт контингента.","PLAIN"]
+playsound "Ed01"
+@camCommitted _camera
+
+
+"NATO1" setMarkerType "EMPTY"
+"NATO1_1" setMarkerType "EMPTY"
+"NATO1_2" setMarkerType "EMPTY"
+"NATO1_3" setMarkerType "EMPTY"
+"NATO1_4" setMarkerType "EMPTY"
+"NATO1_5" setMarkerType "EMPTY"
+"NATO1_6" setMarkerType "EMPTY"
+"NATO1_7" setMarkerType "EMPTY"
+"NATO1_8" setMarkerType "EMPTY"
+"NATO1_9" setMarkerType "EMPTY"
+"NATO1_10" setMarkerType "EMPTY"
+"NATO2" setMarkerType "EMPTY"
+"NATO2_1" setMarkerType "EMPTY"
+"NATO2_2" setMarkerType "EMPTY"
+"TANK1" setMarkerType "EMPTY"
+"TANK2" setMarkerType "EMPTY"
+"TANK3" setMarkerType "EMPTY"
+"ukr" setMarkerType "EMPTY"
+"ukr_1" setMarkerType "EMPTY"
+"ukr_2" setMarkerType "EMPTY"
+"ukr_3" setMarkerType "EMPTY"
+"ukr_4" setMarkerType "EMPTY"
+"ukr_5" setMarkerType "EMPTY"
+"ukr_6" setMarkerType "EMPTY"
+"ukr_7" setMarkerType "EMPTY"
+"ukr_8" setMarkerType "EMPTY"
+"ukr_9" setMarkerType "EMPTY"
+"ukr_10" setMarkerType "EMPTY"
+
+"NATO" setMarkerSize [1, 1]
+
+"meshok2" setMarkerSize [1, 1]
+"meshok1" setMarkerSize [1, 1]
+gen dowatch t_map
+of1  dowatch t_map
+of2  dowatch t_map
+udav dowatch t_map
+gen stop true
+of1 stop true
+of2 stop true
+udav stop true
+
+;gen setdir 215
+~2
+gen say "intro1"
+~5
+gen switchmove "FXStandShowTable"
+
+_camera camSetTarget t_map
+_camera camSetRelPos  [0,  0.3, 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 5
+titleCut ["","BLACK OUT",5]
+@camCommitted _camera
+#Map
+forceMap true
+mapAnimAdd [1,1, getMarkerPos "Morton"]
+mapAnimCommit
+@mapAnimDone
+titleCut ["","BLACK IN",2]
+
+gen say "intro2"
+~2
+"NATO1" setMarkerType "ARROW"
+~2
+"NATO1_1" setMarkerType "ARROW"
+~1
+"MORTON" setMarkerType "Destroy"; "MORTON" setMarkerColor "ColorRed"
+~4
+
+gen say "intro3"
+mapAnimAdd [2,0.3, getMarkerPos "Air"]
+mapAnimCommit
+@mapAnimDone
+~2
+"Air" setMarkerType "Destroy"; "Air" setMarkerColor "ColorRed"
+~3
+"Air" setMarkerType "Marker";
+~2
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+forceMap false
+Udav say "intro4"
+~3
+_camera camSetTarget of2
+_camera camSetRelPos [0,1,1.4]
+_camera camSetFOV 0.800
+_camera camCommit 0
+of2 say "intro5"
+~5
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+gen say "intro6"
+~9
+gen say "intro7"
+~2
+forceMap True
+mapAnimAdd [2,0.3, getMarkerPos "Lamentin"]
+mapAnimCommit
+@mapAnimDone
+~1
+"NATO2" setMarkerType "ARROW"
+~1
+"NATO2_1" setMarkerType "ARROW"
+~1
+"NATO2_2" setMarkerType "ARROW"
+~1
+_lmpos = getmarkerpos "LeMoule"
+_lampos = getmarkerpos "Lamentin"
+"LeMoule" setMarkerPos (getmarkerpos "NATO2_2"); "NATO2_1" setMarkerType "Empty"
+"Lamentin" setMarkerPos (getmarkerpos "NATO2_1"); "NATO2_2" setMarkerType "Empty"
+~1
+"NATO2" setMarkerType "Marker"; "NATO2" setMarkerColor "ColorRed"
+~2
+"NATO2" setMarkerType "EMPTY"
+"LeMoule" setMarkerPos _lmpos
+"Lamentin" setMarkerPos _lampos
+
+gen say "intro8"
+~2
+mapAnimAdd [4,0.1, getMarkerPos "Morton"]
+mapAnimCommit
+@mapAnimDone
+~2
+mapAnimAdd [3,0.1, getMarkerPos "Montignak"]
+mapAnimCommit
+@mapAnimDone
+~2
+"Morton" setMarkerPos [(getmarkerpos "Montignak" select 0) - 100, (getmarkerpos "Montignak" select 1) - 100]
+"Morton" setMarkerType "Flag1"; "Morton" setMarkerColor "ColorGreen"
+~2
+gen say "intro9"
+~2
+mapAnimAdd [4,0.5, getMarkerPos "NATO1_2"]
+mapAnimCommit
+@mapAnimDone
+gen say "intro10"
+~1
+"NATO1_2" setMarkerType "ARROW"
+~0.5
+"NATO1_3" setMarkerType "ARROW"
+~0.5
+"NATO1_4" setMarkerType "ARROW"
+~0.5
+"NATO1_5" setMarkerType "ARROW"
+~0.5
+"NATO1_6" setMarkerType "ARROW"
+~0.5
+"NATO1_7" setMarkerType "ARROW"
+~0.5
+"NATO1_8" setMarkerType "ARROW"
+~0.5
+"NATO1_9" setMarkerType "ARROW"
+~0.5
+"NATO1_10" setMarkerType "ARROW"
+~3
+gen say "intro11"
+mapAnimAdd [4,0.5, getMarkerPos "Levie"]
+mapAnimCommit
+@mapAnimDone
+~1
+"Tank1" setMarkerType "EMPTY"
+~1
+"Levie" setmarkerpos [(getmarkerpos "Durras" select 0) - 100, (getmarkerpos "Durras" select 1) - 100]
+~1
+"Tank2" setMarkerType "EMPTY"
+gen say "intro12"
+~1
+mapAnimAdd [4,0.5, getMarkerPos "Provins"]
+mapAnimCommit
+@mapAnimDone
+~2
+"Provins" setMarkerPos [(getmarkerpos "Montignak" select 0) - 100, (getmarkerpos "Montignak" select 1) + 100]
+~3
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+forceMap false
+~1
+gen say "intro13"
+~9
+gen say "intro14"
+~9
+gen say "intro15"
+~7
+gen say "intro16"
+~6
+gen say "intro17"
+~3
+svyaz domove (getpos kost3)
+svyaz playmove "SitDownToStand"
+~5
+_camera camSetTarget gen
+_camera camSetRelPos [0,1,1.3]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+gen say "intro18"
+~3
+"NATO" setMarkerSize [4000, 1600]
+"LeMoule" setMarkerPos [(getmarkerpos "Lamentin" select 0) - 100, (getmarkerpos "Lamentin" select 1) + 100]
+forceMap True
+mapAnimAdd [0,0.3, getMarkerPos "Lamentin"]
+mapAnimCommit
+@mapAnimDone
+~3
+gen say "intro19"
+~1
+"Lam_NATO1" setMarkerType "ARROW"
+"Lam_NATO2" setMarkerType "ARROW"
+~1
+"Lam_NATO1" setMarkerType "EMPTY"
+"Lam_NATO2" setMarkerType "EMPTY"
+~1
+"Lam_NATO1" setMarkerType "ARROW"
+"Lam_NATO2" setMarkerType "ARROW"
+~1
+"Lam_NATO1" setMarkerType "EMPTY"
+"Lam_NATO2" setMarkerType "EMPTY"
+~6
+
+
+gen say "intro20"
+"Durras" setMarkerType "EMPTY"
+mapAnimAdd [2,0.3, getMarkerPos "Tank2"]
+mapAnimCommit
+@mapAnimDone
+svyaz setpos (getpos kost2)
+~3
+gen say "intro21"
+~2
+"meshok2" setMarkerSize [1700, 250]
+"meshok1" setMarkerSize [1700, 250]
+~1
+"meshok2" setMarkerSize [1, 1]
+"meshok1" setMarkerSize [1, 1]
+~1
+"meshok2" setMarkerSize [1700, 250]
+"meshok1" setMarkerSize [1700, 250]
+~1
+"meshok2" setMarkerSize [1, 1]
+"meshok1" setMarkerSize [1, 1]
+
+~3
+gen say "intro22"
+mapAnimAdd [2,0.3, getMarkerPos "ukr_6"]
+mapAnimCommit
+@mapAnimDone
+~1
+"ukr" setMarkerType "Dot"
+"ukr_1" setMarkerType "Dot"
+"ukr_2" setMarkerType "Dot"
+"ukr_3" setMarkerType "Dot"
+"ukr_4" setMarkerType "Dot"
+"ukr_5" setMarkerType "Dot"
+"ukr_6" setMarkerType "Dot"
+"ukr_7" setMarkerType "Dot"
+"ukr_8" setMarkerType "Dot"
+"ukr_9" setMarkerType "Dot"
+"ukr_10" setMarkerType "Dot"
+~7
+gen say "intro23"
+~5
+gen say "intro24"
+~3
+mapAnimAdd [2,0.3, getMarkerPos "Regina"]
+mapAnimCommit
+@mapAnimDone
+"Durras" setMarkerType "EMPTY"
+"TANK3" setMarkerType "ARROW"
+~1
+"TANK3" setMarkerType "EMPTY"
+~1
+"TANK3" setMarkerType "ARROW"
+~1
+"TANK3" setMarkerType "EMPTY"
+~1
+gen say "intro25"
+~6
+
+mapAnimAdd [2,0.3, getMarkerPos "NATO1_2"]
+mapAnimCommit
+@mapAnimDone
+mapAnimAdd [2,0.3, getMarkerPos "NATO1_3"]
+mapAnimCommit
+@mapAnimDone
+gen say "intro26"
+~3
+mapAnimAdd [2,0.3, getMarkerPos "Vernon"]
+mapAnimCommit
+@mapAnimDone
+"Vernon" setMarkerType "MARKER"; "Vernon" setMarkerColor "ColorRed"
+"Saint" setMarkerType "MARKER"; "Saint" setMarkerColor "ColorRed"
+"Levie" setMarkerType "MARKER"; "Levie" setMarkerColor "ColorRed"
+~3
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+forceMap False
+~2
+gen say "intro27"
+~6
+gen say "intro28"
+~8
+gen say "intro29"
+gen switchmove "Stand"
+~3
+gen dowatch of2
+~4
+gen say "intro30"
+~8
+gen say "intro31"
+~4
+_camera camSetTarget of2
+_camera camSetRelPos [0,0.5,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~5
+of2 say "intro32"
+of2 playmove "EffectStandSalute"
+~2
+titleCut ["","BLACK OUT",2]
+~2
+titleCut ["","BLACK IN",2]
+
+_camera camSetTarget AH1
+_camera camSetRelPos [100,50,0]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~4
+#otl
+_cycle=0
+#cycle_st
+_camera camSetTarget AH1
+_camera camSetRelPos [0,5,0]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~0.01
+_cycle = _cycle + 1
+?_cycle == 350: (gunner AH1) say "intro33"
+?_cycle == 400: (driver AH1) say "missle"
+?_cycle == 420: (gunner AH1) say "intro34"
+?_cycle == 440: _gg = "AA" camcreate [(getpos AH1 select 0),(getpos AH1 select 1), (getpos AH1 select 2)+2]
+?_cycle < 480:goto "cycle_st"
+
+titleCut ["","BLACK OUT",5]
+~5
+end = true
+exit
+
+;select 0, (getpos AH1 select 1)-2, getpos AH1 select 2]; _bb1= "shell73" camcreate [getpos AH1 select 0, (getpos AH1 select 1)+2, getpos AH1 select 2]

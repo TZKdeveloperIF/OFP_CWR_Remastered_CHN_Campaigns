@@ -1,0 +1,16 @@
+
+[m1] join grpnull
+~1
+m1 setspeedmode "FULL"
+m1 setcombatmode "RED"
+m1 setbehaviour "AWARE"
+m1 move getpos m1_up
+@m1 distance m1_up < 10
+
+"unassignvehicle _x" foreach (units group w1)
+~5
+[] exec "eject.sqs"
+
+
+
+exit

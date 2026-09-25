@@ -1,0 +1,129 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["На точке сбора.","PLAIN"]
+titleCut ["","BLACK IN",5]
+scen=0
+_camera camSetTarget Up
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+;goto "Map"
+~8
+S1 say "intro1"
+@scen == 2
+Up dowatch S1
+Up say "intro2"
+S1 dowatch Up
+~5
+S1 say "intro3"
+~2
+_camera camSetTarget Up
+_camera camSetRelPos [0,1,0.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up setMimic "Angry"
+Up say "intro4"
+~4
+_camera camSetTarget S1
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+S1 setMimic "Cynic"
+~1
+S1 say "intro5"
+~3
+_camera camSetTarget Up
+_camera camSetRelPos [0,1,0.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up setMimic "Angry"
+Up say "intro6"
+~6
+_camera camSetTarget S1
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+S1 say "intro7"
+~7
+_camera camSetTarget Up
+_camera camSetRelPos [1,1,1]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+ Up say "intro8"
+~3
+Up switchmove "SitDownToStand"
+~3
+_camera camSetTarget of
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 10
+@camCommitted _camera
+Of say "intro9"
+~4
+#Map
+forceMap true
+mapAnimAdd [1, 0.1, getMarkerPos "Regina"]
+mapAnimCommit
+@mapAnimDone
+ 
+Of say "intro10"
+~7
+"Regina" setMarkerType "Destroy"
+~2
+Of say "intro11"
+~4
+"Shturm2" setMarkerType "Arrow"
+~7
+Of say "intro12"
+~8
+Of say "intro13"
+~2.5
+"Zaslon2" setMarkerType "Arrow"
+"Zaslon1" setMarkerType "Arrow"
+"Zaslon3" setMarkerType "Arrow"
+~2.5
+"Shturm3" setMarkerType "Arrow"
+"Shturm1" setMarkerType "Arrow"
+~5
+Of say "intro14"
+~5
+"Shturm2" setMarkerPos [(getMarkerPos "Regina" select 0) + 5, (getMarkerPos "Regina" select 1) + 100]
+~1
+"Shturm1" setMarkerPos [(getMarkerPos "Regina" select 0) + 100, (getMarkerPos "Regina" select 1) - 100]
+"Shturm3" setMarkerPos [(getMarkerPos "Regina" select 0) - 100, (getMarkerPos "Regina" select 1) - 100]
+"Zaslon1" setMarkerPos [(getMarkerPos "Regina" select 0) + 100, (getMarkerPos "Regina" select 1) + 100]
+"Zaslon2" setMarkerPos [(getMarkerPos "Regina" select 0) + 10, (getMarkerPos "Regina" select 1) + 120]
+"Zaslon3" setMarkerPos [(getMarkerPos "Regina" select 0) - 50, (getMarkerPos "Regina" select 1) + 70]
+~3
+"Regina" setMarkerType "Marker"
+"Regina" setMarkerSize [2, 2]
+~3
+forceMap false
+Of say "intro15"
+~10
+of1 say "intro16"
+~0.5
+of2 say "intro162"
+~2
+Of say "intro17"
+titleCut ["","BLACK OUT",3]
+scen = 3
+~7
+titleCut ["","BLACK IN",3]
+_camera camSetTarget of3
+_camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 15]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+playsound "Ed02"
+~6
+titleCut ["","BLACK OUT",3]
+
+scen = 10
+exit

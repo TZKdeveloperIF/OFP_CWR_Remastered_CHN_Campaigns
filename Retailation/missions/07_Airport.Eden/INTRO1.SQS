@@ -1,0 +1,168 @@
+
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext [localize "STRM_Loadi1_1","plain",1]
+~5
+titletext [localize "STRM_Loadi1_0","plain",1]
+~5
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+titletext ["","plain",1]
+
+_camera camsettarget s1i
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 0
+~0
+
+_camera camsettarget s2i
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 3
+~3
+
+_camera camsettarget s3i
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 3
+~3
+
+_camera camsettarget gameri
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 3
+~3
+
+_camera camsettarget s4i
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 3
+~3
+
+_camera camsettarget s5i
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 3
+~3
+
+general say "intro1_0"
+_camera camsettarget general
+_camera camsetrelpos [0.3,-0.4,1.65]
+_camera camsetfov 0.700
+_camera camCommit 0
+~2
+
+gameri say "intro1_1"
+_camera camsettarget gameri
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+~2
+
+general say "intro1_2"
+_camera camsettarget gameri
+_camera camsetrelpos [0,3.7,1.65]
+_camera camsetfov 0.800
+_camera camCommit 5
+~2
+gameri say "intro1_3"
+gameri switchmove "Stand"
+~2
+
+general say "intro1_4"
+gameri setpos [getpos gameri select 0, (getpos gameri select 1) - 4]
+_camera camsettarget general
+_camera camsetrelpos [0.4,0.8,1.65]
+_camera camsetfov 0.700
+_camera camCommit 0
+~8
+
+general say "intro1_5"
+_camera camsettarget general
+_camera camsetrelpos [1.4,1.8,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+~7
+
+gameri say "intro1_6"
+_camera camsettarget gameri
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+gameri switchmove "EffectStandSalute"
+~1
+gameri switchmove "EffectStandSaluteEnd"
+~1.5
+
+_camera camsettarget gameri
+_camera camsetrelpos [0,1.7,1.65]
+_camera camsetfov 0.800
+_camera camCommit 3
+~3
+
+titlecut["","black out",1]
+~2
+titlecut["","black in",1]
+
+playmusic "inside_music1_9"
+
+general say "intro1_7"
+_camera camsettarget general
+_camera camsetrelpos [0,0.8,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+~4
+
+general say "intro1_8"
+_camera camsettarget general
+_camera camsetrelpos [0.8,0.8,1.65]
+_camera camsetfov 0.500
+_camera camCommit 5
+~4
+
+general say "intro1_9"
+_camera camsettarget general
+_camera camsetrelpos [0.8,0,1.65]
+_camera camsetfov 0.500
+_camera camCommit 5
+~6.5
+
+general say "intro1_10"
+_camera camsettarget general
+_camera camsetrelpos [-1,2,1.75]
+_camera camsetfov 0.800
+_camera camCommit 0
+~10
+
+general say "intro1_11"
+_camera camsettarget general
+_camera camsetrelpos [0,0.6,1.55]
+_camera camsetfov 0.400
+_camera camCommit 5
+~4.5
+
+general say "intro1_12"
+_camera camsettarget general
+_camera camsetrelpos [0,0.8,1.55]
+_camera camsetfov 0.500
+_camera camCommit 0
+5 fademusic 0
+~8
+
+playmusic "track14"
+0 fademusic 1
+_camera camsettarget [(getpos flag select 0) - 0, getpos flag select 1, (getpos flag select 2) + 6]
+_camera camsetpos [(getpos flag select 0) - 2, getpos flag select 1, (getpos flag select 2) + 6]
+_camera camsetfov 0.500
+_camera camCommit 5
+~10
+
+3 fademusic 0
+titlecut["","black out",3]
+~3
+
+[] exec "intro2.sqs"
+
+exit

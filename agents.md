@@ -1,6 +1,6 @@
 # 智能体引导文档：战役汉化工作指南
 
-本文档总结自提交 `a5e936c`（[1985] 文案修复）与 `01dece8`（[BTL1] 编码转换），供后续汉化任务参考。
+本文档总结自提交 `a5e936c`（[1985] 文案修复）、`01dece8`（[BTL1] 编码转换）与 Retailation 战役整体汉化（windows-1251 源），供后续汉化任务参考。
 
 ## 一、需要汉化的文件
 
@@ -93,3 +93,48 @@
 - [ ] CSV 可被正确解析（列数一致、引号配对）
 - [ ] 换行风格与修改前一致
 - [ ] 未误改二进制文件与其他语言列
+- [ ] HTML 标签序列未变，且 `</a>`、`<br`、`href=` 计数与原文件一致（只查 `<a ` 抓不到标签被吃掉）
+- [ ] HTML `<meta ... charset=...>` 已随转码改为 `utf-8`（原 windows-1250/1251 会误导渲染）
+- [ ] 西里尔只剩注释；HTML 注释 `<! ... >` 须先从计数中剔除再比对
+- [ ] 标点无残留半角句点接中文、无“空格+中文标点”（如 `</a>.`、`</a> ，`）
+
+## 三、Retailation 战役经验（windows-1251 源）
+
+### 1. 编码
+
+- 源编码是 **windows-1251**（不是 BTL1 的 GB2312/GBK）。解码顺序按“先 UTF-8，再 cp1251，再 GBK”，以实测为准。
+- 个别文件混入 **KOI8-R 乱码**（`18_Extraction.Eden\MISSION.SQM` 共 7 处，如 `бЬТПДТПН`→`Аэродром`）。可用 bigram 评分 + `encode('cp1251').decode('koi8-r')` 还原；改前先打印确认，避免把正常西里尔当乱码（`ЛИФТ`、`Г. Юрков` 这类是误报）。
+- 转码后必须同步改 HTML meta charset，否则浏览器/游戏按 1251 解 UTF-8 字节。
+
+### 2. 各文件的可译位置（Retailation 实测）
+
+| 文件 | 可译位置 | 禁改 |
+|---|---|---|
+| `stringtable.csv` | row[1] 正文（表头 `LANGUAGE,English,Comment`，row[0]=键，row[2]=英文备注） | 键列、备注列、其他语言列 |
+| `briefing.html` | 文本节点、属性值（按 offset 替换） | 标签、锚点 `name=`/`href=` |
+| `mission.sqm` | Sensors/Markers 的 `text`、Groups 的 `description`、`briefingName`、Effects 的 `title`、`expActiv/expDesactiv` 内嵌串（按引号拆分，只译俄语片段） | **标识符 `name`（marker name、传感器 name）** |
+| `description.ext` | `CfgSounds` 的 `titles[]` 字幕正文、`Campaign` 的 `name` | `$STR` 引用、类名、代码 |
+| `.sqs` | 仅显示用文案 | 俄语注释（按约定保留原文）、逻辑 |
+
+- CSV 字段内的换行是**字面 `\n`（反斜杠+n）**，不是真换行；引号普遍包裹字段，因此用 **span 级替换**，不要 `csv.writer` 重写（QUOTE_MINIMAL 会改变引号与格式）。
+- Retailation 的 HTML 正文是**硬编码文案**（不走 `$STR_` 引用），与 1985/BTL1 的约定不同：已有硬编码正文保持原样译入，不要临时改成 stringtable 引用（会造成大量键新增与引用面改动）。
+- `<! --- ... >` 这类畸形注释（`<` 与 `!` 之间有空格）不被渲染，其中的俄文/捷克文开发者注释**保留原文**，校验时须从西里尔计数中排除。
+- `overview.html` 可能只有 `<img>` + `<title>Overview</title>`（文字烙在 `.paa` 图里）→ 无可译文本，不要硬加 `$STR_` 键。
+- `description.ext` 可能引用**原版就不存在**的键（Retailation 有 59 个 `$STRM_` 无对应条目，64 处有效引用）→ 记录为遗留问题即可，没有原文就不要凭空编字幕。
+
+### 3. 批量翻译工作流（可复用）
+
+工具链放在临时目录（勿入库）：`extract.py` → `batches.py` → 子代理翻译 → `apply.py --apply` → `patch_charset.py` → `cleanup.py --apply` → `verify.py`；`restore.py` 从 `backup\` 还原原件。
+
+- **译后不要再跑 `extract.py`**：文件已无西里尔，会把单元和 `.zh.json` 一起删掉。
+- 翻译子代理可能**静默返回空结果**，重试同一批次即可成功。
+- 给规则文件（`TRANSLATE_RULES.md`）先定死：译文禁实际换行、禁 `<>`、禁半角 `"`（CSV 回填时转 `""`）、`bare` 条目禁 `;`、保留 `%1`/`$STR_`/`marker:`/字面 `\n`、片段单元保持首尾空格（apply 用 `preserve_ws()` 补回）。
+- 调试写回前**先 restore**：任何一次失败的 `--apply` 都会把文件写成半成品。
+
+### 4. 踩坑复盘（写新脚本时对照）
+
+1. `rec['ext']` 带点，比较必须写 `'.csv'` / `'.html'`。写成 `'csv'` 会**静默走错分支**：文件被 UTF-8 重编码却不替换内容，表面上“applied 124 files”正常。DEBUG 打印要放在分支**入口**，不是末尾。
+2. 标点清理正则 `</a>[ 　]*\.` → `。` 会把 `</a>` 一起替换掉；必须用 lookbehind `(?<=</a>)[ 　]*\.`。同时 verify 要比对 `</a>`/`<br` 计数，只查 `<a ` 与 `href=` 抓不到。
+3. 用 `csv.reader` 逐行比对时要跳过空行 `[]`，否则 `a[0]` 抛 IndexError。
+4. 脚本加 `if __name__ == '__main__': sys.exit(main())`，否则 `import` 调试时会直接跑主流程。
+5. 给文件做结构校验时，比较对象是**原始备份**（cp1251/GBK 解码）与新文件；两边都要先归一化“有意改动”的部分（如 charset），否则校验会把预期改动报成错误。

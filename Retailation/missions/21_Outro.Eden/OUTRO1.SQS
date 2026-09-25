@@ -1,0 +1,51 @@
+;camera1_4 setpos [(getpos camera1_4 select 0), (getpos camera1_4 select 1), (getpos camera1_4 select 2) + 1]
+
+;titlecut["","black in",999999999999999999999999999999999999999999999999]
+;titletext [localize "STR_Load2_0","plain",1]
+;~2
+;titletext [localize "STR_Load2_1","plain",1]
+;~2
+;titlecut["","black in",1]
+
+;titletext ["","plain",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget camera2_1
+_camera camsetpos [(getpos camera2 select 0) - 0, (getpos camera2 select 1) + 0, (getpos camera2 select 2) + 0.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera camsettarget camera2_1
+_camera camsetpos [(getpos camera2 select 0) - 0, (getpos camera2 select 1) + 0, (getpos camera2 select 2) + 4.0]
+_camera camsetfov 0.800
+_camera camCommit 5
+~10
+
+_camera camsettarget s1
+_camera camsetrelpos [4,1,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+s1 say "outro2_0"
+~5.2
+
+_camera camsettarget s2
+_camera camsetrelpos [1,1,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+s2 say "outro2_1"
+~4
+
+titlecut["","black out",1]
+~1
+
+titletext ["","plain",1]
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+[] exec "outro2.sqs"
+
+exit

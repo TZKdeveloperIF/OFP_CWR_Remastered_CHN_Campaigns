@@ -1,0 +1,99 @@
+setacctime 1.0
+
+enableradio false
+
+incaptive2ver=true
+
+gamer setcaptive true
+
+showRadio=0
+showCompass=0
+showGPS=0
+showMap=0
+showNotepad=0
+showWatch=0
+debriefing=0
+briefing=0
+
+;disableuserinput true
+
+s1 setdammage 1
+s2 setdammage 1
+s3 setdammage 1
+s4 setdammage 1
+s5 setdammage 1
+s6 setdammage 1
+s7 setdammage 1
+s8 setdammage 1
+s9 setdammage 1
+b_driver setdammage 1
+driver1 setdammage 1
+driver2 setdammage 1
+driver3 setdammage 1
+
+leader grp1 setcombatmode "BLUE"
+leader a2r setcombatmode "BLUE"
+leader j1 setcombatmode "BLUE"
+leader j1 setbehaviour "CARELESS"
+
+g1_1 SetCombatMode "BLUE"
+g1_2 SetCombatMode "BLUE"
+g1_3 SetCombatMode "BLUE"
+g1_4 SetCombatMode "BLUE"
+g1_5 SetCombatMode "BLUE"
+g1_6 SetCombatMode "BLUE"
+g_sniper SetCombatMode "BLUE"
+g_sniper_1 SetCombatMode "BLUE"
+g_sniper_1_1 SetCombatMode "BLUE"
+
+[] exec "setposup.sqs"
+
+gamer switchmove "CombatDyingVer3"
+
+playsound "zoom"
+titlecut ["","white out",2]
+~2
+
+titlecut ["","black in",999999999999999999999999999999999999]
+ld1 setpos [getpos gamer select 0, (getpos gamer select 1) + 2, (getpos gamer select 2) + 0]
+ld2 setpos [getpos gamer select 0, (getpos gamer select 1) - 5, (getpos gamer select 2) + 0]
+ld1 dowatch gamer
+ld2 dowatch gamer
+~5
+
+leader ld1 say "ingameintro2_0"
+~3
+
+?!objdone: goto "skip1"
+leader ld1 say "ingameintro2_1"
+~4.5
+
+#skip1
+leader ld1 say "ingameintro2_2"
+~7
+leader ld1 say "ingameintro2_3"
+~1
+leader ld1 say "ingameintro2_4"
+~4
+leader ld1 say "ingameintro2_5"
+~2
+leader ld1 say "ingameintro2_6"
+~3
+leader ld1 say "ingameintro2_7"
+~3
+
+cam1 setpos [getpos gamer select 0, (getpos gamer select 1) + 0.3, (getpos gamer select 2) + 20]
+cam2 setpos [(getpos gamer select 0) + 1, (getpos gamer select 1) + 0.3, (getpos gamer select 2) + 20]
+
+titlecut ["","black in",5]
+~5
+
+titlecut ["","black out",3]
+
+;disableuserinput false
+~3
+
+; конец ролика 
+[] exec "surrended.sqs"
+
+exit

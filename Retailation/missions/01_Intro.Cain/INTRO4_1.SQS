@@ -1,0 +1,79 @@
+_count1 = 170
+_count2 = 170
+deletevehicle sel
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+~1
+titletext [localize "STR_Load3_6_1","plain",1]
+~5
+tar_ver setpos [(getpos tar_ver_pos1 select 0) + 0, (getpos tar_ver_pos1 select 1) + 1, (getpos tar_ver_pos1 select 2) + 50]
+~1
+titlecut["","black in",1]
+
+titletext ["","plain",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+cutRsc ["OU", "PLAIN", 5]
+
+_camera camsettarget tar_ver
+_camera camsetrelpos [-8,60,-1]
+_camera camsetfov 0.700
+_camera camCommit 0
+~5
+
+[] exec "intro4_1_talk.sqs"
+
+#sc1
+_camera camsettarget tar_ver
+_camera camsetrelpos [0,9,-0.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+_count1 = _count1 - 1
+?_count1 == 0: goto "sc2"
+~0.005
+goto "sc1"
+
+#sc2
+[] exec "intro4_1_talk2.sqs"
+
+#sc3
+_camera camsettarget tar_ver
+_camera camsetrelpos [0,11,-1.5]
+_camera camsetfov 0.500
+_camera camCommit 0
+_count2 = _count2 - 1
+?_count2 == 0: goto "sc4"
+~0.005
+goto "sc3"
+
+#sc4
+titlecut["","black out",0.5]
+titlecut["","black in",0.5]
+general1 dowatch tar_ver
+_camera camsettarget general1
+_camera camsetrelpos [1,2,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~2
+general1 say "intro6_8"
+~4
+
+_camera camsettarget general1
+_camera camsetrelpos [0,-1,1.2]
+_camera camsetfov 0.800
+_camera camCommit 5
+~5
+
+titlecut["","black out",1]
+~1
+
+
+;_camera cameraeffect ["terminate", "back"]
+;camdestroy _camera
+;
+;konec=true
+
+[] exec "intro5.sqs"
+
+exit

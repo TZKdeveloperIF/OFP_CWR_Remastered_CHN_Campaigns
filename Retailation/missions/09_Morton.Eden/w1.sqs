@@ -1,0 +1,17 @@
+Wpoteri = 0
+#start
+_wunits = units W1 - [units W1 select 0]
+_wunits commandmove (getpos baze_pos)
+~20
+@count (units w1) < 12
+? not alive W1: Goto "pause"
+#Resp
+Wpoteri = Wpoteri + 1
+_b = "SoldierWB" createUnit [getPos W1, W1, "", Wskill ];
+~1
+?count (units w1) < 12:goto "Resp"
+goto "start"
+
+
+#pause
+exit

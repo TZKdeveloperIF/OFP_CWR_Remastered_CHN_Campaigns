@@ -1,0 +1,45 @@
+;скрипт сдачи в плен добровольно
+player setcaptive true
+
+setacctime 1.0
+
+enableradio false
+
+incaptive=true
+
+;s1 dofire player
+;s2 dofire player
+;s3 dofire player
+;s4 dofire player
+;s5 dofire player
+;s6 dofire player
+
+;заставляем стрелять по предателю
+;s7 dofire player
+;s8 dofire player
+;s9 dofire player
+;s10 dofire player
+;driver ural1 dofire player
+;driver ural2 dofire player
+;driver ural3 dofire player
+
+;говорит что сдается
+gamer say "ingameintro1_0"
+~3
+
+playsound "ingameintro1_1"
+~2
+
+playsound "ingameintro1_2"
+~3
+
+titlecut ["","black out",1]
+~1
+
+?alive gamer: gamer switchmove "FXStandSurUniv"
+
+removeallweapons gamer
+
+?alive gamer: [] exec "tocaptive2.sqs"
+
+exit

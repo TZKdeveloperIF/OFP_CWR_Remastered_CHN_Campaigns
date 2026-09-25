@@ -1,0 +1,358 @@
+onLoadIntro=$STRM_Load_1
+onLoadMission=$STRM_Load_4
+
+showRadio=0
+showCompass=1
+showGPS=0
+showMap=1
+showNotepad=1
+showWatch=1
+debriefing=1
+briefing=1
+
+class CfgSounds
+{
+      sounds[] = { };
+      class intro1_0
+      {
+            name = "intro1_0";
+            sound[] = {"intro1_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_0
+            };
+      };
+      class intro1_1
+      {
+            name = "intro1_1";
+            sound[] = {"intro1_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_1
+            };
+      };
+      class intro1_2
+      {
+            name = "intro1_2";
+            sound[] = {"intro1_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_2
+            };
+      };
+      class intro1_3
+      {
+            name = "intro1_3";
+            sound[] = {"intro1_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_3
+            };
+      };
+      class intro1_4
+      {
+            name = "intro1_4";
+            sound[] = {"intro1_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_4
+            };
+      };
+      class intro1_5
+      {
+            name = "intro1_5";
+            sound[] = {"intro1_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_5
+            };
+      };
+      class intro1_6
+      {
+            name = "intro1_6";
+            sound[] = {"intro1_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_6
+            };
+      };
+      class intro1_7
+      {
+            name = "intro1_7";
+            sound[] = {"intro1_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_7
+            };
+      };
+      class intro1_8
+      {
+            name = "intro1_8";
+            sound[] = {"intro1_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_8
+            };
+      };
+      class intro2_0
+      {
+            name = "intro2_0";
+            sound[] = {"intro2_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_0
+            };
+      };
+      class intro2_1
+      {
+            name = "intro2_1";
+            sound[] = {"intro2_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_1
+            };
+      };
+      class intro2_2
+      {
+            name = "intro2_2";
+            sound[] = {"intro2_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_2
+            };
+      };
+      class intro2_3
+      {
+            name = "intro2_3";
+            sound[] = {"intro2_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_3
+            };
+      };
+      class intro2_4
+      {
+            name = "intro2_4";
+            sound[] = {"intro2_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_4
+            };
+      };
+      class intro2_5
+      {
+            name = "intro2_5";
+            sound[] = {"intro2_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_5
+            };
+      };
+      class intro2_6
+      {
+            name = "intro2_6";
+            sound[] = {"intro2_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_6
+            };
+      };
+      class intro2_7
+      {
+            name = "intro2_7";
+            sound[] = {"intro2_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_7
+            };
+      };
+      class ingame1_0
+      {
+            name = "ingame1_0";
+            sound[] = {"ingame1_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_0
+            };
+      };
+      class ingame1_1
+      {
+            name = "ingame1_1";
+            sound[] = {"ingame1_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_1
+            };
+      };
+      class ingame1_2
+      {
+            name = "ingame1_2";
+            sound[] = {"ingame1_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_2
+            };
+      };
+      class ingame1_3
+      {
+            name = "ingame1_3";
+            sound[] = {"ingame1_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_3
+            };
+      };
+      class ingame1_4
+      {
+            name = "ingame1_4";
+            sound[] = {"ingame1_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_4
+            };
+      };
+      class ingame1_5
+      {
+            name = "ingame1_5";
+            sound[] = {"ingame1_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_5
+            };
+      };
+      class ingame1_6
+      {
+            name = "ingame1_6";
+            sound[] = {"ingame1_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame1_6
+            };
+      };
+      class ingame2_0
+      {
+            name = "ingame2_0";
+            sound[] = {"ingame2_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame2_0
+            };
+      };
+      class ingame2_1
+      {
+            name = "ingame2_1";
+            sound[] = {"ingame2_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame2_1
+            };
+      };
+      class ingame2_2
+      {
+            name = "ingame2_2";
+            sound[] = {"ingame2_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame2_2
+            };
+      };
+      class ingame2_3
+      {
+            name = "ingame2_3";
+            sound[] = {"ingame2_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame2_3
+            };
+      };
+      class ingame3_0
+      {
+            name = "ingame3_0";
+            sound[] = {"ingame3_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame3_0
+            };
+      };
+      class ingame3_1
+      {
+            name = "ingame3_1";
+            sound[] = {"ingame3_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame3_1
+            };
+      };
+      class ingame3_2
+      {
+            name = "ingame3_2";
+            sound[] = {"ingame3_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame3_2
+            };
+      };
+      class ingame3_3
+      {
+            name = "ingame3_3";
+            sound[] = {"ingame3_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame3_3
+            };
+      };
+      class ingame3_4
+      {
+            name = "ingame3_4";
+            sound[] = {"ingame3_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame3_4
+            };
+      };
+      class ingame4_0
+      {
+            name = "ingame4_0";
+            sound[] = {"ingame4_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame4_0
+            };
+      };
+      class ingame4_1
+      {
+            name = "ingame4_1";
+            sound[] = {"ingame4_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame4_1
+            };
+      };
+      class ingame4_2
+      {
+            name = "ingame4_2";
+            sound[] = {"ingame4_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame4_2
+            };
+      };
+      class ingame4_3
+      {
+            name = "ingame4_3";
+            sound[] = {"ingame4_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame4_3
+            };
+      };
+      class ingame4_4
+      {
+            name = "ingame4_4";
+            sound[] = {"ingame4_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_ingame4_4
+            };
+      };
+};

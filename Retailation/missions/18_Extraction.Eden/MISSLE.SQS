@@ -1,0 +1,7 @@
+
+#start
+@((nearestObject [tar_ver, "AA"] distance tar_ver < 1500) && (tarakan in tar_ver)) or ((nearestObject [tar_ver, "9K32"] distance tar_ver < 1500) && (tarakan in tar_ver))
+tar_gunner vehicleradio "rad_5"
+tar_ver say "missle"
+~2
+goto "start"

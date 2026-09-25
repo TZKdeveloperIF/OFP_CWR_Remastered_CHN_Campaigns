@@ -1,0 +1,107 @@
+
+;titlecut["","black in",999999999999999999999999999999999999999999999999]
+;titletext [localize "STR_Load3_5","plain",1]
+;~5
+;titlecut["","black in",1]
+
+titletext ["","plain",1]
+
+playsound "fx05"
+cutRsc ["Glab", "PLAIN", 5]
+~5
+
+tanks=true
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget camera3_1
+_camera camsetpos [(getpos camera3 select 0) - 0, (getpos camera3 select 1) + 0, (getpos camera3 select 2) + 1]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+_camera camsettarget camera3_1
+_camera camsetpos [(getpos camera3 select 0) - 0, (getpos camera3 select 1) + 0, (getpos camera3 select 2) + 1]
+_camera camsetfov 0.300
+_camera camCommit 3
+koleso say "intro5_0"
+~3
+
+playsound "fx02"
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget radio
+_camera camsetrelpos [-1,0.2,-0.4]
+_camera camsetfov 0.500
+_camera camCommit 0
+~1
+radio say "intro5_1"
+~2
+radio say "intro5_2"
+~3
+
+_camera camsettarget t1
+_camera camsetrelpos [-7,30,-0.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+t1 say "intro5_3"
+~5
+
+cutRsc ["Predstav", "PLAIN", 5]
+
+_camera camsettarget t1
+_camera camsetrelpos [7,30,-0.3]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+t1 say "intro5_4"
+~4
+
+_camera camsettarget koleso
+_camera camsetrelpos [1,0.8,1.65]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+koleso say "intro5_5"
+~3
+
+_camera camsettarget koleso
+_camera camsetrelpos [2,1.8,1.6]
+_camera camsetfov 0.800
+_camera camCommit 1
+~0.5
+t1 fire ["Gun120","Heat120","Heat120"]
+~0.2
+sm1 = "Heat125" camcreate getpos bomm
+~0.2
+e1 switchmove "Fxdismay"
+~0.2
+e2 switchmove "Fxdismay"
+~0.9
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget koleso
+_camera camsetrelpos [0,0.7,1.6]
+_camera camsetfov 0.800
+_camera camCommit 0
+koleso say "intro5_6"
+koleso setmimic "Angry"
+~4
+
+titletext ["","plain",1]
+
+;titlecut["","black out",1]
+;titlecut["","black in",1]
+
+titlecut["","black out",1]
+~1
+
+[] exec "intro4.sqs"
+
+exit

@@ -1,0 +1,40 @@
+tit_boat1 stop false
+tit_boat2 stop false
+tit_boat3 stop false
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+titlecut["","black in",1]
+
+chayka = "seagull" camcreate  [getPos chayka_place select 0, getPos chayka_place select 1, (getPos chayka_place select 2) + 25]
+chayka setdir 180
+
+_camera camsettarget tit_camera7_1
+_camera camsetpos [(getpos tit_camera7 select 0) - 0, (getpos tit_camera7 select 1) + 0, (getpos tit_camera7 select 2) + 25]
+_camera camsetfov 0.900
+_camera camCommit 0
+
+_camera camsettarget tit_camera7_1
+_camera camsetpos [(getpos tit_camera7 select 0) - 0, (getpos tit_camera7 select 1) + 30, (getpos tit_camera7 select 2) + 25]
+_camera camsetfov 0.700
+_camera camCommit 40
+~3
+cutRsc ["Glab", "PLAIN", 5]
+~15
+cutRsc ["Rmedia", "PLAIN", 5]
+~15
+~7
+
+titlecut["","black out",5]
+~5
+titletext ["опнднкфемхе якедсер...","plain",1]
+~5
+titletext ["","plain",1]
+
+konecoutro=true
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+exit

@@ -1,0 +1,2424 @@
+class CfgIdentities
+{
+      class Dmitriy
+      {
+            name = "Дмитрий Астахов";
+            face = "Face37";
+            glasses="None";
+            speaker = "Ruslan";
+            pitch = 1.10;
+      };
+      class Gubin
+      {
+            name = "Алексей Васильевич Губин";
+            face = "Face15";
+            glasses="Spectacles";
+            speaker = "Marc";
+            pitch = 1.10;
+      };
+      class Udav
+      {
+            name = "Андрей Селиванов";
+            face = "Face29";
+            glasses="Sunglasses";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+      class Tarakan
+      {
+            name = "Василий Тараканов";
+            face = "Face44";
+            glasses="None";
+            speaker = "Dan";
+            pitch = 1.00;
+      };
+      class Koleso
+      {
+            name = "Илья Колесников";
+            face = "Face45";
+            glasses="None";
+            speaker = "Jonah";
+            pitch = 1.00;
+      };
+      class Puzo
+      {
+            name = "Федор Пузанцев"
+            face = "face4"
+            glasses = "none"
+            speaker = "Tom"
+            pitch = 1.00
+      };
+      class oficerV
+      {
+            name = "Сергей Волошин";
+            face = "Face32"
+            glasses="None";
+            speaker = "John";
+            pitch = 1.00;
+      };
+      class David
+      {
+            name = "Дэвид Армстронг";
+            face = "Face7";
+            glasses="None";
+            speaker = "Greg";
+            pitch = 1.05;
+      };
+      class Bandit
+      {
+            name = "Ясхар";
+            face = "Face28";
+            glasses="None";
+            speaker = "Rich";
+            pitch = 1.00;
+      };
+      class Tiger
+      {
+            name = "Tiger";
+            face = "Face42";
+            glasses="None";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+      class Lesnik
+      {
+            name = "Лесник";
+            face = "Face14";
+            glasses="None";
+            speaker = "Greg";
+            pitch = 1.05;
+      };
+      class Blake
+      {
+            name = "Капер Блэйк";
+            face = "Face16";
+            glasses="spectacles";
+            speaker = "Greg";
+            pitch = 0.85;
+      };
+};
+
+
+class MissionDefault
+{
+       lives = -1;
+
+      lost = ;
+      end1 = ;
+      end2 = ;
+      end3 = ;
+      end4 = ;
+      end5 = ;
+      end6 = ;
+};
+
+
+
+
+class Campaign
+{
+      name = "ОтветныйУдар";
+      firstBattle = intro;
+      
+      
+
+      class intro
+      {
+            name = "Миротворец";
+
+            cutscene = 00_Intro.Eden;
+
+            firstMission = 01_intro;
+            end1 = ;
+            end2 = ;
+            end3 = ;
+            end4 = ;
+            end5 = ;
+            end6 = ;
+            lost = ;
+
+            class 01_Intro: MissionDefault
+            {
+                  end1 = 01_Zasada;
+                  end2 = 01_Zasada;
+                  end3 = 01_Zasada;
+                  end4 = 01_Zasada;
+                  end5 = 01_Zasada;
+                  end6 = 01_Zasada;
+                  lost =  01_Zasada;
+                  template =  01_Intro.Cain;
+            };
+            class 01_Zasada: MissionDefault
+            {
+                  end1 = 02_Plen;
+                  end2 = 01_Zasada;
+                  end3 = 01_Zasada;
+                  end4 = 01_Zasada;
+                  end5 = 01_Zasada;
+                  end6 = 01_Zasada;
+                  lost =  01_Zasada;
+                  template =  01_Zasada.Eden;
+            };
+            class 02_Plen: MissionDefault
+            {
+                  end1 = 03_Yazik;
+                  end2 = 02_Plen;
+                  end3 = 02_Plen;
+                  end4 = 02_Plen;
+                  end5 = 02_Plen;
+                  end6 = X0_Tribunal;
+                  lost = 02_Plen;
+                  template = 02_Plen.Eden;
+            };
+            class 03_Yazik: MissionDefault
+            {
+                  end1 = 04_Konvoy;
+                  end2 = 03_Yazik;
+                  end3 = 03_Yazik;
+                  end4 = 03_Yazik;
+                  end5 = 03_Yazik;
+                  end6 = 03_Yazik;
+                  lost = 03_Yazik;
+                  template = 03_Yazik.Eden;
+            };
+            class 04_Konvoy: MissionDefault
+            {
+                  end1 = 05_Zachistka;
+                  end2 = 04_Konvoy;
+                  end3 = 04_Konvoy;
+                  end4 = 04_Konvoy;
+                  end5 = 04_Konvoy;
+                  end6 = X0_Tribunal;
+                  lost = 04_Konvoy;
+                  template = 04_Konvoy.Eden;
+            };
+            class 05_Zachistka: MissionDefault
+            {
+                  end1 = 06_Perevorot;
+                  end2 = 05_Zachistka;
+                  end3 = 05_Zachistka;
+                  end4 = 05_Zachistka;
+                  end5 = 05_Zachistka;
+                  end6 = X0_Tribunal;
+                  lost = 05_Zachistka;
+                  template = 05_Zachistka.Eden;
+            };
+            class 06_Perevorot: MissionDefault
+            {
+                  end1 = 07_Airport;
+                  end2 = 06_Perevorot;
+                  end3 = 06_Perevorot;
+                  end4 = 06_Perevorot;
+                  end5 = 06_Perevorot;
+                  end6 = X0_Tribunal;
+                  lost = 06_Perevorot;
+                  template = 06_Perevorot.Eden;
+            };
+            class 07_Airport: MissionDefault
+            {
+                  end1 = 09_Morton;
+                  end2 = 07_Airport;
+                  end3 = 07_Airport;
+                  end4 = 07_Airport;
+                  end5 = 07_Airport;
+                  end6 = X0_Tribunal;
+                  lost = 07_Airport;
+                  template = 07_Airport.eden;
+            };
+            class 09_Morton: MissionDefault
+            {
+                  end1 = 10_Outro;
+                  end2 = 09_Morton;
+                  end3 = 09_Morton;
+                  end4 = 09_Morton;
+                  end5 = 09_Morton;
+                  end6 = 09_Morton;
+                  lost = 09_Morton;
+                  template = 09_Morton.eden;
+            };
+            class 10_Outro: MissionDefault
+            {
+                  end1 = 11_AirStrike;
+                  end2 = 11_AirStrike;
+                  end3 = 11_AirStrike;
+                  end4 = 11_AirStrike;
+                  end5 = 11_AirStrike;
+                  end6 = 11_AirStrike;
+                  lost = 11_AirStrike;
+                  template = 10_Outro.Eden;
+            };
+            class 11_AirStrike: MissionDefault
+            {
+                  end1 = 12_Regina;
+                  end2 = 11_AirStrike;
+                  end3 = 11_AirStrike;
+                  end4 = 11_AirStrike;
+                  end5 = 11_AirStrike;
+                  end6 = 11_AirStrike;
+                  lost = 11_AirStrike;
+                  template = 11_AirStrike.Eden;
+            };
+            class 12_Regina: MissionDefault
+            {
+                  end1 = 13_Defense;
+                  end2 = 12_Regina;
+                  end3 = 12_Regina;
+                  end4 = 12_Regina;
+                  end5 = 12_Regina;
+                  end6 = 12_Regina;
+                  lost = 12_Regina;
+                  template = 12_Regina.eden;
+            };
+            class 13_Defense: MissionDefault
+            {
+                  end1 = 14_Dokument;
+                  end2 = 13_Defense;
+                  end3 = 13_Defense;
+                  end4 = 13_Defense;
+                  end5 = 13_Defense;
+                  end6 = 13_Defense;
+                  lost = 13_Defense;
+                  template = 13_Defense.eden;
+            };
+            class 14_Dokument: MissionDefault
+            {
+                  end1 = 15_RedPoint;
+                  end2 = 14_Dokument;
+                  end3 = 14_Dokument;
+                  end4 = 14_Dokument;
+                  end5 = 14_Dokument;
+                  end6 = 14_Dokument;
+                  lost = 14_Dokument;
+                  template = 14_Dokument.eden;
+            };
+            class 15_RedPoint: MissionDefault
+            {
+                  end1 = 16_Tooktank;
+                  end2 = 15_RedPoint;
+                  end3 = 15_RedPoint;
+                  end4 = 15_RedPoint;
+                  end5 = 15_RedPoint;
+                  end6 = 15_RedPoint;
+                  lost = 15_RedPoint;
+                  template = 15_RedPoint.eden;
+            };
+            class 16_Tooktank: MissionDefault
+            {
+                  end1 = 17_secret_zone;
+                  end2 = 16_Tooktank;
+                  end3 = 16_Tooktank;
+                  end4 = 16_Tooktank;
+                  end5 = 16_Tooktank;
+                  end6 = 16_Tooktank;
+                  lost = 16_Tooktank;
+                  template = 16_Tooktank.eden;
+            };
+            class 17_secret_zone: MissionDefault
+            {
+                  end1 = 18_Extraction;
+                  end2 = 17_secret_zone;
+                  end3 = 17_secret_zone;
+                  end4 = 17_secret_zone;
+                  end5 = 17_secret_zone;
+                  end6 = 17_secret_zone;
+                  lost = 17_secret_zone;
+                  template = 17_secret_zone.eden;
+            };
+            class 18_Extraction: MissionDefault
+            {
+                  end1 = 19_AfterMontignak;
+                  end2 = 18_Extraction;
+                  end3 = 18_Extraction;
+                  end4 = 18_Extraction;
+                  end5 = 18_Extraction;
+                  end6 = 18_Extraction;
+                  lost = 18_Extraction;
+                  template = 18_Extraction.eden;
+            };
+            class 19_AfterMontignak: MissionDefault
+            {
+                  end1 = 20_Outro;
+                  end2 = 19_AfterMontignak;
+                  end3 = 19_AfterMontignak;
+                  end4 = 19_AfterMontignak;
+                  end5 = 19_AfterMontignak;
+                  end6 = X0_Tribunal;
+                  lost = 19_AfterMontignak;
+                  template = 19_AfterMontignak.eden;
+            };
+            class 20_Outro: MissionDefault
+            {
+                  end1 = 21_Outro;
+                  end2 = 21_Outro;
+                  end3 = 21_Outro;
+                  end4 = 21_Outro;
+                  end5 = 21_Outro;
+                  end6 = 21_Outro;
+                  lost = 21_Outro;
+                  template = 20_Outro.abel;
+            };
+            class 21_Outro: MissionDefault
+            {
+                  end1 = ;
+                  end2 = ;
+                  end3 = ;
+                  end4 = ;
+                  end5 = ;
+                  end6 = ;
+                  lost = ;
+                  template = 21_Outro.eden;
+            };
+            class X0_Tribunal: MissionDefault
+            {
+                  end1 = ;
+                  end2 = ;
+                  end3 = ;
+                  end4 = ;
+                  end5 = ;
+                  end6 = ;
+                  lost = ;
+                  template = X0_Tribunal.Cain;
+            };
+
+
+      };
+};
+
+
+class CfgMusic
+{
+      tracks[]={bk01,bk02,bk03,bk04,inside_music1_0,inside_music1_1,inside_music1_2,inside_music1_3,inside_music1_4,inside_music1_5,inside_music1_6,inside_music1_7,inside_music1_8,inside_music1_9,inside_music1_10,inside_music1_11,inside_music1_12,inside_music1_13,inside_music1_14};
+      class bk01
+      {
+      name = "bk01";
+      sound[] = {bk01.ogg, db+20, 1.0};
+      };
+      class bk02
+      {
+      name = "bk02";
+      sound[] = {bk02.ogg, db+20, 1.0};
+      };
+      class bk03
+      {
+      name = "bk03";
+      sound[] = {bk03.ogg, db+20, 1.0};
+      };
+      class bk04
+      {
+      name = "bk04";
+      sound[] = {bk04.ogg, db+20, 1.0};
+      };
+
+     class inside_music1_0
+     {
+     name = "inside_music1_0";
+     sound[] = {inside_music1_0.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_1
+     {
+     name = "inside_music1_1";
+     sound[] = {inside_music1_1.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_2
+     {
+     name = "inside_music1_2";
+     sound[] = {inside_music1_2.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_3
+     {
+     name = "inside_music1_3";
+     sound[] = {inside_music1_3.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_4
+     {
+     name = "inside_music1_4";
+     sound[] = {inside_music1_4.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_5
+     {
+     name = "inside_music1_5";
+     sound[] = {inside_music1_5.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_6
+     {
+     name = "inside_music1_6";
+     sound[] = {inside_music1_6.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_7
+     {
+     name = "inside_music1_7";
+     sound[] = {inside_music1_7.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_8
+     {
+     name = "inside_music1_8";
+     sound[] = {inside_music1_8.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_9
+     {
+     name = "inside_music1_9";
+     sound[] = {inside_music1_9.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_10
+     {
+     name = "inside_music1_10";
+     sound[] = {inside_music1_10.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_11
+     {
+     name = "inside_music1_11";
+     sound[] = {inside_music1_11.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_12
+     {
+     name = "inside_music1_12";
+     sound[] = {inside_music1_12.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_13
+     {
+     name = "inside_music1_13";
+     sound[] = {inside_music1_13.ogg, db+0, 1.0};
+     };
+
+     class inside_music1_14
+     {
+     name = "inside_music1_14";
+     sound[] = {inside_music1_14.ogg, db+0, 1.0};
+     };
+     class inside_music1_15
+     {
+     name = "inside_music1_15";
+     sound[] = {inside_music1_15.ogg, db+0, 1.0};
+     };
+     class inside_music1_16
+     {
+     name = "inside_music1_16";
+     sound[] = {inside_music1_16.ogg, db+0, 1.0};
+     };
+};
+
+
+// SOUND EFFECTS
+class CfgSounds
+{
+      sounds[]={};
+      class fx01
+      {
+            name = "";
+            sound[] = {"fx01.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx02
+      {
+            name = "";
+            sound[] = {"fx02.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx03
+      {
+            name = "";
+            sound[] = {"fx03.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx04
+      {
+            name = "";
+            sound[] = {"fx04.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx05
+      {
+            name = "";
+            sound[] = {"fx05.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx06
+      {
+            name = "";
+            sound[] = {"fx06.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx07
+      {
+            name = "";
+            sound[] = {"fx07.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx08
+      {
+            name = "";
+            sound[] = {"fx08.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx09
+      {
+            name = "";
+            sound[] = {"fx09.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx10
+      {
+            name = "";
+            sound[] = {"fx10.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx11
+      {
+            name = "";
+            sound[] = {"fx11.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx12
+      {
+            name = "";
+            sound[] = {"fx12.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx13
+      {
+            name = "";
+            sound[] = {"fx13.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class fx14
+      {
+            name = "";
+            sound[] = {"fx14.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class bk01
+      {
+            name = "";
+            sound[] = {"bk01.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class bk02
+      {
+            name = "";
+            sound[] = {"bk02.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class bk03
+      {
+            name = "";
+            sound[] = {"bk03.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class bk04
+      {
+            name = "";
+            sound[] = {"bk04.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class ed01
+      {
+            name = "";
+            sound[] = {"ed01.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class ed02
+      {
+            name = "";
+            sound[] = {"ed02.ogg", db+40, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+
+// RES TALKS
+    class res_tolk1_1
+      {
+            name = "res_tolk1_1";
+            sound[] = {"res_tolk1_1.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_2
+      {
+            name = "res_tolk1_2";
+            sound[] = {"res_tolk1_1.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_3
+      {
+            name = "res_tolk1_3";
+            sound[] = {"res_tolk1_3.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_4
+      {
+            name = "res_tolk1_4";
+            sound[] = {"res_tolk1_4.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_5
+      {
+            name = "res_tolk1_5";
+            sound[] = {"res_tolk1_5.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_6
+      {
+            name = "res_tolk1_6";
+            sound[] = {"res_tolk1_6.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_7
+      {
+            name = "res_tolk1_7";
+            sound[] = {"res_tolk1_7.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_8
+      {
+            name = "res_tolk1_8";
+            sound[] = {"res_tolk1_8.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_9
+      {
+            name = "res_tolk1_9";
+            sound[] = {"res_tolk1_9.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_10
+      {
+            name = "res_tolk1_10";
+            sound[] = {"res_tolk1_10.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_11
+      {
+            name = "res_tolk1_11";
+            sound[] = {"res_tolk1_11.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_12
+      {
+            name = "res_tolk1_12";
+            sound[] = {"res_tolk1_12.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_13
+      {
+            name = "res_tolk1_13";
+            sound[] = {"res_tolk1_13.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_14
+      {
+            name = "res_tolk1_14";
+            sound[] = {"res_tolk1_14.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_15
+      {
+            name = "res_tolk1_15";
+            sound[] = {"res_tolk1_15.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_16
+      {
+            name = "res_tolk1_16";
+            sound[] = {"res_tolk1_16.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_17
+      {
+            name = "res_tolk1_17";
+            sound[] = {"res_tolk1_17.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_18
+      {
+            name = "res_tolk1_18";
+            sound[] = {"res_tolk1_18.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_19
+      {
+            name = "res_tolk1_19";
+            sound[] = {"res_tolk1_19.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_20
+      {
+            name = "res_tolk1_20";
+            sound[] = {"res_tolk1_20.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_21
+      {
+            name = "res_tolk1_21";
+            sound[] = {"res_tolk1_21.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_22
+      {
+            name = "res_tolk1_22";
+            sound[] = {"res_tolk1_22.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_23
+      {
+            name = "res_tolk1_23";
+            sound[] = {"res_tolk1_23.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_24
+      {
+            name = "res_tolk1_24";
+            sound[] = {"res_tolk1_24.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_25
+      {
+            name = "res_tolk1_25";
+            sound[] = {"res_tolk1_25.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_26
+      {
+            name = "res_tolk1_26";
+            sound[] = {"res_tolk1_26.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_27
+      {
+            name = "res_tolk1_27";
+            sound[] = {"res_tolk1_27.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_28
+      {
+            name = "res_tolk1_28";
+            sound[] = {"res_tolk1_28.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_29
+      {
+            name = "res_tolk1_29";
+            sound[] = {"res_tolk1_29.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_30
+      {
+            name = "res_tolk1_30";
+            sound[] = {"res_tolk1_30.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_31
+      {
+            name = "res_tolk1_31";
+            sound[] = {"res_tolk1_31.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_32
+      {
+            name = "res_tolk1_32";
+            sound[] = {"res_tolk1_32.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_33
+      {
+            name = "res_tolk1_33";
+            sound[] = {"res_tolk1_33.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_34
+      {
+            name = "res_tolk1_34";
+            sound[] = {"res_tolk1_34.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_35
+      {
+            name = "res_tolk1_35";
+            sound[] = {"res_tolk1_35.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_36
+      {
+            name = "res_tolk1_36";
+            sound[] = {"res_tolk1_36.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_37
+      {
+            name = "res_tolk1_37";
+            sound[] = {"res_tolk1_37.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_38
+      {
+            name = "res_tolk1_38";
+            sound[] = {"res_tolk1_38.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_39
+      {
+            name = "res_tolk1_39";
+            sound[] = {"res_tolk1_39.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_40
+      {
+            name = "res_tolk1_40";
+            sound[] = {"res_tolk1_40.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_41
+      {
+            name = "res_tolk1_41";
+            sound[] = {"res_tolk1_41.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_42
+      {
+            name = "res_tolk1_42";
+            sound[] = {"res_tolk1_42.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_43
+      {
+            name = "res_tolk1_43";
+            sound[] = {"res_tolk1_43.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_44
+      {
+            name = "res_tolk1_44";
+            sound[] = {"res_tolk1_44.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_45
+      {
+            name = "res_tolk1_45";
+            sound[] = {"res_tolk1_45.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_46
+      {
+            name = "res_tolk1_46";
+            sound[] = {"res_tolk1_46.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_47
+      {
+            name = "res_tolk1_47";
+            sound[] = {"res_tolk1_47ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_48
+      {
+            name = "res_tolk1_48";
+            sound[] = {"res_tolk1_48.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_49
+      {
+            name = "res_tolk1_49";
+            sound[] = {"res_tolk1_49.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_50
+      {
+            name = "res_tolk1_50";
+            sound[] = {"res_tolk1_50.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_tolk1_51
+      {
+            name = "res_tolk1_51";
+            sound[] = {"res_tolk1_51.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+
+// DIE SCREAMS
+      class die_scream1_1
+      {
+            name = "die_scream1_1";
+            sound[] = {"die_scream1_1.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_2
+      {
+            name = "die_scream1_2";
+            sound[] = {"die_scream1_2.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_3
+      {
+            name = "die_scream1_3";
+            sound[] = {"die_scream1_3.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_4
+      {
+            name = "die_scream1_4";
+            sound[] = {"die_scream1_4.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_5
+      {
+            name = "die_scream1_5";
+            sound[] = {"die_scream1_5.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_6
+      {
+            name = "die_scream1_6";
+            sound[] = {"die_scream1_6.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_7
+      {
+            name = "die_scream1_7";
+            sound[] = {"die_scream1_7.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_8
+      {
+            name = "die_scream1_8";
+            sound[] = {"die_scream1_8.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_9
+      {
+            name = "die_scream1_9";
+            sound[] = {"die_scream1_9.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_10
+      {
+            name = "die_scream1_10";
+            sound[] = {"die_scream1_10.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_11
+      {
+            name = "die_scream1_11";
+            sound[] = {"die_scream1_11.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_12
+      {
+            name = "die_scream1_12";
+            sound[] = {"die_scream1_12.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_13
+      {
+            name = "die_scream1_13";
+            sound[] = {"die_scream1_13.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_14
+      {
+            name = "die_scream1_14";
+            sound[] = {"die_scream1_14.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_15
+      {
+            name = "die_scream1_15";
+            sound[] = {"die_scream1_15.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_16
+      {
+            name = "die_scream1_16";
+            sound[] = {"die_scream1_16.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_17
+      {
+            name = "die_scream1_17";
+            sound[] = {"die_scream1_17.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_18
+      {
+            name = "die_scream1_18";
+            sound[] = {"die_scream1_18.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_19
+      {
+            name = "die_scream1_19";
+            sound[] = {"die_scream1_19.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_20
+      {
+            name = "die_scream1_20";
+            sound[] = {"die_scream1_20.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_21
+      {
+            name = "die_scream1_21";
+            sound[] = {"die_scream1_21.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_22
+      {
+            name = "die_scream1_22";
+            sound[] = {"die_scream1_22.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_23
+      {
+            name = "die_scream1_23";
+            sound[] = {"die_scream1_23.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_24
+      {
+            name = "die_scream1_24";
+            sound[] = {"die_scream1_24.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_25
+      {
+            name = "die_scream1_25";
+            sound[] = {"die_scream1_25.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_26
+      {
+            name = "die_scream1_26";
+            sound[] = {"die_scream1_26.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_27
+      {
+            name = "die_scream1_27";
+            sound[] = {"die_scream1_27.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_28
+      {
+            name = "die_scream1_28";
+            sound[] = {"die_scream1_28.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_29
+      {
+            name = "die_scream1_29";
+            sound[] = {"die_scream1_29.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_30
+      {
+            name = "die_scream1_30";
+            sound[] = {"die_scream1_30.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_31
+      {
+            name = "die_scream1_31";
+            sound[] = {"die_scream1_31.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_32
+      {
+            name = "die_scream1_32";
+            sound[] = {"die_scream1_32.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_33
+      {
+            name = "die_scream1_33";
+            sound[] = {"die_scream1_33.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_34
+      {
+            name = "die_scream1_34";
+            sound[] = {"die_scream1_34.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_35
+      {
+            name = "die_scream1_35";
+            sound[] = {"die_scream1_35.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_36
+      {
+            name = "die_scream1_36";
+            sound[] = {"die_scream1_36.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_37
+      {
+            name = "die_scream1_37";
+            sound[] = {"die_scream1_37.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_38
+      {
+            name = "die_scream1_38";
+            sound[] = {"die_scream1_38.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_39
+      {
+            name = "die_scream1_39";
+            sound[] = {"die_scream1_39.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_40
+      {
+            name = "die_scream1_40";
+            sound[] = {"die_scream1_40.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_41
+      {
+            name = "die_scream1_41";
+            sound[] = {"die_scream1_41.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_42
+      {
+            name = "die_scream1_42";
+            sound[] = {"die_scream1_42.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_43
+      {
+            name = "die_scream1_43";
+            sound[] = {"die_scream1_43.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_44
+      {
+            name = "die_scream1_44";
+            sound[] = {"die_scream1_44.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_45
+      {
+            name = "die_scream1_45";
+            sound[] = {"die_scream1_45.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_46
+      {
+            name = "die_scream1_46";
+            sound[] = {"die_scream1_46.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_47
+      {
+            name = "die_scream1_47";
+            sound[] = {"die_scream1_47.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_48
+      {
+            name = "die_scream1_48";
+            sound[] = {"die_scream1_48.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_49
+      {
+            name = "die_scream1_49";
+            sound[] = {"die_scream1_49.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_50
+      {
+            name = "die_scream1_50";
+            sound[] = {"die_scream1_50.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_51
+      {
+            name = "die_scream1_51";
+            sound[] = {"die_scream1_51.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_52
+      {
+            name = "die_scream1_52";
+            sound[] = {"die_scream1_52.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class die_scream1_53
+      {
+            name = "die_scream1_53";
+            sound[] = {"die_scream1_53.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+
+// RESISTANCE SCREAMS
+      class res_scream1_1
+      {
+            name = "res_scream1_1";
+            sound[] = {"res_scream1_1.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_2
+      {
+            name = "res_scream1_2";
+            sound[] = {"res_scream1_2.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_3
+      {
+            name = "res_scream1_3";
+            sound[] = {"res_scream1_3.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_4
+      {
+            name = "res_scream1_4";
+            sound[] = {"res_scream1_4.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_5
+      {
+            name = "res_scream1_5";
+            sound[] = {"res_scream1_5.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_6
+      {
+            name = "res_scream1_6";
+            sound[] = {"res_scream1_6.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_7
+      {
+            name = "res_scream1_7";
+            sound[] = {"res_scream1_7.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_8
+      {
+            name = "res_scream1_8";
+            sound[] = {"res_scream1_8.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_9
+      {
+            name = "res_scream1_9";
+            sound[] = {"res_scream1_9.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_10
+      {
+            name = "res_scream1_10";
+            sound[] = {"res_scream1_10.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_11
+      {
+            name = "res_scream1_11";
+            sound[] = {"res_scream1_11.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_12
+      {
+            name = "res_scream1_12";
+            sound[] = {"res_scream1_12.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_13
+      {
+            name = "res_scream1_13";
+            sound[] = {"res_scream1_13.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_14
+      {
+            name = "res_scream1_14";
+            sound[] = {"res_scream1_14.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_15
+      {
+            name = "res_scream1_15";
+            sound[] = {"res_scream1_15.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_16
+      {
+            name = "res_scream1_16";
+            sound[] = {"res_scream1_16.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_17
+      {
+            name = "res_scream1_17";
+            sound[] = {"res_scream1_17.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_18
+      {
+            name = "res_scream1_18";
+            sound[] = {"res_scream1_18.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_19
+      {
+            name = "res_scream1_19";
+            sound[] = {"res_scream1_19.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_20
+      {
+            name = "res_scream1_20";
+            sound[] = {"res_scream1_20.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_21
+      {
+            name = "res_scream1_21";
+            sound[] = {"res_scream1_21.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_22
+      {
+            name = "res_scream1_22";
+            sound[] = {"res_scream1_22.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_23
+      {
+            name = "res_scream1_23";
+            sound[] = {"res_scream1_23.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_24
+      {
+            name = "res_scream1_24";
+            sound[] = {"res_scream1_24.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_25
+      {
+            name = "res_scream1_25";
+            sound[] = {"res_scream1_25.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_26
+      {
+            name = "res_scream1_26";
+            sound[] = {"res_scream1_26.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_27
+      {
+            name = "res_scream1_27";
+            sound[] = {"res_scream1_27.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_28
+      {
+            name = "res_scream1_28";
+            sound[] = {"res_scream1_28.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_29
+      {
+            name = "res_scream1_29";
+            sound[] = {"res_scream1_29.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_30
+      {
+            name = "res_scream1_30";
+            sound[] = {"res_scream1_30.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_31
+      {
+            name = "res_scream1_31";
+            sound[] = {"res_scream1_31.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_32
+      {
+            name = "res_scream1_32";
+            sound[] = {"res_scream1_32.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_33
+      {
+            name = "res_scream1_33";
+            sound[] = {"res_scream1_33.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_34
+      {
+            name = "res_scream1_34";
+            sound[] = {"res_scream1_34.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_35
+      {
+            name = "res_scream1_35";
+            sound[] = {"res_scream1_35.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_36
+      {
+            name = "res_scream1_36";
+            sound[] = {"res_scream1_36.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_37
+      {
+            name = "res_scream1_37";
+            sound[] = {"res_scream1_37.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_38
+      {
+            name = "res_scream1_38";
+            sound[] = {"res_scream1_38.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_39
+      {
+            name = "res_scream1_39";
+            sound[] = {"res_scream1_39.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_40
+      {
+            name = "res_scream1_40";
+            sound[] = {"res_scream1_40.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_41
+      {
+            name = "res_scream1_41";
+            sound[] = {"res_scream1_41.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_42
+      {
+            name = "res_scream1_42";
+            sound[] = {"res_scream1_42.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_43
+      {
+            name = "res_scream1_43";
+            sound[] = {"res_scream1_43.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_44
+      {
+            name = "res_scream1_44";
+            sound[] = {"res_scream1_44.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_45
+      {
+            name = "res_scream1_45";
+            sound[] = {"res_scream1_45.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_46
+      {
+            name = "res_scream1_46";
+            sound[] = {"res_scream1_46.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_47
+      {
+            name = "res_scream1_47";
+            sound[] = {"res_scream1_47.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_48
+      {
+            name = "res_scream1_48";
+            sound[] = {"res_scream1_48.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_49
+      {
+            name = "res_scream1_49";
+            sound[] = {"res_scream1_49.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_50
+      {
+            name = "res_scream1_50";
+            sound[] = {"res_scream1_50.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_51
+      {
+            name = "res_scream1_51";
+            sound[] = {"res_scream1_51.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_52
+      {
+            name = "res_scream1_52";
+            sound[] = {"res_scream1_52.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_53
+      {
+            name = "res_scream1_53";
+            sound[] = {"res_scream1_53.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_54
+      {
+            name = "res_scream1_54";
+            sound[] = {"res_scream1_54.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_55
+      {
+            name = "res_scream1_55";
+            sound[] = {"res_scream1_55.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_56
+      {
+            name = "res_scream1_56";
+            sound[] = {"res_scream1_56.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_57
+      {
+            name = "res_scream1_57";
+            sound[] = {"res_scream1_57.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_58
+      {
+            name = "res_scream1_58";
+            sound[] = {"res_scream1_58.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_59
+      {
+            name = "res_scream1_59";
+            sound[] = {"res_scream1_59.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_60
+      {
+            name = "res_scream1_60";
+            sound[] = {"res_scream1_60.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_61
+      {
+            name = "res_scream1_61";
+            sound[] = {"res_scream1_61.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_62
+      {
+            name = "res_scream1_62";
+            sound[] = {"res_scream1_62.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_63
+      {
+            name = "res_scream1_63";
+            sound[] = {"res_scream1_63.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_64
+      {
+            name = "res_scream1_64";
+            sound[] = {"res_scream1_64.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_65
+      {
+            name = "res_scream1_65";
+            sound[] = {"res_scream1_65.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_66
+      {
+            name = "res_scream1_66";
+            sound[] = {"res_scream1_66.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_67
+      {
+            name = "res_scream1_67";
+            sound[] = {"res_scream1_67.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class res_scream1_68
+    {
+            name = "res_scream1_68";
+            sound[] = {"res_scream1_68.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class west_scream1_1
+    {
+            name = "west_scream1_1";
+            sound[] = {"west_scream1_1.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+    class west_scream1_2
+    {
+            name = "west_scream1_2";
+            sound[] = {"west_scream1_2.ogg", db+20, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+    };
+// HEROES
+    class ast_zablud1
+    {
+            name = "ast_zablud1";
+            sound[] = {"ast_zablud1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ast_zablud1
+            };
+    };
+    class ast_zablud2
+    {
+            name = "ast_zablud2";
+            sound[] = {"ast_zablud2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ast_zablud2
+            };
+    };
+    class ud_zablud1
+    {
+            name = "ud_zablud1";
+            sound[] = {"ud_zablud1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ud_zablud1
+            };
+    };
+    class ud_zablud2
+    {
+            name = "ud_zablud2";
+            sound[] = {"ud_zablud2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ud_zablud2
+            };
+    };
+    class kol_zablud1
+    {
+            name = "kol_zablud1";
+            sound[] = {"kol_zablud1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_kol_zablud1
+            };
+    };
+    class kol_zablud2
+    {
+            name = "kol_zablud2";
+            sound[] = {"kol_zablud2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_kol_zablud2
+            };
+    };
+    class tar_zablud1
+    {
+            name = "tar_zablud1";
+            sound[] = {"tar_zablud1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_tar_zablud1
+            };
+    };
+    class tar_zablud2
+    {
+            name = "tar_zablud2";
+            sound[] = {"tar_zablud2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_tar_zablud2
+            };
+    };
+    class ast_brek1
+    {
+            name = "ast_brek1";
+            sound[] = {"ast_brek1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ast_brek1
+            };
+    };
+    class ast_brek2
+    {
+            name = "ast_brek2";
+            sound[] = {"ast_brek2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ast_brek2
+            };
+    };
+    class ud_brek1
+    {
+            name = "ud_brek1";
+            sound[] = {"ud_brek1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ud_brek1
+            };
+    };
+    class tar_brek1
+    {
+            name = "tar_brek1";
+            sound[] = {"tar_brek1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_tar_brek1
+            };
+    };
+    class tar_brek2
+    {
+            name = "tar_brek2";
+            sound[] = {"tar_brek2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_tar_brek2
+            };
+    };
+    class kol_brek1
+    {
+            name = "kol_brek1";
+            sound[] = {"kol_brek1.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_kol_brek1
+            };
+    };
+    class kol_brek2
+    {
+            name = "kol_brek2";
+            sound[] = {"kol_brek2.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_kol_brek2
+            };
+    };
+    class kol_firm
+    {
+            name = "kol_firm";
+            sound[] = {"kol_firm.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_kol_firm
+            };
+    };
+    class ud_firm
+    {
+            name = "ud_firm";
+            sound[] = {"ud_firm.ogg", db+1, 1.0};
+            titles[] =
+            {
+                  0, $STRC_ud_firm
+            };
+    };
+};

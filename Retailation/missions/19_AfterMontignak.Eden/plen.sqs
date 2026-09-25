@@ -1,0 +1,49 @@
+?(not alive W4): plenniy = true; exit
+w4 say "ENG40"
+w4 action ["drop weapon",w4,0,0,"M60"]
+~4
+w4 say "ENG11"
+~1
+w4 setunitpos "up"
+~3
+[w4] join Up
+_aunits = units Up
+_i = 1
+_j = count _aunits
+#Cycle
+?((_aunits select _i) distance Up < 50) and (alive (_aunits select _i)): _unit1 = (_aunits select _i); _i= _i +1; goto "Cycle2"
+ _i=_i+1
+ ~0.01
+ ?_j>_i:goto "Cycle"
+goto "end"
+
+#Cycle2
+?((_aunits select _i) distance Up < 50) and (alive (_aunits select _i)): _unit2 = (_aunits select _i); _i= _i +1; goto "EndCycle"
+ _i=_i+1
+ ~0.01
+ ?_j>_i:goto "Cycle2"
+goto "end"
+
+#EndCycle
+_unit1 say "plen01"
+~2
+_unit2 say "plen02"
+~3
+_unit1 say "plen03"
+~3
+_unit2 say "plen04"
+~3
+_unit1 say "plen05"
+~2
+_unit2 say "plen06"
+~9
+_unit1 say "plen07"
+~4
+Up say "plen08"
+~2
+#end
+Up sideradio "plen10r"
+bmp sideradio "plen11r"
+Up sideradio "plen12r"
+"1" objstatus "Active"
+exit

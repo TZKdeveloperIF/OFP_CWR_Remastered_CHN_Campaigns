@@ -1,0 +1,20 @@
+
+
+#start
+?(count (units Bpres) < 1) and (not alive Bpres): goto "end"
+?Up distance (Leader S2) > 100: Up commandFollow S2
+~30
+? (leader Up) distance (leader Bpres)> 300: (leader Up) playmove "CombatToPutDown"
+~3
+leader Up move (getpos (leader Bpres))
+;? S2 distance (leader Bpres)> 300: S2 playmove "PutDownToCombat"
+goto "start"
+
+#end
+"3" objstatus "DONE"
+(leader Up) move (getpos (b4base))
+~5
+(leader Up) move (getpos (b4base))
+~20
+Faza = 10
+exit

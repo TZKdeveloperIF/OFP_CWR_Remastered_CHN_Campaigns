@@ -1,0 +1,14 @@
+
+_heli=_this select 0
+
+_count=45
+
+#fire
+_heli fire ["Rocket57x64","Rocket57x64"]
+~0.3
+_count=_count-1
+?_count==0: goto "end"
+goto "fire"
+
+#end
+exit

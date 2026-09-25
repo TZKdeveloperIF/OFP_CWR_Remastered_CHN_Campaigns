@@ -1,0 +1,87 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Южнее Монтигнака. Утро 14 Мая.","PLAIN"]
+titleCut ["","BLACK IN",5]
+
+0 Fademusic 0.4
+Playmusic "inside_music1_11"
+
+_camera camSetTarget off
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 7]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+
+_camera camSetTarget off
+_camera camSetPos   [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 1.6]
+_camera camSetFOV 0.800
+_camera camCommit 35
+~5
+TitleText ["","PLAIN"]
+Off say "Intro1"
+~5
+Off say "Intro2"
+~3
+Off say "Intro3"
+~3
+Up_2 say "Intro4"
+~2
+Off say "Intro5"
+~5
+Off say "Intro6"
+~5
+Off say "Intro7"
+~8
+@camCommitted _camera
+
+_camera camSetTarget Up_2
+_camera camSetRelPos [0,1,1.6]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Off say "Intro8"
+~5
+_camera camSetTarget Up
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~5
+_camera camSetTarget Off
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Off say "intro9"
+~5
+_camera camSetTarget Up
+_camera camSetRelPos [0,5,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+;Up say "intro10"
+~2
+Off say "intro11"
+~2
+_camera camSetTarget tr1
+_camera camCommit 2
+@camCommitted _camera
+
+_camera camSetTarget tr1
+_camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 2.7
+
+@camCommitted _camera
+10 Fademusic 0
+titleCut ["","BLACK Out",10]
+_camera camSetTarget tr3
+_camera camSetPos  [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 10
+@camCommitted _camera
+
+
+scen = 10
+exit

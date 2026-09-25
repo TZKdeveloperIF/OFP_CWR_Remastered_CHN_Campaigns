@@ -1,0 +1,12 @@
+
+_aunits = units w1
+_i = 0
+_j = count _aunits
+#Here
+(_aunits select _i) action ["GETOUT",m1]
+unassignvehicle (_aunits select _i)
+_i=_i+1
+~2
+?_j>_i:goto "Here"
+
+exit

@@ -1,0 +1,108 @@
+_count = 200
+
+setacctime 1.0
+
+titlecut["","black in",9999999999999999999999999999999999999999999999999]
+
+;titletext [localize "STR_Load1","plain down",1]
+;~1
+titlecut["","black in",1]
+
+titletext ["","plain down",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+0 fademusic 1
+playmusic "inside_music1_14"
+
+_camera camsettarget cam2_1
+_camera camsetpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 0.1]
+_camera camsetfov 0.200
+_camera camCommit 0
+~5
+
+_camera camsettarget u1
+_camera camsetpos [(getpos cam2 select 0),(getpos cam2 select 1),(getpos cam2 select 2)+ 0.1]
+_camera camsetfov 0.800
+_camera camCommit 3
+~5
+
+[] exec "introtalk.sqs"
+
+#start1
+_camera camsettarget u1
+_camera camsetrelpos [0.3,1.5,1]
+_camera camsetfov 0.500
+_camera camCommit 0
+~0.005
+_count = _count - 1
+?_count == 0: goto "start2"
+goto "start1"
+
+#start2
+ingo=true
+_camera camsettarget cam1_1
+_camera camsetpos [(getpos cam1 select 0),(getpos cam1 select 1),(getpos cam1 select 2)+ 0.07]
+_camera camsetfov 0.500
+_camera camCommit 0
+~4
+
+;погоня НАТО с криками - пока отключено
+;playsound "intro1_0"
+~4
+
+;playsound "intro1_1"
+~4
+
+titlecut["","black out",1]
+~0.5
+titlecut["","black in",1]
+
+_camera camsettarget cam3_1
+_camera camsetpos [(getpos cam3 select 0),(getpos cam3 select 1),(getpos cam3 select 2)+ 1]
+_camera camsetfov 0.500
+_camera camCommit 0
+ofi say "intro0_5"
+~4
+
+_camera camsettarget tar
+_camera camsetrelpos [0,0.7,1.5]
+_camera camsetfov 0.500
+_camera camCommit 0
+tar switchmove "EffectStandSalute"
+~0.5
+tar switchmove "EffectStandSaluteEnd"
+tar say "intro0_6"
+~3
+
+titlecut["","black out",1]
+~0.5
+tar moveindriver ver1
+targ moveingunner ver1
+tar domove getpos cam1
+titlecut["","black in",1]
+
+_camera camsettarget ver1
+_camera camsetrelpos [0,12,0.8]
+_camera camsetfov 0.500
+_camera camCommit 0
+~5
+
+_camera camsettarget ver1
+_camera camsetrelpos [0,11,-0.8]
+_camera camsetfov 0.500
+_camera camCommit 5
+5 fademusic 0
+5 fadeSound 0
+~5
+
+titlecut["","black out",3]
+~3
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+konecintro=true
+
+exit

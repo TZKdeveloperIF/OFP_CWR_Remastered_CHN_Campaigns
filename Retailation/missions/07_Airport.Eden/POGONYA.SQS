@@ -1,0 +1,22 @@
+
+_ld = _this select 0
+_pl = _this select 1
+_firedistance = _this select 2
+
+_ldunits = count units _ld
+
+_ld setformation "WEDGE"
+_ld setcombatmode "RED"
+_ld setspeedmode "NORMAL"
+_ld setbehaviour "COMBAT"
+_ld allowFleeing 0
+
+#cycle1
+_ld move getpos _pl
+?_pl distance _ld <= _firedistance: _ld reveal _player
+~20
+?_ldunits == 0: goto "cycle2"
+goto "cycle1"
+
+#cycle2
+exit

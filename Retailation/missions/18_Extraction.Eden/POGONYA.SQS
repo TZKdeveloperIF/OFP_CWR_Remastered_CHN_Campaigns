@@ -1,0 +1,18 @@
+
+_ld = _this select 0
+_pl = _this select 1
+
+_ld setformation "WEDGE"
+_ld setcombatmode "RED"
+_ld setspeedmode "NORMAL"
+_ld setbehaviour "AWARE"
+_ld allowFleeing 0
+
+#cycle1
+_ld move getpos _pl
+~20
+goto "cycle1"
+
+#cycle2
+
+exit

@@ -1,0 +1,84 @@
+setacctime 1.0
+
+r1 switchmove "EffectStandmove"
+r2 switchmove "FXStandAtt"
+r3 switchmove "FXStandBug"
+r4 switchmove "FXStandAtt"
+tiger switchmove "EffectStandTalk"
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+titlecut["","black in",3]
+
+_camera camsettarget tiger
+_camera camsetrelpos [0.5,0.5,1.6]
+_camera camsetfov 0.800
+_camera camCommit 0
+~1
+tiger say "intro1_1"
+~12
+
+_camera camsettarget tiger
+_camera camsetrelpos [0.5,0.5,1.6]
+_camera camsetfov 0.500
+_camera camCommit 0
+tiger say "intro1_2"
+~13
+
+_camera camsettarget tiger
+_camera camsetrelpos [1,1,1.6]
+_camera camsetfov 0.800
+_camera camCommit 3
+tiger say "intro1_3"
+~18
+
+_camera camsettarget tiger
+_camera camsetrelpos [1,1,0.6]
+_camera camsetfov 0.800
+_camera camCommit 3
+tiger say "intro1_4"
+~3
+tiger setbehaviour "AWARE"
+~4
+
+_camera camsettarget tiger
+_camera camsetrelpos [0,5,1.6]
+_camera camsetfov 0.800
+_camera camCommit 0
+tiger say "intro1_5"
+~3
+tiger switchmove "CombatStrokeGun"
+~3.5
+
+tiger setbehaviour "CARELESS"
+_camera camsettarget tiger
+_camera camsetrelpos [0,1.2,1.6]
+_camera camsetfov 0.600
+_camera camCommit 5
+tiger say "intro1_6"
+~9
+
+_camera camsettarget tiger
+_camera camsetrelpos [0.7,0.7,1.6]
+_camera camsetfov 0.600
+_camera camCommit 3
+tiger say "intro1_7"
+~2
+
+_camera camsettarget tiger
+_camera camsetrelpos [-1,-1.7,1.6]
+_camera camsetfov 0.800
+_camera camCommit 0
+tiger say "intro1_8"
+~4
+
+titlecut["","black out",3]
+~3
+
+konecintro=true
+
+;_camera cameraeffect ["terminate", "back"]
+;camdestroy _camera
+
+exit

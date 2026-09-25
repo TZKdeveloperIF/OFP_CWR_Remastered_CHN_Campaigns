@@ -1,0 +1,90 @@
+[] exec "wdie.sqs"
+
+0 fadeSound 0
+
+setacctime 1.0
+
+enableradio false
+
+titlecut["","black in",9999999999999999999999999999999999999999999999999]
+
+titletext [localize "STR_Load1_1","plain",1]
+~5
+
+titletext [localize "STR_Load1_2","plain",1]
+~5
+
+astahov switchmove "LyingStillV1"
+
+titlecut["","black in",1]
+
+titletext ["","plain down",1]
+
+0 fadeSound 1
+
+enableradio true
+~1
+
+a1 say "intro0_1"
+~6
+
+astahov say "intro0_2"
+~4.5
+
+a3 say "intro0_3"
+~1
+
+a2 say "intro0_4"
+~4
+
+bom say "snaryad"
+~0.3
+a1 say "intro0_5"
+~1.1
+sm1 = "Heat125" camCreate [getpos bom select 0, getpos bom select 1, getpos bom select 2]
+~2
+
+a2 say "intro0_6"
+~5
+
+astahov say "intro0_7"
+~3.5
+
+[] exec "art2.sqs"
+~1
+
+a1 say "intro0_8"
+~4
+
+~5
+sm1 = "Heat125" camCreate [getpos korrektor select 0, getpos korrektor select 1, getpos korrektor select 2]
+~1
+"1" objstatus "Active"
+basa sideradio "radio1_0"
+~5
+
+a1 say "intro0_9"
+~4
+
+a1 stop false
+a2 stop false
+
+astahov say "intro0_10"
+~3
+
+a1 say "intro0_11"
+~3
+
+astahov sideradio "radio1_1"
+~6
+
+"2" objstatus "Active"
+
+wataka=true
+
+~55
+a2 say "intro0_12"
+~40
+a1 say "intro0_13"
+
+exit

@@ -1,0 +1,30 @@
+; ускорить время для того чтобы успели подойти бандиты
+
+setacctime 500
+~1
+setacctime 1
+
+titlecut ["","black in",1]
+
+_camera = "camera" camCreate getpos player
+_camera cameraEffect ["internal", "Back"]
+
+_camera camsettarget player
+_camera camsetrelpos [0,-0.9,1.7]
+_camera camSetFOV 0.5
+_camera camcommit 0
+~3
+
+playsound "ingameintro1_3"
+_camera camsettarget player
+_camera camsetrelpos [-3,-0.9,3]
+_camera camSetFOV 0.8
+_camera camcommit 5
+~5
+
+_camera cameraEffect ["terminate","BACK"]
+camDestroy _camera
+
+ends=1
+
+exit

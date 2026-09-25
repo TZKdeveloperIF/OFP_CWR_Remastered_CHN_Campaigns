@@ -1,0 +1,20 @@
+Up say "stoy"
+~1
+Bandit action ["drop weapon",Bandit,0,0,"revolver"]
+? (canstand Bandit): Bandit setdammage 0 
+Bandit SetUnitPos "Up"
+~3
+Bandit switchmove "FXStandSurUniv"
+~1
+bandit dowatch Up
+@up distance bandit < 15
+bandit say "Stoy1"
+@up distance bandit < 10
+"1" objstatus "DONE"; "2" objstatus "Active"; 
+Up say "Stoy2"
+[bandit] join Up
+Bandit SetUnitPos "AUTO"
+Bandit switchmove "Stand"
+Bandit setcaptive true
+Bandit SetUnitPos "AUTO"
+exit

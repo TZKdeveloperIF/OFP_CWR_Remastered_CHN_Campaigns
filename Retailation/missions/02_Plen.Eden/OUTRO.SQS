@@ -1,0 +1,24 @@
+gamer setcaptive true
+
+setacctime 1.0
+
+playmusic "inside_music1_6"
+0 fademusic 1
+
+playsound "game2_0"
+
+titlecut["","black out",2]
+~2
+
+gamer setpos getpos pos
+gamer setdammage 0
+
+gamer say "game2_1"
+~1
+
+playsound "game2_2"
+~5
+
+konec=true
+
+exit

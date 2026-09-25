@@ -1,0 +1,42 @@
+
+~0.7
+
+off dowatch kap
+kap dowatch off
+
+off dowatch kap
+off switchmove "EffectStandSalute"
+off stop true
+
+off say "intro1_9"
+kap switchmove "EffectStandSalute"
+Kap setdir 330
+kap stop true
+~9
+
+off switchmove "EffectStandSaluteEnd"
+kap switchmove "EffectStandSaluteEnd"
+
+off say "intro1_10"
+~3.3
+
+kap say "intro1_11"
+~4
+
+off say "intro1_12"
+off switchmove "EffectStandSalute"
+~1
+off switchmove "EffectStandSaluteEnd"
+
+playmusic "inside_music1_4"
+
+off stop false
+kap stop false
+kap lockwp false
+
+off say "intro1_13"
+~3
+
+scen = 20
+
+exit

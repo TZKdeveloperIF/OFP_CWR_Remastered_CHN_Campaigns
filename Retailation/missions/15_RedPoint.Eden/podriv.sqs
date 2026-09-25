@@ -1,0 +1,10 @@
+#Des
+ _aunits = _this select 0
+ _i = 0
+ _j = count _aunits
+#Here
+(_aunits select _i) action ["touchoff"]
+ _i=_i+1
+ ~0.01
+ ?_j>_i:goto "Here"
+exit

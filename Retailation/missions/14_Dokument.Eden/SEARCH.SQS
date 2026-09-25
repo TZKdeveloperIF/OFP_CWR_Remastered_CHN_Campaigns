@@ -1,0 +1,36 @@
+
+player removeaction 1
+player removeaction 0
+
+player switchmove "CombatToPutDown"
+~1.5
+
+hint localize "STRM_hint_1"
+
+"1" objstatus "Done"
+
+doctaken=true
+
+~1
+
+hint localize "STRM_hint_3"
+~1
+
+civ_sup setpos getpos sup_point
+
+~5
+
+udav sideradio "radio1_2"
+~7
+
+base sideradio "radio1_3"
+~8
+
+"east_extr" setMarkerType "Join"
+
+"2" objstatus "Active"
+
+savegame
+~1
+
+exit

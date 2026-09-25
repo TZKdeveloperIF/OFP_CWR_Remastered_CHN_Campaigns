@@ -1,0 +1,173 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Временный командный пункт миротворческого контингента.\n8 мая, 18.00","PLAIN"]
+titleCut ["","BLACK IN",5]
+
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+"NATO1" setMarkerType "EMPTY" 
+"NATO1_1" setMarkerType "EMPTY"
+"NATO1_2" setMarkerType "EMPTY"
+"NATO1_3" setMarkerType "EMPTY"
+"NATO1_4" setMarkerType "EMPTY"
+"NATO1_5" setMarkerType "EMPTY"
+"NATO1_6" setMarkerType "EMPTY"
+"NATO1_7" setMarkerType "EMPTY"
+"NATO1_8" setMarkerType "EMPTY"
+"NATO1_9" setMarkerType "EMPTY"
+"NATO1_10" setMarkerType "EMPTY"
+"NATO2" setMarkerType "EMPTY"
+"NATO2_1" setMarkerType "EMPTY"
+"NATO2_2" setMarkerType "EMPTY"
+"TANK1" setMarkerType "EMPTY"
+"TANK2" setMarkerType "EMPTY"
+"TANK3" setMarkerType "EMPTY"
+
+"NATO" setMarkerSize [1, 1] 
+
+
+
+
+
+
+~2
+gen say "intro1"
+~5
+gen switchmove "FXStandShowTable"
+
+_camera camSetTarget t_map
+_camera camSetRelPos  [0,  0.3, 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 5
+titleCut ["","BLACK OUT",5]
+@camCommitted _camera
+#Map
+forceMap true
+mapAnimAdd [1,1, getMarkerPos "Morton"]
+mapAnimCommit 
+@mapAnimDone
+titleCut ["","BLACK IN",2]
+
+gen say "intro2"
+~2
+"NATO1" setMarkerType "ARROW"
+~2
+"NATO1_1" setMarkerType "ARROW"
+~1
+"MORTON" setMarkerType "Destroy"; "MORTON" setMarkerColor "ColorRed"
+~4
+
+gen say "intro3"
+mapAnimAdd [5,0.3, getMarkerPos "Air"]
+mapAnimCommit 
+@mapAnimDone
+~2
+"Air" setMarkerType "Destroy"; "Air" setMarkerColor "ColorRed"
+~3
+"Air" setMarkerType "Marker";
+~2
+_camera camSetTarget t_map
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+forceMap false
+Udav say "intro4"
+~4
+gen say "intro5"
+~3
+gen say "intro6"
+~6
+gen say "intro7"
+~2
+forceMap True
+mapAnimAdd [2,0.3, getMarkerPos "Lamentin"]
+mapAnimCommit 
+@mapAnimDone
+~2
+"NATO2" setMarkerType "ARROW"
+~2
+"NATO2_1" setMarkerType "ARROW"
+~2
+"NATO2_2" setMarkerType "ARROW"
+~1
+_lmpos = getmarkerpos "LeMoule"
+_lampos = getmarkerpos "Lamentin"
+"LeMoule" setMarkerPos (getmarkerpos "NATO2_2"); "NATO2_1" setMarkerType "Empty"
+"Lamentin" setMarkerPos (getmarkerpos "NATO2_1"); "NATO2_2" setMarkerType "Empty"
+~2
+"NATO2" setMarkerType "Marker"; "NATO2" setMarkerColor "ColorRed"
+~2
+"NATO2" setMarkerType "EMPTY"
+"LeMoule" setMarkerPos _lmpos
+"Lamentin" setMarkerPos _lampos
+
+gen say "intro8"
+~2
+mapAnimAdd [4,0.1, getMarkerPos "Morton"]
+mapAnimCommit 
+@mapAnimDone
+~2
+mapAnimAdd [3,0.1, getMarkerPos "Montignak"]
+mapAnimCommit 
+@mapAnimDone
+~2
+"Morton" setMarkerPos [(getmarkerpos "Montignak" select 0) - 100, (getmarkerpos "Montignak" select 1) - 100]
+"Morton" setMarkerType "Flag1"; "Morton" setMarkerColor "ColorGreen"
+~2
+gen say "intro9"
+~2
+mapAnimAdd [4,0.5, getMarkerPos "NATO1_2"]
+mapAnimCommit 
+@mapAnimDone
+gen say "intro10"
+~1
+"NATO1_2" setMarkerType "ARROW"
+~0.5
+"NATO1_3" setMarkerType "ARROW"
+~0.5
+"NATO1_4" setMarkerType "ARROW"
+~0.5
+"NATO1_5" setMarkerType "ARROW"
+~0.5
+"NATO1_6" setMarkerType "ARROW"
+~0.5
+"NATO1_7" setMarkerType "ARROW"
+~0.5
+"NATO1_8" setMarkerType "EMPTY"
+~0.5
+"NATO1_9" setMarkerType "EMPTY"
+~0.5
+"NATO1_10" setMarkerType "EMPTY"
+~3
+gen say "intro11"
+~1
+mapAnimAdd [4,0.5, getMarkerPos "Levie"]
+mapAnimCommit 
+@mapAnimDone
+~2
+"Tank1" setMarkerType "ARROW"
+~2
+"Tank1" setMarkerType "EMPTY"
+"Tank2" setMarkerType "ARROW"
+~1
+"Levie" setmarkerpos [(getmarkerpos "Durras" select 0) - 100, (getmarkerpos "Durras" select 1) - 100]
+~3
+"Tank2" setMarkerType "EMPTY"
+gen say "intro12"
+~1
+mapAnimAdd [4,0.5, getMarkerPos "Provins"]
+mapAnimCommit 
+@mapAnimDone
+~2
+
+
+
+
+
+
+~500
+exit

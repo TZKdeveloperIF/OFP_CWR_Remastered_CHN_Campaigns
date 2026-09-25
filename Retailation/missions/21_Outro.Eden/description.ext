@@ -1,0 +1,1544 @@
+onLoadIntro=$STR_Load3_0
+
+debriefing=0
+briefing=0
+
+class CfgMusic
+{
+     tracks[]={};
+
+     class titles
+     {
+     name = "titles";
+     sound[] = {titles.ogg, db+0, 1.0};
+     };
+}
+
+class CfgSounds
+{
+      sounds[] = { };
+      class outro0_1
+      {
+            name = "outro0_1";
+            sound[] = {"outro0_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_1
+            };
+      };
+      class outro0_2
+      {
+            name = "outro0_2";
+            sound[] = {"outro0_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_2
+            };
+      };
+      class outro0_3
+      {
+            name = "outro0_3";
+            sound[] = {"outro0_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_3
+            };
+      };
+      class outro0_4
+      {
+            name = "outro0_4";
+            sound[] = {"outro0_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_4
+            };
+      };
+      class outro0_5
+      {
+            name = "outro0_5";
+            sound[] = {"outro0_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_5
+            };
+      };
+      class outro0_6
+      {
+            name = "outro0_6";
+            sound[] = {"outro0_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_6
+            };
+      };
+      class outro0_7
+      {
+            name = "outro0_7";
+            sound[] = {"outro0_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_7
+            };
+      };
+      class outro0_8
+      {
+            name = "outro0_8";
+            sound[] = {"outro0_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_8
+            };
+      };
+      class outro0_9
+      {
+            name = "outro0_9";
+            sound[] = {"outro0_9.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_9
+            };
+      };
+      class outro0_10
+      {
+            name = "outro0_10";
+            sound[] = {"outro0_10.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_10
+            };
+      };
+      class outro0_11
+      {
+            name = "outro0_11";
+            sound[] = {"outro0_11.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_11
+            };
+      };
+      class outro0_12
+      {
+            name = "outro0_12";
+            sound[] = {"outro0_12.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro0_12
+            };
+      };
+      class outro1_1
+      {
+            name = "outro1_1";
+            sound[] = {"outro1_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro1_1
+            };
+      };
+      class outro1_2
+      {
+            name = "outro1_2";
+            sound[] = {"outro1_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro1_2
+            };
+      };
+      class outro1_3
+      {
+            name = "outro1_3";
+            sound[] = {"outro1_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro1_3
+            };
+      };
+      class outro1_4
+      {
+            name = "outro1_4";
+            sound[] = {"outro1_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro1_4
+            };
+      };
+      class outro1_5
+      {
+            name = "outro1_5";
+            sound[] = {"outro1_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro1_5
+            };
+      };
+      class outro2_0
+      {
+            name = "outro2_0";
+            sound[] = {"outro2_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro2_0
+            };
+      }; 
+      class outro2_1
+      {
+            name = "outro2_1";
+            sound[] = {"outro2_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro2_1
+            };
+      };
+      class outro3_0
+      {
+            name = "outro3_0";
+            sound[] = {"outro3_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_0
+            };
+      };
+      class outro3_1
+      {
+            name = "outro3_1";
+            sound[] = {"outro3_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_1
+            };
+      };
+      class outro3_2
+      {
+            name = "outro3_2";
+            sound[] = {"outro3_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_2
+            };
+      };
+      class outro3_3
+      {
+            name = "outro3_3";
+            sound[] = {"outro3_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_3
+            };
+      };
+      class outro3_4
+      {
+            name = "outro3_4";
+            sound[] = {"outro3_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_4
+            };
+      };
+      class outro3_5
+      {
+            name = "outro3_5";
+            sound[] = {"outro3_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_5
+            };
+      };
+      class outro3_6
+      {
+            name = "outro3_6";
+            sound[] = {"outro3_6.wav", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_6
+            };
+      };
+      class outro3_7
+      {
+            name = "outro3_7";
+            sound[] = {"outro3_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_7
+            };
+      };
+      class outro3_8
+      {
+            name = "outro3_8";
+            sound[] = {"outro3_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_8
+            };
+      };
+      class outro3_9
+      {
+            name = "outro3_9";
+            sound[] = {"outro3_9.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_9
+            };
+      };
+      class outro3_10
+      {
+            name = "outro3_10";
+            sound[] = {"outro3_10.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_10
+            };
+      };
+      class outro3_11
+      {
+            name = "outro3_11";
+            sound[] = {"outro3_11.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_11
+            };
+      };
+      class outro3_12
+      {
+            name = "outro3_12";
+            sound[] = {"outro3_12.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_outro3_12
+            };
+      };
+};
+
+#define FontM "tahomaB36"
+#define FontHTML "CourierNewB64"
+
+#define ST_LEFT       0
+#define ST_RIGHT      1
+#define ST_CENTER     2
+#define ST_FRAME      64
+#define ST_PICTURE    48
+
+#define CT_STATIC     0
+#define CT_BUTTON     1
+#define CT_EDIT       2
+#define CT_COMBO      4
+#define CT_LISTBOX    5
+#define CT_ACTIVETEXT 11
+
+class RscText
+{
+      type=0;
+      idc=-1;
+      style=0;
+      h=0.040000;
+      colorBackground[]={0,0,0,0};
+      colorText[]={0.080000,0.080000,0.120000,0.750000};
+      font="tahomaB24";
+      size=1;
+};
+class RscPicture
+{
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTilePicture
+{
+      type=0;
+      idc=-1;
+      style=144;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTitles
+{     Titles[] ={};
+      class Default
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=0.1;
+      };
+      class DefPic : Default
+      {
+            type=0;
+            idc=-1;
+            style=48;
+            colorBackground[]={0,0,0,0};
+            colorText[]={1,1,1,1};
+            font="tahomaB24";
+            size=0;
+      };
+      class Scenar
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Scenar";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t", "text3", "text3_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="АВТОРЫ СЦЕНАРИЯ";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="АВТОРЫ СЦЕНАРИЯ";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Александр Святкин (МОНАХ)";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Александр Святкин (МОНАХ)";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Кирилл Киричаи (psyKKe)";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Кирилл Киричаи (psyKKe)";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text3_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Алексей Быстроходов (GoodSpeed)";
+                  x=0.400000;
+                  y=0.405000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0.9,0.9,0.9,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text3 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Алексей Быстроходов (GoodSpeed)";
+                  x=0.402000;
+                  y=0.407000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+
+      class Produce
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Produce";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ПРОДЮССЕР:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ПРОДЮССЕР:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Андрей Долгонски";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Андрей Долгонски";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+
+      };
+
+
+      class Kartodel
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Kartodel";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РАЗРАБОТКА МИССИЙ:";
+                  x=0.000000;
+                  y=0.300000;
+                  w=0.350000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РАЗРАБОТКА МИССИЙ:";
+                  x=0.002000;
+                  y=0.302000;
+                  w=0.350000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Александр Святкин (МОНАХ)";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Александр Святкин (МОНАХ)";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Алексей Быстроходов (GoodSpeed)";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Алексей Быстроходов (GoodSpeed)";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+
+      };
+
+
+
+      class Testers1
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Testers1";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t", "text3", "text3_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ТЕСТИРОВАНИЕ:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ТЕСТИРОВАНИЕ:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Дмитрий Зотов (LYBYR)";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Дмитрий Зотов (LYBYR)";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Юрий Гусев (Filin)";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Юрий Гусев (Filin)";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text3_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Андрей Симонов";
+                  x=0.400000;
+                  y=0.405000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0.9,0.9,0.9,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text3 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Андрей Симонов";
+                  x=0.402000;
+                  y=0.407000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+
+
+      class Testers2
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Testers2";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t", "text3", "text3_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ТЕСТИРОВАНИЕ:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ТЕСТИРОВАНИЕ:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Владислав Афанасьев";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Владислав Афанасьев";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Иван Коркин";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Иван Коркин";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text3_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Алексей Смоленцев";
+                  x=0.400000;
+                  y=0.405000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0.9,0.9,0.9,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text3 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Алексей Смоленцев";
+                  x=0.402000;
+                  y=0.407000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+
+
+      class Zvuk
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Zvuk";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ЗВУКОРЕЖИССЕРЫ:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="ЗВУКОРЕЖИССЕРЫ:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Григорий Юрков";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Григорий Юрков";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Денис Носов";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Денис Носов";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+
+      class Akter1
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Akter";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t", "text3", "text3_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РОЛИ ОЗВУЧИВАЛИ:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РОЛИ ОЗВУЧИВАЛИ:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="C. Жирнов";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="C. Жирнов";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="О. Семисынов";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="О. Семисынов";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text3_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Ф. Сухов";
+                  x=0.400000;
+                  y=0.405000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0.9,0.9,0.9,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text3 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Ф. Сухов";
+                  x=0.402000;
+                  y=0.407000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+      class Akter2
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Akter";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t", "text2", "text2_t", "text3", "text3_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РОЛИ ОЗВУЧИВАЛИ:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РОЛИ ОЗВУЧИВАЛИ:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="П. Иващенко";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="П. Иващенко";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text2_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Г. Юрков";
+                  x=0.400000;
+                  y=0.355000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text2 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="Г. Юрков";
+                  x=0.402000;
+                  y=0.357000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+            class text3_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="В. Дахненко";
+                  x=0.400000;
+                  y=0.405000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0.9,0.9,0.9,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text3 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="В. Дахненко";
+                  x=0.402000;
+                  y=0.407000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+      class Akter3
+      {
+            idd=-1;
+            movingEnable=1;
+            duration=5;
+            name="Akter";
+            controls[]={"fon", "gran1", "gran2", "text0", "text0_t", "text1", "text1_t"};
+            class fon : RscText
+            {
+                  text="";
+                  colorBackground[]={1,0,0,0.4};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.2;
+                  colorText[]={0,0,0,0};
+            };
+            class gran1 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.4;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class gran2 : RscText
+            {
+                  text="";
+                  colorBackground[]={0,0,0,1};
+                  x=0;
+                  y=0.6;
+                  w=1;
+                  h=0.004;
+                  colorText[]={0,0,0,0};
+            };
+            class text0_t : RscText
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РОЛИ ОЗВУЧИВАЛИ:";
+                  x=0.050000;
+                  y=0.300000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={1,0.8,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+           class text0 : text0_t
+            {
+                  style=ST_RIGHT;
+                  lineSpacing=1.000000;
+                  text="РОЛИ ОЗВУЧИВАЛИ:";
+                  x=0.052000;
+                  y=0.302000;
+                  w=0.300000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.7;
+            };
+            class text1_t : RscText
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="А. Покровская";
+                  x=0.400000;
+                  y=0.305000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={1,1,1,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+           class text1 : text1_t
+            {
+                  style=ST_LEFT;
+                  lineSpacing=1.000000;
+                  text="А. Покровская";
+                  x=0.402000;
+                  y=0.307000;
+                  w=0.600000;
+                  h=0.300000;
+                  colorText[]={0,0,0,1};
+                  font="SteelfishB128";
+                  size=0.6;
+            };
+      };
+      class Glab
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=10;
+            name="Glab";
+            controls[]={"Glab"};
+            class Glab : RscPicture
+            {
+                  text="jlab.jpg";
+                  x=0.000000;
+                  y=0.000000;
+                  w=1.000000;
+                  h=1.000000;
+            };
+
+      };
+      class Rmedia
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=10;
+            name="Rmedia";
+            controls[]={"Rmedia"};
+            class Rmedia : RscPicture
+            {
+                  text="Rmedia.jpg";
+                  x=0.000000;
+                  y=0.000000;
+                  w=1.000000;
+                  h=1.000000;
+            };
+
+      };
+};

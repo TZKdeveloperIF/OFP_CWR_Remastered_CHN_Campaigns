@@ -1,0 +1,49 @@
+
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget object 22120
+_camera camsetrelpos [-10,0,0]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+
+_camera camsettarget object 22120
+_camera camsetrelpos [-15,0,0]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+
+_camera camsettarget object 22120
+_camera camsetrelpos [-20,0,0]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+
+_camera camsettarget object 22120
+_camera camsetrelpos [-25,0,0]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.5
+
+_camera camsettarget object 22120
+_camera camsetrelpos [-30,0,0]
+_camera camsetfov 0.800
+_camera camCommit 0
+
+ter1 action ["touchoff"]
+
+sm1 = "Shell105" camCreate [(getpos object 22120 select 0) + 3, getpos object 22120 select 1, (getpos object 22120 select 2)]
+sm1 = "Shell105" camCreate [(getpos object 22120 select 0) + 3, (getpos object 22120 select 1) - 5, (getpos object 22120 select 2)]
+5 fademusic 0
+
+~3
+
+titlecut["","black out",2]
+~2
+
+[] exec "outro3.sqs"
+
+exit

@@ -1,0 +1,23 @@
+~1
+p3 switchmove "CargoDead"
+
+
+@(Up distance p3<10) and (not (up in ural))
+p3 reveal up
+Up say "Stoy3"
+p3 switchmove "FXStandFromTable"
+~2.2
+p3 setdir (getdir p6 -23)
+p3 say "Stoy31"
+~2
+Up say "Stoy32"
+~6.23
+Up say "Stoy33"
+p3 playmove "EffectStandSalute"
+~4.5
+p3 say "Stoy34"
+p3 switchmove "EffectStandSaluteEnd"
+~2
+
+
+p3scen = true

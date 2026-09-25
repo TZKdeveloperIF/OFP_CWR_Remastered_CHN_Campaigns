@@ -1,0 +1,177 @@
+;мувик после разгрома террористов на аэродроме (в случае если есть потери)
+
+setacctime 1.0
+
+enableradio false
+
+titlecut["","black out",1]
+~1
+
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext ["","plain",1]
+~0.5
+
+s1 stop true
+s2 stop true
+s3 stop true
+s4 stop true
+s5 stop true
+s6 stop true
+s7 stop true
+b2 stop true
+b3 stop true
+b1 stop true
+
+s1 setcombatmode "BLUE"
+s2 setcombatmode "BLUE"
+s3 setcombatmode "BLUE"
+s4 setcombatmode "BLUE"
+s5 setcombatmode "BLUE"
+s6 setcombatmode "BLUE"
+b1 setcombatmode "BLUE"
+b2 setcombatmode "BLUE"
+b3 setcombatmode "BLUE"
+
+s1 setbehaviour "CARELESS"
+s2 setbehaviour "CARELESS"
+s3 setbehaviour "CARELESS"
+s4 setbehaviour "CARELESS"
+s5 setbehaviour "CARELESS"
+s6 setbehaviour "CARELESS"
+b1 setbehaviour "CARELESS"
+b2 setbehaviour "CARELESS"
+b3 setbehaviour "CARELESS"
+
+?!canstand s1 && alive s1: s1 setdammage 0; s1 setdammage 0.3
+?!canstand s2 && alive s2: s2 setdammage 0; s2 setdammage 0.3
+?!canstand s3 && alive s3: s3 setdammage 0; s3 setdammage 0.3
+?!canstand s4 && alive s4: s4 setdammage 0; s4 setdammage 0.3
+?!canstand s5 && alive s5: s5 setdammage 0; s5 setdammage 0.3
+?!canstand s6 && alive s6: s6 setdammage 0; s6 setdammage 0.3
+?!canstand b1 && alive b1: b1 setdammage 0; b1 setdammage 0.3
+?!canstand b2 && alive b2: b2 setdammage 0; b2 setdammage 0.3
+?!canstand b3 && alive b3: b3 setdammage 0; b3 setdammage 0.3
+?!canstand gamer && alive gamer: gamer setdammage 0; gamer setdammage 0.3
+
+?getdammage bmp1 < 0.9: bmp1 setpos getpos bmppos
+
+?!alive s1 && !(s1 in bmp1): s1 setpos getpos more; s11 setpos [(getpos kladbige select 0), (getpos kladbige select 1), (getpos kladbige select 2)]
+?!alive s2 && !(s2 in bmp1): s2 setpos getpos more; s22 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?!alive s3 && !(s3 in bmp1): s3 setpos getpos more; s33 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 2, (getpos kladbige select 2)]
+?!alive s4 && !(s4 in bmp1): s4 setpos getpos more; s44 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 3, (getpos kladbige select 2)]
+?!alive s5 && !(s5 in bmp1): s5 setpos getpos more; s55 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 4, (getpos kladbige select 2)]
+?!alive s6 && !(s6 in bmp1): s6 setpos getpos more; s66 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 5, (getpos kladbige select 2)]
+?!alive b2 && !(b2 in bmp1): b2 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 7, (getpos kladbige select 2)]; b22 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 6, (getpos kladbige select 2)]
+?!alive b3 && !(b3 in bmp1): b3 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 8, (getpos kladbige select 2)]; b33 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 7, (getpos kladbige select 2)]
+?!alive b1 && !(b1 in bmp1): b1 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 9, (getpos kladbige select 2)]; b11 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 8, (getpos kladbige select 2)]
+
+?alive s1: s1 setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]; s1 setunitpos "UP"; s1 setunitpos "AUTO"; s1 switchmove "Stand"
+?alive s2: s2 setpos [(getpos kladbige select 0) + 3.2, (getpos kladbige select 1) + 2, (getpos kladbige select 2)]; s2 setunitpos "UP"; s2 setunitpos "AUTO"; s2 switchmove "Stand"
+?alive s3: s3 setpos [(getpos kladbige select 0) + 4, (getpos kladbige select 1) + 3, (getpos kladbige select 2)]; s3 setunitpos "UP"; s3 setunitpos "AUTO"; s3 switchmove "Stand"
+?alive s4: s4 setpos [(getpos kladbige select 0) + 2.8, (getpos kladbige select 1) + 4, (getpos kladbige select 2)]; s4 setunitpos "UP"; s4 setunitpos "AUTO"; s4 switchmove "Stand"
+?alive s5: s5 setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) + 5, (getpos kladbige select 2)]; s5 setunitpos "UP"; s5 setunitpos "AUTO"; s5 switchmove "Stand"
+?alive s6: s6 setpos [(getpos kladbige select 0) + 3.1, (getpos kladbige select 1) + 6, (getpos kladbige select 2)]; s6 setunitpos "UP"; s6 setunitpos "AUTO"; s6 switchmove "Stand"
+?alive b1: b1 setpos [(getpos kladbige select 0) + 4, (getpos kladbige select 1) + 10, (getpos kladbige select 2)]; b1 setunitpos "UP"; b1 setunitpos "AUTO"; b1 switchmove "Stand"
+?alive b2: b2 setpos [(getpos kladbige select 0) + 2.3, (getpos kladbige select 1) + 8, (getpos kladbige select 2)]; b2 setunitpos "UP"; b2 setunitpos "AUTO"; b2 switchmove "Stand"
+?alive b3: b3 setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) + 9, (getpos kladbige select 2)]; b3 setunitpos "UP"; b3 setunitpos "AUTO"; b3 switchmove "Stand"
+?alive gamer: gamer setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) - 2, (getpos kladbige select 2)]; gamer setbehaviour "CARELESS"; gamer setunitpos "AUTO"; gamer switchmove "Stand"
+
+?alive gamer: gamer setDir 350
+?alive s1: s1 setDir 270
+?alive s2: s2 setDir 270
+?alive s3: s3 setDir 270
+?alive s4: s4 setDir 270
+?alive s5: s5 setDir 270
+?alive s6: s6 setDir 270
+?alive b2: b2 setdir 270
+?alive b3: b3 setdir 270
+?alive b1: b1 setdir 270
+;===========================================================
+
+~0.5
+titlecut["","black in",1]
+titletext ["","plain",1]
+
+;старт вертолетов НАТО (с момента старта до подъема и начала движения проходит 20 секунд)
+weststarted=true
+ver1 setfuel 1
+ver2 setfuel 1
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+gamer say "ingameintro4_0"
+_camera camsettarget gamer
+_camera camsetrelpos [0,1,1.5]
+_camera camsetfov 0.700
+_camera camCommit 0
+~4
+
+gamer say "ingameintro4_1"
+_camera camsettarget gamer
+_camera camsetrelpos [1,-2,2]
+_camera camsetfov 0.400
+_camera camCommit 0
+~7
+
+gamer say "ingameintro4_2"
+_camera camsettarget gamer
+_camera camsetpos [(getpos camera1 select 0), (getpos camera1 select 1) + 0, (getpos camera1 select 2) + 1.2]
+_camera camsetfov 0.500
+_camera camCommit 0
+~3
+
+_camera camsettarget kladbige
+_camera camsetpos [(getpos camera1 select 0), (getpos camera1 select 1) + 0, (getpos camera1 select 2) + 5]
+_camera camsetfov 0.700
+_camera camCommit 5
+~5
+
+_camera camsettarget kladbige1
+_camera camsetpos [(getpos camera1 select 0), (getpos camera1 select 1) + 0, (getpos camera1 select 2) + 5]
+_camera camsetfov 0.700
+_camera camCommit 5
+~5
+
+titlecut["","black out",1]
+~1
+
+s1 stop false
+s2 stop false
+s3 stop false
+s4 stop false
+s5 stop false
+s6 stop false
+s7 stop false
+b2 stop false
+b3 stop false
+b1 stop false
+
+s1 setbehaviour "AWARE"
+s2 setbehaviour "AWARE"
+s3 setbehaviour "AWARE"
+s4 setbehaviour "AWARE"
+s5 setbehaviour "AWARE"
+s6 setbehaviour "AWARE"
+b1 setbehaviour "AWARE"
+b2 setbehaviour "AWARE"
+b3 setbehaviour "AWARE"
+
+s1 setcombatmode "RED"
+s2 setcombatmode "RED"
+s3 setcombatmode "RED"
+s4 setcombatmode "RED"
+s5 setcombatmode "RED"
+s6 setcombatmode "RED"
+b1 setcombatmode "RED"
+b2 setcombatmode "RED"
+b3 setcombatmode "RED"
+
+enableradio true
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+titlecut["","black in",1]
+
+exit

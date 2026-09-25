@@ -1,0 +1,21 @@
+epoteri = 0
+eskill = 0.3
+
+_unit = _this select 0
+_pos = _this select 1
+
+#start
+~0.1
+@count (units _unit) < 11
+? not alive _unit: Goto "pause"
+
+#Resp
+epoteri = epoteri + 1
+_b = "SoldierGB" createUnit [getPos _unit, group _unit, "this allowFleeing 0", eskill]
+?epoteri > 45: _bm = "SoldierGB" createUnit [getPos _unit, group _unit, "this allowFleeing 0; removeallweapons this; this AddMagazine ""M60""; this AddMagazine ""M60""; this AddMagazine ""M60""; this AddWeapon ""M60""", eskill]
+_b commandmove (getpos _pos)
+_bm commandmove (getpos _pos)
+goto "start"
+
+#pause
+exit

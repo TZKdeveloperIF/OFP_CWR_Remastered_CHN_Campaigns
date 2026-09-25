@@ -1,0 +1,32 @@
+
+; доклад о подлете неизвестных вертолетов
+
+setacctime 1.0
+
+enableradio false
+
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget ver2
+_camera camsetpos [(getpos gamer select 0), (getpos gamer select 1) + 0.7, (getpos gamer select 2) + 1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera camsettarget ver2
+_camera camsetpos [(getpos gamer select 0), (getpos gamer select 1) + 0.7, (getpos gamer select 2) + 1.5]
+_camera camsetfov 0.200
+_camera camCommit 5
+~5
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+savegame
+
+enableradio true
+
+exit

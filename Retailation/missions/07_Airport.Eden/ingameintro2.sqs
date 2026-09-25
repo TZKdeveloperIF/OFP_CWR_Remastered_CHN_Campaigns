@@ -1,0 +1,71 @@
+;сцена подлета вертолетов НАТО к аэродрому.
+
+setacctime 1.0
+
+enableradio false
+
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_count = 200
+_count1 = 200
+_count2 = 200
+_count3 = 200
+
+[] exec "ingameintro1-talks1.sqs"
+
+;лицо пилота первого вертолета НАТО крупным планом. Докладывает о том, что на аэродроме замечены русские солдаты.
+#sc1
+_camera camsettarget ver1
+_camera camSetRelPos [0.5,4.1,-0.49]
+_camera camSetFOV 0.600
+_camera camCommit 0
+~0.005
+_count = _count - 1
+?_count == 0: goto "sc2"
+goto "sc1"
+
+;крупным планом лицо командира в первом вертолете, он дает запрос на базу для дальнейших действий.
+#sc2
+_camera camsettarget ver1
+_camera camSetRelPos [-0.65,2,-0.35]
+_camera camSetFOV 0.400
+_camera camCommit 0
+~0.005
+_count1 = _count1 - 1
+?_count1 == 0: goto "sc3"
+goto "sc2"
+
+;камера направлена на игрока с вертолета НАТО
+#sc3
+_camera camsettarget ver1
+_camera camSetPos [(getpos ver1 select 0) - 0.95, (getpos ver1 select 1) - 0.75, (getpos ver1 select 2) + 2]
+_camera camSetFOV 0.700
+_camera camCommit 0
+~0.005
+_count2 = _count2 - 1
+?_count2 == 0: goto "sc4"
+goto "sc3"
+
+;камера направлена с одного вертолета нато на другой
+#sc4
+_camera camsettarget ver1
+_camera camSetPos [(getpos ver2 select 0) + 0.5, (getpos ver2 select 1) + 2.1, (getpos ver2 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~0.005
+_count3 = _count3 - 1
+?_count3 == 0: goto "sc5"
+goto "sc4"
+
+#sc5
+titlecut["","black out",1]
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+[] exec "ingameintro3.sqs"
+
+exit

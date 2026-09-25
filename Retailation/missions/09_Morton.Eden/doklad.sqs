@@ -1,0 +1,19 @@
+?doklad:exit
+?p1post and p2post and p3post and p4post:goto "dokl"
+hintC "Вы можете доложить о смене часовых только в том случае, если на всех четырех постах часовые будут заменены на бойцов вашего отделения"
+exit
+
+#dokl
+doklad = true
+Up say "doklad1"
+~2.5
+Ofser say "doklad2"
+hintC "Чтобы убедиться, что ваши часовые живы и не спят,  нажмите ~ - 5 - 5. Они по очереди доложат о своем состоянии."
+"0" objstatus "DONE"
+"1" objstatus "DONE"
+"2" objstatus "DONE"
+"3" objstatus "DONE"
+"4" objstatus "DONE"
+1 setRadioMsg "Тревога!"
+~3
+exit

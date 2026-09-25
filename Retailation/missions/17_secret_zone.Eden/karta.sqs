@@ -1,0 +1,23 @@
+up playmove "getweapon"
+"tank" setmarkertype "Warning"
+"tank_false" setmarkertype "Warning"
+"Armor" setmarkertype "dot"
+"NATO_1" setmarkertype "Flag1"
+"NATO_2" setmarkertype "Flag1"
+"NATO_3" setmarkertype "Flag1"
+"NATO_4" setmarkertype "Flag1"
+"NATO_5" setmarkertype "Flag1"
+"NATO_6" setmarkertype "Flag1"
+"NATO_7" setmarkertype "Flag1"
+"NATO_8" setmarkertype "Flag1"
+"NATO_9" setmarkertype "Flag1"
+"NATO_10" setmarkertype "Flag1"
+"NATO_12" setmarkertype "Flag1"
+"NATO_13" setmarkertype "Flag1"
+"NATO" setmarkertype "Flag1"
+
+?up distance hum < 20: Hint "вы взяли карту"; hum removeAction 0; up say "ud_firm"
+?up distance track1 < 20: Hint "вы нашли пачку сигарет и карту"; track1 removeAction 0
+?up distance track2 < 20: Hint "вы взяли карту и пачку жевательной резинки"; track2 removeAction 0
+?up distance track3 < 20: Hint "вы обнаружили карту, магнитофонную касету и зажигалку"; track3 removeAction 0
+exit

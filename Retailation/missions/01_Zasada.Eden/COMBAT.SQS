@@ -1,0 +1,57 @@
+setacctime 1
+
+ural2 setcaptive true
+driver ural2 setdammage 1
+
+ural1 stop true
+ural3 stop true
+
+unassignvehicle driver ural1
+unassignvehicle driver ural3
+
+driver ural1 leavevehicle ural1
+driver ural3 leavevehicle ural3
+
+driver ural1 setcombatmode "RED"
+driver ural3 setcombatmode "RED"
+
+driver ural1 setbehaviour "COMBAT"
+driver ural3 setbehaviour "COMBAT"
+
+group_e1 setcombatmode "RED"
+
+s1 allowFleeing 0
+s2 allowFleeing 0
+s3 allowFleeing 0
+s4 allowFleeing 0
+s5 allowFleeing 0
+s6 allowFleeing 0
+s7 allowFleeing 0
+s8 allowFleeing 0
+
+group_e1 setformation "LINE"
+group_e1 setbehaviour "COMBAT"
+
+leader gamer reveal g1_1
+leader gamer reveal g1_2
+leader gamer reveal g1_3
+leader gamer reveal g1_4
+leader gamer reveal g1_5
+leader gamer reveal g1_6
+leader gamer reveal g_sniper
+leader gamer reveal g_sniper_1
+
+;g1_1 SetCombatMode "RED"
+;g1_2 SetCombatMode "RED"
+;g1_3 SetCombatMode "RED"
+;g1_4 SetCombatMode "RED"
+;g1_5 SetCombatMode "RED"
+;g1_6 SetCombatMode "RED"
+
+;g_sniper SetCombatMode "RED"
+;g_sniper_1 SetCombatMode "RED"
+
+~5
+enableradio true
+
+exit

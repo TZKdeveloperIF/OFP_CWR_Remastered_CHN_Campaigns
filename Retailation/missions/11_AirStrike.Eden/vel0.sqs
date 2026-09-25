@@ -1,0 +1,6 @@
+_ch = "BulletSingle" camcreate  [getpos bochka select 0, getpos bochka select 1, (getpos bochka select 2) + 0.2]; bochka setdamage 0
+#start
+@speed bochka < 0.00001
+bochka setvelocity [0.2,0.2, 0.2]
+goto"start"
+exit

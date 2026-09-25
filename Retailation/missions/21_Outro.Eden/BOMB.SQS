@@ -1,0 +1,25 @@
+_bomber = _this select 0
+_target = _this select 1
+_distanc = _this select 2
+_cicle = 0
+_bomber flyinheight 150
+
+@_bomber distance _target < _distanc
+
+bomb = true
+
+#start
+_bomber fire ["LaserGuidedBombLauncher", "LaserGuidedBombLauncher"]
+_cicle = _cicle + 1
+~ 0.3
+ ?_cicle < 8: goto "start"
+
+~5
+_bomber setBehaviour "AWARE"
+_bomber setcombatmode "RED"
+_bomber setSpeedMode "NORMAL"
+
+~300
+_bomber domove (getpos Air)
+unassignvehicle _bomber
+exit

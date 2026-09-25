@@ -1,0 +1,44 @@
+?koord: exit
+_posic0 = _this select 0
+_posic1 = _this select 1
+target setpos [_posic0,_posic1,0]
+"Mtarget" setMarkerPos [_posic0,_posic1]; "Mtarget" setMarkerType "Destroy"
+su1 setcombatmode "BLUE"; su1 setBehaviour "CARELESS"; su1 setSpeedMode "LIMITED"
+su2 setcombatmode "BLUE"; su2 setBehaviour "CARELESS"; su2 setSpeedMode "LIMITED"
+su3 setcombatmode "BLUE"; su3 setBehaviour "CARELESS"; su3 setSpeedMode "LIMITED"
+su4 setcombatmode "BLUE"; su4 setBehaviour "CARELESS"; su4 setSpeedMode "LIMITED"
+su5 setcombatmode "BLUE"; su5 setBehaviour "CARELESS"; su5 setSpeedMode "LIMITED"
+su6 setcombatmode "BLUE"; su6 setBehaviour "CARELESS"; su6 setSpeedMode "LIMITED"
+su7 flyinheight 250
+su8 flyinheight 250
+koord = true
+cel = false
+~10
+su1 setfuel 1; su1 setpos [getpos su1_baze select 0, getpos su1_baze select 1, (getpos su1_baze select 2) + 1500]
+su1 domove (getpos target)
+[su1, target, 1100] exec "bomber.sqs"
+~10
+su2 setfuel 1; su2 setpos [getpos su2_baze select 0, getpos su2_baze select 1, (getpos su2_baze select 2) + 1500]
+su2 domove [(getpos target select 0)+50, (getpos target select 1)+50, getpos target select 2]
+[su2, target, 1220] exec "bomber.sqs"
+~10
+su3 setfuel 1; su3 setpos [getpos su1_baze select 0, getpos su1_baze select 1, (getpos su1_baze select 2) + 1500]
+su3 domove [(getpos target select 0)+50, (getpos target select 1)-50, getpos target select 2]
+[su3, target, 1170] exec "bomber.sqs"
+~10
+su4 setfuel 1; su4 setpos [getpos su2_baze select 0, getpos su2_baze select 1, (getpos su2_baze select 2) + 1500]
+su4 domove [(getpos target select 0)-50, (getpos target select 1)-50, getpos target select 2]
+[su4, target, 1125] exec "bomber.sqs"
+~10
+su5 setfuel 1; su5 setpos [getpos su1_baze select 0, getpos su1_baze select 1, (getpos su1_baze select 2) + 1500]
+su5 domove [(getpos target select 0)-50, (getpos target select 1)+50, getpos target select 2]
+[su5, target, 1100] exec "bomber.sqs"
+~10
+su6 setfuel 1; su6 setpos [getpos su2_baze select 0, getpos su2_baze select 1, (getpos su2_baze select 2) + 1500]
+su6 domove (getpos target)
+[su6, target, 1300] exec "bomber.sqs"
+~10
+? Baze distance Target < 150: su7 setfuel 1; su7 setpos [getpos su1_baze select 0, getpos su1_baze select 1, (getpos su1_baze select 2) + 1500]
+~10
+? Baze distance Target < 150: su8 setfuel 1; su8 setpos [getpos su2_baze select 0, getpos su2_baze select 1, (getpos su2_baze select 2) + 1500]
+exit

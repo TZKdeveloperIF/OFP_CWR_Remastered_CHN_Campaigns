@@ -1,0 +1,26 @@
+boch removeaction 0
+boch removeaction 1
+
+bochin=true
+
+titlecut ["","black out",1]
+~1
+titlecut ["","black in",1]
+
+#keep
+_x = (getPos uaz) select 0
+_y = (getPos uaz) select 1
+_z = (getPos uaz) select 2
+
+_dir = getDir uaz
+boch setDir _dir
+
+boch setpos [_x, _y - 0, _z + 0.8]
+~0.00000001
+
+?bochout: goto "ex"
+goto "keep"
+
+#ex
+bochin = false
+exit

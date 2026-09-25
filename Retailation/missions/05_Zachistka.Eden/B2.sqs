@@ -1,0 +1,13 @@
+
+#start
+~0.1
+@count (units B2) < B2kol
+? not alive B2: Goto "pause"
+#Resp
+Bpoteri = Bpoteri + 1
+"SoldierGB" createUnit [getPos B2baze, group B2, "Removeallweapons This; This addmagazine ""M16""; This addmagazine ""M16""; This addmagazine ""M16""; This addmagazine ""M16""; This addmagazine ""M16""; This addweapon ""M16""", B2skill ];
+goto "start"
+
+
+#pause
+exit

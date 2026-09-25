@@ -1,0 +1,9 @@
+#start
+@speed lst < 36
+lst setvelocity [sin(getdir lst)*10,cos(getdir lst)*10, 0]
+~0.1
+?Lst_stop: goto "end"
+goto "start"
+
+#end
+exit

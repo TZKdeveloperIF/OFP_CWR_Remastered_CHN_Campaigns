@@ -1,0 +1,15 @@
+
+_flevel = fuel abrams1
+
+#cycle
+_pause = random 5
+
+abrams1 setfuel 0
+~(_pause)
+
+abrams1 setfuel _flevel
+~(_pause)
+
+goto "cycle"
+
+exit

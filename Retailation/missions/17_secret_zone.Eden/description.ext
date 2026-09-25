@@ -1,0 +1,701 @@
+onLoadMission="МАСКАРАД"
+
+showCompass=1
+
+showGPS=1
+
+showMap=1
+
+showNotepad=1
+
+showWatch=1
+
+debriefing=1
+
+class CfgIdentities
+{
+      class Dmitriy
+      {
+            name = "Дмитрий Астахов";
+            face = "Face37";
+            glasses="None";
+            speaker = "Ruslan";
+            pitch = 1.10;
+      };
+      class Udav
+      {
+            name = "Андрей Селиванов";
+            face = "Face29";
+            glasses="Sunglasses";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+      class Kombat
+      {
+            name = "Сергей Волошин";
+            face = "Face32"
+            glasses="None";
+            speaker = "John";
+            pitch = 1.00;
+      };
+      class Bandit
+      {
+            name = "Ясхар";
+            face = "Face28";
+            glasses="None";
+            speaker = "Rich";
+            pitch = 1.00;
+      };
+      class Vodila
+      {
+            name = "Левашов";
+            face = "Face11";
+            glasses="None";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+};
+
+
+class CfgSounds
+{
+      sounds[] = { };
+      class vihlop
+      {
+            name = "vihlop";
+            sound[] = {"vihlop.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_smeh
+            };
+      };
+      class intro1
+      {
+            name = "intro1";
+            sound[] = {"intro1.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1
+            };
+      };
+      class intro2
+      {
+            name = "intro2";
+            sound[] = {"intro2.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2
+            };
+      };
+      class intro3
+      {
+            name = "intro3";
+            sound[] = {"intro3.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3
+            };
+      };
+      class intro4
+      {
+            name = "intro4";
+            sound[] = {"intro4.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4
+            };
+      };
+      class intro5
+      {
+            name = "intro5";
+            sound[] = {"intro5.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5
+            };
+      };
+      class intro6
+      {
+            name = "intro6";
+            sound[] = {"intro6.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6
+            };
+      };
+      class intro7
+      {
+            name = "intro7";
+            sound[] = {"intro7.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7
+            };
+      };
+      class intro8
+      {
+            name = "intro8";
+            sound[] = {"intro8.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro8
+            };
+      };
+      class intro9
+      {
+            name = "intro9";
+            sound[] = {"intro9.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro9
+            };
+      };
+      class intro10
+      {
+            name = "intro10";
+            sound[] = {"intro10.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro10
+            };
+      };
+      class intro11
+      {
+            name = "intro11";
+            sound[] = {"intro11.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro11
+            };
+      };
+      class intro12
+      {
+            name = "intro12";
+            sound[] = {"intro12.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro12
+            };
+      };
+      class intro13
+      {
+            name = "intro13";
+            sound[] = {"intro13.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro13
+            };
+      };
+      class intro14
+      {
+            name = "intro14";
+            sound[] = {"intro14.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro14
+            };
+      };
+      class intro15
+      {
+            name = "intro15";
+            sound[] = {"intro15.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro15
+            };
+      };
+      class intro16
+      {
+            name = "intro16";
+            sound[] = {"intro16.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro16
+            };
+      };
+      class intro17
+      {
+            name = "intro17";
+            sound[] = {"intro17.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro17
+            };
+      };
+      class intro18
+      {
+            name = "intro18";
+            sound[] = {"intro18.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro18
+            };
+      };
+      class intro19
+      {
+            name = "intro19";
+            sound[] = {"intro19.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro19
+            };
+      };
+      class intro20
+      {
+            name = "intro20";
+            sound[] = {"intro20.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro20
+            };
+      };
+      class intro21
+      {
+            name = "intro21";
+            sound[] = {"intro21.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro21
+            };
+      };
+      class intro22
+      {
+            name = "intro22";
+            sound[] = {"intro22.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro22
+            };
+      };
+      class intro23
+      {
+            name = "intro23";
+            sound[] = {"intro23.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro23
+            };
+      };
+      class intro24
+      {
+            name = "intro24";
+            sound[] = {"intro24.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro24
+            };
+      };
+      class intro25
+      {
+            name = "intro25";
+            sound[] = {"intro25.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro25
+            };
+      };
+      class intro26
+      {
+            name = "intro26";
+            sound[] = {"intro26.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro26
+            };
+      };
+
+      class tank
+      {
+            name = "tank";
+            sound[] = {"tank.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tank
+            };
+      };
+      class tank1
+      {
+            name = "tank1";
+            sound[] = {"tank1.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tank1
+            };
+      };
+      class tank2
+      {
+            name = "tank2";
+            sound[] = {"tank2.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tank2
+            };
+      };
+      class tank3
+      {
+            name = "tank3";
+            sound[] = {"tank3.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tank3
+            };
+      };
+      class tank4
+      {
+            name = "tank4";
+            sound[] = {"tank4.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tank4
+            };
+      };
+      class hum
+      {
+            name = "hum";
+            sound[] = {"hum.ogg", db-1, 1.0};
+            titles[] =
+            {
+                  0, $STRM_hum
+            };
+      };
+};
+class CfgRadio
+{
+      sounds[] = { };
+
+      class baze_1
+      {
+            name = "baze_1";
+            sound[] = {"baze_1.ogg", db+20, 1.0};
+            title = $STRM_baze_1;
+      };
+      class baze_1f
+      {
+            name = "baze_1f";
+            sound[] = {"baze_1f.ogg", db+20, 1.0};
+            title = $STRM_baze_1f;
+      };
+      class baze_2
+      {
+            name = "baze_2";
+            sound[] = {"baze_2.ogg", db+20, 1.0};
+            title = $STRM_baze_2;
+      };
+      class baze_3
+      {
+            name = "baze_3";
+            sound[] = {"baze_3.ogg", db+20, 1.0};
+            title = $STRM_baze_3;
+      };
+      class baze_3f
+      {
+            name = "baze_3f";
+            sound[] = {"baze_3f.ogg", db+20, 1.0};
+            title = $STRM_baze_3f;
+      };
+      class baze_4
+      {
+            name = "baze_4";
+            sound[] = {"baze_4.ogg", db+20, 1.0};
+            title = $STRM_baze_4;
+      };
+      class baze_4f
+      {
+            name = "baze_4f";
+            sound[] = {"baze_4f.ogg", db+20, 1.0};
+            title = $STRM_baze_4f;
+      };
+      class baze_5
+      {
+            name = "baze_5";
+            sound[] = {"baze_5.ogg", db+20, 1.0};
+            title = $STRM_baze_5;
+      };
+      class baze_6
+      {
+            name = "baze_6";
+            sound[] = {"baze_6.ogg", db+20, 1.0};
+            title = $STRM_baze_6;
+      };
+      class baze_7
+      {
+            name = "baze_7";
+            sound[] = {"baze_7.ogg", db+20, 1.0};
+            title = $STRM_baze_7;
+      };
+      class baze_7f
+      {
+            name = "baze_7f";
+            sound[] = {"baze_7f.ogg", db+20, 1.0};
+            title = $STRM_baze_7f;
+      };
+      class baze_7d
+      {
+            name = "baze_7d";
+            sound[] = {"baze_7d.ogg", db+20, 1.0};
+            title = $STRM_baze_7d;
+      };
+      class baze_8
+      {
+            name = "baze_8";
+            sound[] = {"baze_8.ogg", db+20, 1.0};
+            title = $STRM_baze_8;
+      };
+      class baze_9
+      {
+            name = "baze_9";
+            sound[] = {"baze_9.ogg", db+20, 1.0};
+            title = $STRM_baze_9;
+      };
+      class bomb_go
+      {
+            name = "bomb_go";
+            sound[] = {"bomb_go.ogg", db+20, 1.0};
+            title = $STRM_bomb_go;
+      };
+};
+
+class CfgSFX
+{
+      sounds[] = {};
+};
+class CfgEnvSounds
+{
+      sounds[] = {};
+};
+
+class RscPicture
+{
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTilePicture
+{
+      type=0;
+      idc=-1;
+      style=144;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTitles
+{      Titles[] ={};
+      class PhotoTank
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=8;
+            fadein=1
+            name="PhotoTank";
+            controls[]={"PhotoTank"};
+            class PhotoTank : RscPicture
+            {
+                  text="zone.jpg";
+                  x=0.25;
+                  y=0.25;
+                  w=0.5;
+                  h=0.5;
+            };
+      };
+      class PhotoZona
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=8;
+            fadein=1
+            name="PhotoZona";
+            controls[]={"PhotoZona"};
+            class PhotoZona : RscPicture
+            {
+                  text="zone2.jpg";
+                  x=0.25;
+                  y=0.25;
+                  w=0.5;
+                  h=0.5;
+            };
+      };
+};
+class Weapons
+{
+      class M16
+            {
+            count = 4;
+            };
+      class M4
+            {
+            count = 3;
+            };
+      class M16GrenadeLauncher
+            {
+            count = 2;
+            };
+      class XMS
+            {
+            count = 2;
+            };
+      class G36a
+            {
+            count = 1;
+            };
+      class HK
+            {
+            count = 3;
+            };
+      class M21
+            {
+            count = 1;
+            };
+      class Tokarev
+            {
+            count = 4;
+            };
+      class Beretta
+            {
+            count = 2;
+            };
+      class Glock
+            {
+            count = 1;
+            };
+      class Revolver
+            {
+            count = 2;
+            };
+      class GlockS
+            {
+            count = 1;
+            };
+      class M60
+            {
+            count = 2;
+            };
+      class LAWLauncher
+            {
+            count = 2;
+            };
+      class CarlGustavLauncher
+            {
+            count = 3;
+            };
+      class AALauncher
+            {
+            count = 1;
+            };
+      class Binocular
+            {
+            count = 12;
+            };
+      class NVGoggles
+            {
+            count = 12;
+            };
+};
+class Magazines
+{
+      class M16
+            {
+            count = 21;
+            };
+      class M4
+            {
+            count = 9;
+            };
+      class G36aMag
+            {
+            count = 12;
+            };
+      class HK
+            {
+            count = 16;
+            };
+      class GrenadeLauncher
+            {
+            count = 30;
+            };
+      class M21
+            {
+            count = 7;
+            };
+      class M60
+            {
+            count = 7;
+            };
+      class LAWLauncher
+            {
+            count = 5;
+            };
+      class AALauncher
+            {
+            count = 1;
+            };
+      class CarlGustavLauncher
+            {
+            count = 0;
+            };
+      class TokarevMag
+            {
+            count = 46;
+            };
+      class BerettaMag
+            {
+            count = 5;
+            };
+      class CZ75Mag
+            {
+            count = 21;
+            };
+      class GlockMag
+            {
+            count = 12;
+            };
+      class GlockSMag
+            {
+            count = 6;
+            };
+      class RevolverMag
+            {
+            count = 10;
+            };
+      class HandGrenade
+            {
+            count = 15;
+            };
+      class SmokeShell
+            {
+            count = 5;
+            };
+      class SmokeShellRed
+            {
+            count = 5;
+            };
+      class SmokeShellGreen
+            {
+            count = 4;
+            };
+      class Flare
+            {
+            count = 10;
+            };
+      class FlareRed
+            {
+            count = 17;
+            };
+      class FlareGreen
+            {
+            count = 13;
+            };
+      class FlareYellow
+            {
+            count = 19;
+            };
+      class PipeBomb
+            {
+            count = 20;
+            };
+};

@@ -1,0 +1,432 @@
+onLoadMission="ЗВЕРОЛОВЫ"
+
+showCompass=1
+
+showGPS=0
+
+showMap=1
+
+showNotepad=1
+
+showWatch=1
+
+debriefing=1
+
+class CfgIdentities
+{
+      class Dmitriy
+      {
+            name = "Дмитрий Астахов";
+            face = "Face37";
+            glasses="None";
+            speaker = "Ruslan";
+            pitch = 1.10;
+      };
+      class David
+      {
+            name = "Дэвид Армстронг";
+            face = "Face7";
+            glasses="None";
+            speaker = "Greg";
+            pitch = 1.05;
+      };
+};
+
+class CfgSounds
+{
+      sounds[] = { };
+      class intro1
+      {
+            name = "intro1";
+            sound[] = {"intro1.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1
+            };
+      };
+      class intro2
+      {
+            name = "intro2";
+            sound[] = {"intro2.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2
+            };
+      };
+      class intro3
+      {
+            name = "intro3";
+            sound[] = {"intro3.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3
+            };
+      };
+      class intro4
+      {
+            name = "intro4";
+            sound[] = {"intro4.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4
+            };
+      };
+      class intro5
+      {
+            name = "intro5";
+            sound[] = {"intro5.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5
+            };
+      };
+      class intro6
+      {
+            name = "intro6";
+            sound[] = {"intro6.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6
+            };
+      };
+      class intro7
+      {
+            name = "intro7";
+            sound[] = {"intro7.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7
+            };
+      };
+      class intro8
+      {
+            name = "intro8";
+            sound[] = {"intro8.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro8
+            };
+      };
+      class intro9
+      {
+            name = "intro9";
+            sound[] = {"intro9.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro9
+            };
+      };
+      class intro10
+      {
+            name = "intro10";
+            sound[] = {"intro10.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro10
+            };
+      };
+      class intro11
+      {
+            name = "intro11";
+            sound[] = {"intro11.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro11
+            };
+      };
+      class intro12
+      {
+            name = "intro12";
+            sound[] = {"intro12.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro12
+            };
+      };
+
+
+
+      class plen01
+      {
+            name = "plen01";
+            sound[] = {"plen01.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen01
+            };
+      };
+      class plen02
+      {
+            name = "plen02";
+            sound[] = {"plen02.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen02
+            };
+      };
+      class plen03
+      {
+            name = "plen03";
+            sound[] = {"plen03.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen03
+            };
+      };
+      class plen04
+      {
+            name = "plen04";
+            sound[] = {"plen04.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen04
+            };
+      };
+      class plen05
+      {
+            name = "plen05";
+            sound[] = {"plen05.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen05
+            };
+      };
+      class plen06
+      {
+            name = "plen06";
+            sound[] = {"plen06.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen06
+            };
+      };
+      class plen07
+      {
+            name = "plen07";
+            sound[] = {"plen07.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen07
+            };
+      };
+      class plen08
+      {
+            name = "plen08";
+            sound[] = {"plen08.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen08
+            };
+      };
+      class plen09
+      {
+            name = "plen09";
+            sound[] = {"plen09.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_plen09
+            };
+      };
+
+
+      class mis_01
+      {
+            name = "mis_01";
+            sound[] = {"mis_01.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_mis_01
+            };
+      };
+      class mis_02
+      {
+            name = "mis_02";
+            sound[] = {"mis_02.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_mis_02
+            };
+      };
+      class david00
+      {
+            name = "david00";
+            sound[] = {"david00.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david00
+            };
+      };
+      class david01
+      {
+            name = "david01";
+            sound[] = {"david01.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david01
+            };
+      };
+      class david02
+      {
+            name = "david02";
+            sound[] = {"david02.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david02
+            };
+      };
+      class david03
+      {
+            name = "david03";
+            sound[] = {"david03.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david03
+            };
+      };
+      class david04
+      {
+            name = "david04";
+            sound[] = {"david04.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david04
+            };
+      };
+      class david05
+      {
+            name = "david05";
+            sound[] = {"david05.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david05
+            };
+      };
+      class david06
+      {
+            name = "david06";
+            sound[] = {"david06.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david06
+            };
+      };
+      class david07
+      {
+            name = "david07";
+            sound[] = {"david07.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david07
+            };
+      };
+      class david08
+      {
+            name = "david08";
+            sound[] = {"david08.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david08
+            };
+      };
+      class david09
+      {
+            name = "david09";
+            sound[] = {"david09.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david09
+            };
+      };
+      class david10
+      {
+            name = "david10";
+            sound[] = {"david10.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david10
+            };
+      };
+      class david11
+      {
+            name = "david11";
+            sound[] = {"david11.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david11
+            };
+      };
+      class david12
+      {
+            name = "david12";
+            sound[] = {"david12.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david12
+            };
+      };
+      class david13
+      {
+            name = "david13";
+            sound[] = {"david13.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_david13
+            };
+      };
+};
+
+
+class CfgRadio
+{
+      sounds[] = {};
+
+      class plen10r
+      {
+            name = "plen10r";
+            sound[] = {"plen10r.ogg", db-10, 1.0};
+            title = $STRM_plen10r;
+            
+      };
+      class plen11r
+      {
+            name = "plen11r";
+            sound[] = {"plen11r.ogg", db-10, 1.0};
+            title = $STRM_plen11r;
+            
+      };
+      class plen12r
+      {
+            name = "plen12r";
+            sound[] = {"plen12r.ogg", db-10, 1.0};
+            title = $STRM_plen12r;
+            
+      };
+      class rad_01
+      {
+            name = "rad_01";
+            sound[] = {"rad_01.ogg", db-10, 1.0};
+            title = $STRM_rad_01;
+            
+      };
+      class rad_02
+      {
+            name = "rad_02";
+            sound[] = {"rad_02.ogg", db-10, 1.0};
+            title = $STRM_rad_02;
+            
+      };
+      class rad_03
+      {
+            name = "rad_03";
+            sound[] = {"rad_03.ogg", db-10, 1.0};
+            title = $STRM_rad_03;
+            
+      };
+      class rad_04
+      {
+            name = "rad_04";
+            sound[] = {"rad_04.ogg", db-10, 1.0};
+            title = $STRM_rad_04;
+            
+      };
+};

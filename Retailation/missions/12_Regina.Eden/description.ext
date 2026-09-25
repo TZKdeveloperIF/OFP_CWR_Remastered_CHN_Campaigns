@@ -1,0 +1,366 @@
+onLoadMission="СТАЛЬНОЙ БРОСОК"
+
+showCompass=1
+
+showGPS=0
+
+showMap=1
+
+showNotepad=1
+
+showWatch=1
+
+debriefing=1
+
+class CfgIdentities
+{
+      class Dmitriy
+      {
+            name = "Дмитрий Астахов";
+            face = "Face37";
+            glasses="None";
+            speaker = "Ruslan";
+            pitch = 1.10;
+      };
+      class Udav
+      {
+            name = "Андрей Селиванов";
+            face = "Face29";
+            glasses="Sunglasses";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+      class Kombat
+      {
+            name = "Сергей Волошин";
+            face = "Face32"
+            glasses="None";
+            speaker = "John";
+            pitch = 1.00;
+      };
+      class Bandit
+      {
+            name = "Ясхар";
+            face = "Face28";
+            glasses="None";
+            speaker = "Rich";
+            pitch = 1.00;
+      };
+      class Vodila
+      {
+            name = "Левашов";
+            face = "Face11";
+            glasses="None";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+};
+
+class CfgSounds
+{
+      sounds[] = { };
+      class intro1
+      {
+            name = "intro1";
+            sound[] = {"intro1.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1
+            };
+      };
+      class intro2
+      {
+            name = "intro2";
+            sound[] = {"intro2.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2
+            };
+      };
+      class intro3
+      {
+            name = "intro3";
+            sound[] = {"intro3.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3
+            };
+      };
+      class intro4
+      {
+            name = "intro4";
+            sound[] = {"intro4.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4
+            };
+      };
+      class intro5
+      {
+            name = "intro5";
+            sound[] = {"intro5.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5
+            };
+      };
+      class intro6
+      {
+            name = "intro6";
+            sound[] = {"intro6.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6
+            };
+      };
+      class intro7
+      {
+            name = "intro7";
+            sound[] = {"intro7.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7
+            };
+      };
+      class intro8
+      {
+            name = "intro8";
+            sound[] = {"intro8.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro8
+            };
+      };
+      class intro9
+      {
+            name = "intro9";
+            sound[] = {"intro9.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro9
+            };
+      };
+      class intro10
+      {
+            name = "intro10";
+            sound[] = {"intro10.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro10
+            };
+      };
+};
+class CfgRadio
+{
+      sounds[] = {};
+      class rad1
+      {
+            name = "rad1";
+            sound[] = {"rad1.ogg", db-10, 1.0};
+            title = $STRM_rad1;
+            
+      };
+      class rad2
+      {
+            name = "rad2";
+            sound[] = {"rad2.ogg", db-10, 1.0};
+            title = $STRM_rad2;
+            
+      };
+      class rad3
+      {
+            name = "rad3";
+            sound[] = {"rad3.ogg", db-10, 1.0};
+            title = $STRM_rad3;
+            
+      };
+      class rad4
+      {
+            name = "rad4";
+            sound[] = {"rad4.ogg", db-10, 1.0};
+            title = $STRM_rad4;
+            
+      };
+      class rad5
+      {
+            name = "rad5";
+            sound[] = {"rad5.ogg", db-10, 1.0};
+            title = $STRM_rad5;
+            
+      };
+      class rad6
+      {
+            name = "rad6";
+            sound[] = {"rad6.ogg", db-10, 1.0};
+            title = $STRM_rad6;
+            
+      };
+      class rad7
+      {
+            name = "rad7";
+            sound[] = {"rad7.ogg", db-10, 1.0};
+            title = $STRM_rad7;
+            
+      };
+      class rad8
+      {
+            name = "rad8";
+            sound[] = {"rad8.ogg", db-10, 1.0};
+            title = $STRM_rad8;
+            
+      };
+      class rad9
+      {
+            name = "rad9";
+            sound[] = {"rad9.ogg", db-10, 1.0};
+            title = $STRM_rad9;
+            
+      };
+      class rad10
+      {
+            name = "rad10";
+            sound[] = {"rad10.ogg", db-10, 1.0};
+            title = $STRM_rad10;
+            
+      };
+      class rad11
+      {
+            name = "rad11";
+            sound[] = {"rad11.ogg", db-10, 1.0};
+            title = $STRM_rad11;
+            
+      };
+      class rad12
+      {
+            name = "rad12";
+            sound[] = {"rad12.ogg", db-10, 1.0};
+            title = $STRM_rad12;
+            
+      };
+      class rad13
+      {
+            name = "rad13";
+            sound[] = {"rad13.ogg", db-10, 1.0};
+            title = $STRM_rad13;
+            
+      };
+      class rad14
+      {
+            name = "rad14";
+            sound[] = {"rad14.ogg", db-10, 1.0};
+            title = $STRM_rad14;
+            
+      };
+      class rad15
+      {
+            name = "rad15";
+            sound[] = {"rad15.ogg", db-10, 1.0};
+            title = $STRM_rad15;
+            
+      };
+      class rad16
+      {
+            name = "rad16";
+            sound[] = {"rad16.ogg", db-10, 1.0};
+            title = $STRM_rad16;
+            
+      };
+      class rad17
+      {
+            name = "rad17";
+            sound[] = {"rad17.ogg", db-10, 1.0};
+            title = $STRM_rad17;
+            
+      };
+      class rad18
+      {
+            name = "rad18";
+            sound[] = {"rad18.ogg", db-10, 1.0};
+            title = $STRM_rad18;
+            
+      };
+      class rad19
+      {
+            name = "rad19";
+            sound[] = {"rad19.ogg", db-10, 1.0};
+            title = $STRM_rad19;
+            
+      };
+      class rad20
+      {
+            name = "rad20";
+            sound[] = {"rad20.ogg", db-10, 1.0};
+            title = $STRM_rad20;
+            
+      };
+      class rad21
+      {
+            name = "rad21";
+            sound[] = {"rad21.ogg", db-10, 1.0};
+            title = $STRM_rad21;
+            
+      };
+      class rad22
+      {
+            name = "rad22";
+            sound[] = {"rad22.ogg", db-10, 1.0};
+            title = $STRM_rad22;
+            
+      };
+      class rad23
+      {
+            name = "rad23";
+            sound[] = {"rad23.ogg", db-10, 1.0};
+            title = $STRM_rad23;
+            
+      };
+      class rad24
+      {
+            name = "rad24";
+            sound[] = {"rad24.ogg", db-10, 1.0};
+            title = $STRM_rad24;
+            
+      };
+      class rad25
+      {
+            name = "rad25";
+            sound[] = {"rad25.ogg", db-10, 1.0};
+            title = $STRM_rad25;
+            
+      };
+      class rad26
+      {
+            name = "rad26";
+            sound[] = {"rad26.ogg", db-10, 1.0};
+            title = $STRM_rad26;
+            
+      };
+      class rad27
+      {
+            name = "rad27";
+            sound[] = {"rad27.ogg", db-10, 1.0};
+            title = $STRM_rad27;
+            
+      };
+      class rad28
+      {
+            name = "rad28";
+            sound[] = {"rad28.ogg", db-10, 1.0};
+            title = $STRM_rad28;
+            
+      };
+      class rad_atak1
+      {
+            name = "rad_atak1";
+            sound[] = {"rad_atak1.ogg", db-10, 1.0};
+            title = $STRM_rad_atak1;
+            
+      };
+      class rad_atak2
+      {
+            name = "rad_atak2";
+            sound[] = {"rad_atak2.ogg", db-10, 1.0};
+            title = $STRM_rad_atak2;
+            
+      };
+};

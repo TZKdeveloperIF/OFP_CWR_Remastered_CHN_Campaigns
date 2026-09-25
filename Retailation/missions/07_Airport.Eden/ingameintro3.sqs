@@ -1,0 +1,45 @@
+; доклад о подлете неизвестных вертолетов
+
+s1 setcombatmode "BLUE"
+s2 setcombatmode "BLUE"
+s3 setcombatmode "BLUE"
+s4 setcombatmode "BLUE"
+s5 setcombatmode "BLUE"
+s6 setcombatmode "BLUE"
+s7 setcombatmode "BLUE"
+b1 setcombatmode "BLUE"
+b2 setcombatmode "BLUE"
+b3 setcombatmode "BLUE"
+
+setacctime 1.0
+
+enableradio false
+
+titlecut["","black in",1]
+~1
+
+s1 say "ingameintro6_1"
+~3
+
+gamer say "ingameintro6_2"
+~4
+
+s1 say "ingameintro6_3"
+~4.5
+
+gamer say "ingameintro6_4"
+~4
+
+?count units group gamer == 1: goto "ext"
+gamer say "ingameintro6_5"
+~3
+
+gamer say "ingameintro6_6"
+~2
+
+#ext
+savegame
+
+enableradio true
+
+exit

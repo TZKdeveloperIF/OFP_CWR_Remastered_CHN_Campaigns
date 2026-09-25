@@ -1,0 +1,61 @@
+_camera = "camera" camCreate (getpos pk1)
+_camera cameraEffect ["internal","back"]
+TitleText ["À‎נמהנמל.\nÍמקü םא 9 לאÿ 1985-דמ דמהא.","PLAIN",5]
+titleCut ["","BLACK IN",5]
+scen = 0
+
+
+_camera camSetTarget gen
+_camera camSetPos  [getPos pk1 select 0, getPos pk1 select 1, (getPos pk1 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+0 Fademusic 0.3
+Playmusic "inside_music1_4"
+
+~4
+TitleText ["","PLAIN",0]
+~4
+
+
+_camera camSetTarget gen
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+gen say "intro1"
+~6
+_camera camSetTarget Up2
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up2 say "intro2"
+~6
+_camera camSetTarget Up
+_camera camCommit 2
+@camCommitted _camera
+Up say "intro3"
+~5
+_camera camSetTarget gen
+_camera camSetRelPos [0,1,1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+gen say "intro4"
+~11
+gen dowatch hhh
+scen = 1
+_camera camSetTarget gen
+_camera camSetPos  [getPos pk1 select 0, getPos pk1 select 1, (getPos pk1 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+@ scen == 3
+titleCut ["","BLACK OUT",5]
+~5
+scen = 100
+exit

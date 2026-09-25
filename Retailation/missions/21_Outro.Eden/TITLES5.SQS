@@ -1,0 +1,31 @@
+;36
+tit_start6go=true
+titlecut["","black in",0.5]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget tit_ural1_1
+_camera camsetpos [(getpos tit_camera4 select 0) - 0, (getpos tit_camera4 select 1) + 0, (getpos tit_camera4 select 2) + 0.5]
+_camera camsetfov 0.900
+_camera camCommit 0
+
+_camera camsettarget tit_ural1_1
+_camera camsetpos [(getpos tit_camera4 select 0) - 0, (getpos tit_camera4 select 1) + 0, (getpos tit_camera4 select 2) + 1.5]
+_camera camsetfov 0.700
+_camera camCommit 10
+~1
+
+cutRsc ["Akter2", "PLAIN", 5]
+
+~4
+
+tit_start5=true
+~5
+
+titlecut["","black out",0.5]
+~0.5
+[] exec "titles6.sqs"
+;total time: 15.5
+
+exit

@@ -1,0 +1,179 @@
+w1 switchmove "FXStandAtt"
+w2 switchmove "FXStandAtt"
+w3 switchmove "FXStandAtt"
+w4 switchmove "FXStandAtt"
+w5 switchmove "FXStandAtt"
+w6 switchmove "FXStandAtt"
+w7 switchmove "FXStandAtt"
+w8 switchmove "FXStandAtt"
+
+w21 switchmove "FXStandAtt"
+w22 switchmove "FXStandAtt"
+w23 switchmove "FXStandAtt"
+w24 switchmove "FXStandAtt"
+w25 switchmove "FXStandAtt"
+w26 switchmove "FXStandAtt"
+w27 switchmove "FXStandAtt"
+w28 switchmove "FXStandAtt"
+
+west1 switchmove "FXStandAtt"
+west2 switchmove "FXStandAtt"
+
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext [localize "STRM_Loadi1_2","plain",1]
+~5
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+titletext ["","plain",1]
+
+_camera camsettarget [(getpos flag2 select 0) - 0, getpos flag2 select 1, (getpos flag2 select 2) + 6]
+_camera camsetpos [(getpos flag2 select 0) - 2, getpos flag2 select 1, (getpos flag2 select 2) + 6]
+_camera camsetfov 0.500
+_camera camCommit 0
+~5
+
+_camera camsettarget w1
+_camera camsetrelpos [0,0.7,1.65]
+_camera camsetfov 0.600
+_camera camCommit 0
+~0
+
+_camera camsettarget w2
+_camera camsetrelpos [0,0.9,1.65]
+_camera camsetfov 0.650
+_camera camCommit 3
+~3
+
+_camera camsettarget w3
+_camera camsetrelpos [0,1.2,1.65]
+_camera camsetfov 0.700
+_camera camCommit 3
+~3
+
+_camera camsettarget w4
+_camera camsetrelpos [0,1.5,1.65]
+_camera camsetfov 0.750
+_camera camCommit 3
+~3
+
+_camera camsettarget w5
+_camera camsetrelpos [0,1.8,1.65]
+_camera camsetfov 0.800
+_camera camCommit 3
+~3
+
+_camera camsettarget w6
+_camera camsetrelpos [0,2.1,1.65]
+_camera camsetfov 0.850
+_camera camCommit 3
+~3
+
+_camera camsettarget w7
+_camera camsetrelpos [0,2.3,1.65]
+_camera camsetfov 0.900
+_camera camCommit 3
+~3
+
+_camera camsettarget w8
+_camera camsetrelpos [0,2.6,1.65]
+_camera camsetfov 0.950
+_camera camCommit 3
+~3
+
+west1 say "intro2_0"
+_camera camsettarget west1
+_camera camsetrelpos [0.1,0.7,1.65]
+_camera camsetfov 0.800
+_camera camCommit 0
+~6
+
+west1 say "intro2_1"
+_camera camsettarget west1
+_camera camsetrelpos [0.1,1.7,1.65]
+_camera camsetfov 0.800
+_camera camCommit 5
+~3.5
+
+west1 say "intro2_2"
+_camera camsettarget west1
+_camera camsetrelpos [0.1,-0.6,1.75]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+west1 say "intro2_3"
+gohel=true
+_camera camsettarget west1
+_camera camsetrelpos [0.1,-1.4,1.55]
+_camera camsetfov 0.800
+_camera camCommit 5
+~1
+
+w1 switchmove "Stand"
+w2 switchmove "Stand"
+w3 switchmove "Stand"
+w4 switchmove "Stand"
+w5 switchmove "Stand"
+w6 switchmove "Stand"
+w7 switchmove "Stand"
+w8 switchmove "Stand"
+
+w21 switchmove "Stand"
+w22 switchmove "Stand"
+w23 switchmove "Stand"
+w24 switchmove "Stand"
+w25 switchmove "Stand"
+w26 switchmove "Stand"
+w27 switchmove "Stand"
+w28 switchmove "Stand"
+
+gogo=true
+~4
+
+west1 say "intro2_4"
+_camera camsettarget west1
+_camera camsetrelpos [0.1,0.7,1.65]
+_camera camsetfov 0.800
+_camera camCommit 0
+~3
+
+west2 say "intro2_5"
+_camera camsettarget west2
+_camera camsetrelpos [0.1,0.7,1.65]
+_camera camsetfov 0.800
+_camera camCommit 0
+~2
+
+west1 say "intro2_6"
+_camera camsettarget west1
+_camera camsetrelpos [0.1,3,1.45]
+_camera camsetfov 0.500
+_camera camCommit 0
+~4
+
+west2 say "intro2_7"
+_camera camsettarget west2
+_camera camsetrelpos [0.1,3,1.45]
+_camera camsetfov 0.500
+_camera camCommit 1.5
+~3
+
+west1 say "intro2_8"
+_camera camsettarget west1
+_camera camsetrelpos [0.1,3,1.45]
+_camera camsetfov 0.700
+_camera camCommit 0
+~1
+
+titlecut["","black out",3]
+~3
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+endintro=true
+
+exit

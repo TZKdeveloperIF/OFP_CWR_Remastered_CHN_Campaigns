@@ -1,0 +1,115 @@
+_camera = "camera" camCreate (getpos pk1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Мортон.\nРаннее утро. 8 мая 1985-го года.","PLAIN",5]
+titleCut ["","BLACK IN",5]
+
+up switchMove "CombatRunBDead"
+s1 switchMove "CombatDeadVer3"
+s2 switchMove "LyingDying"
+s3 switchMove "StandDeadVer2"
+s4 switchMove "StandDeadVer2"
+
+_camera camSetTarget ofser
+_camera camSetPos  [getPos pk1 select 0, getPos pk1 select 1, (getPos pk1 select 2) + 30]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetTarget ofser
+_camera camSetPos  [getPos pk2 select 0, getPos pk2 select 1, (getPos pk2 select 2) + 3]
+_camera camSetFOV 0.800
+_camera camCommit 10
+ofser say "intro_r1"
+~7.5
+ofser say "intro_r2"
+ofser playmove "FXshow2"
+@camCommitted _camera
+~8.5
+_camera camSetTarget serj
+_camera camSetRelPos [0,0.9,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+serj playmove "EffectStandSalute"
+serj say "intro_r3"
+~3
+_camera camSetTarget ofser
+_camera camSetPos  [getPos pk2 select 0, getPos pk2 select 1, (getPos pk2 select 2) + 3]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+ofser switchmove "FXCivilArmsAkimboL"
+~5
+ofser say "intro_r4"
+~1
+ofser switchmove "FXshow5"
+~1
+scen = 1
+_camera camSetTarget serj
+_camera camSetPos  [getPos pk2 select 0, getPos pk2 select 1, (getPos pk2 select 2) + 3]
+_camera camSetFOV 0.800
+_camera camCommit 3
+@camCommitted _camera
+
+serj dowatch up
+~10
+_camera camSetTarget Up
+_camera camSetPos  [getPos pk3 select 0, getPos pk3 select 1, (getPos pk3 select 2) + 1.7]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+@scen == 2
+;serj setdir 180
+serj switchmove "CombatToPutDown"
+serj say "intro1"
+~4
+up say "intro2"
+~2.25
+serj say "intro3"
+~7.3
+up say "intro4"
+~1.5
+serj say "intro5"
+~7.5
+up say "intro6"
+~1
+serj say "intro7"
+~13
+up say "intro8"
+~4
+_camera camSetTarget chas
+_camera camSetPos  [getPos pk4 select 0, getPos pk4 select 1, (getPos pk4 select 2) + 1.7]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+playsound "Fx03"
+chas switchmove "FXStandBug"
+scen = 4
+up switchmove "EffectStandSaluteEnd"
+~3
+serj setpos (getpos posa)
+up setpos (getpos posa2)
+~1
+_camera camSetTarget Up
+_camera camSetPos  [getPos pk3 select 0, getPos pk3 select 1, (getPos pk3 select 2) + 1.7]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~2
+serj say "intro9"
+s4 switchmove "EffectStandSaluteEnd"
+~9.5
+s4 setpos (getpos posa3)
+s3 switchmove "EffectStandSaluteEnd"
+up say "intro10"
+~6
+s2 switchmove "EffectStandSaluteEnd"
+up dowatch tent
+~2
+up say "intro11"
+~6
+titleCut ["","BLACK OUT",5]
+~5
+scen = 10
+exit

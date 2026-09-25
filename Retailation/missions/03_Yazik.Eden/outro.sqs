@@ -1,0 +1,76 @@
+gscen = 0
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+titleCut ["","BLACK IN",5]
+
+_camera camSetTarget Bandit
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Bandit switchmove "FXStandSurUniv"
+~3
+up say "priv1"
+~7
+up say "priv2"
+~3
+offser_1 stop false
+@ gscen == 2
+
+offser_2 say "priv3"
+~5
+
+offser_1 say "priv4"
+~4
+up stop false
+_camera camSetTarget up
+_camera camSetPos  [getPos PK11 select 0, getPos Pk11 select 1, (getPos Pk11 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 4
+@camCommitted _camera
+_camera camSetTarget offser_2
+_camera camSetPos  [getPos PK12 select 0, getPos Pk12 select 1, (getPos Pk12 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~1
+offser_2 say "priv5"
+Offser_2 switchmove "StandToCombat"
+~0.5
+titleCut ["","BLACK Out",2]
+~5
+TitleText ["","PLAIN"]
+krik say "die_scream1_36"
+~3
+TitleText ["20 минут спустя","PLAIN"]
+~3
+titleCut ["","BLACK IN",7]
+
+
+
+_camera camSetTarget kt1
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~1
+_camera camSetTarget kt1
+_camera camSetPos   [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 20
+@camCommitted _camera
+
+offser say "outro1"
+
+_camera camSetTarget offser
+_camera camSetPos   [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 6
+@camCommitted _camera
+
+
+~4
+titleCut ["","BLACK OUT",5]
+~5
+scen = 1
+exit

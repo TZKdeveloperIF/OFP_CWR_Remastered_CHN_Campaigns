@@ -1,0 +1,16 @@
+
+_aunits = units wg_at
+_i = 0
+_j = count _aunits
+#Here
+(_aunits select _i) action ["EJECT",ver_at]
+unassignvehicle (_aunits select _i)
+_i=_i+1
+~1
+?_j>_i:goto "Here"
+
+[wg_at,udav,100] exec "pogonya.sqs"
+
+ver_at move getpos ver_at_base
+
+exit

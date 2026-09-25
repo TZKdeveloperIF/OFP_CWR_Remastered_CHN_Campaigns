@@ -1,0 +1,128 @@
+; script for KONVOY mission of campaign "RETALIATION"
+; http://www.flashpoint.ru/retaliation/
+; (c)flashpoint.ru team, 2001
+
+
+_camera = "camera" camCreate (getpos pk1)
+_camera cameraEffect ["internal", "Back"]
+titleCut ["","BLACK IN",12]
+_camera camSetTarget kor
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 48]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetTarget kor
+_camera camSetPos  [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 20]
+_camera camSetFOV 0.800
+_camera camCommit 18
+0 fadeMusic 1
+Playmusic "inside_music1_4"
+@camCommitted _camera
+
+
+
+_camera camSetTarget kat_k
+_camera camSetPos  [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 20]
+_camera camSetFOV 0.800
+_camera camCommit 5
+@camCommitted _camera
+~6
+#here
+_camera camSettarget kat_k
+_camera camSetpos  [getpos kat_k select 0, (getpos kat_k select 1)+10, (getpos kat_k select 2) + 3]
+;box setpos [(getpos kat_k select 0), (getpos kat_k select 1) +2.3, (getpos kat_k select 2) + 1.5]
+;box setdir (getdir kat_k + 90)
+_camera camcommit 0
+?scen==1: goto "start"
+~0.005
+goto"here"
+#start
+
+#here1
+_camera camSettarget kat_k
+_camera camSetpos  [getpos kat_k select 0, (getpos kat_k select 1)-7, (getpos kat_k select 2) + 3]
+;box setpos [(getpos kat_k select 0), (getpos kat_k select 1) +2.3, (getpos kat_k select 2) + 1.5]
+;box setdir (getdir kat_k + 90)
+_camera camcommit 0
+?scen==2: goto "start1"
+~0.005
+goto"here1"
+#start1
+titleCut ["","BLACK IN",5]
+playsound "Fx05"
+_camera camSetTarget kt1
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 0.2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+Playmusic "inside_music1_1"
+
+_camera camSetTarget kt2
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 0.2]
+_camera camSetFOV 0.800
+_camera camCommit 15
+@camCommitted _camera
+
+_camera camSetTarget off
+_camera camSetPos  [getPos PK10 select 0, getPos Pk10 select 1, (getPos Pk10 select 2) + 5]
+_camera camSetFOV 0.800
+_camera camCommit 15
+@camCommitted _camera
+
+#here2
+?scen==3: goto "start2"
+~0.1
+goto"here2"
+#start2
+
+titleCut ["","BLACK OUT",5]
+~5
+_camera camSetTarget jp
+_camera camSetPos  [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 2.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+titleCut ["","BLACK IN",5]
+
+_camera camSetTarget box
+_camera camSetPos  [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 2.5]
+_camera camSetFOV 0.800
+_camera camCommit 15
+~6
+ban1 say "introban10"
+~3
+ban2 say "introban11"
+@camCommitted _camera
+spec say "intro1"
+_camera camSetTarget spec
+_camera camSetPos  [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 2.5]
+_camera camSetFOV 0.300
+_camera camCommit 5
+~4
+@camCommitted _camera
+B0_1 say "intro2"
+~4
+spec say "intro3"
+~4
+spec say "intro4"
+~10.2
+spec say "intro5"
+~9
+spec say "intro6"
+~13
+B0_1 say "intro7"
+~6.3
+B0_1 say "intro8"
+~8.5
+spec say "intro9"
+~7.5
+spec say "intro10"
+~6
+
+~2
+titleCut ["","BLACK OUT",5]
+~5
+scen = 100
+exit

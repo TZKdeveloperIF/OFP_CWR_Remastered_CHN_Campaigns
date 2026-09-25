@@ -1,0 +1,62 @@
+Up say "stoy"
+Bandit action ["drop weapon",Bandit,0,0,"revolver"]
+~1
+B1 action ["drop weapon",B1,0,0,"M4"]
+B2 action ["drop weapon",B2,0,0,"M4"]
+~3
+? (canstand Bandit): Bandit setdammage 0
+Bandit SetUnitPos "Up"
+B1 SetUnitPos "Up"
+B2 SetUnitPos "Up"
+Bandit switchmove "FXStandSurUniv"
+;zahvat = true
+?(alive B1):B1 switchmove "FXStandSurUniv"
+?(alive B2):B2 switchmove "FXStandSurUniv"
+~1
+bandit dowatch Up
+
+#cycle
+~1
+?up distance bandit > 200: goto "end_lost"
+?up distance bandit > 15: bandit dowatch Up; goto "cycle"
+
+bandit say "Stoy1"
+"1" objstatus "DONE"; "2" objstatus "Active";
+~4
+Up say "Stoy2"
+[bandit,b1,b2] join Up
+zahvat = true
+Bandit SetUnitPos "AUTO"
+B1 SetUnitPos "AUTO"
+B2 SetUnitPos "AUTO"
+~3
+Bandit switchmove "Stand"
+?(alive B1):B1 switchmove "Stand"
+?(alive B2):B2 switchmove "Stand"
+Bandit setcaptive true
+B1 setcaptive true
+B2 setcaptive true
+Bandit SetUnitPos "AUTO"
+B1 SetUnitPos "AUTO"
+B2 SetUnitPos "AUTO"
+exit
+
+
+#end_lost
+zahvat = true
+B1 commandFollow Bandit
+B2 commandFollow Bandit
+Bandit setcaptive false
+B1 setcaptive false
+B2 setcaptive false
+Bandit SetUnitPos "AUTO"
+B1 SetUnitPos "AUTO"
+B2 SetUnitPos "AUTO"
+Bandit switchmove "Stand"
+?(alive B1):B1 switchmove "Stand"
+?(alive B2):B2 switchmove "Stand"
+Bandit SetUnitPos "AUTO"
+B1 SetUnitPos "AUTO"
+B2 SetUnitPos "AUTO"
+(group Bandit) setSpeedMode "FULL"
+exit

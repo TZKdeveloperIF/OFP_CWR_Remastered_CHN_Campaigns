@@ -1,0 +1,15 @@
+_bomber = _this select 0
+_target = _this select 1
+_distanc = _this select 2
+_cicle = 0
+
+@_bomber distance _target < _distanc
+bomb = true
+#start
+_bomber fire ["LaserGuidedBombLauncher", "LaserGuidedBombLauncher"]
+
+
+_cicle = _cicle + 1
+~ 0.5
+ ?_cicle < 8: goto "start"
+exit

@@ -1,0 +1,41 @@
+
+;расстановка солдат в случае, когда никто из группы не пострадал
+
+s1 stop true
+s2 stop true
+s3 stop true
+s4 stop true
+s5 stop true
+s6 stop true
+s7 stop true
+b2 stop true
+b3 stop true
+b1 stop true
+
+?alive s1: s1 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s2: s2 setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s3: s3 setpos [(getpos kladbige select 0) + 4, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s4: s4 setpos [(getpos kladbige select 0) + 5, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s5: s5 setpos [(getpos kladbige select 0) + 6, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s6: s6 setpos [(getpos kladbige select 0) + 7, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s7: s7 setpos [(getpos kladbige select 0) + 8, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive b2: b2 setpos [(getpos kladbige select 0) + 1, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive b3: b3 setpos [(getpos kladbige select 0) + 0, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive b1: b1 setpos [(getpos kladbige select 0) - 1, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+
+?alive gamer: gamer setpos [(getpos kladbige select 0) + 5, (getpos kladbige select 1) - 3, (getpos kladbige select 2)]
+
+gamer setbehaviour "CARELESS"
+gamer switchmove "Stand"
+
+gamer setDir 0
+s1 setDir 180
+s2 setDir 180
+s3 setDir 180
+s4 setDir 180
+s5 setDir 180
+s6 setDir 180
+s7 setDir 180
+b2 setdir 180
+b3 setdir 180
+b1 setdir 180

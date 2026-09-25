@@ -1,0 +1,51 @@
+
+;расстановка солдат в случае потерь
+
+s1 stop true
+s2 stop true
+s3 stop true
+s4 stop true
+s5 stop true
+s6 stop true
+s7 stop true
+b2 stop true
+b3 stop true
+b1 stop true
+
+?!alive s1 && !(s1 in bmp1): s1 setpos getpos more; s11 setpos [(getpos kladbige select 0), (getpos kladbige select 1), (getpos kladbige select 2)]
+?!alive s2 && !(s2 in bmp1): s2 setpos getpos more; s22 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?!alive s3 && !(s3 in bmp1): s3 setpos getpos more; s33 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 2, (getpos kladbige select 2)]
+?!alive s4 && !(s4 in bmp1): s4 setpos getpos more; s44 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 3, (getpos kladbige select 2)]
+?!alive s5 && !(s5 in bmp1): s5 setpos getpos more; s55 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 4, (getpos kladbige select 2)]
+?!alive s6 && !(s6 in bmp1): s6 setpos getpos more; s66 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 5, (getpos kladbige select 2)]
+?!alive s7 && !(s7 in bmp1): s7 setpos getpos more; s77 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 6, (getpos kladbige select 2)]
+?!alive b2 && !(b2 in bmp1): b2 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 7, (getpos kladbige select 2)]
+?!alive b3 && !(b3 in bmp1): b3 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 8, (getpos kladbige select 2)]
+?!alive b1 && !(b1 in bmp1): b1 setpos [(getpos kladbige select 0), (getpos kladbige select 1) + 9, (getpos kladbige select 2)]
+
+?alive s1: s1 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 1, (getpos kladbige select 2)]
+?alive s2: s2 setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) + 2, (getpos kladbige select 2)]
+?alive s3: s3 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 3, (getpos kladbige select 2)]
+?alive s4: s4 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 4, (getpos kladbige select 2)]
+?alive s5: s5 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 5, (getpos kladbige select 2)]
+?alive s6: s6 setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) + 6, (getpos kladbige select 2)]
+?alive s7: s7 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 7, (getpos kladbige select 2)]
+?alive b2: b2 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 8, (getpos kladbige select 2)]
+?alive b3: b2 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 9, (getpos kladbige select 2)]
+?alive b1: b1 setpos [(getpos kladbige select 0) + 2, (getpos kladbige select 1) + 10, (getpos kladbige select 2)]
+?alive gamer: gamer setpos [(getpos kladbige select 0) + 3, (getpos kladbige select 1) - 2, (getpos kladbige select 2)]
+
+gamer setbehaviour "CARELESS"
+gamer switchmove "Stand"
+
+gamer setDir 270
+?alive s1: s1 setDir 270
+?alive s2: s2 setDir 270
+?alive s3: s3 setDir 270
+?alive s4: s4 setDir 270
+?alive s5: s5 setDir 270
+?alive s6: s6 setDir 270
+?alive s7: s7 setDir 270
+?alive b2: b2 setdir 270
+?alive b3: b3 setdir 270
+?alive b1: b1 setdir 270

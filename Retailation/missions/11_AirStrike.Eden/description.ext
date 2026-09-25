@@ -1,0 +1,135 @@
+onLoadMission="อฮือฮษ ยÛหลา"
+
+showCompass=1
+
+showGPS=0
+
+showMap=1
+
+showNotepad=1
+
+showWatch=1
+
+debriefing=1
+
+class CfgSounds
+{
+      sounds[] = { };
+      class est
+      {
+            name = "est";
+            sound[] = {"est.wav", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_est
+            };
+      };
+      class est2
+      {
+            name = "est2";
+            sound[] = {"est2.wav", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_est
+            };
+      };
+      class intro1
+      {
+            name = "intro1";
+            sound[] = {"intro1.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1
+            };
+      };
+      class intro2
+      {
+            name = "intro2";
+            sound[] = {"intro2.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2
+            };
+      };
+      class intro3
+      {
+            name = "intro3";
+            sound[] = {"intro3.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3
+            };
+      };
+      class intro4
+      {
+            name = "intro4";
+            sound[] = {"intro4.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4
+            };
+      };
+
+      class tar_podbit1
+      {
+            name = "tar_podbit1";
+            sound[] = {"tar_podbit1.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tar_podbit1
+            };
+      };
+
+      class tar_podbit2
+      {
+            name = "tar_podbit2";
+            sound[] = {"tar_podbit2.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_tar_podbit2
+            };
+      };
+      class missle
+      {
+            name = "missle";
+            sound[] = {"missle.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_in
+            };
+      };
+};
+class CfgRadio
+{
+      sounds[] = {};
+      class rad_1
+      {
+            name = "rad_1";
+            sound[] = {"rad_1.ogg", db-10, 1.0};
+            title = $STRM_rad_1;
+      };
+      class rad_2
+      {
+            name = "rad_2";
+            sound[] = {"rad_2.ogg", db-10, 1.0};
+            title = $STRM_rad_2;
+      };
+      class rad_3
+      {
+            name = "rad_3";
+            sound[] = {"rad_3.ogg", db-10, 1.0};
+            title = $STRM_rad_3;
+      };
+      class rad_4
+      {
+            name = "rad_4";
+            sound[] = {"rad_4.ogg", db-10, 1.0};
+            title = $STRM_rad_4;
+      };
+      class rad_5
+      {
+            name = "rad_5";
+            sound[] = {"rad_5.ogg", db-10, 1.0};
+            title = $STRM_rad_5;
+      };
+};

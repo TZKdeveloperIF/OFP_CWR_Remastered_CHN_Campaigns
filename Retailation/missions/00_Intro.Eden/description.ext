@@ -1,0 +1,277 @@
+//onLoadIntro=$STR_Load1_0
+
+debriefing=0
+briefing=0
+
+class CfgSounds
+{
+      sounds[] = { };
+      class bumb
+      {
+            name = "bumb";
+            sound[] = {"bumb.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class shutter
+      {
+            name = "shutter";
+            sound[] = {"shutter.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0,
+            };
+      };
+      class intro0_1
+      {
+            name = "";
+            sound[] = {"intro0_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_1
+            };
+      };
+      class intro0_2
+      {
+            name = "";
+            sound[] = {"intro0_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_2
+            };
+      };
+      class intro0_3
+      {
+            name = "";
+            sound[] = {"intro0_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro0_3
+            };
+      };
+      class intro1_0
+      {
+            name = "intro1_0";
+            sound[] = {"intro1_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_0
+            };
+      };
+      class intro1_1
+      {
+            name = "intro1_1";
+            sound[] = {"intro1_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_1
+            };
+      };
+      class intro1_2
+      {
+            name = "intro1_2";
+            sound[] = {"intro1_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_2
+            };
+      };
+      class intro1_3
+      {
+            name = "intro1_3";
+            sound[] = {"intro1_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_3
+            };
+      };
+      class intro1_4
+      {
+            name = "intro1_4";
+            sound[] = {"intro1_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_4
+            };
+      };
+      class intro1_5
+      {
+            name = "intro1_5";
+            sound[] = {"intro1_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_5
+            };
+      };
+      class intro1_6
+      {
+            name = "intro1_6";
+            sound[] = {"intro1_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1_6
+            };
+      };
+      class intro2_0
+      {
+            name = "intro2_0";
+            sound[] = {"intro2_0.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_0
+            };
+      };
+      class intro2_1
+      {
+            name = "intro2_1";
+            sound[] = {"intro2_1.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_1
+            };
+      };
+      class intro2_2
+      {
+            name = "intro2_2";
+            sound[] = {"intro2_2.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_2
+            };
+      };
+      class intro2_3
+      {
+            name = "intro2_3";
+            sound[] = {"intro2_3.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_3
+            };
+      };
+      class intro2_4
+      {
+            name = "intro2_4";
+            sound[] = {"intro2_4.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_4
+            };
+      };
+      class intro2_5
+      {
+            name = "intro2_5";
+            sound[] = {"intro2_5.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_5
+            };
+      };
+      class intro2_6
+      {
+            name = "intro2_6";
+            sound[] = {"intro2_6.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_6
+            };
+      };
+      class intro2_7
+      {
+            name = "intro2_7";
+            sound[] = {"intro2_7.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_7
+            };
+      };
+      class intro2_8
+      {
+            name = "intro2_8";
+            sound[] = {"intro2_8.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_8
+            };
+      };
+      class intro2_9
+      {
+            name = "intro2_9";
+            sound[] = {"intro2_9.ogg", db+10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2_9
+            };
+      };
+};
+
+class RscText
+{
+      type=0;
+      idc=-1;
+      style=0;
+      h=0.040000;
+      colorBackground[]={0,0,0,0};
+      colorText[]={0.080000,0.080000,0.120000,0.750000};
+      font="tahomaB24";
+      size=1;
+};
+class RscPicture
+{
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTilePicture
+{
+      type=0;
+      idc=-1;
+      style=144;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="tahomaB24";
+      size=0;
+};
+class RscTitles
+{     Titles[] ={};
+      class Default
+      {
+            idd=-1;
+            movingEnable=0;
+            duration=0.1;
+      };
+      class DefPic : Default
+      {
+            type=0;
+            idc=-1;
+            style=48;
+            colorBackground[]={0,0,0,0};
+            colorText[]={1,1,1,1};
+            font="tahomaB24";
+            size=0;
+      };
+      class Warning
+      {
+            idd=-1;
+            movingEnable=0;
+            fadein=0;
+            fadeout=0;
+            duration=10;
+            name="Warning";
+            controls[]={"Warning"};
+            class Warning : RscPicture
+            {
+                  text="Warning.jpg";
+                  x=0.000000;
+                  y=0.000000;
+                  w=1.000000;
+                  h=1.000000;
+            };
+
+      };
+};

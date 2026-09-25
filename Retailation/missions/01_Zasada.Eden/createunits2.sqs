@@ -1,0 +1,8 @@
+_unit = _this select 0
+_pos = _this select 1
+
+#start
+~20
+_Eunits = units _unit - [units _unit select 0]
+_Eunits commandmove (getpos _pos)
+goto "start"

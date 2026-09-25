@@ -1,0 +1,44 @@
+Playsound "rujyo"
+~1.5
+setacctime 1
+Lesnik setdammage 1
+bd3 setdammage 1
+Up say "opa"
+~3
+titleCut ["","BLACK OUT",2]
+~2
+_camera = "camera" camCreate (getpos pk1)
+_camera cameraEffect ["internal","back"]
+_camera camSetTarget lesnik
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+setacctime 1
+titleCut ["","BLACK IN",2]
+playsound "sfx1"
+~3
+B1 say "banda1"
+~5
+_camera camSetTarget Bandit
+_camera camSetRelPos [0,0.5,1.2]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Bandit setMimic "Angry"
+Bandit say "banda2"
+5 Fademusic 0
+~6
+titleCut ["","BLACK OUT",2]
+~2
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+titleCut ["","BLACK IN",2]
+"0" objstatus "FAILED"; "1" objstatus "Active"
+TitleText ["","PLAIN"]
+savegame
+~1
+1 setRadioMsg "Вызвать базу"
+hintc "Лесник уже ничего и никому не расскажет. Необходимо захватить в плен лидера боевиков.\nОбстреляйте его охранников с автоматами, чтобы они поняли серьезность ваших намерений. Главарь вам нужен живым."
+[] exec "WP.sqs"
+exit

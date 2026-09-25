@@ -1,0 +1,240 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Вернон.\nБлокпост миротворцев.","PLAIN"]
+titleCut ["","BLACK IN",5]
+playsound "Fx05"
+
+_camera camSetTarget Tent
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 10]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+akt1 switchmove "CargoVer2"
+akt2 switchmove "CargoVer1"
+akt3 switchmove "FXStandShowTable"
+0 fademusic 0.7
+playmusic "inside_music1_13"
+_camera camSetTarget Tent
+_camera camSetPos   [getPos PK2 select 0, getPos Pk2 select 1, (getPos Pk2 select 2) + 3]
+_camera camSetFOV 0.800
+_camera camCommit 20
+@camCommitted _camera
+
+
+
+_camera camSetTarget Akt1
+_camera camSetPos   [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 3]
+_camera camSetFOV 0.800
+_camera camCommit 10
+@camCommitted _camera
+
+titleCut ["","BLACK IN",4]
+playsound "Fx05"
+
+_camera camSetPos   [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 0.3]
+_camera camSetTarget offser
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetPos   [getPos PK4 select 0, getPos Pk4 select 1, (getPos Pk4 select 2) + 1.5]
+_camera camSetTarget lesnik
+_camera camSetFOV 0.800
+_camera camCommit 10
+5 fademusic 0
+~6
+Lesnik say "Intro1"
+~5.4
+up say "Intro2"
+@camCommitted _camera
+~2
+_camera camSetTarget lesnik
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Lesnik setMimic "Angry"
+
+Lesnik say "Intro3"
+~3.4
+_camera camSetTarget Up
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up setMimic "Normal"
+
+Up say "Intro4"
+~2
+Lesnik setMimic "Normal"
+_camera camSetTarget lesnik
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+Lesnik say "Intro5"
+~6
+Lesnik setMimic "Ironic"
+~3
+
+Lesnik say "Intro6"
+~9
+
+Up say "Intro7"
+Lesnik setMimic "Normal"
+~3
+
+Lesnik say "Intro8"
+~12
+_camera camSetPos   [getPos PK41 select 0, getPos Pk41 select 1, (getPos Pk41 select 2) + 1.6]
+_camera camSetTarget Lesnik
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+Lesnik say "Intro9"
+~9
+_camera camSetPos   [getPos PK41 select 0, getPos Pk41 select 1, (getPos Pk41 select 2) + 1.6]
+_camera camSetTarget Up
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up setMimic "Angry"
+
+Up say "Intro10"
+~2.5
+_camera camSetTarget Lesnik
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 1
+@camCommitted _camera
+
+Lesnik say "Intro11"
+~9
+
+Lesnik say "Intro12"
+~11
+_camera camSetTarget Up
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+Up say "Intro13"
+~8
+_camera camSetTarget Lesnik
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Lesnik say "Intro14"
+~9
+_camera camSetTarget Up
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up say "Intro15"
+~2
+_camera camSetTarget Lesnik
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Lesnik setMimic "Smile"
+Lesnik say "Intro16"
+~4
+Lesnik setMimic "Default"
+_camera camSetTarget Up
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up say "Intro17"
+~4
+_camera camSetTarget Lesnik
+_camera camSetRelPos [0,0.5,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Lesnik setMimic "Smile"
+~2
+Lesnik say "Intro18"
+~10
+_camera camSetPos   [getPos PK41 select 0, getPos Pk41 select 1, (getPos Pk41 select 2) + 1.6]
+_camera camSetTarget Up
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+~1
+Up say "Intro19"
+~3
+scen = 4
+
+_camera camSetTarget Lesnik
+_camera camSetPos   [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 10
+@camCommitted _camera
+
+;@lesnik in jawa
+@ Up distance Offser < 10
+
+_camera camSetTarget Up
+_camera camSetPos   [getPos PK3 select 0, getPos Pk3 select 1, (getPos Pk3 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 2
+@camCommitted _camera
+Up playmove "EffectStandSalute"
+Up say "Intro20"
+~4
+_camera camSetTarget Offser
+_camera camSetPos   [getPos Pk6 select 0, getPos Pk6 select 1, (getPos Pk6 select 2) + 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+Offser say "Intro21"
+~2
+Up say "Intro22"
+~4
+Offser say "Intro23"
+~7
+Up say "Intro24"
+~6
+Up say "Intro25"
+~6
+Offser say "Intro26"
+~4
+_camera camSetTarget Up
+_camera camSetRelPos [0,0.9,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up say "Intro27"
+~5
+
+Offser say "Intro28"
+~1
+Up say "Intro29"
+~7
+_camera camSetTarget Offser
+_camera camSetRelPos [0,0.9,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Offser say "Intro30"
+~8
+Offser say "Intro31"
+Up dowatch Offser
+~16
+_camera camSetTarget Up
+_camera camSetRelPos [0,0.9,1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+Up playmove "EffectStandSalute"
+Up say "Intro32"
+~2
+scen = 10
+exit

@@ -1,0 +1,12 @@
+
+_ld = _this select 0
+_pl = _this select 1
+
+#cycle1
+_ld move getpos _pl
+~20
+?_pl distance _ld <= 600: ver_at setspeedmode "LIMITED"; [] exec "eject.sqs"; goto "cycle2"
+goto "cycle1"
+
+#cycle2
+exit

@@ -1,0 +1,37 @@
+udav setcaptive true
+sp1 setcaptive true
+sp2 setcaptive true
+sp2 setcaptive true
+
+unassignvehicle udav
+unassignvehicle sp1
+unassignvehicle sp2
+unassignvehicle sp3
+
+titlecut["","black out",1]
+~1
+
+udav setpos getpos sup_point_2
+?alive sp1: sp1 setpos getpos sup_point_2
+?alive sp2: sp2 setpos getpos sup_point_2
+?alive sp3: sp3 setpos getpos sup_point_2
+
+udav moveincargo civ_sup
+?alive sp1 && sp1 distance sup_point < 200: sp1 moveincargo civ_sup
+?alive sp2 && sp2 distance sup_point < 200: sp2 moveincargo civ_sup
+?alive sp3 && sp3 distance sup_point < 200: sp3 moveincargo civ_sup
+
+civ_sup move getpos sup_point_1
+civ_sup lock true
+civ_sup setspeedmode "FULL"
+
+"2" objstatus "Done"
+
+titlecut["","black in",1]
+~10
+
+titlecut["","black out",1]
+~1
+happyend=true
+
+exit

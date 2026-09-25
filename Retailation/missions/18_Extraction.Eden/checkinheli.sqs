@@ -1,0 +1,42 @@
+#ch0
+?udav in tar_ver: goto "ch1"
+~0.01
+goto "ch0"
+
+#ch1
+?!u2_17: goto "ch2"
+?alive sp1 && u2_17 && sp1 in tar_ver: goto "ch2"
+?!alive sp1 && u2_17: goto "ch2"
+~0.01
+goto "ch1"
+
+#ch2
+?!u3_17: goto "ch3"
+?alive sp2 && u3_17 && sp2 in tar_ver: goto "ch3"
+?!alive sp2 && u3_17: goto "ch3"
+~0.01
+goto "ch2"
+
+#ch3
+?!u4_17: goto "ch4"
+?alive sp3 && u4_17 && sp3 in tar_ver: goto "ch4"
+?!alive sp3 && u4_17: goto "ch4"
+~0.01
+goto "ch3"
+
+#ch4
+hint localize "STRM_hint1_0"
+
+[tarakan, 1] setWPPos getpos tarakan
+
+gohome=true
+
+"1" objstatus "Done"
+
+"2" objstatus "Active"
+
+savegame
+
+[] exec "radio3.sqs"
+
+exit

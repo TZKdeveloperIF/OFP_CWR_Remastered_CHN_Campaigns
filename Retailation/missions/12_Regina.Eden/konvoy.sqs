@@ -1,0 +1,14 @@
+#start
+
+~5
+?count (units group kolonna_1) == 0: goto "bmpdawn"
+?(leader kolonna_2) distance (leader kolonna_1) < 200: goto "start"
+(leader kolonna_2) move (getpos leader kolonna_1)
+goto "start"
+
+#bmpdawn
+~2
+?(leader kolonna_2) distance put < 100: goto "start"
+(leader kolonna_2) move (getpos put)
+goto "bmpdawn"
+exit

@@ -1,0 +1,80 @@
+;иструктаж в вертолете НАТО
+
+setacctime 1.0
+
+enableradio false
+
+titlecut["","black out",1]
+~1
+
+titlecut["","black in",99999999999999999999999999999999]
+
+titletext[localize "STRM_Load1_2","plain down"]
+~5
+titletext[localize "STRM_Load1_3","plain down"]
+~5
+titlecut["","black in",0]
+
+[] exec "ingameintro1-talks.sqs"
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+#sc1
+_camera camsettarget ver1
+_camera camSetRelPos [6.1,9,1]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~0.005
+?scene==2: goto "sc2"
+goto "sc1"
+
+#sc2
+_camera camsettarget ver1
+_camera camSetRelPos [-4,5.7,-0.35]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~0.005
+?scene==3: goto "sc3"
+goto "sc2"
+
+
+#sc3
+_camera camsettarget ver1
+_camera camSetRelPos [-3,3,-0.35]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~0.005
+?scene==4: goto "sc4"
+goto "sc3"
+
+
+#sc4
+_camera camsettarget ver1
+_camera camSetRelPos [0.4,5,-0.35]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~0.005
+?scene==5: goto "sc5"
+goto "sc4"
+
+#sc5
+titletext["","plain down"]
+_camera camsettarget ver1
+_camera camSetRelPos [0.4,5,0]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~2
+
+titlecut["","white out",4]
+~4
+
+;переброс вертолетов к острову
+ver1 setpos getpos w2_ver1
+ver2 setpos getpos w2_ver2
+~0.1
+titlecut["","black out",1]
+
+[] exec "ingameintro2.sqs"
+
+exit

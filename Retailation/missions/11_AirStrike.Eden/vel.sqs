@@ -1,0 +1,5 @@
+? Bochka distance Up > 3: exit
+?speed Bochka == 0:  _ch = "BulletSingle" camcreate  [getpos bochka select 0, getpos bochka select 1, (getpos bochka select 2) + 0.2]; bochka setdamage 0
+bochka setvelocity [sin(getdir Up)*3,cos(getdir Up)*3, 0]
+~0.01
+exit

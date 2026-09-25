@@ -1,0 +1,11 @@
+
+player switchmove "CombatToPutDown"
+~1.5
+hint localize "STRM_hint_2"
+~1
+"2" objstatus "Failed"
+player removeaction 1
+
+[] exec "lost.sqs"
+
+exit

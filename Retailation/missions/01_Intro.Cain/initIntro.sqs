@@ -1,0 +1,19 @@
+
+camera1_4 setpos [getpos camera1_4 select 0, getpos camera1_4 select 1, (getpos camera1_4 select 2) + 7]
+camera1_2 setpos [getpos camera1_2 select 0, getpos camera1_2 select 1, (getpos camera1_2 select 2) + 7]
+camera1_1 setpos [getpos camera1_1 select 0, getpos camera1_1 select 1, (getpos camera1_1 select 2) + 7]
+camera1 setpos [getpos camera1 select 0, getpos camera1 select 1, (getpos camera1 select 2) + 7]
+
+general setidentity "Gubin"
+sel setIdentity "Udav"
+(driver tar_ver) setIdentity "Tarakan"
+
+tanks=false
+uazgo=false
+uazed=false
+westgo=false
+konec=false
+
+[] exec "intro1.sqs"
+
+exit

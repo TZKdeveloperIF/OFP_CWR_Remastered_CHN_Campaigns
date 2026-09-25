@@ -1,0 +1,26 @@
+titleCut ["","BLACK OUT",2]
+_camera = "camera" camCreate [getPos up select 0, getPos up select 1, (getPos up select 2) + 20]
+_camera cameraEffect ["internal","back"]
+_camera camSetTarget tar1
+titleCut ["","BLACK IN",5]
+
+_camera camSetTarget g1
+_camera camSetPos  [getPos Pk1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 10]
+_camera camSetFOV 0.800
+_camera camCommit 20
+
+k1 sideradio "radio6"
+Kombat sideradio "radio7"
+k1 sideradio "radio8"
+k1 sideradio "radio9"
+@camCommitted _camera
+_camera camSetTarget g2
+_camera camSetPos  [getPos Pk1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 10]
+_camera camSetFOV 0.800
+_camera camCommit 5
+titleCut ["","BLACK OUT",5]
+@camCommitted _camera
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+scen2 = 100
+exit

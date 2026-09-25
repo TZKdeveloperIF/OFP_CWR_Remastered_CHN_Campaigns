@@ -1,0 +1,13 @@
+
+#start
+~0.1
+@count (units b1) < B1kol
+? not alive B1: Goto "pause"
+#Resp
+Bpoteri = Bpoteri + 1
+_b = "SoldierGB" createUnit [getPos B1baze, group B1, "", B1skill ];
+goto "start"
+
+
+#pause
+exit

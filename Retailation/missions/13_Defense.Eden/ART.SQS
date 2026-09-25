@@ -1,0 +1,24 @@
+?!ogr:exit
+ogr = false
+_posic0 = _this select 0
+_posic1 = _this select 1
+_i = 0
+"f_target" setmarkertype "Destroy"
+target setpos [_posic0,_posic1,0]
+"f_target" setmarkerpos [_posic0,_posic1]
+astahov sideradio "radio1_2"
+~1
+astahov sidechat format ["%1-%2",_posic0,_posic1]
+~1
+arti sideradio "radio1_3"
+~4
+
+#Start
+_ugol = random (360)
+_toch = random (50)
+~0.5
+_sn = "shell120" camcreate [(getpos target select 0) + _toch*cos(_ugol),(getpos target select 1) + _toch*0.5*sin(_ugol), 30]
+_i=_i + 1
+?_i<10: goto "start"
+ogr = true
+exit

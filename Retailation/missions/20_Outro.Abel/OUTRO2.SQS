@@ -1,0 +1,168 @@
+
+a1p switchmove "FXStandAtt"
+a2p switchmove "FXStandAtt"
+a3p switchmove "FXStandAtt"
+a4p switchmove "FXStandAtt"
+a5p switchmove "FXStandAtt"
+a6p switchmove "FXStandAtt"
+a7p switchmove "FXStandAtt"
+
+;camera1_4 setpos [(getpos camera1_4 select 0), (getpos camera1_4 select 1), (getpos camera1_4 select 2) + 1]
+
+titlecut["","black in",999999999999999999999999999999999999999999999999]
+titletext [localize "STR_Load2_0","plain",1]
+~5
+titletext [localize "STR_Load2_1","plain",1]
+~5
+titlecut["","black in",1]
+
+titletext ["","plain",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+;goto "sc3"
+
+_camera camsettarget [(getpos a1 select 0) - 4, (getpos a1 select 1) + 0.5, (getpos a1 select 2) + 1]
+_camera camsetpos [(getpos a1 select 0) - 5, (getpos a1 select 1) - 4, (getpos a1 select 2) + 1]
+_camera camsetfov 0.300
+_camera camCommit 0
+~3
+
+_camera camsettarget a1
+_camera camsetrelpos [0,11,-1]
+_camera camsetfov 0.800
+_camera camCommit 10
+@camCommitted _camera
+
+_camera camsettarget a1
+_camera camsetrelpos [0,14,3]
+_camera camsetfov 0.500
+_camera camCommit 10
+@camCommitted _camera
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget of
+_camera camsetrelpos [0,0.8,1.65]
+_camera camsetfov 0.500
+_camera camCommit 0
+of say "outro1_1"
+~2
+
+_camera camsettarget a7p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 5
+~5
+
+of say "outro1_2"
+_camera camsettarget a6p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 3
+~3
+
+_camera camsettarget a5p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 3
+~3
+
+of say "outro1_3"
+_camera camsettarget a4p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 3.5
+~3.5
+
+_camera camsettarget a3p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 4
+~4
+
+of say "outro1_4"
+_camera camsettarget a2p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 3
+~3
+
+_camera camsettarget a1p
+_camera camsetrelpos [0,1,1.65]
+_camera camsetfov 0.700
+_camera camCommit 3
+~1
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget of
+_camera camsetrelpos [0,15,2]
+_camera camsetfov 0.800
+_camera camCommit 0
+of say "outro1_5"
+gogo=true
+a1p switchmove "Stand"
+a2p switchmove "Stand"
+a3p switchmove "Stand"
+a4p switchmove "Stand"
+a5p switchmove "Stand"
+a6p switchmove "Stand"
+a7p switchmove "Stand"
+@a1p in a1
+
+#sc0
+_camera camsettarget a1
+_camera camSetRelPos [0,7,1]
+_camera camSetFOV 0.600
+_camera camCommit 0
+~0.005
+?scene == 1: goto "sc1"
+goto "sc0"
+
+#sc1
+_camera camsettarget a1
+_camera camSetRelPos [-6,5,1]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@scene == 2
+
+#sc2
+_camera camsettarget [(getpos a1 select 0) - 4, (getpos a1 select 1) + 0.5, (getpos a1 select 2) + 1]
+_camera camsetpos [(getpos a1 select 0) - 5, (getpos a1 select 1) - 4, (getpos a1 select 2) + 1]
+_camera camsetfov 0.300
+_camera camCommit 0
+~0.005
+?scene == 3: goto "sc3"
+goto "sc2"
+
+#sc3
+_camera camsettarget [(getpos a1 select 0) - 2, (getpos a1 select 1) + 24, (getpos a1 select 2) - 3]
+_camera camsetpos [(getpos a1 select 0) - 2, (getpos a1 select 1) - 6, (getpos a1 select 2) + 1.8]
+_camera camsetfov 0.400
+_camera camCommit 0
+~0.005
+?getpos a1 select 2 > 10: goto "sc4"
+goto "sc3"
+
+#sc4
+_camera camsettarget a1
+_camera camSetRelPos [4,-3,1]
+_camera camSetFOV 0.800
+_camera camCommit 0
+~10
+
+titlecut["","black out",3]
+~3
+
+endoutro1=true
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+exit

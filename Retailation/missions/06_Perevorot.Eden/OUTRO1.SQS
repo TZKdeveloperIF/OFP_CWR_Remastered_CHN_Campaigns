@@ -1,0 +1,51 @@
+[] exec "introTerTalk.sqs"
+
+titlecut["","black in",1]
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+#cycle
+_camera camsettarget car1
+_camera camsetrelpos [0.5,0.5,-0.25]
+_camera camsetfov 0.800
+_camera camCommit 0
+~0.005
+?tertalkend: goto "goon"
+goto "cycle"
+
+
+#goon
+_camera camsettarget car1
+_camera camsetrelpos [3,0,0.4]
+_camera camsetfov 0.800
+_camera camCommit 0
+~4
+
+titlecut["","black out",1]
+titlecut["","black in",1]
+
+_camera camsettarget ter11
+_camera camsetrelpos [1,5,1.4]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera camsettarget ter1
+_camera camsetpos [(getpos (object 33643) select 0) - 1, (getpos (object 33643) select 1) - 3, (getpos (object 33643) select 2) - 5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~27
+
+_camera camsettarget car1
+_camera camsetrelpos [3,0,0]
+_camera camsetfov 0.800
+_camera camCommit 0
+~20
+
+titlecut["","black out",2]
+~2
+
+[] exec "outro2.sqs"
+
+exit

@@ -1,0 +1,29 @@
+etank1 stop true
+bmp3 stop true
+bmp4 stop true
+
+_aunits = units grp3
+_i = 0
+_j = count _aunits
+
+_aunits2 = units grp4
+_i2 = 0
+_j2 = count _aunits
+
+
+#Here
+(_aunits select _i) action ["GETOUT",ural1]
+unassignvehicle (_aunits select _i)
+(_aunits2 select _i2) action ["GETOUT",ural1]
+unassignvehicle (_aunits2 select _i2)
+_i=_i+1
+_i2=_i2+1
+
+~1.5
+?(_j>_i)&&(_j2>_i2):goto "Here"
+
+etank1 stop false
+bmp3 stop false
+bmp4 stop false
+
+exit

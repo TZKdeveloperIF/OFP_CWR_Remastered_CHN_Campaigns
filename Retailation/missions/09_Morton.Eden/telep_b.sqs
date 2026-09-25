@@ -1,0 +1,10 @@
+ _aunits = units black
+ _i = 0
+ _j = count _aunits
+#Here
+(_aunits select _i) setpos getpos telepb
+ _i=_i+1
+ ~0.3
+ ?_j>_i:goto "Here"
+
+exit

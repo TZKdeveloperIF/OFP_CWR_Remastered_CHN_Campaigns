@@ -1,0 +1,21 @@
+_i = 0
+;цель
+_target = _this select 0
+;кучность
+_kuchnost = _this select 1
+;х радиус
+_xkoef = _this select 2
+;у радиус
+_ykoef = _this select 3
+;кол-во пуль
+_kolvo = _this select 4
+
+#Start
+_ugol = random (360)
+_toch = random (_kuchnost)
+~0.2
+_sn = "BulletSingle" camcreate [(getpos _target select 0) + _toch* cos(_ugol)/_xkoef,(getpos _target select 1) + _toch* sin(_ugol)/_ykoef, 0.1]
+_i=_i + 1
+?_i<_kolvo: goto "start"
+
+exit

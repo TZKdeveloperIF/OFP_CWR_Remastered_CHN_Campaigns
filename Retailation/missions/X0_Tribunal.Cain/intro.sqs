@@ -1,0 +1,71 @@
+_camera = "camera" camCreate (getpos PK1)
+_camera cameraEffect ["internal","back"]
+TitleText ["Кольгуев.\nГарнизонная гауптвахта","PLAIN"]
+titleCut ["","BLACK IN",5]
+
+disbat_status = false; saveVar "disbat_status"
+
+_camera camSetTarget storoj
+_camera camSetRelPos  [0,  50, 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+
+_camera camSetTarget storoj
+_camera camSetRelPos  [0,  5, 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 10
+@camCommitted _camera
+TitleText ["","PLAIN"]
+_camera camSetTarget Uaz
+_camera camCommit 3
+@camCommitted _camera
+
+
+
+
+
+@!(up in UAZ)
+
+titleCut ["","BLACK OUT",1]
+
+_camera camSetTarget Up
+_camera camSetPos  [getPos PK1 select 0, getPos Pk1 select 1, (getPos Pk1 select 2) + 1.65]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+titleCut ["","BLACK IN",1]
+
+@scen == 1
+
+medic say "disbat_1"
+~3
+pul say "disbat_2"
+~2
+? disbat == "Zasada": medic say "disbat_Zasada"; end_m = 1
+? disbat == "Plen": medic say "disbat_Plen"; end_m = 2
+? disbat == "Konvoy": medic say "disbat_Konvoy"; end_m = 3
+? disbat == "Monti": medic say "disbat_Monti"; end_m = 4
+? disbat == "Obshiy": medic say "disbat_Obshiy"; end_m = 5
+~6
+TitleText ["","PLAIN"]
+titleCut ["","BLACK OUT",1]
+0 fademusic 1
+Playmusic "inside_music1_9"
+_camera camSetTarget Up
+_camera camSetRelPos  [1,  5, 1.5]
+_camera camSetFOV 0.800
+_camera camCommit 0
+@camCommitted _camera
+titleCut ["","BLACK IN",1]
+setacctime 0.3
+~1
+titleCut ["","BLACK OUT",2]
+~2
+TitleText ["В жизни такие ошибки могут исковеркать судьбы людей.\nВ игре у вас есть шанс все исправить.","PLAIN"]
+~2
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+Setacctime 1
+scen = 10
+exit

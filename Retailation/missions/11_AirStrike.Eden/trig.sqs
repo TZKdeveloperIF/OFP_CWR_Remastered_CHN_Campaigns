@@ -1,0 +1,14 @@
+_paus = 2
+#start
+~(_paus)
+?getdammage mi != 1:goto "radar"
+goto "start"
+
+#radar
+0.1
+?porog_tr == 3: goto "start"
+?porog_tr == 2: _paus = 2; playsound "est"; goto "start"
+?porog_tr == 1: _paus = 1; playsound "est"; goto "start"
+?porog_tr == 0: _paus = 0.5; playsound "est"; goto "start"
+?porog_tr < 0: _paus = 0.2; playsound "est"; goto "start"
+goto "start"

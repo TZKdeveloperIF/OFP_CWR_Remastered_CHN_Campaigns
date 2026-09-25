@@ -1,0 +1,48 @@
+_baze = _this select 0
+
+?dial: exit
+dial = true
+?_baze == 0: Up sideradio"baze_1f"; baza1_obn = true
+?_baze == 1: Up sideradio"baze_1"; baza2_obn = true
+~1
+ded sideradio "baze_2"
+dial_pod = 0
+1 setRadioMsg "÷ель подтверждаю"
+2 setRadioMsg "÷ель ложна€"
+~10
+HintC "„тобы подвердить или опровергнуть наличие танковой роты противника в этом квадрате, воспользуйтесь рацией (0-0-...)"
+
+#cycle_pod
+? dial_pod == 1:"0" objstatus "Done"; "1" objstatus "Active"; goto "falsivka"
+? dial_pod == 2:"0" objstatus "Done"; "1" objstatus "Done"; ded sideradio "baze_4"; 1 setRadioMsg "Null"; 2 setRadioMsg "Null"; goto "cycle_pvo" 
+~1
+goto "cycle_pod"
+
+#cycle_pvo
+?(getdammage PVO_F > 0.99) and (_baze == 0): goto "end_cycle_pvo"
+?(getdammage PVO > 0.99) and (_baze == 1): goto "end_cycle_pvo"
+~1
+goto "cycle_pvo"
+
+#end_cycle_pvo
+"2" objstatus "Active"; "3" objstatus "Active";
+Up sideradio "baze_5"
+~3
+Cel = true
+~15
+HintC "„тобы передать координаты дл€ бомбардировки, откройте карту и укажите одним щелчком 'мышки' место скоплени€ танков."
+
+@koord
+"2" objstatus "Done"
+ded sideradio "baze_6"
+Cel = false
+exit
+
+
+#falsivka
+1 setRadioMsg "Null"
+2 setRadioMsg "Null"
+ded sideradio "baze_4f"
+dial = false
+dial_pod = 0
+exit

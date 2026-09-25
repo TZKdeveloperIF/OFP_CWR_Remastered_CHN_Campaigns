@@ -1,0 +1,463 @@
+onLoadMission=""
+onLoadIntro=""
+showCompass=0
+
+showGPS=0
+
+showMap=1
+
+showNotepad=0
+
+showWatch=0
+
+debriefing=0
+
+briefing=0
+class CfgIdentities
+{
+      class Dmitriy
+      {
+            name = "Дмитрий Астахов";
+            face = "Face37";
+            glasses="None";
+            speaker = "Ruslan";
+            pitch = 1.10;
+      };
+      class Udav
+      {
+            name = "Андрей Селиванов";
+            face = "Face29";
+            glasses="Sunglasses";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+      class Kombat
+      {
+            name = "Сергей Волошин";
+            face = "Face32"
+            glasses="None";
+            speaker = "John";
+            pitch = 1.00;
+      };
+      class Bandit
+      {
+            name = "Ясхар";
+            face = "Face28";
+            glasses="None";
+            speaker = "Rich";
+            pitch = 1.00;
+      };
+      class Vodila
+      {
+            name = "Левашов";
+            face = "Face11";
+            glasses="None";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+};
+
+class CfgSounds
+{
+      sounds[] = { };
+      class int1
+      {
+            name = "int1";
+            sound[] = {"int1.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int1
+            };
+      };
+      class int2
+      {
+            name = "int2";
+            sound[] = {"int2.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int2
+            };
+      };
+      class int3
+      {
+            name = "int3";
+            sound[] = {"int3.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int3
+            };
+      };
+      class int4
+      {
+            name = "int4";
+            sound[] = {"int4.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int4
+            };
+      };
+      class int5
+      {
+            name = "int5";
+            sound[] = {"int5.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int5
+            };
+      };
+      class int6
+      {
+            name = "int6";
+            sound[] = {"int6.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int6
+            };
+      };
+      class int7r
+      {
+            name = "int7r";
+            sound[] = {"int7r.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_int7r
+            };
+      };
+
+      class intro1
+      {
+            name = "intro1";
+            sound[] = {"intro1.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro1
+            };
+      };
+      class intro2
+      {
+            name = "intro2";
+            sound[] = {"intro2.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro2
+            };
+      };
+      class intro3
+      {
+            name = "intro3";
+            sound[] = {"intro3.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro3
+            };
+      };
+      class intro4
+      {
+            name = "intro4";
+            sound[] = {"intro4.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro4
+            };
+      };
+      class intro5
+      {
+            name = "intro5";
+            sound[] = {"intro5.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro5
+            };
+      };
+      class intro6
+      {
+            name = "intro6";
+            sound[] = {"intro6.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro6
+            };
+      };
+      class intro7
+      {
+            name = "intro7";
+            sound[] = {"intro7.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro7
+            };
+      };
+      class intro8
+      {
+            name = "intro8";
+            sound[] = {"intro8.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro8
+            };
+      };
+      class intro9
+      {
+            name = "intro9";
+            sound[] = {"intro9.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro9
+            };
+      };
+      class intro10
+      {
+            name = "intro10";
+            sound[] = {"intro10.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro10
+            };
+      };
+      class intro11
+      {
+            name = "intro11";
+            sound[] = {"intro11.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro11
+            };
+      };
+      class intro12
+      {
+            name = "intro12";
+            sound[] = {"intro12.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro12
+            };
+      };
+      class intro13
+      {
+            name = "intro13";
+            sound[] = {"intro13.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro13
+            };
+      };
+      class intro14
+      {
+            name = "intro14";
+            sound[] = {"intro14.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro14
+            };
+      };
+      class intro15
+      {
+            name = "intro15";
+            sound[] = {"intro15.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro15
+            };
+      };
+      class intro16
+      {
+            name = "intro16";
+            sound[] = {"intro16.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro16
+            };
+      };
+      class intro17
+      {
+            name = "intro17";
+            sound[] = {"intro17.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro17
+            };
+      };
+      class intro18
+      {
+            name = "intro18";
+            sound[] = {"intro18.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro18
+            };
+      };
+      class intro19
+      {
+            name = "intro19";
+            sound[] = {"intro19.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro19
+            };
+      };
+      class intro20
+      {
+            name = "intro20";
+            sound[] = {"intro20.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro20
+            };
+      };
+      class intro21
+      {
+            name = "intro21";
+            sound[] = {"intro21.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro21
+            };
+      };
+      class intro22
+      {
+            name = "intro22";
+            sound[] = {"intro22.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro22
+            };
+      };
+      class intro23
+      {
+            name = "intro23";
+            sound[] = {"intro23.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro23
+            };
+      };
+      class intro24
+      {
+            name = "intro24";
+            sound[] = {"intro24.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro24
+            };
+      };
+      class intro25
+      {
+            name = "intro25";
+            sound[] = {"intro25.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro25
+            };
+      };
+      class intro26
+      {
+            name = "intro26";
+            sound[] = {"intro26.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro26
+            };
+      };
+      class intro27
+      {
+            name = "intro27";
+            sound[] = {"intro27.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro27
+            };
+      };
+      class intro28
+      {
+            name = "intro28";
+            sound[] = {"intro28.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro28
+            };
+      };
+      class intro29
+      {
+            name = "intro29";
+            sound[] = {"intro29.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro29
+            };
+      };
+      class intro30
+      {
+            name = "intro30";
+            sound[] = {"intro30.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro30
+            };
+      };
+      class intro31
+      {
+            name = "intro31";
+            sound[] = {"intro31.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro31
+            };
+      };
+      class intro32
+      {
+            name = "intro32";
+            sound[] = {"intro32.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro32
+            };
+      };
+      class intro33
+      {
+            name = "intro33";
+            sound[] = {"intro33.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro33
+            };
+      };
+      class intro34
+      {
+            name = "intro34";
+            sound[] = {"intro34.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro34
+            };
+      };
+      class intro35
+      {
+            name = "intro35";
+            sound[] = {"intro35.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_intro35
+            };
+      };
+      class missle
+      {
+            name = "missle";
+            sound[] = {"missle.ogg", db-10, 1.0};
+            titles[] =
+            {
+                  0, $STRM_00
+            };
+      };
+};
+
+class CfgRadio
+{
+      sounds[] = {};
+
+      class baza
+      {
+            name = "baza";
+            sound[] = {"crak1.ogg", db-100, 1.0};
+            title = ;
+      };
+};

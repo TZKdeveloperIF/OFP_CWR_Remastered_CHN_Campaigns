@@ -1,0 +1,87 @@
+enableradio false
+astahov setcaptive true
+
+titlecut["","black out",3]
+~3
+
+povar setpos getpos povar_place
+ural1 setpos getpos ural_place
+povar moveindriver ural1
+ural1 lock true
+povar stop false
+
+titletext [localize "STR_Load1_3","plain",1]
+~5
+
+titlecut["","black in",1]
+
+0 fademusic 1
+playmusic "inside_music1_9"
+
+_camera = "camera" camCreate [0,0,0]
+_camera cameraeffect ["internal", "back"]
+
+_camera camsettarget cam1_1
+_camera camsetpos [(getpos cam1 select 0) + 0.1, (getpos cam1 select 1) + 0, (getpos cam1 select 2) + 0.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+~5
+
+_camera camsettarget cam1_2
+_camera camsetpos [(getpos cam1 select 0) + 0.1, (getpos cam1 select 1) + 0, (getpos cam1 select 2) + 1.5]
+_camera camsetfov 0.800
+_camera camCommit 10
+~10
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget ural1
+_camera camsetrelpos [-3,25,1.5]
+_camera camsetfov 0.800
+_camera camCommit 0
+@!(povar in ural1)
+
+_camera camsettarget ural1
+_camera camsetrelpos [-1,-7,2]
+_camera camsetfov 0.800
+_camera camCommit 0
+
+_camera camsettarget ural1
+_camera camsetrelpos [3,-10,5]
+_camera camsetfov 0.800
+_camera camCommit 5
+~5
+
+titlecut["","black out",1]
+~1
+titlecut["","black in",1]
+
+_camera camsettarget povar
+_camera camsetrelpos [-2,7,1.4]
+_camera camsetfov 0.700
+_camera camCommit 0
+~3
+povar say "intro1_0"
+~5
+
+_camera camsettarget povar
+_camera camsetrelpos [1,7,1.4]
+_camera camsetfov 0.500
+_camera camCommit 0
+~5
+povar say "intro1_1"
+~5
+5 fademusic 0
+~5
+
+titlecut["","black out",3]
+~3
+
+konecmis=true
+
+_camera cameraeffect ["terminate", "back"]
+camdestroy _camera
+
+exit

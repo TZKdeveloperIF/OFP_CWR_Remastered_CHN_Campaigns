@@ -1,0 +1,29 @@
+
+ _aunits = units j1
+ _i = 0
+ _j = count _aunits
+#Here
+(_aunits select _i) setunitpos "UP" 
+ _i=_i+1
+ ~1
+ ?_j>_i:goto "Here"
+ 
+  _aunits = units a2r
+ _i = 0
+ _j = count _aunits
+#Here1
+(_aunits select _i) setunitpos "UP" 
+ _i=_i+1
+ ~1
+ ?_j>_i:goto "Here1"
+ 
+  _aunits = units a2r
+ _i = 0
+ _j = count _aunits
+#Here2
+(_aunits select _i) setunitpos "UP" 
+ _i=_i+1
+ ~1
+ ?_j>_i:goto "Here2"
+ 
+exit

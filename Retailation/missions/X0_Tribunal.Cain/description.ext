@@ -1,0 +1,128 @@
+onLoadMission=""
+
+showCompass=0
+
+showGPS=0
+
+showMap=0
+
+showNotepad=0
+
+showWatch=0
+
+briefing=0
+
+debriefing=0
+
+class CfgIdentities
+{
+      class Dmitriy
+      {
+            name = "Дмитрий Астахов";
+            face = "Face37";
+            glasses="None";
+            speaker = "Ruslan";
+            pitch = 1.10;
+      };
+      class Udav
+      {
+            name = "Андрей Селиванов";
+            face = "Face29";
+            glasses="Sunglasses";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+      class Kombat
+      {
+            name = "Сергей Волошин";
+            face = "Face32"
+            glasses="None";
+            speaker = "John";
+            pitch = 1.00;
+      };
+      class Bandit
+      {
+            name = "Ясхар";
+            face = "Face28";
+            glasses="None";
+            speaker = "Rich";
+            pitch = 1.00;
+      };
+      class Vodila
+      {
+            name = "Левашов";
+            face = "Face11";
+            glasses="None";
+            speaker = "Patrick";
+            pitch = 1.00;
+      };
+};
+
+
+class CfgSounds
+{
+      sounds[] = { };
+      class disbat_1
+      {
+            name = "disbat_1";
+            sound[] = {"disbat_1.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_1
+            };
+      };
+      class disbat_2
+      {
+            name = "disbat_2";
+            sound[] = {"disbat_2.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_2
+            };
+      };
+      class disbat_Zasada
+      {
+            name = "disbat_Zasada";
+            sound[] = {"disbat_Zasada.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_Zasada
+            };
+      };
+      class disbat_Plen
+      {
+            name = "disbat_Plen";
+            sound[] = {"disbat_Plen.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_Plen
+            };
+      };
+      class disbat_Konvoy
+      {
+            name = "disbat_Konvoy";
+            sound[] = {"disbat_Konvoy.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_Konvoy
+            };
+      };
+      class disbat_Monti
+      {
+            name = "disbat_Monti";
+            sound[] = {"disbat_Monti.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_Monti
+            };
+      };
+      class disbat_Obshiy
+      {
+            name = "disbat_Obshiy";
+            sound[] = {"disbat_Obshiy.ogg", db+30, 1.0};
+            titles[] =
+            {
+                  0, $STRM_disbat_Obshiy
+            };
+      };
+};
